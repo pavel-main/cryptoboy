@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E9163AFE260EA4BA00453411 /* cryptoboyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163AFD260EA4BA00453411 /* cryptoboyApp.swift */; };
+		E9163B00260EA4BA00453411 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163AFF260EA4BA00453411 /* ContentView.swift */; };
+		E9163B02260EA4BA00453411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9163B01260EA4BA00453411 /* Assets.xcassets */; };
+		E9163B05260EA4BA00453411 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9163B04260EA4BA00453411 /* Preview Assets.xcassets */; };
+		E9163B10260EA4BB00453411 /* cryptoboyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B0F260EA4BB00453411 /* cryptoboyTests.swift */; };
+		E9163B1B260EA4BB00453411 /* cryptoboyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B1A260EA4BB00453411 /* cryptoboyUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E9163B0C260EA4BB00453411 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9163AF2260EA4BA00453411 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9163AF9260EA4BA00453411;
+			remoteInfo = cryptoboy;
+		};
+		E9163B17260EA4BB00453411 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9163AF2260EA4BA00453411 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9163AF9260EA4BA00453411;
+			remoteInfo = cryptoboy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E9163AFA260EA4BA00453411 /* cryptoboy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cryptoboy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9163AFD260EA4BA00453411 /* cryptoboyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cryptoboyApp.swift; sourceTree = "<group>"; };
+		E9163AFF260EA4BA00453411 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E9163B01260EA4BA00453411 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E9163B04260EA4BA00453411 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E9163B06260EA4BA00453411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9163B0B260EA4BB00453411 /* cryptoboyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cryptoboyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9163B0F260EA4BB00453411 /* cryptoboyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cryptoboyTests.swift; sourceTree = "<group>"; };
+		E9163B11260EA4BB00453411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9163B16260EA4BB00453411 /* cryptoboyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cryptoboyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9163B1A260EA4BB00453411 /* cryptoboyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cryptoboyUITests.swift; sourceTree = "<group>"; };
+		E9163B1C260EA4BB00453411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E9163AF7260EA4BA00453411 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9163B08260EA4BB00453411 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9163B13260EA4BB00453411 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E9163AF1260EA4BA00453411 = {
+			isa = PBXGroup;
+			children = (
+				E9163AFC260EA4BA00453411 /* cryptoboy */,
+				E9163B0E260EA4BB00453411 /* cryptoboyTests */,
+				E9163B19260EA4BB00453411 /* cryptoboyUITests */,
+				E9163AFB260EA4BA00453411 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E9163AFB260EA4BA00453411 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E9163AFA260EA4BA00453411 /* cryptoboy.app */,
+				E9163B0B260EA4BB00453411 /* cryptoboyTests.xctest */,
+				E9163B16260EA4BB00453411 /* cryptoboyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E9163AFC260EA4BA00453411 /* cryptoboy */ = {
+			isa = PBXGroup;
+			children = (
+				E9163AFD260EA4BA00453411 /* cryptoboyApp.swift */,
+				E9163AFF260EA4BA00453411 /* ContentView.swift */,
+				E9163B01260EA4BA00453411 /* Assets.xcassets */,
+				E9163B06260EA4BA00453411 /* Info.plist */,
+				E9163B03260EA4BA00453411 /* Preview Content */,
+			);
+			path = cryptoboy;
+			sourceTree = "<group>";
+		};
+		E9163B03260EA4BA00453411 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E9163B04260EA4BA00453411 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E9163B0E260EA4BB00453411 /* cryptoboyTests */ = {
+			isa = PBXGroup;
+			children = (
+				E9163B0F260EA4BB00453411 /* cryptoboyTests.swift */,
+				E9163B11260EA4BB00453411 /* Info.plist */,
+			);
+			path = cryptoboyTests;
+			sourceTree = "<group>";
+		};
+		E9163B19260EA4BB00453411 /* cryptoboyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E9163B1A260EA4BB00453411 /* cryptoboyUITests.swift */,
+				E9163B1C260EA4BB00453411 /* Info.plist */,
+			);
+			path = cryptoboyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E9163AF9260EA4BA00453411 /* cryptoboy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9163B1F260EA4BB00453411 /* Build configuration list for PBXNativeTarget "cryptoboy" */;
+			buildPhases = (
+				E9163AF6260EA4BA00453411 /* Sources */,
+				E9163AF7260EA4BA00453411 /* Frameworks */,
+				E9163AF8260EA4BA00453411 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cryptoboy;
+			productName = cryptoboy;
+			productReference = E9163AFA260EA4BA00453411 /* cryptoboy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E9163B0A260EA4BB00453411 /* cryptoboyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9163B22260EA4BB00453411 /* Build configuration list for PBXNativeTarget "cryptoboyTests" */;
+			buildPhases = (
+				E9163B07260EA4BB00453411 /* Sources */,
+				E9163B08260EA4BB00453411 /* Frameworks */,
+				E9163B09260EA4BB00453411 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E9163B0D260EA4BB00453411 /* PBXTargetDependency */,
+			);
+			name = cryptoboyTests;
+			productName = cryptoboyTests;
+			productReference = E9163B0B260EA4BB00453411 /* cryptoboyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E9163B15260EA4BB00453411 /* cryptoboyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9163B25260EA4BB00453411 /* Build configuration list for PBXNativeTarget "cryptoboyUITests" */;
+			buildPhases = (
+				E9163B12260EA4BB00453411 /* Sources */,
+				E9163B13260EA4BB00453411 /* Frameworks */,
+				E9163B14260EA4BB00453411 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E9163B18260EA4BB00453411 /* PBXTargetDependency */,
+			);
+			name = cryptoboyUITests;
+			productName = cryptoboyUITests;
+			productReference = E9163B16260EA4BB00453411 /* cryptoboyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E9163AF2260EA4BA00453411 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					E9163AF9260EA4BA00453411 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					E9163B0A260EA4BB00453411 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = E9163AF9260EA4BA00453411;
+					};
+					E9163B15260EA4BB00453411 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = E9163AF9260EA4BA00453411;
+					};
+				};
+			};
+			buildConfigurationList = E9163AF5260EA4BA00453411 /* Build configuration list for PBXProject "cryptoboy" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E9163AF1260EA4BA00453411;
+			productRefGroup = E9163AFB260EA4BA00453411 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E9163AF9260EA4BA00453411 /* cryptoboy */,
+				E9163B0A260EA4BB00453411 /* cryptoboyTests */,
+				E9163B15260EA4BB00453411 /* cryptoboyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E9163AF8260EA4BA00453411 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9163B05260EA4BA00453411 /* Preview Assets.xcassets in Resources */,
+				E9163B02260EA4BA00453411 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9163B09260EA4BB00453411 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9163B14260EA4BB00453411 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E9163AF6260EA4BA00453411 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9163B00260EA4BA00453411 /* ContentView.swift in Sources */,
+				E9163AFE260EA4BA00453411 /* cryptoboyApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9163B07260EA4BB00453411 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9163B10260EA4BB00453411 /* cryptoboyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9163B12260EA4BB00453411 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9163B1B260EA4BB00453411 /* cryptoboyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E9163B0D260EA4BB00453411 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9163AF9260EA4BA00453411 /* cryptoboy */;
+			targetProxy = E9163B0C260EA4BB00453411 /* PBXContainerItemProxy */;
+		};
+		E9163B18260EA4BB00453411 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9163AF9260EA4BA00453411 /* cryptoboy */;
+			targetProxy = E9163B17260EA4BB00453411 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E9163B1D260EA4BB00453411 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E9163B1E260EA4BB00453411 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E9163B20260EA4BB00453411 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"cryptoboy/Preview Content\"";
+				DEVELOPMENT_TEAM = ACU6WYW3JF;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = cryptoboy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = engineering.pavel.cryptoboy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E9163B21260EA4BB00453411 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"cryptoboy/Preview Content\"";
+				DEVELOPMENT_TEAM = ACU6WYW3JF;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = cryptoboy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = engineering.pavel.cryptoboy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E9163B23260EA4BB00453411 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ACU6WYW3JF;
+				INFOPLIST_FILE = cryptoboyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = engineering.pavel.cryptoboyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cryptoboy.app/cryptoboy";
+			};
+			name = Debug;
+		};
+		E9163B24260EA4BB00453411 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ACU6WYW3JF;
+				INFOPLIST_FILE = cryptoboyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = engineering.pavel.cryptoboyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cryptoboy.app/cryptoboy";
+			};
+			name = Release;
+		};
+		E9163B26260EA4BB00453411 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ACU6WYW3JF;
+				INFOPLIST_FILE = cryptoboyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = engineering.pavel.cryptoboyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = cryptoboy;
+			};
+			name = Debug;
+		};
+		E9163B27260EA4BB00453411 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ACU6WYW3JF;
+				INFOPLIST_FILE = cryptoboyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = engineering.pavel.cryptoboyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = cryptoboy;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E9163AF5260EA4BA00453411 /* Build configuration list for PBXProject "cryptoboy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9163B1D260EA4BB00453411 /* Debug */,
+				E9163B1E260EA4BB00453411 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9163B1F260EA4BB00453411 /* Build configuration list for PBXNativeTarget "cryptoboy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9163B20260EA4BB00453411 /* Debug */,
+				E9163B21260EA4BB00453411 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9163B22260EA4BB00453411 /* Build configuration list for PBXNativeTarget "cryptoboyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9163B23260EA4BB00453411 /* Debug */,
+				E9163B24260EA4BB00453411 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9163B25260EA4BB00453411 /* Build configuration list for PBXNativeTarget "cryptoboyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9163B26260EA4BB00453411 /* Debug */,
+				E9163B27260EA4BB00453411 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E9163AF2260EA4BA00453411 /* Project object */;
+}
