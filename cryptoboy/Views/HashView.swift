@@ -16,33 +16,56 @@ struct HashView: View {
     
     var body: some View {
         Form {
-            Section(header: Text("Input Text")) {
-                TextEditor(text: $input)
-                    .autocapitalization(.none)
-                    .disableAutocorrection(true)
-                    .onChange(of: input) { newValue in
-                        encode()
+            Section(header: Text("Input Message")) {
+                HStack {
+                    Image(systemName: "message")
+                    TextEditor(text: $input)
+                        .autocapitalization(.none)
+                        .disableAutocorrection(true)
+                        .onChange(of: input) { newValue in
+                            encode()
+                        }
+                    Button(action: {
+                        input = ""
+                    }) {
+                        Image(systemName: "doc.on.doc")
                     }
+                }
             }
             
             Section(header: Text("sha256")) {
                 HStack {
-                    Image(systemName: "lock")
-                    TextField("N/A", text: $sha256)
+                    Image(systemName: "number")
+                    TextField("Secure Hash Algorithm 2", text: $sha256)
+                    Button(action: {
+                        UIPasteboard.general.string = sha256
+                    }) {
+                        Image(systemName: "doc.on.doc")
+                    }
                 }
             }
             
             Section(header: Text("keccak256")) {
                 HStack {
-                    Image(systemName: "lock")
-                    TextField("N/A", text: $keccak256)
+                    Image(systemName: "number")
+                    TextField("Secure Hash Algorithm 3", text: $keccak256)
+                    Button(action: {
+                        UIPasteboard.general.string = keccak256
+                    }) {
+                        Image(systemName: "doc.on.doc")
+                    }
                 }
             }
             
             Section(header: Text("ripemd160")) {
                 HStack {
-                    Image(systemName: "lock")
-                    TextField("N/A", text: $keccak256)
+                    Image(systemName: "number")
+                    TextField("RIPE Message Digest", text: $ripemd160)
+                    Button(action: {
+                        UIPasteboard.general.string = ripemd160
+                    }) {
+                        Image(systemName: "doc.on.doc")
+                    }
                 }
             }
         }
