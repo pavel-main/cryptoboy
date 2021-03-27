@@ -23,7 +23,10 @@ struct EncodingView: View {
             }
             
             Section(header: Text("SHA-256")) {
-                TextField("SHA-256", text: $sha256)
+                HStack {
+                    Image(systemName: "lock")
+                    TextField("SHA-256", text: $sha256)
+                }
             }
         }
     }
