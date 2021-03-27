@@ -16,7 +16,7 @@ struct OrderView : View {
                 Section {
                     ForEach(order.items, id: \.id) { item in
                         HStack {
-                            Text(item.name)
+                            Text(item.title)
                             Spacer()
                             // Text("$\(item.price)")
                         }

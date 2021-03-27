@@ -10,10 +10,11 @@ import SwiftUI
 struct FavoritesView: View {    
     var body: some View {
         NavigationView {
-            Text("Coming Soon")
-            .padding()
-            .navigationTitle("Favorites")
+            Text("Favorites list is empty")
+                .padding()
+                .navigationTitle("Favorites")
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

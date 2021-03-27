@@ -35,8 +35,15 @@ struct ItemDetail: View {
 //        }
         Text("Coming Soon")
             .padding()
-            .navigationTitle(item.name)
+            .navigationTitle(item.title)
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                Button(action: {
+                    print("Added to bookmarks...")
+                }) {
+                    Image(systemName: "star")
+                }
+            }
     }
 }
 

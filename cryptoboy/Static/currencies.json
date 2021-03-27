@@ -1,59 +1,59 @@
 [
     {
-        "id": "00000000-0000-0000-0000-000000000001",
-        "name": "Bitcoin",
+        "id": "btc",
+        "title": "Bitcoin",
         "items": [
             {
-                "id": "00000000-0000-0000-0000-000000000010",
-                "name": "Unit Converter",
+                "id": "btc-unit",
+                "title": "Unit Converter",
                 "systemImage": "dollarsign.circle",
-                "description": "",
+                "description": "BTC, mBTC, μBTC, satoshi, ...",
                 "icons": []
             },
             {
-                "id": "00000000-0000-0000-0000-000000000011",
-                "name": "Address Derivation",
+                "id": "btc-address",
+                "title": "Address Derivation",
                 "systemImage": "signpost.left",
                 "description": "",
                 "icons": []
             },
             {
-                "id": "00000000-0000-0000-0000-000000000012",
-                "name": "Public Key Compression",
+                "id": "btc-pubkey-compress",
+                "title": "Public Key Compression",
                 "systemImage": "archivebox",
                 "description": "",
                 "icons": []
             },
             {
-                "id": "00000000-0000-0000-0000-000000000013",
-                "name": "Transaction Fee Estimation",
+                "id": "btc-tx-fee",
+                "title": "Transaction Fee Estimation",
                 "systemImage": "percent",
-                "description": "",
+                "description": "p2pkh, p2sh, p2wpkh, ...",
                 "icons": ["new"]
             }
         ]
     },
     {
-        "name": "Ethereum",
-        "id": "00000000-0000-0000-0000-000000000002",
+        "id": "eth",
+        "title": "Ethereum",
         "items": [
             {
-                "id": "00000000-0000-0000-0000-000000000010",
-                "name": "Unit Converter",
+                "id": "eth-unit",
+                "title": "Unit Converter",
                 "systemImage": "eurosign.circle",
-                "description": "",
+                "description": "ether, finney, szabo, gwei, wei, ...",
                 "icons": []
             },
             {
-                "id": "00000000-0000-0000-0000-000000000011",
-                "name": "Address Derivation",
+                "id": "eth-address",
+                "title": "Address Derivation",
                 "systemImage": "signpost.left",
                 "description": "",
                 "icons": []
             },
             {
-                "id": "00000000-0000-0000-0000-000000000012",
-                "name": "RLP Encoding",
+                "id": "eth-rlp",
+                "title": "RLP Encoding",
                 "systemImage": "arrow.triangle.capsulepath",
                 "description": "",
                 "icons": ["soon"]
