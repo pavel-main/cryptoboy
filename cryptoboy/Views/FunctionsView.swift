@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  FunctionsView.swift
 //  cryptoboy
 //
 //  Created by Pavel on 26/03/2021.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct ContentView: View {    
-    let menu = Bundle.main.decode([MenuSection].self, from: "menu.json")
+struct FunctionsView: View {    
+    let menu = Bundle.main.decode([MenuSection].self, from: "functions.json")
     
     var body: some View {
         NavigationView {
@@ -22,13 +22,13 @@ struct ContentView: View {
                 }
             }
             .listStyle(GroupedListStyle())
-            .navigationTitle("Menu")
+            .navigationTitle("Functions")
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct CategoryView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        FunctionsView()
     }
 }

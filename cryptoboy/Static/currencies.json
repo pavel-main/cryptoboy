@@ -1,0 +1,63 @@
+[
+    {
+        "id": "00000000-0000-0000-0000-000000000001",
+        "name": "Bitcoin",
+        "items": [
+            {
+                "id": "00000000-0000-0000-0000-000000000010",
+                "name": "Unit Converter",
+                "systemImage": "dollarsign.circle",
+                "description": "",
+                "icons": []
+            },
+            {
+                "id": "00000000-0000-0000-0000-000000000011",
+                "name": "Address Derivation",
+                "systemImage": "signpost.left",
+                "description": "",
+                "icons": []
+            },
+            {
+                "id": "00000000-0000-0000-0000-000000000012",
+                "name": "Public Key Compression",
+                "systemImage": "archivebox",
+                "description": "",
+                "icons": []
+            },
+            {
+                "id": "00000000-0000-0000-0000-000000000013",
+                "name": "Transaction Fee Estimation",
+                "systemImage": "percent",
+                "description": "",
+                "icons": ["new"]
+            }
+        ]
+    },
+    {
+        "name": "Ethereum",
+        "id": "00000000-0000-0000-0000-000000000002",
+        "items": [
+            {
+                "id": "00000000-0000-0000-0000-000000000010",
+                "name": "Unit Converter",
+                "systemImage": "eurosign.circle",
+                "description": "",
+                "icons": []
+            },
+            {
+                "id": "00000000-0000-0000-0000-000000000011",
+                "name": "Address Derivation",
+                "systemImage": "signpost.left",
+                "description": "",
+                "icons": []
+            },
+            {
+                "id": "00000000-0000-0000-0000-000000000012",
+                "name": "RLP Encoding",
+                "systemImage": "arrow.triangle.capsulepath",
+                "description": "",
+                "icons": ["soon"]
+            }
+        ]
+    }
+]

@@ -1,0 +1,62 @@
+[
+	{
+        "id": "00000000-0000-0000-0000-000000000001",
+		"name": "Data",
+		"items": [
+			{
+                "id": "00000000-0000-0000-0000-000000000010",
+				"name": "Hash Functions",
+                "systemImage": "number",
+                "description": "sha256, keccak256, ripemd160, ...",
+				"icons": []
+			},
+            {
+                "id": "00000000-0000-0000-0000-000000000011",
+                "name": "Encoding Formats",
+                "systemImage": "arrow.2.squarepath",
+                "description": "hex, base58, base64, ...",
+                "icons": []
+            },
+            {
+                "id": "00000000-0000-0000-0000-000000000012",
+                "name": "Encryption Algorithms",
+                "systemImage": "lock",
+                "description": "aes-cbc, aes-ctr, ...",
+                "icons": ["soon"]
+            }
+		]
+	},
+	{
+		"name": "Public Key Cryptography",
+        "id": "00000000-0000-0000-0000-000000000002",
+		"items": [
+            {
+                "id": "00000000-0000-0000-0000-000000000020",
+                "name": "Elliptic Curve Cryptography",
+                "systemImage": "signature",
+                "description": "secp256k1, ed25519, nist256p1, ...",
+                "icons": []
+            },
+            {
+                "id": "00000000-0000-0000-0000-000000000021",
+                "name": "Deterministic Wallet",
+                "systemImage": "wallet.pass",
+                "description": "BIP39, BIP44, BIP141, ...",
+                "icons": ["new"]
+            }
+		]
+	},
+	{
+		"name": "Miscellaneous",
+        "id": "00000000-0000-0000-0000-000000000003",
+		"items": [
+            {
+                "id": "00000000-0000-0000-0000-000000000030",
+                "name": "QR Code Generation",
+                "systemImage": "qrcode",
+                "description": "",
+                "icons": ["soon"]
+            }
+		]
+	}
+]

@@ -9,27 +9,32 @@ import SwiftUI
 
 struct ItemRow : View {
     let item: MenuItem
-    let colors: [String: Color] = ["D": .purple, "G": .black, "N": .red, "S": .blue, "V": .green]
+    let colors: [String: Color] = ["new": .red, "soon": .blue]
 
     var body: some View {
         NavigationLink(destination: ItemDetail(item: item)) {
             HStack {
-                Image(item.thumbnailImage)
-                    .clipShape(Circle())
-                    .overlay(Circle().stroke(Color.gray, lineWidth: 2))
+                Label("", systemImage: item.systemImage)
+                
                 VStack(alignment: .leading) {
                     Text(item.name)
                         .font(.headline)
-                    Text(String("$\(item.price)"))
+                    
+                    if (item.description != "") {
+                        Text(item.description)
+                            .font(.caption)
+                    }
                 }
+                
                 Spacer()
-                ForEach(item.restrictions, id: \.self) { restriction in
-                    Text(restriction)
+                
+                ForEach(item.icons, id: \.self) { icon in
+                    Text(icon)
                         .font(.caption)
                         .fontWeight(.black)
                         .padding(5)
-                        .background(colors[restriction, default: .black])
-                        .clipShape(Circle())
+                        .background(colors[icon, default: .white])
+                        .clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
                         .foregroundColor(.white)
                 }
             }
