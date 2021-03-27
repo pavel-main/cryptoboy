@@ -18,17 +18,15 @@ struct HashView: View {
         Form {
             Section(header: Text("Input Message")) {
                 HStack {
-                    Image(systemName: "message")
+                    Image(systemName: "text.bubble")
                     TextEditor(text: $input)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
                         .onChange(of: input) { newValue in
                             encode()
                         }
-                    Button(action: {
-                        input = ""
-                    }) {
-                        Image(systemName: "doc.on.doc")
+                    Button(action: clear) {
+                        Image(systemName: "xmark.circle.fill")
                     }
                 }
             }
@@ -69,6 +67,13 @@ struct HashView: View {
                 }
             }
         }
+    }
+    
+    func clear() {
+        input = ""
+        sha256 = ""
+        keccak256 = ""
+        ripemd160 = ""
     }
     
     func encode() {
