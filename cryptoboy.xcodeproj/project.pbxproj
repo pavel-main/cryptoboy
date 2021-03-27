@@ -225,7 +225,6 @@
 			isa = PBXGroup;
 			children = (
 				E9163B3F260EACA900453411 /* ItemRow.swift */,
-				E9163B44260EAEA200453411 /* ItemDetail.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -242,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				E9163B5E260EB4C800453411 /* CheckoutView.swift */,
+				E9163B44260EAEA200453411 /* ItemDetail.swift */,
 				E9163B49260EB28300453411 /* OrderView.swift */,
 			);
 			path = Legacy;

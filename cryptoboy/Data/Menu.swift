@@ -9,14 +9,14 @@
 import SwiftUI
 
 struct MenuSection: Codable {
-    var id: UUID
-    var name: String
+    var id: String
+    var title: String
     var items: [MenuItem]
 }
 
 struct MenuItem: Codable, Equatable {
-    var id: UUID
-    var name: String
+    var id: String
+    var title: String
     var systemImage: String
     var description: String
     var icons: [String]
@@ -24,8 +24,8 @@ struct MenuItem: Codable, Equatable {
 
     #if DEBUG
     static let example = MenuItem(
-        id: UUID(),
-        name: "Hash Functions",
+        id: "hash",
+        title: "Hash Functions",
         systemImage: "number",
         description: "sha256, keccak256, ripemd160, ...",
         icons: ["new", "soon"]

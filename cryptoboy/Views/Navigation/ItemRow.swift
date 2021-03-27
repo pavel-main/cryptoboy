@@ -12,12 +12,12 @@ struct ItemRow : View {
     let colors: [String: Color] = ["new": .red, "soon": .blue]
 
     var body: some View {
-        NavigationLink(destination: ItemDetail(item: item)) {
+        NavigationLink(destination: getDestination(from: item)) {
             HStack {
                 Label("", systemImage: item.systemImage)
                 
                 VStack(alignment: .leading) {
-                    Text(item.name)
+                    Text(item.title)
                         .font(.headline)
                     
                     if (item.description != "") {
@@ -30,14 +30,23 @@ struct ItemRow : View {
                 
                 ForEach(item.icons, id: \.self) { icon in
                     Text(icon)
+                        .textCase(.uppercase)
                         .font(.caption)
-                        .fontWeight(.black)
+                        //.fontWeight(.black)
                         .padding(5)
                         .background(colors[icon, default: .white])
                         .clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
-                        .foregroundColor(.white)
+                        //.foregroundColor(.white)
                 }
             }
+        }
+    }
+    
+    func getDestination(from item: MenuItem) -> AnyView {
+        if item.id == "hash" {
+            return AnyView(HashingView())
+        } else {
+            return AnyView(ItemDetail(item: item))
         }
     }
 }

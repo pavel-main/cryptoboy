@@ -67,6 +67,15 @@ struct HashingView: View {
                 }
             }
         }
+        .navigationTitle("Hash Functions")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            Button(action: {
+                print("Added to bookmarks...")
+            }) {
+                Image(systemName: "star")
+            }
+        }
     }
     
     func clear() {
