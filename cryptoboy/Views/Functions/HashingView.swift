@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HashView: View {
+struct HashingView: View {
     @State private var input = ""
     
     @State private var sha256 = ""

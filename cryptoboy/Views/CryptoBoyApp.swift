@@ -13,7 +13,8 @@ struct CryptoBoyApp: App {
     
     var body: some Scene {
         WindowGroup {
-            HashView().environmentObject(order)
+            MainView()
+                .environmentObject(order)
         }
     }
 }
