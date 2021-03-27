@@ -1,0 +1,1 @@
+../../../TrustWalletCore/include/TrustWalletCore/TWBitcoinAddress.h

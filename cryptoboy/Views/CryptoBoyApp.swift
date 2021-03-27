@@ -1,6 +1,6 @@
 //
-//  cryptoboyApp.swift
-//  cryptoboy
+//  CryptoboyApp.swift
+//  CryptoboyApp
 //
 //  Created by Pavel on 26/03/2021.
 //
@@ -8,13 +8,12 @@
 import SwiftUI
 
 @main
-struct Application: App {
+struct CryptoBoyApp: App {
     @StateObject var order = Order()
     
     var body: some Scene {
         WindowGroup {
-            MainView()
-                .environmentObject(order)
+            EncodingView().environmentObject(order)
         }
     }
 }

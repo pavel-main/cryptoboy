@@ -1,0 +1,6 @@
+module WalletCore {
+  umbrella header "TrustWalletCore-umbrella.h"
+
+  export *
+  module * { export * }
+}
