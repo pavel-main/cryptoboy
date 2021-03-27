@@ -13,6 +13,12 @@
 		E9163B05260EA4BA00453411 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9163B04260EA4BA00453411 /* Preview Assets.xcassets */; };
 		E9163B10260EA4BB00453411 /* cryptoboyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B0F260EA4BB00453411 /* cryptoboyTests.swift */; };
 		E9163B1B260EA4BB00453411 /* cryptoboyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B1A260EA4BB00453411 /* cryptoboyUITests.swift */; };
+		E9163B38260EAAD200453411 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B34260EAAD200453411 /* Helper.swift */; };
+		E9163B39260EAAD200453411 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B35260EAAD200453411 /* Order.swift */; };
+		E9163B3A260EAAD200453411 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B36260EAAD200453411 /* Menu.swift */; };
+		E9163B3B260EAAD200453411 /* menu.json in Resources */ = {isa = PBXBuildFile; fileRef = E9163B37260EAAD200453411 /* menu.json */; };
+		E9163B40260EACA900453411 /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B3F260EACA900453411 /* ItemRow.swift */; };
+		E9163B45260EAEA200453411 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B44260EAEA200453411 /* ItemDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +51,12 @@
 		E9163B16260EA4BB00453411 /* cryptoboyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cryptoboyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9163B1A260EA4BB00453411 /* cryptoboyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cryptoboyUITests.swift; sourceTree = "<group>"; };
 		E9163B1C260EA4BB00453411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9163B34260EAAD200453411 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		E9163B35260EAAD200453411 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		E9163B36260EAAD200453411 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		E9163B37260EAAD200453411 /* menu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = menu.json; sourceTree = "<group>"; };
+		E9163B3F260EACA900453411 /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
+		E9163B44260EAEA200453411 /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +107,14 @@
 		E9163AFC260EA4BA00453411 /* cryptoboy */ = {
 			isa = PBXGroup;
 			children = (
+				E9163B34260EAAD200453411 /* Helper.swift */,
+				E9163B37260EAAD200453411 /* menu.json */,
+				E9163B36260EAAD200453411 /* Menu.swift */,
+				E9163B35260EAAD200453411 /* Order.swift */,
 				E9163AFD260EA4BA00453411 /* cryptoboyApp.swift */,
 				E9163AFF260EA4BA00453411 /* ContentView.swift */,
+				E9163B3F260EACA900453411 /* ItemRow.swift */,
+				E9163B44260EAEA200453411 /* ItemDetail.swift */,
 				E9163B01260EA4BA00453411 /* Assets.xcassets */,
 				E9163B06260EA4BA00453411 /* Info.plist */,
 				E9163B03260EA4BA00453411 /* Preview Content */,
@@ -233,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9163B3B260EAAD200453411 /* menu.json in Resources */,
 				E9163B05260EA4BA00453411 /* Preview Assets.xcassets in Resources */,
 				E9163B02260EA4BA00453411 /* Assets.xcassets in Resources */,
 			);
@@ -259,8 +278,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9163B45260EAEA200453411 /* ItemDetail.swift in Sources */,
 				E9163B00260EA4BA00453411 /* ContentView.swift in Sources */,
 				E9163AFE260EA4BA00453411 /* cryptoboyApp.swift in Sources */,
+				E9163B39260EAAD200453411 /* Order.swift in Sources */,
+				E9163B40260EACA900453411 /* ItemRow.swift in Sources */,
+				E9163B38260EAAD200453411 /* Helper.swift in Sources */,
+				E9163B3A260EAAD200453411 /* Menu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
