@@ -1,0 +1,4 @@
+target 'cryptoboy'
+
+pod 'TrustWalletCore'
+
