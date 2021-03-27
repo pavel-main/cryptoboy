@@ -9,15 +9,21 @@ import SwiftUI
 
 struct EncodingView: View {
     @State private var input = ""
+    @State private var sha256 = ""
     
     var body: some View {
         Form {
             Section(header: Text("Input Text")) {
-                TextField("", text: $input)
+                TextEditor(text: $input)
+                    .autocapitalization(.none)
+                    .disableAutocorrection(true)
+                    .onChange(of: input) { newValue in
+                        sha256 = input.sha256()
+                    }
             }
             
             Section(header: Text("SHA-256")) {
-                Text("\(input.sha256())")
+                TextField("SHA-256", text: $sha256)
             }
         }
     }
