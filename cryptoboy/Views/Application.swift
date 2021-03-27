@@ -8,10 +8,13 @@
 import SwiftUI
 
 @main
-struct cryptoboyApp: App {
+struct Application: App {
+    @StateObject var order = Order()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
+                .environmentObject(order)
         }
     }
 }

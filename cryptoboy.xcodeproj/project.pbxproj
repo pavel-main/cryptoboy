@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E9163AFE260EA4BA00453411 /* cryptoboyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163AFD260EA4BA00453411 /* cryptoboyApp.swift */; };
+		E9163AFE260EA4BA00453411 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163AFD260EA4BA00453411 /* Application.swift */; };
 		E9163B00260EA4BA00453411 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163AFF260EA4BA00453411 /* ContentView.swift */; };
 		E9163B02260EA4BA00453411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9163B01260EA4BA00453411 /* Assets.xcassets */; };
 		E9163B05260EA4BA00453411 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9163B04260EA4BA00453411 /* Preview Assets.xcassets */; };
@@ -19,6 +19,9 @@
 		E9163B3B260EAAD200453411 /* menu.json in Resources */ = {isa = PBXBuildFile; fileRef = E9163B37260EAAD200453411 /* menu.json */; };
 		E9163B40260EACA900453411 /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B3F260EACA900453411 /* ItemRow.swift */; };
 		E9163B45260EAEA200453411 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B44260EAEA200453411 /* ItemDetail.swift */; };
+		E9163B4A260EB28300453411 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B49260EB28300453411 /* OrderView.swift */; };
+		E9163B4F260EB31200453411 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B4E260EB31200453411 /* MainView.swift */; };
+		E9163B5F260EB4C800453411 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B5E260EB4C800453411 /* CheckoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +43,7 @@
 
 /* Begin PBXFileReference section */
 		E9163AFA260EA4BA00453411 /* cryptoboy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cryptoboy.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9163AFD260EA4BA00453411 /* cryptoboyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cryptoboyApp.swift; sourceTree = "<group>"; };
+		E9163AFD260EA4BA00453411 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		E9163AFF260EA4BA00453411 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E9163B01260EA4BA00453411 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9163B04260EA4BA00453411 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -57,6 +60,9 @@
 		E9163B37260EAAD200453411 /* menu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = menu.json; sourceTree = "<group>"; };
 		E9163B3F260EACA900453411 /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
 		E9163B44260EAEA200453411 /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
+		E9163B49260EB28300453411 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		E9163B4E260EB31200453411 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		E9163B5E260EB4C800453411 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,14 +113,10 @@
 		E9163AFC260EA4BA00453411 /* cryptoboy */ = {
 			isa = PBXGroup;
 			children = (
+				E9163B54260EB38400453411 /* Data */,
+				E9163B53260EB36F00453411 /* Views */,
 				E9163B34260EAAD200453411 /* Helper.swift */,
 				E9163B37260EAAD200453411 /* menu.json */,
-				E9163B36260EAAD200453411 /* Menu.swift */,
-				E9163B35260EAAD200453411 /* Order.swift */,
-				E9163AFD260EA4BA00453411 /* cryptoboyApp.swift */,
-				E9163AFF260EA4BA00453411 /* ContentView.swift */,
-				E9163B3F260EACA900453411 /* ItemRow.swift */,
-				E9163B44260EAEA200453411 /* ItemDetail.swift */,
 				E9163B01260EA4BA00453411 /* Assets.xcassets */,
 				E9163B06260EA4BA00453411 /* Info.plist */,
 				E9163B03260EA4BA00453411 /* Preview Content */,
@@ -146,6 +148,29 @@
 				E9163B1C260EA4BB00453411 /* Info.plist */,
 			);
 			path = cryptoboyUITests;
+			sourceTree = "<group>";
+		};
+		E9163B53260EB36F00453411 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E9163AFD260EA4BA00453411 /* Application.swift */,
+				E9163B4E260EB31200453411 /* MainView.swift */,
+				E9163B5E260EB4C800453411 /* CheckoutView.swift */,
+				E9163B49260EB28300453411 /* OrderView.swift */,
+				E9163AFF260EA4BA00453411 /* ContentView.swift */,
+				E9163B3F260EACA900453411 /* ItemRow.swift */,
+				E9163B44260EAEA200453411 /* ItemDetail.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E9163B54260EB38400453411 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E9163B36260EAAD200453411 /* Menu.swift */,
+				E9163B35260EAAD200453411 /* Order.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,8 +304,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9163B45260EAEA200453411 /* ItemDetail.swift in Sources */,
+				E9163B4F260EB31200453411 /* MainView.swift in Sources */,
+				E9163B5F260EB4C800453411 /* CheckoutView.swift in Sources */,
+				E9163B4A260EB28300453411 /* OrderView.swift in Sources */,
 				E9163B00260EA4BA00453411 /* ContentView.swift in Sources */,
-				E9163AFE260EA4BA00453411 /* cryptoboyApp.swift in Sources */,
+				E9163AFE260EA4BA00453411 /* Application.swift in Sources */,
 				E9163B39260EAAD200453411 /* Order.swift in Sources */,
 				E9163B40260EACA900453411 /* ItemRow.swift in Sources */,
 				E9163B38260EAAD200453411 /* Helper.swift in Sources */,
