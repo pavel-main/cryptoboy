@@ -8,42 +8,22 @@
 import SwiftUI
 
 struct ItemDetail: View {
-    @EnvironmentObject var order: Order
+    @EnvironmentObject var state: AppState
     
     let item: MenuItem
     
     var body: some View {
-//        VStack {
-//            ZStack(alignment: .bottomTrailing) {
-//                Image(item.mainImage)
-//                    .resizable()
-//                    .scaledToFit()
-//                Text("Photo: \(item.photoCredit)")
-//                    .padding(4)
-//                    .background(Color.black)
-//                    .font(.caption)
-//                    .foregroundColor(.white)
-//                    .offset(x: -5, y: -5)
-//            }
-//            Text(item.description)
-//                .padding()
-//            Button("Order This") {
-//                order.add(item: item)
-//            }
-//            .font(.headline)
-//            Spacer()
-//        }
-        Text("Coming Soon")
+        Text("\(self.item.title) is coming soon!")
             .padding()
-            .navigationTitle(item.title)
+            .navigationTitle(self.item.title)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                Button(action: {
-                    print("Added to bookmarks...")
-                }) {
-                    Image(systemName: "star")
-                }
+                NavigationBar(self.item.id)
             }
+            .onAppear {
+                state.visitView(item.id)
+            }
+            .environmentObject(state)
     }
 }
 
@@ -51,7 +31,7 @@ struct ItemDetail_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             ItemDetail(item: MenuItem.example)
-                .environmentObject(Order())
+                .environmentObject(AppState())
         }
     }
 }

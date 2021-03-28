@@ -14,33 +14,31 @@ struct HashingView: View {
         Form {
             Section(header: Text("Input Message")) {
                 HStack {
-                    Image(systemName: "text.bubble")
+                    Image(systemName: "terminal")
+                    
                     TextEditor(text: $state.message)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
-                    Button(action: state.clear) {
+                    
+                    Button(action: state.clearMessage) {
                         Image(systemName: "xmark.circle.fill")
                     }
                 }
             }
             
-            HashingItemView("sha1", "Secure Hash Algorithm 1 (160 bits)")
-            HashingItemView("sha256", "Secure Hash Algorithm 2 (256 bits)")
-            HashingItemView("sha512", "Secure Hash Algorithm 2 (512 bits)")
-            HashingItemView("keccak256", "Keccak (256 bits)")
-            HashingItemView("keccak512", "Keccak (512 bits)")
-            HashingItemView("ripemd160", "RIPE Message Digest (160 bits)")
-            HashingItemView("blake256", "BLAKE (256 bits)")
-            HashingItemView("groestl512", "Grøstl (512 bits)")
+            HashingItemView("sha1", "SHA-1")
+            HashingItemView("sha256", "SHA-256")
+            HashingItemView("sha512", "SHA-512")
+            HashingItemView("keccak256", "Keccak256")
+            HashingItemView("keccak512", "Keccak512")
+            HashingItemView("ripemd160", "RIPEMD-160")
+            HashingItemView("blake256", "BLAKE-256")
+            HashingItemView("groestl512", "Grøstl-512")
         }
         .navigationTitle("Hash Functions")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            Button(action: {
-                print("Added to bookmarks...")
-            }) {
-                Image(systemName: "star")
-            }
+            NavigationBar("hash")
         }
     }
 }
