@@ -10,11 +10,6 @@ import SwiftUI
 struct HashingView: View {
     @EnvironmentObject var state: AppState
     
-    @State private var input = ""
-    @State private var sha256 = ""
-    @State private var keccak256 = ""
-    @State private var ripemd160 = ""
-    
     var body: some View {
         Form {
             Section(header: Text("Input Message")) {
@@ -23,9 +18,6 @@ struct HashingView: View {
                     TextEditor(text: $state.message)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
-                        .onChange(of: state.message) { newValue in
-                            encode()
-                        }
                     Button(action: state.clear) {
                         Image(systemName: "xmark.circle.fill")
                     }
@@ -50,11 +42,5 @@ struct HashingView: View {
                 Image(systemName: "star")
             }
         }
-    }
-    
-    func encode() {
-        self.sha256 = state.message.sha256()
-        self.keccak256 = state.message.keccak256()
-        self.ripemd160 = state.message.ripemd160()
     }
 }
