@@ -11,19 +11,27 @@ struct FavoritesView: View {
     @EnvironmentObject var state: AppState
     
     var body: some View {
-        NavigationView {
-            if (!state.bookmarks.isEmpty) {
-                Text("Favorites list is NOT empty")
-                    .padding()
-                    .navigationTitle("Favorites")
-            } else {
+        if (!state.bookmarks.isEmpty) {
+            NavigationView {
+                List {
+                    ForEach(state.bookmarks.reversed(), id: \.self) { view in
+                        NavigationRow(item: state.getMenuItem(view)!)
+                    }
+                }
+                .listStyle(GroupedListStyle())
+                .navigationTitle("Favorites")
+            }
+            .navigationViewStyle(StackNavigationViewStyle())
+            .environmentObject(state)
+        } else {
+            NavigationView {
                 Text("Favorites list is empty")
                     .padding()
                     .navigationTitle("Favorites")
             }
+            .navigationViewStyle(StackNavigationViewStyle())
+            .environmentObject(state)
         }
-        .navigationViewStyle(StackNavigationViewStyle())
-        .environmentObject(state)
     }
 }
 

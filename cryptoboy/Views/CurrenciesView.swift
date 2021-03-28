@@ -25,6 +25,7 @@ struct CurrenciesView: View {
             .navigationTitle("Currencies")
         }
         .navigationViewStyle(StackNavigationViewStyle())
+        .environmentObject(state)
     }
 }
 
