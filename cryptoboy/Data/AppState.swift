@@ -23,6 +23,9 @@ class AppState : ObservableObject {
     @Published var bookmarks: Array<String> = []
     @Published var visitedViews: Set<String> = []
     
+    let functionsMenu = Bundle.main.decode([MenuSection].self, from: "functions.json")
+    let currenciesMenu = Bundle.main.decode([MenuSection].self, from: "currencies.json")
+    
     func isDefault() -> Bool {
         return message.isEmpty && !hasMessageChanged
     }
