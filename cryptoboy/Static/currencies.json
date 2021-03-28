@@ -14,7 +14,7 @@
                 "id": "btc-address",
                 "title": "Address Derivation",
                 "systemImage": "signpost.left",
-                "description": "",
+                "description": "p2pkh, p2sh, bech32, ...",
                 "icons": []
             },
             {
@@ -58,6 +58,19 @@
                 "description": "",
                 "icons": ["soon"]
             }
+        ]
+    },
+    {
+        "id": "bch",
+        "title": "Bitcoin Cash",
+        "items": [
+            {
+                "id": "bch-cashaddr",
+                "title": "CashAddr Converter",
+                "systemImage": "banknote",
+                "description": "",
+                "icons": []
+            },
         ]
     }
 ]

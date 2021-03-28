@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MainView: View {
+    @EnvironmentObject var state: AppState
+    
     var body: some View {
         TabView {
             FunctionsView()
@@ -27,11 +29,13 @@ struct MainView: View {
                     Label("Settings", systemImage: "gear")
                 }
         }
+        .environmentObject(AppState())
     }
 }
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
+            .environmentObject(AppState())
     }
 }

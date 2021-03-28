@@ -20,7 +20,7 @@ struct HashingItemView: View {
     }
     
     var body: some View {
-        if (!state.isDefault()) {
+        if (!state.isDefaultMessage()) {
             Section(header: Text(self.title)) {
                 HStack {
                     Button(action: {

@@ -25,6 +25,7 @@ struct FunctionsView: View {
             .navigationTitle("Functions")
         }
         .navigationViewStyle(StackNavigationViewStyle())
+        .environmentObject(state)
     }
 }
 

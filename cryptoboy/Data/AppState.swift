@@ -26,7 +26,12 @@ class AppState : ObservableObject {
     let functionsMenu = Bundle.main.decode([MenuSection].self, from: "functions.json")
     let currenciesMenu = Bundle.main.decode([MenuSection].self, from: "currencies.json")
     
-    func isDefault() -> Bool {
+    func getMenuItem(_ id: String) -> MenuItem? {
+        let menuItems = functionsMenu.flatMap { $0.items } + currenciesMenu.flatMap { $0.items }
+        return menuItems.filter { $0.id == id }.first
+    }
+    
+    func isDefaultMessage() -> Bool {
         return message.isEmpty && !hasMessageChanged
     }
     
@@ -58,7 +63,7 @@ class AppState : ObservableObject {
     }
     
     func getHashOrDefault(_ type: String, _ defaultValue: String) -> String {
-        if (self.isDefault()) {
+        if (self.isDefaultMessage()) {
             return defaultValue
         }
         

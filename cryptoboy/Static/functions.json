@@ -49,6 +49,7 @@
 	{
         "id": "coop",
 		"title": "Cooperative",
+        "type": "functions",
 		"items": [
             {
                 "id": "shamir",
