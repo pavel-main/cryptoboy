@@ -69,4 +69,12 @@ class AppState : ObservableObject {
         
         return message.hash(type)
     }
+    
+    func encodeOrDefault(_ type: String, _ defaultValue: String) -> String {
+        if (self.isDefaultMessage()) {
+            return defaultValue
+        }
+        
+        return message.encode(type)
+    }
 }
