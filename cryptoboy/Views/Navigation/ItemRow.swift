@@ -32,11 +32,10 @@ struct ItemRow : View {
                     Text(icon)
                         .textCase(.uppercase)
                         .font(.caption)
-                        //.fontWeight(.black)
                         .padding(5)
                         .background(colors[icon, default: .white])
                         .clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
-                        //.foregroundColor(.white)
+                        .foregroundColor(.white)
                 }
             }
         }
