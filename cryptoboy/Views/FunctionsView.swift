@@ -28,7 +28,7 @@ struct FunctionsView: View {
     }
 }
 
-struct CategoryView_Previews: PreviewProvider {
+struct FunctionsView_Previews: PreviewProvider {
     static var previews: some View {
         FunctionsView()
     }
