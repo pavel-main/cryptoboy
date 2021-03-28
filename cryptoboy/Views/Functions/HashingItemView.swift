@@ -26,7 +26,7 @@ struct HashingItemView: View {
                 Image(systemName: "number")
                 TextField(self.placeholder, text: $digest)
                     .disabled(true)
-                    .onChange(of: state.hashMessage) { newValue in
+                    .onChange(of: state.message) { newValue in
                         digest = state.getDigest(type, placeholder)
                     }
                 Button(action: {

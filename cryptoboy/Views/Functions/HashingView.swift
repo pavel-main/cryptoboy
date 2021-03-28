@@ -20,10 +20,10 @@ struct HashingView: View {
             Section(header: Text("Input Message")) {
                 HStack {
                     Image(systemName: "text.bubble")
-                    TextEditor(text: $state.hashMessage)
+                    TextEditor(text: $state.message)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
-                        .onChange(of: state.hashMessage) { newValue in
+                        .onChange(of: state.message) { newValue in
                             encode()
                         }
                     Button(action: state.clear) {
@@ -53,8 +53,8 @@ struct HashingView: View {
     }
     
     func encode() {
-        self.sha256 = state.hashMessage.sha256()
-        self.keccak256 = state.hashMessage.keccak256()
-        self.ripemd160 = state.hashMessage.ripemd160()
+        self.sha256 = state.message.sha256()
+        self.keccak256 = state.message.keccak256()
+        self.ripemd160 = state.message.ripemd160()
     }
 }
