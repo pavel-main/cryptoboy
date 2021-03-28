@@ -16,7 +16,7 @@ struct CurrenciesView: View {
                 ForEach(menu, id: \.id) { section in
                     Section(header: Text(section.title)) {
                         ForEach(section.items, id: \.id) { item in
-                            ItemRow(item: item)
+                            NavigationRow(item: item)
                         }
                     }
                 }

@@ -20,7 +20,7 @@ struct MainView: View {
                 }
             FavoritesView()
                 .tabItem {
-                    Label("Favorites", systemImage: "star")
+                    Label("Favorites", systemImage: "list.star")
                 }
             SettingsView()
                 .tabItem {

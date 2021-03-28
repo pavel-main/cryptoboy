@@ -1,4 +1,3 @@
 target 'cryptoboy'
 
 pod 'TrustWalletCore'
-

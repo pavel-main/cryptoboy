@@ -1,5 +1,5 @@
 //
-//  ItemRow.swift
+//  NavigationRow.swift
 //  cryptoboy
 //
 //  Created by Pavel on 26/03/2021.
@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct ItemRow : View {
+struct NavigationRow : View {
+    @EnvironmentObject var state: AppState
+    
     let item: MenuItem
     let colors: [String: Color] = ["new": .red, "soon": .blue]
 
@@ -28,17 +30,21 @@ struct ItemRow : View {
                 
                 Spacer()
                 
-                ForEach(item.icons, id: \.self) { icon in
-                    Text(icon)
-                        .textCase(.uppercase)
-                        .font(.caption)
-                        .padding(5)
-                        .background(colors[icon, default: .white])
-                        .clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
-                        .foregroundColor(.white)
+                // Icons
+                if (!state.hasVisited(item.id)) {
+                    ForEach(item.icons, id: \.self) { icon in
+                        Text(icon)
+                            .textCase(.uppercase)
+                            .font(.caption)
+                            .padding(5)
+                            .background(colors[icon, default: .white])
+                            .clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
+                            .foregroundColor(.white)
+                    }
                 }
             }
         }
+        .environmentObject(state)
     }
     
     func getDestination(from item: MenuItem) -> AnyView {
@@ -50,8 +56,9 @@ struct ItemRow : View {
     }
 }
 
-struct ItemRow_Previews: PreviewProvider {
+struct NavigationRow_Previews: PreviewProvider {
     static var previews: some View {
-        ItemRow(item: MenuItem.example)
+        NavigationRow(item: MenuItem.example)
+            .environmentObject(AppState())
     }
 }

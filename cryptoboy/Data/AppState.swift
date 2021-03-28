@@ -20,58 +20,45 @@ class AppState : ObservableObject {
         }
     }
     
-    func clear() {
+    @Published var bookmarks: Array<String> = []
+    @Published var visitedViews: Set<String> = []
+    
+    func isDefault() -> Bool {
+        return message.isEmpty && !hasMessageChanged
+    }
+    
+    func visitView(_ view: String) {
+        visitedViews.insert(view)
+    }
+    
+    func hasVisited(_ view: String) -> Bool {
+        return visitedViews.contains(view)
+    }
+    
+    func addBookmark(_ view: String) {
+        bookmarks.append(view)
+    }
+    
+    func hasBookmark(_ view: String) -> Bool {
+        return bookmarks.contains(view)
+    }
+    
+    func removeBookmark(_ view: String) {
+        if let index = bookmarks.firstIndex(of: view) {
+            bookmarks.remove(at: index)
+        }
+    }
+    
+    func clearMessage() {
         self.message = ""
         self.hasMessageChanged = false
     }
     
-    func getDigest(_ type: String, _ placeholder: String) -> String {
-        if (message.isEmpty && !hasMessageChanged) {
-            return placeholder
+    func getHashOrDefault(_ type: String, _ defaultValue: String) -> String {
+        if (self.isDefault()) {
+            return defaultValue
         }
         
-        switch type {
-        case "sha1":
-            return message.sha1()
-            
-        case "sha256":
-            return message.sha256()
-        
-        case "sha256ripedm160":
-            return message.sha256ripemd160()
-
-        case "sha256sha256":
-            return message.sha256sha256()
-            
-        case "sha512":
-            return message.sha512()
-            
-        case "keccak256":
-            return message.keccak256()
-
-        case "keccak512":
-            return message.keccak512()
-            
-        case "ripemd160":
-            return message.ripemd160()
-            
-        case "blake256":
-            return message.blake256()
-        
-        case "blake256ripedm160":
-            return message.blake256ripemd160()
-
-        case "blake256blake256":
-            return message.blake256blake256()
-            
-        case "groestl512":
-            return message.groestl512()
-            
-        case "groestl512groestl512":
-            return message.groestl512groestl512()
-
-        default:
-            return "Invalid hash function \(type)"
-        }
+        return message.hash(type)
     }
 }

@@ -9,34 +9,28 @@ import SwiftUI
 
 struct HashingItemView: View {
     @EnvironmentObject var state: AppState
-    @State private var digest = ""
     
     var type: String
-    var placeholder: String
+    var title: String
     
-    init(_ type: String, _ placeholder: String) {
+    init(_ type: String, _ title: String) {
         self.type = type
-        self.placeholder = placeholder
-        // self.digest = state.getDigest(type, placeholder)
+        self.title = title
     }
     
     var body: some View {
-        Section(header: Text(self.type)) {
-            HStack {
-                Image(systemName: "number")
-                TextField(self.placeholder, text: $digest)
-                    .disabled(true)
-                    .onChange(of: state.message) { newValue in
-                        digest = state.getDigest(type, placeholder)
+        if (!state.isDefault()) {
+            Section(header: Text(self.title)) {
+                HStack {
+                    Button(action: {
+                        UIPasteboard.general.string = state.getHashOrDefault(type, title)
+                    }) {
+                        Text(state.getHashOrDefault(type, title))
                     }
-                Button(action: {
-                    UIPasteboard.general.string = state.getDigest(type, placeholder)
-                }) {
-                    Image(systemName: "doc.on.doc")
                 }
             }
+            .environmentObject(state)
         }
-        .environmentObject(state)
     }
 }
 
