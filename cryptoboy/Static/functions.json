@@ -47,9 +47,16 @@
 		]
 	},
 	{
-        "id": "misc",
-		"title": "Miscellaneous",
+        "id": "coop",
+		"title": "Cooperative",
 		"items": [
+            {
+                "id": "shamir",
+                "title": "Shamir Secret Sharing",
+                "systemImage": "person.3",
+                "description": "",
+                "icons": [""]
+            },
             {
                 "id": "qrcode",
                 "title": "QR Code Generation",
