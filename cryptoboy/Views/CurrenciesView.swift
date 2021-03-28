@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct CurrenciesView: View {
-    let menu = Bundle.main.decode([MenuSection].self, from: "currencies.json")
+    @EnvironmentObject var state: AppState
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(menu, id: \.id) { section in
+                ForEach(state.currenciesMenu, id: \.id) { section in
                     Section(header: Text(section.title)) {
                         ForEach(section.items, id: \.id) { item in
                             NavigationRow(item: item)
@@ -31,5 +31,6 @@ struct CurrenciesView: View {
 struct CurrencyView_Previews: PreviewProvider {
     static var previews: some View {
         CurrenciesView()
+            .environmentObject(AppState())
     }
 }

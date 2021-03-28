@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct FunctionsView: View {    
-    let menu = Bundle.main.decode([MenuSection].self, from: "functions.json")
+    @EnvironmentObject var state: AppState
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(menu, id: \.id) { section in
+                ForEach(state.functionsMenu, id: \.id) { section in
                     Section(header: Text(section.title)) {
                         ForEach(section.items, id: \.id) { item in
                             NavigationRow(item: item)
@@ -31,5 +31,6 @@ struct FunctionsView: View {
 struct FunctionsView_Previews: PreviewProvider {
     static var previews: some View {
         FunctionsView()
+            .environmentObject(AppState())
     }
 }

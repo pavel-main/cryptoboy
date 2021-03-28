@@ -16,7 +16,7 @@ struct NavigationRow : View {
     var body: some View {
         NavigationLink(destination: getDestination(from: item)) {
             HStack {
-                Label("", systemImage: item.systemImage)
+                Label(String(), systemImage: item.systemImage)
                 
                 VStack(alignment: .leading) {
                     Text(item.title)

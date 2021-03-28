@@ -37,6 +37,9 @@ struct HashingView: View {
         }
         .navigationTitle("Hash Functions")
         .navigationBarTitleDisplayMode(.inline)
+        .onAppear {
+            state.visitView("hash")
+        }
         .toolbar {
             NavigationBar("hash")
         }

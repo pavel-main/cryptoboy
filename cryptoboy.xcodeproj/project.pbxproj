@@ -14,13 +14,10 @@
 		E9163B10260EA4BB00453411 /* cryptoboyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B0F260EA4BB00453411 /* cryptoboyTests.swift */; };
 		E9163B1B260EA4BB00453411 /* cryptoboyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B1A260EA4BB00453411 /* cryptoboyUITests.swift */; };
 		E9163B38260EAAD200453411 /* Bundle+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B34260EAAD200453411 /* Bundle+JSON.swift */; };
-		E9163B39260EAAD200453411 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B35260EAAD200453411 /* Order.swift */; };
 		E9163B3A260EAAD200453411 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B36260EAAD200453411 /* Menu.swift */; };
 		E9163B40260EACA900453411 /* NavigationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B3F260EACA900453411 /* NavigationRow.swift */; };
 		E9163B45260EAEA200453411 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B44260EAEA200453411 /* ItemDetail.swift */; };
-		E9163B4A260EB28300453411 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B49260EB28300453411 /* OrderView.swift */; };
 		E9163B4F260EB31200453411 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B4E260EB31200453411 /* MainView.swift */; };
-		E9163B5F260EB4C800453411 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B5E260EB4C800453411 /* CheckoutView.swift */; };
 		E937D404260ECB8A00A75B06 /* String+Hashing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E937D403260ECB8A00A75B06 /* String+Hashing.swift */; };
 		E945C397260EC96900E732A0 /* CryptoBoyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E945C396260EC96900E732A0 /* CryptoBoyApp.swift */; };
 		E945C39C260EC96F00E732A0 /* HashingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E945C39B260EC96F00E732A0 /* HashingView.swift */; };
@@ -68,13 +65,10 @@
 		E9163B1A260EA4BB00453411 /* cryptoboyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cryptoboyUITests.swift; sourceTree = "<group>"; };
 		E9163B1C260EA4BB00453411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9163B34260EAAD200453411 /* Bundle+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+JSON.swift"; sourceTree = "<group>"; };
-		E9163B35260EAAD200453411 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		E9163B36260EAAD200453411 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		E9163B3F260EACA900453411 /* NavigationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRow.swift; sourceTree = "<group>"; };
 		E9163B44260EAEA200453411 /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
-		E9163B49260EB28300453411 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		E9163B4E260EB31200453411 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		E9163B5E260EB4C800453411 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 		E937D403260ECB8A00A75B06 /* String+Hashing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Hashing.swift"; sourceTree = "<group>"; };
 		E945C396260EC96900E732A0 /* CryptoBoyApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoBoyApp.swift; sourceTree = "<group>"; };
 		E945C39B260EC96F00E732A0 /* HashingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashingView.swift; sourceTree = "<group>"; };
@@ -200,7 +194,6 @@
 			isa = PBXGroup;
 			children = (
 				E9D14B69260FDB81000B191B /* Functions */,
-				E9D14B6A260FDBD1000B191B /* Legacy */,
 				E96A4A9F260FE4C9009EA367 /* Navigation */,
 				E945C396260EC96900E732A0 /* CryptoBoyApp.swift */,
 				E9163B4E260EB31200453411 /* MainView.swift */,
@@ -217,7 +210,6 @@
 			children = (
 				E96A4AA9260FFD74009EA367 /* AppState.swift */,
 				E9163B36260EAAD200453411 /* Menu.swift */,
-				E9163B35260EAAD200453411 /* Order.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -243,20 +235,11 @@
 		E9D14B69260FDB81000B191B /* Functions */ = {
 			isa = PBXGroup;
 			children = (
+				E9163B44260EAEA200453411 /* ItemDetail.swift */,
 				E945C39B260EC96F00E732A0 /* HashingView.swift */,
 				E96A4AB1260FFF0D009EA367 /* HashingItemView.swift */,
 			);
 			path = Functions;
-			sourceTree = "<group>";
-		};
-		E9D14B6A260FDBD1000B191B /* Legacy */ = {
-			isa = PBXGroup;
-			children = (
-				E9163B5E260EB4C800453411 /* CheckoutView.swift */,
-				E9163B44260EAEA200453411 /* ItemDetail.swift */,
-				E9163B49260EB28300453411 /* OrderView.swift */,
-			);
-			path = Legacy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,16 +402,13 @@
 				E96A4A8F260FE2DF009EA367 /* SettingsView.swift in Sources */,
 				E9163B45260EAEA200453411 /* ItemDetail.swift in Sources */,
 				E9163B4F260EB31200453411 /* MainView.swift in Sources */,
-				E9163B5F260EB4C800453411 /* CheckoutView.swift in Sources */,
 				E945C39C260EC96F00E732A0 /* HashingView.swift in Sources */,
 				E96A4A8E260FE2DF009EA367 /* FavoritesView.swift in Sources */,
 				E945C397260EC96900E732A0 /* CryptoBoyApp.swift in Sources */,
 				E96A4AAA260FFD74009EA367 /* AppState.swift in Sources */,
-				E9163B4A260EB28300453411 /* OrderView.swift in Sources */,
 				E9163B00260EA4BA00453411 /* FunctionsView.swift in Sources */,
 				E937D404260ECB8A00A75B06 /* String+Hashing.swift in Sources */,
 				E96A4A85260FE062009EA367 /* CurrenciesView.swift in Sources */,
-				E9163B39260EAAD200453411 /* Order.swift in Sources */,
 				E9BC9415261125E400D8B83E /* String+Encoding.swift in Sources */,
 				E96A4AB2260FFF0D009EA367 /* HashingItemView.swift in Sources */,
 				E9163B40260EACA900453411 /* NavigationRow.swift in Sources */,
