@@ -48,9 +48,14 @@ struct NavigationRow : View {
     }
     
     func getDestination(from item: MenuItem) -> AnyView {
-        if item.id == "hash" {
+        switch item.id {
+        case "hash":
             return AnyView(HashingView())
-        } else {
+
+        case "encoding":
+            return AnyView(EncodingView())
+            
+        default:
             return AnyView(ItemDetail(item: item))
         }
     }

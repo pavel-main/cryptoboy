@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C9B849CA541CCF9F68044053 /* libPods-cryptoboy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 498ADA47C73524B39421AE11 /* libPods-cryptoboy.a */; };
+		E90853C0261148F30001B9BE /* EncodingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90853BF261148F30001B9BE /* EncodingItemView.swift */; };
+		E90853C5261149290001B9BE /* EncodingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90853C4261149290001B9BE /* EncodingView.swift */; };
 		E9163B00260EA4BA00453411 /* FunctionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163AFF260EA4BA00453411 /* FunctionsView.swift */; };
 		E9163B02260EA4BA00453411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9163B01260EA4BA00453411 /* Assets.xcassets */; };
 		E9163B05260EA4BA00453411 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9163B04260EA4BA00453411 /* Preview Assets.xcassets */; };
@@ -53,6 +55,8 @@
 		498ADA47C73524B39421AE11 /* libPods-cryptoboy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cryptoboy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB873BBB4D4F864C700D46AD /* Pods-cryptoboy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cryptoboy.debug.xcconfig"; path = "Target Support Files/Pods-cryptoboy/Pods-cryptoboy.debug.xcconfig"; sourceTree = "<group>"; };
 		E1E84236F48D7A61A8D3980E /* Pods-cryptoboy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cryptoboy.release.xcconfig"; path = "Target Support Files/Pods-cryptoboy/Pods-cryptoboy.release.xcconfig"; sourceTree = "<group>"; };
+		E90853BF261148F30001B9BE /* EncodingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodingItemView.swift; sourceTree = "<group>"; };
+		E90853C4261149290001B9BE /* EncodingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodingView.swift; sourceTree = "<group>"; };
 		E9163AFA260EA4BA00453411 /* cryptoboy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cryptoboy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9163AFF260EA4BA00453411 /* FunctionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionsView.swift; sourceTree = "<group>"; };
 		E9163B01260EA4BA00453411 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -238,6 +242,8 @@
 				E9163B44260EAEA200453411 /* ItemDetail.swift */,
 				E945C39B260EC96F00E732A0 /* HashingView.swift */,
 				E96A4AB1260FFF0D009EA367 /* HashingItemView.swift */,
+				E90853C4261149290001B9BE /* EncodingView.swift */,
+				E90853BF261148F30001B9BE /* EncodingItemView.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -402,6 +408,7 @@
 				E96A4A8F260FE2DF009EA367 /* SettingsView.swift in Sources */,
 				E9163B45260EAEA200453411 /* ItemDetail.swift in Sources */,
 				E9163B4F260EB31200453411 /* MainView.swift in Sources */,
+				E90853C5261149290001B9BE /* EncodingView.swift in Sources */,
 				E945C39C260EC96F00E732A0 /* HashingView.swift in Sources */,
 				E96A4A8E260FE2DF009EA367 /* FavoritesView.swift in Sources */,
 				E945C397260EC96900E732A0 /* CryptoBoyApp.swift in Sources */,
@@ -415,6 +422,7 @@
 				E9163B38260EAAD200453411 /* Bundle+JSON.swift in Sources */,
 				E9163B3A260EAAD200453411 /* Menu.swift in Sources */,
 				E9BC942A26112C9900D8B83E /* NavigationBar.swift in Sources */,
+				E90853C0261148F30001B9BE /* EncodingItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
