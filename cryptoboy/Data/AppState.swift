@@ -45,6 +45,7 @@ class AppState : ObservableObject {
     
     func addBookmark(_ view: String) {
         bookmarks.append(view)
+        bookmarks = bookmarks.reversed()
     }
     
     func hasBookmark(_ view: String) -> Bool {
