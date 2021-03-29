@@ -15,7 +15,7 @@
                 "title": "Encoding Formats",
                 "systemImage": "arrow.2.squarepath",
                 "description": "hex, base58, base64, ...",
-                "icons": []
+                "icons": ["new"]
             },
             {
                 "id": "encryption",

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct AboutView: View {
+    @EnvironmentObject var state: AppState
+    @State private var showClearAlert = false
+    
     var appVersion: String {
         if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
            return version
@@ -36,6 +39,22 @@ struct AboutView: View {
     var body: some View {
         NavigationView {
             List {
+                Section(header: Text("Reset")) {
+                    Button(action: {
+                        state.clearState()
+                        showClearAlert.toggle()
+                    }) {
+                        Text("Clear Application State")
+                    }
+                }
+                .alert(isPresented: $showClearAlert) {
+                    Alert(
+                        title: Text("Reset Successful"),
+                        message: Text("Application state was cleared"),
+                        dismissButton: .default(Text("OK"))
+                    )
+                }
+                
                 // Contact
                 Section(header: Text("Contact")) {
                     AboutLinkItem("E-mail", title: "cryptoboy2283@gmail.com", url: "mailto:cryptoboy2283@gmail.com")
@@ -59,11 +78,13 @@ struct AboutView: View {
             .navigationTitle("Settings")
         }
         .navigationViewStyle(StackNavigationViewStyle())
+        .environmentObject(state)
     }
 }
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         AboutView()
+            .environmentObject(AppState())
     }
 }
