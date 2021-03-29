@@ -35,12 +35,33 @@ struct SettingsView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                Text("App Version: \(appVersion)")
-                    .padding()
-                Text("Build Date: \(buildDate)")
-                    .padding()
+            List {
+                // Donation
+                Section(header: Text("Donate")) {
+                    SettingsDonateItem("BTC", "1PVVjazdf7ye5oSpTcBq5CWKkCMHHQYD1m")
+                    SettingsDonateItem("ETH", "0xC5362223D38d1d4ADbE36Dd78E77B5f4DbbC0F21")
+                    SettingsDonateItem("BCH", "qrmtven6eellut9dm5v6ztaee9h9wu7zkulgd7crze")
+                    SettingsDonateItem("XLM", "GAIDD763J2YXYZBGBWSWVT7Y6MPF2KTJO77OS2QXQ3FJ6UMN6GRDDGUC")
+                }
+                
+                // System
+                Section(header: Text("System")) {
+                    HStack {
+                        Text("App Version")
+                        Spacer()
+                        Text(appVersion)
+                            .foregroundColor(.gray)
+                    }
+                    
+                    HStack {
+                        Text("Build Date")
+                        Spacer()
+                        Text(buildDate)
+                            .foregroundColor(.gray)
+                    }
+                }
             }
+            .listStyle(GroupedListStyle())
             .navigationTitle("Settings")
         }
         .navigationViewStyle(StackNavigationViewStyle())
