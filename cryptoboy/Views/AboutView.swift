@@ -1,5 +1,5 @@
 //
-//  SettingsView.swift
+//  AboutView.swift
 //  cryptoboy
 //
 //  Created by Pavel on 26/03/2021.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SettingsView: View {
+struct AboutView: View {
     var appVersion: String {
         if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
            return version
@@ -36,29 +36,23 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             List {
+                // Contact
+                Section(header: Text("Contact")) {
+                    AboutLinkItem("E-mail", title: "cryptoboy2283@gmail.com", url: "mailto:cryptoboy2283@gmail.com")
+                }
+                
                 // Donation
                 Section(header: Text("Donate")) {
-                    SettingsDonateItem("BTC", "1PVVjazdf7ye5oSpTcBq5CWKkCMHHQYD1m")
-                    SettingsDonateItem("ETH", "0xC5362223D38d1d4ADbE36Dd78E77B5f4DbbC0F21")
-                    SettingsDonateItem("BCH", "qrmtven6eellut9dm5v6ztaee9h9wu7zkulgd7crze")
-                    SettingsDonateItem("XLM", "GAIDD763J2YXYZBGBWSWVT7Y6MPF2KTJO77OS2QXQ3FJ6UMN6GRDDGUC")
+                    AboutDonateItem("BTC", "1PVVjazdf7ye5oSpTcBq5CWKkCMHHQYD1m")
+                    AboutDonateItem("ETH", "0xC5362223D38d1d4ADbE36Dd78E77B5f4DbbC0F21")
+                    AboutDonateItem("BCH", "qrmtven6eellut9dm5v6ztaee9h9wu7zkulgd7crze")
+                    AboutDonateItem("XLM", "GAIDD763J2YXYZBGBWSWVT7Y6MPF2KTJO77OS2QXQ3FJ6UMN6GRDDGUC")
                 }
                 
                 // System
                 Section(header: Text("System")) {
-                    HStack {
-                        Text("App Version")
-                        Spacer()
-                        Text(appVersion)
-                            .foregroundColor(.gray)
-                    }
-                    
-                    HStack {
-                        Text("Build Date")
-                        Spacer()
-                        Text(buildDate)
-                            .foregroundColor(.gray)
-                    }
+                    AboutSystemItem("App Version", appVersion)
+                    AboutSystemItem("Build Date", buildDate)
                 }
             }
             .listStyle(GroupedListStyle())
@@ -70,6 +64,6 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        AboutView()
     }
 }

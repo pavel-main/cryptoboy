@@ -24,9 +24,9 @@ struct MainView: View {
                 .tabItem {
                     Label("Favorites", systemImage: "list.star")
                 }
-            SettingsView()
+            AboutView()
                 .tabItem {
-                    Label("Settings", systemImage: "gear")
+                    Label("About", systemImage: "info.circle")
                 }
         }
         .environmentObject(AppState())

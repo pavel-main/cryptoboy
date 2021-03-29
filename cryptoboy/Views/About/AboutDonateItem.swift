@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SettingsDonateItem: View {
+struct AboutDonateItem: View {
     var type: String
     var address: String
     @State private var showCopyAlert = false
@@ -19,13 +19,13 @@ struct SettingsDonateItem: View {
     
     var body: some View {
         HStack {
-            Text(type)
+            Text(self.type)
             Spacer()
             Button(action: {
-                UIPasteboard.general.string = address
+                UIPasteboard.general.string = self.address
                 showCopyAlert.toggle()
             }) {
-                Text(address)
+                Text(self.address)
                     .frame(height: 10)
                     .multilineTextAlignment(.trailing)
             }
@@ -33,7 +33,7 @@ struct SettingsDonateItem: View {
         .alert(isPresented: $showCopyAlert) {
             Alert(
                 title: Text("Copied to clipboard"),
-                message: Text("\(type) address: \(address)"),
+                message: Text("\(self.type) address: \(self.address)"),
                 dismissButton: .default(Text("OK"))
             )
         }
@@ -42,6 +42,6 @@ struct SettingsDonateItem: View {
 
 struct SettingsDonateItem_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsDonateItem("BTC", "1PVVjazdf7ye5oSpTcBq5CWKkCMHHQYD1m")
+        AboutDonateItem("BTC", "1PVVjazdf7ye5oSpTcBq5CWKkCMHHQYD1m")
     }
 }
