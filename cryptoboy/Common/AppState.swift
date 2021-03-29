@@ -8,18 +8,34 @@
 import SwiftUI
 
 class AppState : ObservableObject {
-    @Published var hasMessageChanged: Bool = false
+    @AppStorage("hasMessageChanged") var hasMessageChanged: Bool = false {
+        willSet {
+            objectWillChange.send()
+        }
+    }
     
-    @Published var message: String = "" {
+    @AppStorage("message") var message: String = "" {
         didSet {            
             if (!hasMessageChanged) {
                 hasMessageChanged = true
             }
         }
+        willSet {
+            objectWillChange.send()
+        }
     }
     
-    @Published var bookmarks: Array<String> = []
-    @Published var visitedViews: Set<String> = []
+    @AppStorage("bookmarks") var bookmarks: Array<String> = [] {
+        willSet {
+            objectWillChange.send()
+        }
+    }
+    
+    @AppStorage("visitedViews") var visitedViews: Set<String> = [] {
+        willSet {
+            objectWillChange.send()
+        }
+    }
     
     let functionsMenu = Bundle.main.decode([MenuSection].self, from: "functions.json")
     let currenciesMenu = Bundle.main.decode([MenuSection].self, from: "currencies.json")
