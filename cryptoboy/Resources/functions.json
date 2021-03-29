@@ -52,16 +52,16 @@
         "type": "functions",
 		"items": [
             {
-                "id": "shamir",
-                "title": "Shamir Secret Sharing",
-                "systemImage": "person.3",
+                "id": "qrcode",
+                "title": "QR Code Generation",
+                "systemImage": "qrcode",
                 "description": "",
                 "icons": ["soon"]
             },
             {
-                "id": "qrcode",
-                "title": "QR Code Generation",
-                "systemImage": "qrcode",
+                "id": "shamir",
+                "title": "Shamir Secret Sharing",
+                "systemImage": "person.3",
                 "description": "",
                 "icons": ["soon"]
             }
