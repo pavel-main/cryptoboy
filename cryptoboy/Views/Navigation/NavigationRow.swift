@@ -31,8 +31,8 @@ struct NavigationRow : View {
                 Spacer()
                 
                 // Icons
-                if (!state.hasVisited(item.id)) {
-                    ForEach(item.icons, id: \.self) { icon in
+                ForEach(item.icons, id: \.self) { icon in
+                    if (icon == "soon" || !state.hasVisited(item.id)) {
                         Text(icon)
                             .textCase(.uppercase)
                             .font(.caption)

@@ -79,6 +79,13 @@ class AppState : ObservableObject {
         self.hasMessageChanged = false
     }
     
+    func clearState() {
+        self.clearMessage()
+        self.visitedViews = []
+        self.bookmarks = []
+        self.amount = Decimal.init(string: "1")!
+    }
+    
     func getHashOrDefault(_ type: String, _ defaultValue: String) -> String {
         if (self.isDefaultMessage()) {
             return defaultValue
