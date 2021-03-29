@@ -55,6 +55,12 @@ struct NavigationRow : View {
         case "encoding":
             return AnyView(EncodingView())
             
+        case "btc-unit":
+            return AnyView(BitcoinUnitView())
+            
+        case "eth-unit":
+            return AnyView(EthereumUnitView())
+            
         default:
             return AnyView(ItemDetail(item: item))
         }

@@ -34,7 +34,7 @@ struct EncodingItemView: View {
             .alert(isPresented: $showCopyAlert) {
                 Alert(
                     title: Text("Copied to clipboard"),
-                    message: Text("\(title) hash was copied to clipboard!"),
+                    message: Text("\(title) was copied to clipboard!"),
                     dismissButton: .default(Text("OK"))
                 )
             }

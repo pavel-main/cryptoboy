@@ -36,6 +36,9 @@
 		E96A4AB2260FFF0D009EA367 /* HashingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A4AB1260FFF0D009EA367 /* HashingItemView.swift */; };
 		E99F77B3261240DB009BDFF1 /* Array+RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F77B2261240DB009BDFF1 /* Array+RawRepresentable.swift */; };
 		E99F77BB26124118009BDFF1 /* Set+RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F77BA26124118009BDFF1 /* Set+RawRepresentable.swift */; };
+		E99F77C7261269EA009BDFF1 /* BitcoinUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F77C6261269EA009BDFF1 /* BitcoinUnitView.swift */; };
+		E99F77EB26127939009BDFF1 /* CryptoFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F77EA26127939009BDFF1 /* CryptoFormatter.swift */; };
+		E99F77FB26128569009BDFF1 /* EthereumUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F77FA26128569009BDFF1 /* EthereumUnitView.swift */; };
 		E9BC9415261125E400D8B83E /* String+Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC9414261125E400D8B83E /* String+Encoding.swift */; };
 		E9BC942A26112C9900D8B83E /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC942926112C9900D8B83E /* NavigationBar.swift */; };
 /* End PBXBuildFile section */
@@ -95,6 +98,9 @@
 		E96A4AB1260FFF0D009EA367 /* HashingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashingItemView.swift; sourceTree = "<group>"; };
 		E99F77B2261240DB009BDFF1 /* Array+RawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+RawRepresentable.swift"; sourceTree = "<group>"; };
 		E99F77BA26124118009BDFF1 /* Set+RawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Set+RawRepresentable.swift"; sourceTree = "<group>"; };
+		E99F77C6261269EA009BDFF1 /* BitcoinUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinUnitView.swift; sourceTree = "<group>"; };
+		E99F77EA26127939009BDFF1 /* CryptoFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoFormatter.swift; sourceTree = "<group>"; };
+		E99F77FA26128569009BDFF1 /* EthereumUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthereumUnitView.swift; sourceTree = "<group>"; };
 		E9BC9414261125E400D8B83E /* String+Encoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Encoding.swift"; sourceTree = "<group>"; };
 		E9BC942926112C9900D8B83E /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -255,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				E96A4AA9260FFD74009EA367 /* AppState.swift */,
+				E99F77EA26127939009BDFF1 /* CryptoFormatter.swift */,
 				E9163B36260EAAD200453411 /* Menu.swift */,
 			);
 			path = Common;
@@ -281,11 +288,13 @@
 		E9D14B69260FDB81000B191B /* Functions */ = {
 			isa = PBXGroup;
 			children = (
+				E99F77C6261269EA009BDFF1 /* BitcoinUnitView.swift */,
 				E9163B44260EAEA200453411 /* ItemDetail.swift */,
 				E945C39B260EC96F00E732A0 /* HashingView.swift */,
 				E96A4AB1260FFF0D009EA367 /* HashingItemView.swift */,
 				E90853C4261149290001B9BE /* EncodingView.swift */,
 				E90853BF261148F30001B9BE /* EncodingItemView.swift */,
+				E99F77FA26128569009BDFF1 /* EthereumUnitView.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -453,13 +462,16 @@
 				E90853F326115F0B0001B9BE /* ROT13.swift in Sources */,
 				E9163B4F260EB31200453411 /* MainView.swift in Sources */,
 				E90853C5261149290001B9BE /* EncodingView.swift in Sources */,
+				E99F77FB26128569009BDFF1 /* EthereumUnitView.swift in Sources */,
 				E945C39C260EC96F00E732A0 /* HashingView.swift in Sources */,
 				E96A4A8E260FE2DF009EA367 /* FavoritesView.swift in Sources */,
 				E90853CE261153510001B9BE /* AboutDonateItem.swift in Sources */,
 				E945C397260EC96900E732A0 /* CryptoBoyApp.swift in Sources */,
 				E99F77BB26124118009BDFF1 /* Set+RawRepresentable.swift in Sources */,
+				E99F77C7261269EA009BDFF1 /* BitcoinUnitView.swift in Sources */,
 				E96A4AAA260FFD74009EA367 /* AppState.swift in Sources */,
 				E9163B00260EA4BA00453411 /* FunctionsView.swift in Sources */,
+				E99F77EB26127939009BDFF1 /* CryptoFormatter.swift in Sources */,
 				E937D404260ECB8A00A75B06 /* String+Hashing.swift in Sources */,
 				E96A4A85260FE062009EA367 /* CurrenciesView.swift in Sources */,
 				E9BC9415261125E400D8B83E /* String+Encoding.swift in Sources */,
