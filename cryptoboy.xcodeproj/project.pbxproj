@@ -191,8 +191,8 @@
 		E9163AFC260EA4BA00453411 /* cryptoboy */ = {
 			isa = PBXGroup;
 			children = (
+				E9163B54260EB38400453411 /* Common */,
 				E90853F126115EF90001B9BE /* Crypto */,
-				E9163B54260EB38400453411 /* Data */,
 				E90853FA26115FFF0001B9BE /* Extensions */,
 				E96A4A76260FDCDC009EA367 /* Resources */,
 				E9163B53260EB36F00453411 /* Views */,
@@ -245,13 +245,13 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		E9163B54260EB38400453411 /* Data */ = {
+		E9163B54260EB38400453411 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				E96A4AA9260FFD74009EA367 /* AppState.swift */,
 				E9163B36260EAAD200453411 /* Menu.swift */,
 			);
-			path = Data;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		E96A4A76260FDCDC009EA367 /* Resources */ = {
