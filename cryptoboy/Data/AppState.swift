@@ -11,9 +11,7 @@ class AppState : ObservableObject {
     @Published var hasMessageChanged: Bool = false
     
     @Published var message: String = "" {
-        didSet {
-            print("Message changed to \(message)")
-            
+        didSet {            
             if (!hasMessageChanged) {
                 hasMessageChanged = true
             }
