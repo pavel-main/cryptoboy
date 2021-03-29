@@ -13,6 +13,7 @@
 		E90853CE261153510001B9BE /* AboutDonateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90853CD261153510001B9BE /* AboutDonateItem.swift */; };
 		E90853D9261157D50001B9BE /* AboutSystemItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90853D8261157D50001B9BE /* AboutSystemItem.swift */; };
 		E90853DE261158700001B9BE /* AboutLinkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90853DD261158700001B9BE /* AboutLinkItem.swift */; };
+		E90853F326115F0B0001B9BE /* ROT13.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90853F226115F0B0001B9BE /* ROT13.swift */; };
 		E9163B00260EA4BA00453411 /* FunctionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163AFF260EA4BA00453411 /* FunctionsView.swift */; };
 		E9163B02260EA4BA00453411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9163B01260EA4BA00453411 /* Assets.xcassets */; };
 		E9163B05260EA4BA00453411 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9163B04260EA4BA00453411 /* Preview Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		E90853CD261153510001B9BE /* AboutDonateItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutDonateItem.swift; sourceTree = "<group>"; };
 		E90853D8261157D50001B9BE /* AboutSystemItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSystemItem.swift; sourceTree = "<group>"; };
 		E90853DD261158700001B9BE /* AboutLinkItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutLinkItem.swift; sourceTree = "<group>"; };
+		E90853F226115F0B0001B9BE /* ROT13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ROT13.swift; sourceTree = "<group>"; };
 		E9163AFA260EA4BA00453411 /* cryptoboy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cryptoboy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9163AFF260EA4BA00453411 /* FunctionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionsView.swift; sourceTree = "<group>"; };
 		E9163B01260EA4BA00453411 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -146,6 +148,14 @@
 			path = About;
 			sourceTree = "<group>";
 		};
+		E90853F126115EF90001B9BE /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				E90853F226115F0B0001B9BE /* ROT13.swift */,
+			);
+			path = Crypto;
+			sourceTree = "<group>";
+		};
 		E9163AF1260EA4BA00453411 = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				E9163B54260EB38400453411 /* Data */,
+				E90853F126115EF90001B9BE /* Crypto */,
 				E96A4A76260FDCDC009EA367 /* Static */,
 				E9163B53260EB36F00453411 /* Views */,
 				E9163B34260EAAD200453411 /* Bundle+JSON.swift */,
@@ -425,6 +436,7 @@
 				E90853D9261157D50001B9BE /* AboutSystemItem.swift in Sources */,
 				E96A4A8F260FE2DF009EA367 /* AboutView.swift in Sources */,
 				E9163B45260EAEA200453411 /* ItemDetail.swift in Sources */,
+				E90853F326115F0B0001B9BE /* ROT13.swift in Sources */,
 				E9163B4F260EB31200453411 /* MainView.swift in Sources */,
 				E90853C5261149290001B9BE /* EncodingView.swift in Sources */,
 				E945C39C260EC96F00E732A0 /* HashingView.swift in Sources */,

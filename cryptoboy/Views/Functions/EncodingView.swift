@@ -29,6 +29,8 @@ struct EncodingView: View {
             EncodingItemView("hex", "Hexadecimal")
             EncodingItemView("base58", "Base58")
             EncodingItemView("base64", "Base64")
+            EncodingItemView("rot13", "ROT13")
+            EncodingItemView("bin", "Binary")
         }
         .navigationTitle("Encoding Formats")
         .navigationBarTitleDisplayMode(.inline)
