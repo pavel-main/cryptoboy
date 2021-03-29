@@ -10,7 +10,9 @@
 		C9B849CA541CCF9F68044053 /* libPods-cryptoboy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 498ADA47C73524B39421AE11 /* libPods-cryptoboy.a */; };
 		E90853C0261148F30001B9BE /* EncodingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90853BF261148F30001B9BE /* EncodingItemView.swift */; };
 		E90853C5261149290001B9BE /* EncodingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90853C4261149290001B9BE /* EncodingView.swift */; };
-		E90853CE261153510001B9BE /* SettingsDonateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90853CD261153510001B9BE /* SettingsDonateItem.swift */; };
+		E90853CE261153510001B9BE /* AboutDonateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90853CD261153510001B9BE /* AboutDonateItem.swift */; };
+		E90853D9261157D50001B9BE /* AboutSystemItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90853D8261157D50001B9BE /* AboutSystemItem.swift */; };
+		E90853DE261158700001B9BE /* AboutLinkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90853DD261158700001B9BE /* AboutLinkItem.swift */; };
 		E9163B00260EA4BA00453411 /* FunctionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163AFF260EA4BA00453411 /* FunctionsView.swift */; };
 		E9163B02260EA4BA00453411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9163B01260EA4BA00453411 /* Assets.xcassets */; };
 		E9163B05260EA4BA00453411 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9163B04260EA4BA00453411 /* Preview Assets.xcassets */; };
@@ -28,7 +30,7 @@
 		E96A4A80260FDD6E009EA367 /* currencies.json in Resources */ = {isa = PBXBuildFile; fileRef = E96A4A7F260FDD6E009EA367 /* currencies.json */; };
 		E96A4A85260FE062009EA367 /* CurrenciesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A4A84260FE062009EA367 /* CurrenciesView.swift */; };
 		E96A4A8E260FE2DF009EA367 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A4A8C260FE2DF009EA367 /* FavoritesView.swift */; };
-		E96A4A8F260FE2DF009EA367 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A4A8D260FE2DF009EA367 /* SettingsView.swift */; };
+		E96A4A8F260FE2DF009EA367 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A4A8D260FE2DF009EA367 /* AboutView.swift */; };
 		E96A4AAA260FFD74009EA367 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A4AA9260FFD74009EA367 /* AppState.swift */; };
 		E96A4AB2260FFF0D009EA367 /* HashingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A4AB1260FFF0D009EA367 /* HashingItemView.swift */; };
 		E9BC9415261125E400D8B83E /* String+Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC9414261125E400D8B83E /* String+Encoding.swift */; };
@@ -58,7 +60,9 @@
 		E1E84236F48D7A61A8D3980E /* Pods-cryptoboy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cryptoboy.release.xcconfig"; path = "Target Support Files/Pods-cryptoboy/Pods-cryptoboy.release.xcconfig"; sourceTree = "<group>"; };
 		E90853BF261148F30001B9BE /* EncodingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodingItemView.swift; sourceTree = "<group>"; };
 		E90853C4261149290001B9BE /* EncodingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodingView.swift; sourceTree = "<group>"; };
-		E90853CD261153510001B9BE /* SettingsDonateItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDonateItem.swift; sourceTree = "<group>"; };
+		E90853CD261153510001B9BE /* AboutDonateItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutDonateItem.swift; sourceTree = "<group>"; };
+		E90853D8261157D50001B9BE /* AboutSystemItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSystemItem.swift; sourceTree = "<group>"; };
+		E90853DD261158700001B9BE /* AboutLinkItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutLinkItem.swift; sourceTree = "<group>"; };
 		E9163AFA260EA4BA00453411 /* cryptoboy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cryptoboy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9163AFF260EA4BA00453411 /* FunctionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionsView.swift; sourceTree = "<group>"; };
 		E9163B01260EA4BA00453411 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,7 +86,7 @@
 		E96A4A7F260FDD6E009EA367 /* currencies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = currencies.json; sourceTree = "<group>"; };
 		E96A4A84260FE062009EA367 /* CurrenciesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrenciesView.swift; sourceTree = "<group>"; };
 		E96A4A8C260FE2DF009EA367 /* FavoritesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
-		E96A4A8D260FE2DF009EA367 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		E96A4A8D260FE2DF009EA367 /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		E96A4AA9260FFD74009EA367 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		E96A4AB1260FFF0D009EA367 /* HashingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashingItemView.swift; sourceTree = "<group>"; };
 		E9BC9414261125E400D8B83E /* String+Encoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Encoding.swift"; sourceTree = "<group>"; };
@@ -132,12 +136,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		E90853CC2611532F0001B9BE /* Settings */ = {
+		E90853CC2611532F0001B9BE /* About */ = {
 			isa = PBXGroup;
 			children = (
-				E90853CD261153510001B9BE /* SettingsDonateItem.swift */,
+				E90853CD261153510001B9BE /* AboutDonateItem.swift */,
+				E90853D8261157D50001B9BE /* AboutSystemItem.swift */,
+				E90853DD261158700001B9BE /* AboutLinkItem.swift */,
 			);
-			path = Settings;
+			path = About;
 			sourceTree = "<group>";
 		};
 		E9163AF1260EA4BA00453411 = {
@@ -209,13 +215,13 @@
 			children = (
 				E9D14B69260FDB81000B191B /* Functions */,
 				E96A4A9F260FE4C9009EA367 /* Navigation */,
-				E90853CC2611532F0001B9BE /* Settings */,
+				E90853CC2611532F0001B9BE /* About */,
 				E945C396260EC96900E732A0 /* CryptoBoyApp.swift */,
 				E9163B4E260EB31200453411 /* MainView.swift */,
 				E9163AFF260EA4BA00453411 /* FunctionsView.swift */,
 				E96A4A84260FE062009EA367 /* CurrenciesView.swift */,
 				E96A4A8C260FE2DF009EA367 /* FavoritesView.swift */,
-				E96A4A8D260FE2DF009EA367 /* SettingsView.swift */,
+				E96A4A8D260FE2DF009EA367 /* AboutView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -416,13 +422,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E96A4A8F260FE2DF009EA367 /* SettingsView.swift in Sources */,
+				E90853D9261157D50001B9BE /* AboutSystemItem.swift in Sources */,
+				E96A4A8F260FE2DF009EA367 /* AboutView.swift in Sources */,
 				E9163B45260EAEA200453411 /* ItemDetail.swift in Sources */,
 				E9163B4F260EB31200453411 /* MainView.swift in Sources */,
 				E90853C5261149290001B9BE /* EncodingView.swift in Sources */,
 				E945C39C260EC96F00E732A0 /* HashingView.swift in Sources */,
 				E96A4A8E260FE2DF009EA367 /* FavoritesView.swift in Sources */,
-				E90853CE261153510001B9BE /* SettingsDonateItem.swift in Sources */,
+				E90853CE261153510001B9BE /* AboutDonateItem.swift in Sources */,
 				E945C397260EC96900E732A0 /* CryptoBoyApp.swift in Sources */,
 				E96A4AAA260FFD74009EA367 /* AppState.swift in Sources */,
 				E9163B00260EA4BA00453411 /* FunctionsView.swift in Sources */,
@@ -434,6 +441,7 @@
 				E9163B38260EAAD200453411 /* Bundle+JSON.swift in Sources */,
 				E9163B3A260EAAD200453411 /* Menu.swift in Sources */,
 				E9BC942A26112C9900D8B83E /* NavigationBar.swift in Sources */,
+				E90853DE261158700001B9BE /* AboutLinkItem.swift in Sources */,
 				E90853C0261148F30001B9BE /* EncodingItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

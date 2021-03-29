@@ -35,14 +35,14 @@
                 "title": "Elliptic Curve Cryptography",
                 "systemImage": "signature",
                 "description": "secp256k1, ed25519, nist256p1, ...",
-                "icons": []
+                "icons": ["soon"]
             },
             {
                 "id": "hd",
                 "title": "Deterministic Wallet",
                 "systemImage": "wallet.pass",
                 "description": "BIP39, BIP44, BIP141, ...",
-                "icons": ["new"]
+                "icons": ["soon"]
             }
 		]
 	},
@@ -56,7 +56,7 @@
                 "title": "Shamir Secret Sharing",
                 "systemImage": "person.3",
                 "description": "",
-                "icons": []
+                "icons": ["soon"]
             },
             {
                 "id": "qrcode",
