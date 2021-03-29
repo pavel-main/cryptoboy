@@ -8,7 +8,7 @@
                 "title": "Unit Converter",
                 "systemImage": "dollarsign.circle",
                 "description": "BTC, mBTC, μBTC, satoshi, ...",
-                "icons": ["soon"]
+                "icons": []
             },
             {
                 "id": "btc-address",
@@ -42,7 +42,7 @@
                 "title": "Unit Converter",
                 "systemImage": "eurosign.circle",
                 "description": "ether, finney, szabo, gwei, wei, ...",
-                "icons": ["soon"]
+                "icons": []
             },
             {
                 "id": "eth-rlp",

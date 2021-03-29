@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-class AppState : ObservableObject {
+class AppState : ObservableObject {    
+    @Published var amount: Decimal = Decimal.init(string: "1")!
+    
     @AppStorage("hasMessageChanged") var hasMessageChanged: Bool = false {
         willSet {
             objectWillChange.send()
