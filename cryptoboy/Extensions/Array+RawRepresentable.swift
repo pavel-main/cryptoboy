@@ -1,0 +1,36 @@
+//
+//  Array+RawRepresentable.swift
+//  cryptoboy
+//
+//  Created by Pavel on 29/03/2021.
+//
+
+import Foundation
+
+extension Array: RawRepresentable where Element: Codable {
+    public init?(rawValue: String) {
+        guard let data = rawValue.data(using: .utf8),
+              let result = try? JSONDecoder().decode([Element].self, from: data)
+        else {
+            return nil
+        }
+        self = result
+    }
+
+    public var rawValue: String {
+        guard let data = try? JSONEncoder().encode(self),
+              let result = String(data: data, encoding: .utf8)
+        else {
+            return "[]"
+        }
+        return result
+    }
+    
+    func mapToSet<T: Hashable>(_ transform: (Element) -> T) -> Set<T> {
+        var result = Set<T>()
+        for item in self {
+            result.insert(transform(item))
+        }
+        return result
+    }
+}
