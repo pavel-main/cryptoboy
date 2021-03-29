@@ -44,7 +44,11 @@ struct AboutView: View {
                     Button(action: {
                         showClearPrompt.toggle()
                     }) {
-                        Text("Clear Application State")
+                        HStack {
+                            Image(systemName: "trash")
+                            Text("Clear Application State")
+                        }
+                        
                     }
                 }
                 .alert(isPresented: $showClearPrompt) {
