@@ -40,29 +40,6 @@ struct AboutView: View {
     var body: some View {
         NavigationView {
             List {
-                Section(header: Text("Reset")) {
-                    Button(action: {
-                        showClearPrompt.toggle()
-                    }) {
-                        HStack {
-                            Image(systemName: "trash")
-                            Text("Clear Application State")
-                        }
-                        
-                    }
-                }
-                .alert(isPresented: $showClearPrompt) {
-                    Alert(
-                        title: Text("Reset Application State"),
-                        message: Text("Are you sure?"),
-                        primaryButton: .destructive(Text("Clear")) {
-                            state.clearState()
-                            showClearAlert.toggle()
-                        },
-                        secondaryButton: .cancel()
-                    )
-                }
-                
                 // Contact
                 Section(header: Text("Contact")) {
                     AboutLinkItem("E-mail", title: "cryptoboy2283@gmail.com", url: "mailto:cryptoboy2283@gmail.com")
@@ -80,6 +57,31 @@ struct AboutView: View {
                 Section(header: Text("System")) {
                     AboutSystemItem("App Version", appVersion)
                     AboutSystemItem("Build Date", buildDate)
+                }
+                
+                // Actions
+                Section(header: Text("Actions")) {
+                    Button(action: {
+                        showClearPrompt.toggle()
+                    }) {
+                        HStack {
+                            Spacer()
+                            Image(systemName: "trash")
+                            Text("Clear Application State")
+                            Spacer()
+                        }.foregroundColor(.red)
+                    }
+                }
+                .alert(isPresented: $showClearPrompt) {
+                    Alert(
+                        title: Text("Reset Application State"),
+                        message: Text("Are you sure?"),
+                        primaryButton: .destructive(Text("Clear")) {
+                            state.clearState()
+                            showClearAlert.toggle()
+                        },
+                        secondaryButton: .cancel()
+                    )
                 }
             }
             .alert(isPresented: $showClearAlert) {
