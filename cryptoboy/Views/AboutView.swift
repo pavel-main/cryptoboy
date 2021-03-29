@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AboutView: View {
     @EnvironmentObject var state: AppState
+    @State private var showClearPrompt = false
     @State private var showClearAlert = false
     
     var appVersion: String {
@@ -41,17 +42,20 @@ struct AboutView: View {
             List {
                 Section(header: Text("Reset")) {
                     Button(action: {
-                        state.clearState()
-                        showClearAlert.toggle()
+                        showClearPrompt.toggle()
                     }) {
                         Text("Clear Application State")
                     }
                 }
-                .alert(isPresented: $showClearAlert) {
+                .alert(isPresented: $showClearPrompt) {
                     Alert(
-                        title: Text("Reset Successful"),
-                        message: Text("Application state was cleared"),
-                        dismissButton: .default(Text("OK"))
+                        title: Text("Reset Application State"),
+                        message: Text("Are you sure?"),
+                        primaryButton: .destructive(Text("Clear")) {
+                            state.clearState()
+                            showClearAlert.toggle()
+                        },
+                        secondaryButton: .cancel()
                     )
                 }
                 
@@ -73,6 +77,13 @@ struct AboutView: View {
                     AboutSystemItem("App Version", appVersion)
                     AboutSystemItem("Build Date", buildDate)
                 }
+            }
+            .alert(isPresented: $showClearAlert) {
+                Alert(
+                    title: Text("Reset Successful"),
+                    message: Text("Application state was cleared"),
+                    dismissButton: .default(Text("OK"))
+                )
             }
             .listStyle(GroupedListStyle())
             .navigationTitle("Settings")
