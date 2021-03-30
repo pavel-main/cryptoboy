@@ -251,9 +251,10 @@
 			isa = PBXGroup;
 			children = (
 				E90853CC2611532F0001B9BE /* About */,
+				E95432182612B66C001918F3 /* Currencies */,
 				E9D14B69260FDB81000B191B /* Functions */,
 				E96A4A9F260FE4C9009EA367 /* Navigation */,
-				E954320D2612B358001918F3 /* Themes */,
+				E954320D2612B358001918F3 /* Theme */,
 				E945C396260EC96900E732A0 /* CryptoBoyApp.swift */,
 				E9163B4E260EB31200453411 /* MainView.swift */,
 				E9163AFF260EA4BA00453411 /* FunctionsView.swift */,
@@ -275,13 +276,22 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		E954320D2612B358001918F3 /* Themes */ = {
+		E954320D2612B358001918F3 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
 				E954320E2612B389001918F3 /* ChangeThemeButton.swift */,
 				E95432132612B3A8001918F3 /* SelectThemeView.swift */,
 			);
-			path = Themes;
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		E95432182612B66C001918F3 /* Currencies */ = {
+			isa = PBXGroup;
+			children = (
+				E99F77C6261269EA009BDFF1 /* BitcoinUnitView.swift */,
+				E99F77FA26128569009BDFF1 /* EthereumUnitView.swift */,
+			);
+			path = Currencies;
 			sourceTree = "<group>";
 		};
 		E96A4A76260FDCDC009EA367 /* Resources */ = {
@@ -305,13 +315,11 @@
 		E9D14B69260FDB81000B191B /* Functions */ = {
 			isa = PBXGroup;
 			children = (
-				E99F77C6261269EA009BDFF1 /* BitcoinUnitView.swift */,
 				E9163B44260EAEA200453411 /* ItemDetail.swift */,
 				E945C39B260EC96F00E732A0 /* HashingView.swift */,
 				E96A4AB1260FFF0D009EA367 /* HashingItemView.swift */,
 				E90853C4261149290001B9BE /* EncodingView.swift */,
 				E90853BF261148F30001B9BE /* EncodingItemView.swift */,
-				E99F77FA26128569009BDFF1 /* EthereumUnitView.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
