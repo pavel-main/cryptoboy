@@ -90,14 +90,7 @@ struct EthereumUnitView: View {
                 .keyboardType(.decimalPad)
             }
         }
-        .navigationTitle("Ethereum Unit Converter")
-        .navigationBarTitleDisplayMode(.inline)
-        .onAppear {
-            state.visitView("eth-unit")
-        }
-        .toolbar {
-            NavigationBar("eth-unit")
-        }
+        .modifier(NavigationViewModifier(page: .eth_unit))
         .environmentObject(state)
     }
 }

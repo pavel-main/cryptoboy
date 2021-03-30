@@ -65,7 +65,7 @@ struct NavigationRow : View {
             return AnyView(EthereumUnitView())
             
         default:
-            return AnyView(ItemDetail(item: item))
+            return AnyView(ComingSoonView(item: item))
         }
     }
 }
