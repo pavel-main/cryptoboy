@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ChangeThemeButton: View {
+struct SelectThemeButton: View {
     @Binding var currentThemeName: String?
     var colorName: String
     var themeName: String?
@@ -21,8 +21,8 @@ struct ChangeThemeButton: View {
             }) {
                 HStack {
                     Circle()
-                    .fill(getTheme(themeName: themeName).colorPrimary)
-                    .frame(width: 25, height: 25)
+                        .fill(getTheme(themeName: themeName).colorPrimary)
+                        .frame(width: 25, height: 25)
                     
                     Text(self.colorName)
                     

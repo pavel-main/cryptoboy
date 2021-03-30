@@ -13,10 +13,10 @@ struct SelectThemeView: View {
     var body: some View {
         List {
             ForEach(themes, id: \.self) { theme in
-                ChangeThemeButton(currentThemeName: self.$currentThemeName, colorName: theme.publicName, themeName: theme.name)
+                SelectThemeButton(currentThemeName: self.$currentThemeName, colorName: theme.publicName, themeName: theme.name)
             }
         }
-        .navigationBarTitle("Theme").onAppear {
+        .navigationBarTitle("Select Theme").onAppear {
             self.currentThemeName = UserDefaults.standard.string(forKey: "themeName")
         }
     }
