@@ -25,6 +25,13 @@
                 "icons": ["soon"]
             },
             {
+                "id": "btc_wif",
+                "title": "Wallet Import Format",
+                "systemImage": "square.and.arrow.down",
+                "description": "",
+                "icons": ["soon"]
+            },
+            {
                 "id": "btc_tx_fee",
                 "title": "Transaction Fee Estimation",
                 "systemImage": "percent",
@@ -43,6 +50,13 @@
                 "systemImage": "eurosign.circle",
                 "description": "ether, finney, szabo, gwei, wei, …",
                 "icons": []
+            },
+            {
+                "id": "eth_checksum",
+                "title": "Address Checksum",
+                "systemImage": "checkmark.seal",
+                "description": "",
+                "icons": ["soon"]
             },
             {
                 "id": "eth_rlp",

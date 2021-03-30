@@ -7,7 +7,7 @@
 				"id": "hash",
                 "title": "Hashing",
                 "systemImage": "number",
-                "description": "sha256, keccak256, ripemd160, …",
+                "description": "sha, keccak, ripemd, blake, …",
 				"icons": []
 			},
             {
@@ -71,6 +71,13 @@
                 "systemImage": "qrcode.viewfinder",
                 "description": "",
                 "icons": ["new"]
+            },
+            {
+                "id": "ecdh",
+                "title": "Diffie-Hellman Key Exchange",
+                "systemImage": "person.2",
+                "description": "ECDH",
+                "icons": ["soon"]
             },
             {
                 "id": "shamir",
