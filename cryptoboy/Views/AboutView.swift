@@ -61,6 +61,10 @@ struct AboutView: View {
                 
                 // Actions
                 Section(header: Text("Actions")) {
+                    NavigationLink(destination: SelectThemeView()) {
+                        Text("Change theme")
+                    }
+                    
                     Button(action: {
                         showClearPrompt.toggle()
                     }) {
