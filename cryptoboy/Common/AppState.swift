@@ -9,6 +9,7 @@ import SwiftUI
 
 class AppState : ObservableObject {
     @AppStorage("isDarkMode") var isDarkMode: Bool = true
+    @AppStorage("currentTheme") var currentTheme: String = "blue"
     
     @Published var amount: Decimal = Decimal.init(string: "1")!
     
@@ -82,15 +83,14 @@ class AppState : ObservableObject {
     }
     
     func clearState() {
+        self.isDarkMode = true
+        self.currentTheme = "blue"
+        
         self.clearMessage()
-        self.visitedViews = []
-        self.bookmarks = []
         self.amount = Decimal.init(string: "1")!
         
-        // TODO
-        isDarkMode = true
-        UserDefaults.standard.set("blue", forKey: "themeName")
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "themeUpdated"), object: self)
+        self.visitedViews = []
+        self.bookmarks = []
     }
     
     func getHashOrDefault(_ type: String, _ defaultValue: String) -> String {

@@ -46,6 +46,7 @@
 		E9BC9415261125E400D8B83E /* String+Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC9414261125E400D8B83E /* String+Encoding.swift */; };
 		E9BC942A26112C9900D8B83E /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC942926112C9900D8B83E /* NavigationBar.swift */; };
 		E9ED74B12612E93300DCD4A3 /* DarkModeViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED74B02612E93300DCD4A3 /* DarkModeViewModifier.swift */; };
+		E9ED74B92612F6C200DCD4A3 /* ThemeViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED74B82612F6C200DCD4A3 /* ThemeViewModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		E9BC9414261125E400D8B83E /* String+Encoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Encoding.swift"; sourceTree = "<group>"; };
 		E9BC942926112C9900D8B83E /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		E9ED74B02612E93300DCD4A3 /* DarkModeViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeViewModifier.swift; sourceTree = "<group>"; };
+		E9ED74B82612F6C200DCD4A3 /* ThemeViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeViewModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				E9ED74B02612E93300DCD4A3 /* DarkModeViewModifier.swift */,
+				E9ED74B82612F6C200DCD4A3 /* ThemeViewModifier.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				E90853F326115F0B0001B9BE /* ROT13.swift in Sources */,
 				E9163B4F260EB31200453411 /* MainView.swift in Sources */,
 				E90853C5261149290001B9BE /* EncodingView.swift in Sources */,
+				E9ED74B92612F6C200DCD4A3 /* ThemeViewModifier.swift in Sources */,
 				E9ED74B12612E93300DCD4A3 /* DarkModeViewModifier.swift in Sources */,
 				E99F77FB26128569009BDFF1 /* EthereumUnitView.swift in Sources */,
 				E945C39C260EC96F00E732A0 /* HashingView.swift in Sources */,
