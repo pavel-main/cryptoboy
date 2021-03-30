@@ -9,7 +9,6 @@ import SwiftUI
 
 struct MainView: View {
     @EnvironmentObject var state: AppState
-    @State var currentTheme: Theme = getCurrentTheme()
     
     var body: some View {
         TabView {
@@ -30,15 +29,8 @@ struct MainView: View {
                     Label("Settings", systemImage: "gear")
                 }
         }
-        .accentColor(currentTheme.colorPrimary)
         .modifier(DarkModeViewModifier())
-        .onAppear {
-            NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "themeUpdated"), object: nil , queue: nil) { (notification) in
-                DispatchQueue.main.async {
-                    self.currentTheme = getCurrentTheme()
-                }
-            }
-        }
+        .modifier(ThemeViewModifier())
         .environmentObject(AppState())
     }
 }

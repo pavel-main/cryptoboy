@@ -9,12 +9,12 @@ import SwiftUI
 
 struct Theme: Hashable {
     var colorPrimary: Color = Color.primary
-    var name: String? = nil
+    var name: String = "system"
     var publicName: String = "System"
 }
 
 var themes: [Theme] = [
-    Theme(colorPrimary: Color.blue, name: nil, publicName: "Blue"),
+    Theme(colorPrimary: Color.blue, name: "blue", publicName: "Blue"),
     Theme(colorPrimary: Color.orange, name: "orange", publicName: "Orange"),
     Theme(colorPrimary: Color.purple, name: "purple", publicName: "Purple"),
     Theme(colorPrimary: Color.red, name: "red", publicName: "Red"),
@@ -34,9 +34,4 @@ func getTheme(themeName: String?) -> Theme {
     }
     
     return themes[0]
-}
-
-func getCurrentTheme() -> Theme {
-    let currentThemeName = UserDefaults.standard.string(forKey: "themeName")
-    return getTheme(themeName: currentThemeName)
 }

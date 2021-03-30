@@ -8,25 +8,23 @@
 import SwiftUI
 
 struct SelectThemeButton: View {
-    @Binding var currentThemeName: String?
+    @AppStorage("currentTheme") var currentTheme: String = "blue"
     var colorName: String
-    var themeName: String?
+    var themeName: String
     
     var body: some View {
         HStack {
             Button(action: {
-                UserDefaults.standard.set(self.themeName, forKey: "themeName")
-                self.currentThemeName = UserDefaults.standard.string(forKey: "themeName")
-                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "themeUpdated"), object: self)
+                self.currentTheme = self.themeName
             }) {
                 HStack {
                     Circle()
-                        .fill(getTheme(themeName: themeName).colorPrimary)
+                        .fill(getTheme(themeName: self.themeName).colorPrimary)
                         .frame(width: 25, height: 25)
                     
                     Text(self.colorName)
                     
-                    if self.currentThemeName == themeName {
+                    if self.currentTheme == self.themeName {
                         Image(systemName: "checkmark")
                     }
                 }
