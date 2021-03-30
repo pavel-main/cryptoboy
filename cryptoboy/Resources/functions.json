@@ -7,21 +7,21 @@
 				"id": "hash",
                 "title": "Hash Functions",
                 "systemImage": "number",
-                "description": "sha256, keccak256, ripemd160, ...",
+                "description": "sha256, keccak256, ripemd160, …",
 				"icons": []
 			},
             {
                 "id": "encoding",
                 "title": "Encoding Formats",
                 "systemImage": "arrow.2.squarepath",
-                "description": "hex, base58, base64, ...",
-                "icons": ["new"]
+                "description": "hex, base58, base64, rot13, …",
+                "icons": []
             },
             {
                 "id": "encryption",
                 "title": "Encryption Algorithms",
-                "systemImage": "lock",
-                "description": "aes-cbc, aes-ctr, ...",
+                "systemImage": "lock.shield",
+                "description": "aes-cbc, aes-ctr, …",
                 "icons": ["soon"]
             }
 		]
@@ -34,27 +34,27 @@
                 "id": "ecc",
                 "title": "Elliptic Curve Cryptography",
                 "systemImage": "signature",
-                "description": "secp256k1, ed25519, nist256p1, ...",
+                "description": "secp256k1, ed25519, nist256p1, …",
                 "icons": ["soon"]
             },
             {
                 "id": "hd",
                 "title": "Deterministic Wallet",
                 "systemImage": "lock.rectangle.stack",
-                "description": "BIP39, BIP44, BIP141, ...",
+                "description": "BIP39, BIP44, BIP141, …",
                 "icons": ["soon"]
             }
 		]
 	},
 	{
         "id": "coop",
-		"title": "Cooperative",
+		"title": "Exchange",
         "type": "functions",
 		"items": [
             {
                 "id": "qrcode",
                 "title": "QR Code Generation",
-                "systemImage": "qrcode",
+                "systemImage": "qrcode.viewfinder",
                 "description": "",
                 "icons": ["new"]
             },

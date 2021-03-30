@@ -7,14 +7,14 @@
                 "id": "btc-unit",
                 "title": "Unit Converter",
                 "systemImage": "dollarsign.circle",
-                "description": "BTC, mBTC, μBTC, satoshi, ...",
-                "icons": ["new"]
+                "description": "BTC, mBTC, μBTC, satoshi, …",
+                "icons": []
             },
             {
                 "id": "btc-address",
                 "title": "Address Derivation",
-                "systemImage": "signpost.left",
-                "description": "p2pkh, p2sh, bech32, ...",
+                "systemImage": "mail.and.text.magnifyingglass",
+                "description": "p2pkh, p2sh, bech32, …",
                 "icons": ["soon"]
             },
             {
@@ -28,7 +28,7 @@
                 "id": "btc-tx-fee",
                 "title": "Transaction Fee Estimation",
                 "systemImage": "percent",
-                "description": "p2pkh, p2sh, p2wpkh, ...",
+                "description": "p2pkh, p2sh, p2wpkh, …",
                 "icons": ["soon"]
             }
         ]
@@ -41,8 +41,8 @@
                 "id": "eth-unit",
                 "title": "Unit Converter",
                 "systemImage": "eurosign.circle",
-                "description": "ether, finney, szabo, gwei, wei, ...",
-                "icons": ["new"]
+                "description": "ether, finney, szabo, gwei, wei, …",
+                "icons": []
             },
             {
                 "id": "eth-rlp",
