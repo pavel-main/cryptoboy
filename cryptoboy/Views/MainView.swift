@@ -31,6 +31,7 @@ struct MainView: View {
                 }
         }
         .accentColor(currentTheme.colorPrimary)
+        .modifier(DarkModeViewModifier())
         .onAppear {
             NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "themeUpdated"), object: nil , queue: nil) { (notification) in
                 DispatchQueue.main.async {

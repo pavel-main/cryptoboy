@@ -32,6 +32,7 @@ func getTheme(themeName: String?) -> Theme {
             }
         }
     }
+    
     return themes[0]
 }
 
