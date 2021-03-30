@@ -77,7 +77,8 @@ struct SettingsView: View {
                             Image(systemName: "trash")
                             Text("Clear Application State")
                             Spacer()
-                        }.foregroundColor(.red)
+                        }
+                        .foregroundColor(.red)
                     }
                 }
                 .alert(isPresented: $showClearPrompt) {
