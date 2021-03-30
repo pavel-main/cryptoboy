@@ -167,6 +167,7 @@
 		E90853F126115EF90001B9BE /* Crypto */ = {
 			isa = PBXGroup;
 			children = (
+				E99F77EA26127939009BDFF1 /* CryptoFormatter.swift */,
 				E90853F226115F0B0001B9BE /* ROT13.swift */,
 			);
 			path = Crypto;
@@ -269,7 +270,6 @@
 			isa = PBXGroup;
 			children = (
 				E96A4AA9260FFD74009EA367 /* AppState.swift */,
-				E99F77EA26127939009BDFF1 /* CryptoFormatter.swift */,
 				E9163B36260EAAD200453411 /* Menu.swift */,
 				E95432082612B29B001918F3 /* Theme.swift */,
 			);
