@@ -55,6 +55,9 @@ struct NavigationRow : View {
         case "encoding":
             return AnyView(EncodingView())
             
+        case "qrcode":
+            return AnyView(QRCodeView())
+            
         case "btc-unit":
             return AnyView(BitcoinUnitView())
             
