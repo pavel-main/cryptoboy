@@ -11,10 +11,10 @@ struct HashingItemView: View {
     @EnvironmentObject var state: AppState
     @State private var showCopyAlert = false
 
-    var type: String
+    var type: HashFunction
     var title: String
     
-    init(_ type: String, _ title: String) {
+    init(_ type: HashFunction, _ title: String) {
         self.type = type
         self.title = title
     }
@@ -45,6 +45,6 @@ struct HashingItemView: View {
 
 struct HashFunctionView_Previews: PreviewProvider {
     static var previews: some View {
-        HashingItemView("sha256", "SHA-256")
+        HashingItemView(.sha256, "SHA-256")
     }
 }

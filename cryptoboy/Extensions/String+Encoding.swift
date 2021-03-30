@@ -28,25 +28,22 @@ extension String {
         return result
     }
     
-    func encode(_ type: String) -> String {
+    func encode(_ type: EncodingFormat) -> String {
         switch type {
-        case "bin":
+        case .bin:
             return self.bin()
         
-        case "hex":
+        case .hex:
             return self.hex()
             
-        case "base58":
+        case .base58:
             return Base58.encode(data: Data(self.utf8))
 
-        case "base64":
+        case .base64:
             return Data(self.utf8).base64EncodedString()
             
-        case "rot13":
+        case .rot13:
             return ROT13.string(self)
-
-        default:
-            return "Invalid hash function \(type)"
         }
     }
 }
