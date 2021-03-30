@@ -22,7 +22,7 @@
 		E9163B38260EAAD200453411 /* Bundle+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B34260EAAD200453411 /* Bundle+JSON.swift */; };
 		E9163B3A260EAAD200453411 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B36260EAAD200453411 /* Menu.swift */; };
 		E9163B40260EACA900453411 /* NavigationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B3F260EACA900453411 /* NavigationRow.swift */; };
-		E9163B45260EAEA200453411 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B44260EAEA200453411 /* ItemDetail.swift */; };
+		E9163B45260EAEA200453411 /* ComingSoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B44260EAEA200453411 /* ComingSoonView.swift */; };
 		E9163B4F260EB31200453411 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B4E260EB31200453411 /* MainView.swift */; };
 		E937D404260ECB8A00A75B06 /* String+Hashing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E937D403260ECB8A00A75B06 /* String+Hashing.swift */; };
 		E945C397260EC96900E732A0 /* CryptoBoyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E945C396260EC96900E732A0 /* CryptoBoyApp.swift */; };
@@ -49,6 +49,8 @@
 		E9ED74B92612F6C200DCD4A3 /* ThemeViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED74B82612F6C200DCD4A3 /* ThemeViewModifier.swift */; };
 		E9ED74C12612F8F500DCD4A3 /* HashFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED74C02612F8F500DCD4A3 /* HashFunction.swift */; };
 		E9ED74C62612FAAE00DCD4A3 /* EncodingFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED74C52612FAAE00DCD4A3 /* EncodingFormat.swift */; };
+		E9ED74CE2612FCC900DCD4A3 /* NavigationViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED74CD2612FCC900DCD4A3 /* NavigationViewModifier.swift */; };
+		E9ED74D9261301B300DCD4A3 /* PageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED74D8261301B300DCD4A3 /* PageType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +94,7 @@
 		E9163B34260EAAD200453411 /* Bundle+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+JSON.swift"; sourceTree = "<group>"; };
 		E9163B36260EAAD200453411 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		E9163B3F260EACA900453411 /* NavigationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRow.swift; sourceTree = "<group>"; };
-		E9163B44260EAEA200453411 /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
+		E9163B44260EAEA200453411 /* ComingSoonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonView.swift; sourceTree = "<group>"; };
 		E9163B4E260EB31200453411 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		E937D403260ECB8A00A75B06 /* String+Hashing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Hashing.swift"; sourceTree = "<group>"; };
 		E945C396260EC96900E732A0 /* CryptoBoyApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoBoyApp.swift; sourceTree = "<group>"; };
@@ -119,6 +121,8 @@
 		E9ED74B82612F6C200DCD4A3 /* ThemeViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeViewModifier.swift; sourceTree = "<group>"; };
 		E9ED74C02612F8F500DCD4A3 /* HashFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashFunction.swift; sourceTree = "<group>"; };
 		E9ED74C52612FAAE00DCD4A3 /* EncodingFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodingFormat.swift; sourceTree = "<group>"; };
+		E9ED74CD2612FCC900DCD4A3 /* NavigationViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewModifier.swift; sourceTree = "<group>"; };
+		E9ED74D8261301B300DCD4A3 /* PageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,6 +289,7 @@
 				E96A4AA9260FFD74009EA367 /* AppState.swift */,
 				E9163B36260EAAD200453411 /* Menu.swift */,
 				E95432082612B29B001918F3 /* Theme.swift */,
+				E9ED74D8261301B300DCD4A3 /* PageType.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -310,8 +315,8 @@
 		E96A4A76260FDCDC009EA367 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E96A4A7A260FDD62009EA367 /* functions.json */,
 				E96A4A7F260FDD6E009EA367 /* currencies.json */,
+				E96A4A7A260FDD62009EA367 /* functions.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -328,11 +333,11 @@
 		E9D14B69260FDB81000B191B /* Functions */ = {
 			isa = PBXGroup;
 			children = (
-				E9163B44260EAEA200453411 /* ItemDetail.swift */,
-				E945C39B260EC96F00E732A0 /* HashingView.swift */,
-				E96A4AB1260FFF0D009EA367 /* HashingItemView.swift */,
+				E9163B44260EAEA200453411 /* ComingSoonView.swift */,
 				E90853C4261149290001B9BE /* EncodingView.swift */,
 				E90853BF261148F30001B9BE /* EncodingItemView.swift */,
+				E945C39B260EC96F00E732A0 /* HashingView.swift */,
+				E96A4AB1260FFF0D009EA367 /* HashingItemView.swift */,
 				E954321C2612B701001918F3 /* QRCodeView.swift */,
 			);
 			path = Functions;
@@ -343,6 +348,7 @@
 			children = (
 				E9ED74B02612E93300DCD4A3 /* DarkModeViewModifier.swift */,
 				E9ED74B82612F6C200DCD4A3 /* ThemeViewModifier.swift */,
+				E9ED74CD2612FCC900DCD4A3 /* NavigationViewModifier.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -507,8 +513,9 @@
 				E90853D9261157D50001B9BE /* AboutSystemItem.swift in Sources */,
 				E9ED74C12612F8F500DCD4A3 /* HashFunction.swift in Sources */,
 				E96A4A8F260FE2DF009EA367 /* SettingsView.swift in Sources */,
-				E9163B45260EAEA200453411 /* ItemDetail.swift in Sources */,
+				E9163B45260EAEA200453411 /* ComingSoonView.swift in Sources */,
 				E90853F326115F0B0001B9BE /* ROT13.swift in Sources */,
+				E9ED74CE2612FCC900DCD4A3 /* NavigationViewModifier.swift in Sources */,
 				E9163B4F260EB31200453411 /* MainView.swift in Sources */,
 				E90853C5261149290001B9BE /* EncodingView.swift in Sources */,
 				E9ED74B92612F6C200DCD4A3 /* ThemeViewModifier.swift in Sources */,
@@ -527,6 +534,7 @@
 				E99F77EB26127939009BDFF1 /* CryptoFormatter.swift in Sources */,
 				E937D404260ECB8A00A75B06 /* String+Hashing.swift in Sources */,
 				E96A4A85260FE062009EA367 /* CurrenciesView.swift in Sources */,
+				E9ED74D9261301B300DCD4A3 /* PageType.swift in Sources */,
 				E9BC9415261125E400D8B83E /* String+Encoding.swift in Sources */,
 				E96A4AB2260FFF0D009EA367 /* HashingItemView.swift in Sources */,
 				E9163B40260EACA900453411 /* NavigationRow.swift in Sources */,

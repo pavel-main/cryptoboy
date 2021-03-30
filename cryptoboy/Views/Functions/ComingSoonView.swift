@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ItemDetail: View {
+struct ComingSoonView: View {
     @EnvironmentObject var state: AppState
     
     let item: MenuItem
@@ -15,14 +15,7 @@ struct ItemDetail: View {
     var body: some View {
         Text("\(self.item.title) is coming soon!")
             .padding()
-            .navigationTitle(self.item.title)
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                NavigationBar(self.item.id)
-            }
-            .onAppear {
-                state.visitView(item.id)
-            }
+            .modifier(NavigationViewModifier(page: .unknown))
             .environmentObject(state)
     }
 }
@@ -30,7 +23,7 @@ struct ItemDetail: View {
 struct ItemDetail_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            ItemDetail(item: MenuItem.example)
+            ComingSoonView(item: MenuItem.example)
                 .environmentObject(AppState())
         }
     }

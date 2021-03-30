@@ -44,14 +44,7 @@ struct QRCodeView: View {
             }
 
         }
-        .navigationBarTitle("QR code")
-        .navigationBarTitleDisplayMode(.inline)
-        .onAppear {
-            state.visitView("qrcode")
-        }
-        .toolbar {
-            NavigationBar("qrcode")
-        }
+        .modifier(NavigationViewModifier(page: .qrcode))
         .environmentObject(state)
     }
     

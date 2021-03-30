@@ -26,22 +26,25 @@ struct HashingView: View {
                 }
             }
             
-            HashingItemView(.sha1, "SHA-1")
-            HashingItemView(.sha256, "SHA-256")
-            HashingItemView(.sha512, "SHA-512")
-            HashingItemView(.keccak256, "Keccak256")
-            HashingItemView(.keccak512, "Keccak512")
-            HashingItemView(.ripemd160, "RIPEMD-160")
-            HashingItemView(.blake256, "BLAKE-256")
-            HashingItemView(.groestl512, "Grøstl-512")
+            Group {
+                HashingItemView(.sha1)
+                HashingItemView(.sha256)
+                HashingItemView(.sha512)
+                HashingItemView(.keccak256)
+                HashingItemView(.keccak512)
+                HashingItemView(.ripemd160)
+                HashingItemView(.blake256)
+                HashingItemView(.groestl512)
+            }
+            
+            Group {
+                HashingItemView(.sha256ripedm160)
+                HashingItemView(.sha256sha256)
+                HashingItemView(.blake256ripedm160)
+                HashingItemView(.blake256blake256)
+                HashingItemView(.groestl512groestl512)
+            }
         }
-        .navigationTitle("Hash Functions")
-        .navigationBarTitleDisplayMode(.inline)
-        .onAppear {
-            state.visitView("hash")
-        }
-        .toolbar {
-            NavigationBar("hash")
-        }
+        .modifier(NavigationViewModifier(page: .hash))
     }
 }

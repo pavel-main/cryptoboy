@@ -57,14 +57,7 @@ struct BitcoinUnitView: View {
                 .keyboardType(.decimalPad)
             }
         }
-        .navigationTitle("Bitcoin Unit Converter")
-        .navigationBarTitleDisplayMode(.inline)
-        .onAppear {
-            state.visitView("btc-unit")
-        }
-        .toolbar {
-            NavigationBar("btc-unit")
-        }
+        .modifier(NavigationViewModifier(page: .btc_unit))
         .environmentObject(state)
     }
 }

@@ -4,31 +4,31 @@
         "title": "Bitcoin",
         "items": [
             {
-                "id": "btc-unit",
+                "id": "btc_unit",
                 "title": "Unit Converter",
                 "systemImage": "dollarsign.circle",
                 "description": "BTC, mBTC, μBTC, satoshi, …",
                 "icons": []
             },
             {
-                "id": "btc-address",
+                "id": "btc_address",
                 "title": "Address Derivation",
                 "systemImage": "mail.and.text.magnifyingglass",
                 "description": "p2pkh, p2sh, bech32, …",
                 "icons": ["soon"]
             },
             {
-                "id": "btc-pubkey-compress",
+                "id": "btc_pubkey_compress",
                 "title": "Public Key Compression",
                 "systemImage": "archivebox",
                 "description": "",
                 "icons": ["soon"]
             },
             {
-                "id": "btc-tx-fee",
+                "id": "btc_tx_fee",
                 "title": "Transaction Fee Estimation",
                 "systemImage": "percent",
-                "description": "p2pkh, p2sh, p2wpkh, …",
+                "description": "legacy, segwit, …",
                 "icons": ["soon"]
             }
         ]
@@ -38,14 +38,14 @@
         "title": "Ethereum",
         "items": [
             {
-                "id": "eth-unit",
+                "id": "eth_unit",
                 "title": "Unit Converter",
                 "systemImage": "eurosign.circle",
                 "description": "ether, finney, szabo, gwei, wei, …",
                 "icons": []
             },
             {
-                "id": "eth-rlp",
+                "id": "eth_rlp",
                 "title": "RLP Encoding",
                 "systemImage": "arrow.triangle.capsulepath",
                 "description": "",
@@ -58,7 +58,7 @@
         "title": "Bitcoin Cash",
         "items": [
             {
-                "id": "bch-cashaddr",
+                "id": "bch_cashaddr",
                 "title": "CashAddr Converter",
                 "systemImage": "banknote",
                 "description": "",

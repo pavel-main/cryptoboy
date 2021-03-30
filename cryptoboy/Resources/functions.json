@@ -5,21 +5,21 @@
 		"items": [
 			{
 				"id": "hash",
-                "title": "Hash Functions",
+                "title": "Hashing",
                 "systemImage": "number",
                 "description": "sha256, keccak256, ripemd160, …",
 				"icons": []
 			},
             {
                 "id": "encoding",
-                "title": "Encoding Formats",
+                "title": "Encoding",
                 "systemImage": "arrow.2.squarepath",
                 "description": "hex, base58, base64, rot13, …",
                 "icons": []
             },
             {
                 "id": "encryption",
-                "title": "Encryption Algorithms",
+                "title": "Encryption",
                 "systemImage": "lock.shield",
                 "description": "aes-cbc, aes-ctr, …",
                 "icons": ["soon"]
@@ -32,14 +32,14 @@
 		"items": [
             {
                 "id": "ecc",
-                "title": "Elliptic Curve Cryptography",
+                "title": "Elliptic Curves",
                 "systemImage": "signature",
                 "description": "secp256k1, ed25519, nist256p1, …",
                 "icons": ["soon"]
             },
             {
                 "id": "hd",
-                "title": "Deterministic Wallet",
+                "title": "HD Wallet",
                 "systemImage": "lock.rectangle.stack",
                 "description": "BIP39, BIP44, BIP141, …",
                 "icons": ["soon"]
@@ -53,7 +53,7 @@
 		"items": [
             {
                 "id": "qrcode",
-                "title": "QR Code Generation",
+                "title": "QR Code Generator",
                 "systemImage": "qrcode.viewfinder",
                 "description": "",
                 "icons": ["new"]

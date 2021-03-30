@@ -26,19 +26,12 @@ struct EncodingView: View {
                 }
             }
             
-            EncodingItemView(.hex, "Hexadecimal")
-            EncodingItemView(.base58, "Base58")
-            EncodingItemView(.base64, "Base64")
-            EncodingItemView(.rot13, "ROT13")
-            EncodingItemView(.bin, "Binary")
+            EncodingItemView(.hex)
+            EncodingItemView(.base58)
+            EncodingItemView(.base64)
+            EncodingItemView(.rot13)
+            EncodingItemView(.bin)
         }
-        .navigationTitle("Encoding Formats")
-        .navigationBarTitleDisplayMode(.inline)
-        .onAppear {
-            state.visitView("encoding")
-        }
-        .toolbar {
-            NavigationBar("encoding")
-        }
+        .modifier(NavigationViewModifier(page: .encoding))
     }
 }

@@ -93,17 +93,17 @@ class AppState : ObservableObject {
         self.bookmarks = []
     }
     
-    func getHashOrDefault(_ type: HashFunction, _ defaultValue: String) -> String {
+    func getHashOrDefault(_ type: HashFunction) -> String {
         if (self.isDefaultMessage()) {
-            return defaultValue
+            return type.title
         }
         
         return message.hash(type)
     }
     
-    func encodeOrDefault(_ type: EncodingFormat, _ defaultValue: String) -> String {
+    func encodeOrDefault(_ type: EncodingFormat) -> String {
         if (self.isDefaultMessage()) {
-            return defaultValue
+            return type.title
         }
         
         return message.encode(type)
