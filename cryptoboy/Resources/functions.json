@@ -40,7 +40,7 @@
             {
                 "id": "hd",
                 "title": "Deterministic Wallet",
-                "systemImage": "wallet.pass",
+                "systemImage": "lock.rectangle.stack",
                 "description": "BIP39, BIP44, BIP141, ...",
                 "icons": ["soon"]
             }
