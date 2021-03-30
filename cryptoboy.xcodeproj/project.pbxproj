@@ -28,14 +28,14 @@
 		E945C397260EC96900E732A0 /* CryptoBoyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E945C396260EC96900E732A0 /* CryptoBoyApp.swift */; };
 		E945C39C260EC96F00E732A0 /* HashingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E945C39B260EC96F00E732A0 /* HashingView.swift */; };
 		E95432092612B29B001918F3 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95432082612B29B001918F3 /* Theme.swift */; };
-		E954320F2612B389001918F3 /* ChangeThemeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954320E2612B389001918F3 /* ChangeThemeButton.swift */; };
+		E954320F2612B389001918F3 /* SelectThemeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954320E2612B389001918F3 /* SelectThemeButton.swift */; };
 		E95432142612B3A8001918F3 /* SelectThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95432132612B3A8001918F3 /* SelectThemeView.swift */; };
 		E954321D2612B701001918F3 /* QRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954321C2612B701001918F3 /* QRCodeView.swift */; };
 		E96A4A7B260FDD62009EA367 /* functions.json in Resources */ = {isa = PBXBuildFile; fileRef = E96A4A7A260FDD62009EA367 /* functions.json */; };
 		E96A4A80260FDD6E009EA367 /* currencies.json in Resources */ = {isa = PBXBuildFile; fileRef = E96A4A7F260FDD6E009EA367 /* currencies.json */; };
 		E96A4A85260FE062009EA367 /* CurrenciesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A4A84260FE062009EA367 /* CurrenciesView.swift */; };
 		E96A4A8E260FE2DF009EA367 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A4A8C260FE2DF009EA367 /* FavoritesView.swift */; };
-		E96A4A8F260FE2DF009EA367 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A4A8D260FE2DF009EA367 /* AboutView.swift */; };
+		E96A4A8F260FE2DF009EA367 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A4A8D260FE2DF009EA367 /* SettingsView.swift */; };
 		E96A4AAA260FFD74009EA367 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A4AA9260FFD74009EA367 /* AppState.swift */; };
 		E96A4AB2260FFF0D009EA367 /* HashingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A4AB1260FFF0D009EA367 /* HashingItemView.swift */; };
 		E99F77B3261240DB009BDFF1 /* Array+RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F77B2261240DB009BDFF1 /* Array+RawRepresentable.swift */; };
@@ -94,14 +94,14 @@
 		E945C396260EC96900E732A0 /* CryptoBoyApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoBoyApp.swift; sourceTree = "<group>"; };
 		E945C39B260EC96F00E732A0 /* HashingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashingView.swift; sourceTree = "<group>"; };
 		E95432082612B29B001918F3 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		E954320E2612B389001918F3 /* ChangeThemeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeThemeButton.swift; sourceTree = "<group>"; };
+		E954320E2612B389001918F3 /* SelectThemeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectThemeButton.swift; sourceTree = "<group>"; };
 		E95432132612B3A8001918F3 /* SelectThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectThemeView.swift; sourceTree = "<group>"; };
 		E954321C2612B701001918F3 /* QRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeView.swift; sourceTree = "<group>"; };
 		E96A4A7A260FDD62009EA367 /* functions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = functions.json; sourceTree = "<group>"; };
 		E96A4A7F260FDD6E009EA367 /* currencies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = currencies.json; sourceTree = "<group>"; };
 		E96A4A84260FE062009EA367 /* CurrenciesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrenciesView.swift; sourceTree = "<group>"; };
 		E96A4A8C260FE2DF009EA367 /* FavoritesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
-		E96A4A8D260FE2DF009EA367 /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		E96A4A8D260FE2DF009EA367 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		E96A4AA9260FFD74009EA367 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		E96A4AB1260FFF0D009EA367 /* HashingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashingItemView.swift; sourceTree = "<group>"; };
 		E99F77B2261240DB009BDFF1 /* Array+RawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+RawRepresentable.swift"; sourceTree = "<group>"; };
@@ -263,7 +263,7 @@
 				E9163AFF260EA4BA00453411 /* FunctionsView.swift */,
 				E96A4A84260FE062009EA367 /* CurrenciesView.swift */,
 				E96A4A8C260FE2DF009EA367 /* FavoritesView.swift */,
-				E96A4A8D260FE2DF009EA367 /* AboutView.swift */,
+				E96A4A8D260FE2DF009EA367 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -281,7 +281,7 @@
 		E954320D2612B358001918F3 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
-				E954320E2612B389001918F3 /* ChangeThemeButton.swift */,
+				E954320E2612B389001918F3 /* SelectThemeButton.swift */,
 				E95432132612B3A8001918F3 /* SelectThemeView.swift */,
 			);
 			path = Theme;
@@ -485,7 +485,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E90853D9261157D50001B9BE /* AboutSystemItem.swift in Sources */,
-				E96A4A8F260FE2DF009EA367 /* AboutView.swift in Sources */,
+				E96A4A8F260FE2DF009EA367 /* SettingsView.swift in Sources */,
 				E9163B45260EAEA200453411 /* ItemDetail.swift in Sources */,
 				E90853F326115F0B0001B9BE /* ROT13.swift in Sources */,
 				E9163B4F260EB31200453411 /* MainView.swift in Sources */,
@@ -512,7 +512,7 @@
 				E9163B3A260EAAD200453411 /* Menu.swift in Sources */,
 				E9BC942A26112C9900D8B83E /* NavigationBar.swift in Sources */,
 				E90853DE261158700001B9BE /* AboutLinkItem.swift in Sources */,
-				E954320F2612B389001918F3 /* ChangeThemeButton.swift in Sources */,
+				E954320F2612B389001918F3 /* SelectThemeButton.swift in Sources */,
 				E90853C0261148F30001B9BE /* EncodingItemView.swift in Sources */,
 				E99F77B3261240DB009BDFF1 /* Array+RawRepresentable.swift in Sources */,
 			);

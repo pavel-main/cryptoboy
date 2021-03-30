@@ -25,9 +25,9 @@ struct MainView: View {
                 .tabItem {
                     Label("Favorites", systemImage: "list.star")
                 }
-            AboutView()
+            SettingsView()
                 .tabItem {
-                    Label("About", systemImage: "info.circle")
+                    Label("Settings", systemImage: "gear")
                 }
         }
         .accentColor(currentTheme.colorPrimary)

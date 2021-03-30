@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AboutView: View {
+struct SettingsView: View {
     @EnvironmentObject var state: AppState
     @State private var showClearPrompt = false
     @State private var showClearAlert = false
@@ -62,7 +62,7 @@ struct AboutView: View {
                 // Actions
                 Section(header: Text("Actions")) {
                     NavigationLink(destination: SelectThemeView()) {
-                        Text("Change theme")
+                        Label("Select theme", systemImage: "paintbrush")
                     }
                     
                     Button(action: {
@@ -105,7 +105,7 @@ struct AboutView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        AboutView()
+        SettingsView()
             .environmentObject(AppState())
     }
 }
