@@ -16,7 +16,8 @@ struct SelectThemeView: View {
                 SelectThemeButton(currentThemeName: self.$currentThemeName, colorName: theme.publicName, themeName: theme.name)
             }
         }
-        .navigationBarTitle("Select Theme").onAppear {
+        .navigationBarTitle("Select Theme")
+        .onAppear {
             self.currentThemeName = UserDefaults.standard.string(forKey: "themeName")
         }
     }
