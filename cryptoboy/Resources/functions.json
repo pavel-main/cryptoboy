@@ -56,7 +56,7 @@
                 "title": "QR Code Generation",
                 "systemImage": "qrcode",
                 "description": "",
-                "icons": ["soon"]
+                "icons": ["new"]
             },
             {
                 "id": "shamir",
