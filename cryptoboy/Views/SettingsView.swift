@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SettingsView: View {
     @EnvironmentObject var state: AppState
+    @AppStorage("isDarkMode") var isDarkMode: Bool = true
     @State private var showClearPrompt = false
     
     var appVersion: String {
@@ -60,8 +61,12 @@ struct SettingsView: View {
                 
                 // Actions
                 Section(header: Text("Actions")) {
+                    Toggle(isOn: $isDarkMode) {
+                        Label("Dark Mode", systemImage: "moon.stars")
+                    }
+                    
                     NavigationLink(destination: SelectThemeView()) {
-                        Label("Select Theme", systemImage: "paintbrush")
+                        Label("Color Theme", systemImage: "paintbrush")
                     }
                     
                     Button(action: {
