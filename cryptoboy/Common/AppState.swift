@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-class AppState : ObservableObject {    
+class AppState : ObservableObject {
+    @AppStorage("isDarkMode") var isDarkMode: Bool = true
+    
     @Published var amount: Decimal = Decimal.init(string: "1")!
     
     @AppStorage("hasMessageChanged") var hasMessageChanged: Bool = false {
@@ -84,6 +86,11 @@ class AppState : ObservableObject {
         self.visitedViews = []
         self.bookmarks = []
         self.amount = Decimal.init(string: "1")!
+        
+        // TODO
+        isDarkMode = true
+        UserDefaults.standard.set("blue", forKey: "themeName")
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "themeUpdated"), object: self)
     }
     
     func getHashOrDefault(_ type: String, _ defaultValue: String) -> String {
