@@ -13,14 +13,28 @@
             {
                 "id": "encoding",
                 "title": "Encoding",
-                "systemImage": "arrow.2.squarepath",
+                "systemImage": "arrow.clockwise",
                 "description": "hex, base58, base64, rot13, …",
                 "icons": []
+            },
+            {
+                "id": "decoding",
+                "title": "Decoding",
+                "systemImage": "arrow.counterclockwise",
+                "description": "hex, base58, base64, rot13, …",
+                "icons": ["soon"]
             },
             {
                 "id": "encryption",
                 "title": "Encryption",
                 "systemImage": "lock.shield",
+                "description": "aes-cbc, aes-ctr, …",
+                "icons": ["soon"]
+            },
+            {
+                "id": "decryption",
+                "title": "Decryption",
+                "systemImage": "key",
                 "description": "aes-cbc, aes-ctr, …",
                 "icons": ["soon"]
             }
