@@ -334,10 +334,10 @@
 			isa = PBXGroup;
 			children = (
 				E9163B44260EAEA200453411 /* ComingSoonView.swift */,
-				E90853C4261149290001B9BE /* EncodingView.swift */,
 				E90853BF261148F30001B9BE /* EncodingItemView.swift */,
-				E945C39B260EC96F00E732A0 /* HashingView.swift */,
+				E90853C4261149290001B9BE /* EncodingView.swift */,
 				E96A4AB1260FFF0D009EA367 /* HashingItemView.swift */,
+				E945C39B260EC96F00E732A0 /* HashingView.swift */,
 				E954321C2612B701001918F3 /* QRCodeView.swift */,
 			);
 			path = Functions;
@@ -347,8 +347,8 @@
 			isa = PBXGroup;
 			children = (
 				E9ED74B02612E93300DCD4A3 /* DarkModeViewModifier.swift */,
-				E9ED74B82612F6C200DCD4A3 /* ThemeViewModifier.swift */,
 				E9ED74CD2612FCC900DCD4A3 /* NavigationViewModifier.swift */,
+				E9ED74B82612F6C200DCD4A3 /* ThemeViewModifier.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
