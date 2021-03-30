@@ -26,7 +26,7 @@ struct MainView: View {
                 }
             SettingsView()
                 .tabItem {
-                    Label("Settings", systemImage: "gear")
+                    Label("Settings", systemImage: "wrench.and.screwdriver")
                 }
         }
         .modifier(DarkModeViewModifier())
