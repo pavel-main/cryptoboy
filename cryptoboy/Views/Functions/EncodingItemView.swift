@@ -11,10 +11,10 @@ struct EncodingItemView: View {
     @EnvironmentObject var state: AppState
     @State private var showCopyAlert = false
 
-    var type: String
+    var type: EncodingFormat
     var title: String
     
-    init(_ type: String, _ title: String) {
+    init(_ type: EncodingFormat, _ title: String) {
         self.type = type
         self.title = title
     }
@@ -45,7 +45,7 @@ struct EncodingItemView: View {
 
 struct EncodingItemView_Previews: PreviewProvider {
     static var previews: some View {
-        EncodingItemView("hex", "Hexadecimal")
+        EncodingItemView(.hex, "Hexadecimal")
     }
 }
 

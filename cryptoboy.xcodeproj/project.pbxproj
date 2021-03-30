@@ -47,6 +47,8 @@
 		E9BC942A26112C9900D8B83E /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC942926112C9900D8B83E /* NavigationBar.swift */; };
 		E9ED74B12612E93300DCD4A3 /* DarkModeViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED74B02612E93300DCD4A3 /* DarkModeViewModifier.swift */; };
 		E9ED74B92612F6C200DCD4A3 /* ThemeViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED74B82612F6C200DCD4A3 /* ThemeViewModifier.swift */; };
+		E9ED74C12612F8F500DCD4A3 /* HashFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED74C02612F8F500DCD4A3 /* HashFunction.swift */; };
+		E9ED74C62612FAAE00DCD4A3 /* EncodingFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED74C52612FAAE00DCD4A3 /* EncodingFormat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +117,8 @@
 		E9BC942926112C9900D8B83E /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		E9ED74B02612E93300DCD4A3 /* DarkModeViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeViewModifier.swift; sourceTree = "<group>"; };
 		E9ED74B82612F6C200DCD4A3 /* ThemeViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeViewModifier.swift; sourceTree = "<group>"; };
+		E9ED74C02612F8F500DCD4A3 /* HashFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashFunction.swift; sourceTree = "<group>"; };
+		E9ED74C52612FAAE00DCD4A3 /* EncodingFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodingFormat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				E99F77EA26127939009BDFF1 /* CryptoFormatter.swift */,
+				E9ED74C52612FAAE00DCD4A3 /* EncodingFormat.swift */,
+				E9ED74C02612F8F500DCD4A3 /* HashFunction.swift */,
 				E90853F226115F0B0001B9BE /* ROT13.swift */,
 			);
 			path = Crypto;
@@ -499,6 +505,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E90853D9261157D50001B9BE /* AboutSystemItem.swift in Sources */,
+				E9ED74C12612F8F500DCD4A3 /* HashFunction.swift in Sources */,
 				E96A4A8F260FE2DF009EA367 /* SettingsView.swift in Sources */,
 				E9163B45260EAEA200453411 /* ItemDetail.swift in Sources */,
 				E90853F326115F0B0001B9BE /* ROT13.swift in Sources */,
@@ -531,6 +538,7 @@
 				E954320F2612B389001918F3 /* SelectThemeButton.swift in Sources */,
 				E90853C0261148F30001B9BE /* EncodingItemView.swift in Sources */,
 				E99F77B3261240DB009BDFF1 /* Array+RawRepresentable.swift in Sources */,
+				E9ED74C62612FAAE00DCD4A3 /* EncodingFormat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -26,14 +26,14 @@ struct HashingView: View {
                 }
             }
             
-            HashingItemView("sha1", "SHA-1")
-            HashingItemView("sha256", "SHA-256")
-            HashingItemView("sha512", "SHA-512")
-            HashingItemView("keccak256", "Keccak256")
-            HashingItemView("keccak512", "Keccak512")
-            HashingItemView("ripemd160", "RIPEMD-160")
-            HashingItemView("blake256", "BLAKE-256")
-            HashingItemView("groestl512", "Grøstl-512")
+            HashingItemView(.sha1, "SHA-1")
+            HashingItemView(.sha256, "SHA-256")
+            HashingItemView(.sha512, "SHA-512")
+            HashingItemView(.keccak256, "Keccak256")
+            HashingItemView(.keccak512, "Keccak512")
+            HashingItemView(.ripemd160, "RIPEMD-160")
+            HashingItemView(.blake256, "BLAKE-256")
+            HashingItemView(.groestl512, "Grøstl-512")
         }
         .navigationTitle("Hash Functions")
         .navigationBarTitleDisplayMode(.inline)
