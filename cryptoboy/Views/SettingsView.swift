@@ -10,7 +10,6 @@ import SwiftUI
 struct SettingsView: View {
     @EnvironmentObject var state: AppState
     @State private var showClearPrompt = false
-    @State private var showClearAlert = false
     
     var appVersion: String {
         if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
@@ -62,7 +61,7 @@ struct SettingsView: View {
                 // Actions
                 Section(header: Text("Actions")) {
                     NavigationLink(destination: SelectThemeView()) {
-                        Label("Select theme", systemImage: "paintbrush")
+                        Label("Select Theme", systemImage: "paintbrush")
                     }
                     
                     Button(action: {
@@ -78,22 +77,14 @@ struct SettingsView: View {
                 }
                 .alert(isPresented: $showClearPrompt) {
                     Alert(
-                        title: Text("Reset Application State"),
+                        title: Text("Clear Application State"),
                         message: Text("Are you sure?"),
-                        primaryButton: .destructive(Text("Clear")) {
+                        primaryButton: .destructive(Text("Reset")) {
                             state.clearState()
-                            showClearAlert.toggle()
                         },
                         secondaryButton: .cancel()
                     )
                 }
-            }
-            .alert(isPresented: $showClearAlert) {
-                Alert(
-                    title: Text("Reset Successful"),
-                    message: Text("Application state was cleared"),
-                    dismissButton: .default(Text("OK"))
-                )
             }
             .listStyle(GroupedListStyle())
             .navigationTitle("Settings")
