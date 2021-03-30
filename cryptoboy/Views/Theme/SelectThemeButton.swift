@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SelectThemeButton: View {
+    @EnvironmentObject var state: AppState
     @AppStorage("currentTheme") var currentTheme: String = "blue"
     var colorName: String
     var themeName: String
@@ -19,7 +20,8 @@ struct SelectThemeButton: View {
             }) {
                 HStack {
                     Circle()
-                        .fill(getTheme(themeName: self.themeName).colorPrimary)
+                        .strokeBorder(state.invertedColor(), lineWidth: 1)
+                        .background(Circle().foregroundColor(getTheme(themeName: self.themeName).colorPrimary))
                         .frame(width: 25, height: 25)
                     
                     Text(self.colorName)
@@ -30,5 +32,6 @@ struct SelectThemeButton: View {
                 }
             }
         }
+        .environmentObject(state)
     }
 }

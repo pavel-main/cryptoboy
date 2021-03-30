@@ -93,6 +93,13 @@ class AppState : ObservableObject {
         self.bookmarks = []
     }
     
+    func invertedColor() -> Color {
+        if (isDarkMode) {
+            return Color.white
+        }
+        return Color.black
+    }
+    
     func getHashOrDefault(_ type: HashFunction) -> String {
         if (self.isDefaultMessage()) {
             return type.title

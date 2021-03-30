@@ -37,7 +37,7 @@ struct NavigationRow : View {
                             .textCase(.uppercase)
                             .font(.caption)
                             .padding(5)
-                            .background(colors[icon, default: .white])
+                            .background(colors[icon, default: state.invertedColor()])
                             .clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
                             .foregroundColor(.white)
                     }
