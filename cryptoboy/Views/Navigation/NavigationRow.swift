@@ -58,10 +58,10 @@ struct NavigationRow : View {
         case "qrcode":
             return AnyView(QRCodeView())
             
-        case "btc-unit":
+        case "btc_unit":
             return AnyView(BitcoinUnitView())
             
-        case "eth-unit":
+        case "eth_unit":
             return AnyView(EthereumUnitView())
             
         default:

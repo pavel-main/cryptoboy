@@ -9,11 +9,13 @@ import Foundation
 import SwiftUI
 
 class CryptoFormatter {
+    // BTC
     static var bitcoin = createFormatter(0, 8)
     static var milliBTC = createFormatter(0, 5)
     static var microBTC = createFormatter(0, 2)
     static var satoshi = createFormatter(0, 0)
     
+    // ETH
     static var ether = createFormatter(0, 18)
     static var milliether = createFormatter(0, 15)
     static var microether = createFormatter(0, 12)
