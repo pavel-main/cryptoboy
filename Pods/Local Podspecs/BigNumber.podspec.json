@@ -1,0 +1,23 @@
+{
+  "name": "BigNumber",
+  "version": "2.2.0",
+  "summary": "A lightweight, high performance bignum library for Swift!",
+  "description": "A lightweight, high performance bignum library for Swift for both intergers and doubles!",
+  "homepage": "https://github.com/mkrd/Swift-Big-Integer",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": "mkrd",
+  "platforms": {
+    "ios": "8.0",
+    "osx": "10.9",
+    "watchos": "2.0",
+    "tvos": "9.0"
+  },
+  "source": {
+    "git": "https://github.com/mkrd/Swift-Big-Integer.git",
+    "tag": "v2.2.0"
+  },
+  "source_files": "Sources/*.swift"
+}

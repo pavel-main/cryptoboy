@@ -27,6 +27,7 @@
 		E937D404260ECB8A00A75B06 /* String+Hashing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E937D403260ECB8A00A75B06 /* String+Hashing.swift */; };
 		E945C397260EC96900E732A0 /* CryptoBoyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E945C396260EC96900E732A0 /* CryptoBoyApp.swift */; };
 		E945C39C260EC96F00E732A0 /* HashingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E945C39B260EC96F00E732A0 /* HashingView.swift */; };
+		E94D6DFF2614EBBC00181287 /* Binding+Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94D6DFE2614EBBC00181287 /* Binding+Value.swift */; };
 		E95432092612B29B001918F3 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95432082612B29B001918F3 /* Theme.swift */; };
 		E954320F2612B389001918F3 /* SelectThemeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954320E2612B389001918F3 /* SelectThemeButton.swift */; };
 		E95432142612B3A8001918F3 /* SelectThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95432132612B3A8001918F3 /* SelectThemeView.swift */; };
@@ -99,6 +100,7 @@
 		E937D403260ECB8A00A75B06 /* String+Hashing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Hashing.swift"; sourceTree = "<group>"; };
 		E945C396260EC96900E732A0 /* CryptoBoyApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoBoyApp.swift; sourceTree = "<group>"; };
 		E945C39B260EC96F00E732A0 /* HashingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashingView.swift; sourceTree = "<group>"; };
+		E94D6DFE2614EBBC00181287 /* Binding+Value.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Value.swift"; sourceTree = "<group>"; };
 		E95432082612B29B001918F3 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		E954320E2612B389001918F3 /* SelectThemeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectThemeButton.swift; sourceTree = "<group>"; };
 		E95432132612B3A8001918F3 /* SelectThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectThemeView.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				E99F77B2261240DB009BDFF1 /* Array+RawRepresentable.swift */,
+				E94D6DFE2614EBBC00181287 /* Binding+Value.swift */,
 				E9163B34260EAAD200453411 /* Bundle+JSON.swift */,
 				E9BC9414261125E400D8B83E /* String+Encoding.swift */,
 				E937D403260ECB8A00A75B06 /* String+Hashing.swift */,
@@ -518,6 +521,7 @@
 				E9ED74CE2612FCC900DCD4A3 /* NavigationViewModifier.swift in Sources */,
 				E9163B4F260EB31200453411 /* MainView.swift in Sources */,
 				E90853C5261149290001B9BE /* EncodingView.swift in Sources */,
+				E94D6DFF2614EBBC00181287 /* Binding+Value.swift in Sources */,
 				E9ED74B92612F6C200DCD4A3 /* ThemeViewModifier.swift in Sources */,
 				E9ED74B12612E93300DCD4A3 /* DarkModeViewModifier.swift in Sources */,
 				E99F77FB26128569009BDFF1 /* EthereumUnitView.swift in Sources */,
