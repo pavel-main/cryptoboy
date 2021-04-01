@@ -202,9 +202,9 @@
 				E94D6DFE2614EBBC00181287 /* Binding+Value.swift */,
 				E9163B34260EAAD200453411 /* Bundle+JSON.swift */,
 				E9BC9414261125E400D8B83E /* String+Encoding.swift */,
+				E902F3ED2616170B00825004 /* String+Filtering.swift */,
 				E937D403260ECB8A00A75B06 /* String+Hashing.swift */,
 				E99F77BA26124118009BDFF1 /* Set+RawRepresentable.swift */,
-				E902F3ED2616170B00825004 /* String+Filtering.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
