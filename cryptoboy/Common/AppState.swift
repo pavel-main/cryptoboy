@@ -11,7 +11,7 @@ class AppState : ObservableObject {
     @AppStorage("isDarkMode") var isDarkMode: Bool = true
     @AppStorage("currentTheme") var currentTheme: String = "blue"
     
-    @Published var amount: Decimal = Decimal.init(string: "1")!
+    @Published var amount: String = "1"
     
     @AppStorage("hasMessageChanged") var hasMessageChanged: Bool = false {
         willSet {
@@ -87,7 +87,7 @@ class AppState : ObservableObject {
         self.currentTheme = "blue"
         
         self.clearMessage()
-        self.amount = Decimal.init(string: "1")!
+        self.amount = "1"
         
         self.visitedViews = []
         self.bookmarks = []
