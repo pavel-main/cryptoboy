@@ -11,7 +11,7 @@ class AppState: ObservableObject {
     @Environment(\.colorScheme) var colorScheme
 
     @AppStorage("isDarkMode") var isDarkMode: Bool = true
-    @AppStorage("currentTheme") var currentTheme: String = "blue"
+    //@AppStorage("currentTheme") var currentTheme: String = "blue"
 
     @Published var amount: String = "1"
 
@@ -44,8 +44,19 @@ class AppState: ObservableObject {
         }
     }
 
-    let functionsMenu = Bundle.main.decode([MenuSection].self, from: "functions.json")
-    let currenciesMenu = Bundle.main.decode([MenuSection].self, from: "currencies.json")
+    //let functionsMenu = Bundle.main.decode([MenuSection].self, from: "functions.json")
+    //let currenciesMenu = Bundle.main.decode([MenuSection].self, from: "currencies.json")
+    
+    let functionsMenu: [MenuSection] = []
+    let currenciesMenu: [MenuSection] = []
+    
+    init() {
+        #if os(iOS)
+        print("Running on iOS")
+        #else
+        print("Running on macOS")
+        #endif
+    }
 
     func getMenuItem(_ id: String) -> MenuItem? {
         let menuItems = functionsMenu.flatMap { $0.items } + currenciesMenu.flatMap { $0.items }
@@ -86,7 +97,7 @@ class AppState: ObservableObject {
 
     func clearState() {
         self.isDarkMode = true
-        self.currentTheme = "blue"
+        //self.currentTheme = "blue"
 
         self.clearMessage()
         self.amount = "1"

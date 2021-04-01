@@ -16,8 +16,8 @@ public struct NavigationViewModifier: ViewModifier {
     public func body(content: Content) -> some View {
         content
             .navigationTitle(self.page.title)
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationViewStyle(StackNavigationViewStyle())
+            //.navigationBarTitleDisplayMode(.inline)
+            //.navigationViewStyle(StackNavigationViewStyle())
             .onAppear {
                 state.visitView("\(page)")
             }

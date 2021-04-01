@@ -14,6 +14,6 @@ struct SelectThemeView: View {
                 SelectThemeButton(colorName: theme.publicName, themeName: theme.name)
             }
         }
-        .navigationBarTitle("Select Theme")
+        //.navigationBarTitle("Select Theme")
     }
 }

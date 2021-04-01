@@ -22,7 +22,7 @@ struct EncodingItemView: View {
             Section(header: Text(self.type.title)) {
                 HStack {
                     Button(action: {
-                        UIPasteboard.general.string = state.encodeOrDefault(type)
+                        //UIPasteboard.general.string = state.encodeOrDefault(type)
                         showCopyAlert.toggle()
                     }) {
                         Text(state.encodeOrDefault(type))

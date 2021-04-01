@@ -10,27 +10,24 @@ import SwiftUI
 struct MainView: View {
     @EnvironmentObject var state: AppState
 
+    #if os(iOS)
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass: UserInterfaceSizeClass?
+    #endif
+    
     var body: some View {
-        TabView {
-            FunctionsView()
-                .tabItem {
-                    Label("Functions", systemImage: "function")
-                }
-            CurrenciesView()
-                .tabItem {
-                    Label("Currencies", systemImage: "bitcoinsign.circle")
-                }
-            FavoritesView()
-                .tabItem {
-                    Label("Favorites", systemImage: "list.star")
-                }
-            SettingsView()
-                .tabItem {
-                    Label("Settings", systemImage: "wrench.and.screwdriver")
-                }
+        NavigationView {
+            #if os(iOS)
+            if horizontalSizeClass == .compact {
+                MainNavigationTabBar()
+            } else {
+                MainNavigationSideBar()
+            }
+            #else
+            MainNavigationSideBar()
+            #endif
         }
         .modifier(DarkModeViewModifier())
-        .modifier(ThemeViewModifier())
+//        .modifier(ThemeViewModifier())
         .environmentObject(AppState())
     }
 }

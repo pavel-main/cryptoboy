@@ -6,12 +6,13 @@
 //
 
 import Foundation
-import WalletCore
+//import WalletCore
 
 extension String {
 
     func hex() -> String {
-        return Data(self.utf8).hexString
+        return self
+        //return Data(self.utf8).hexString
     }
 
     func bin() -> String {
@@ -37,7 +38,8 @@ extension String {
             return self.hex()
 
         case .base58:
-            return Base58.encode(data: Data(self.utf8))
+            //return Base58.encode(data: Data(self.utf8))
+            return self.hex()
 
         case .base64:
             return Data(self.utf8).base64EncodedString()

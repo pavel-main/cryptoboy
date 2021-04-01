@@ -24,7 +24,7 @@ struct QRCodeGeneratorView: View {
                     Image(systemName: "ellipsis.bubble")
 
                     TextField("", text: $data)
-                        .autocapitalization(.none)
+                        //.autocapitalization(.none)
                         .disableAutocorrection(true)
                         .onReceive(data.publisher.collect()) {
                             self.data = String($0.prefix(MESSAGE_LIMIT))
@@ -50,11 +50,11 @@ struct QRCodeGeneratorView: View {
 
             if !data.isEmpty {
                 Section(header: Text("QR Code")) {
-                    Image(uiImage: QRCodeHelper.generate(from: self.data, size: QR_SIZE, level: self.level))
-                        .interpolation(.none)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: QR_SIZE, height: QR_SIZE)
+//                    Image(uiImage: QRCodeHelper.generate(from: self.data, size: QR_SIZE, level: self.level))
+//                        .interpolation(.none)
+//                        .resizable()
+//                        .scaledToFit()
+//                        .frame(width: QR_SIZE, height: QR_SIZE)
                 }
             }
 

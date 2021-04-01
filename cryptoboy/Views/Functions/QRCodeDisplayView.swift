@@ -19,16 +19,16 @@ struct QRCodeDisplayView: View {
     var body: some View {
         Form {
             Section(header: Text(self.title)) {
-                Image(uiImage: QRCodeHelper.generate(from: self.data, size: QR_SIZE, level: "M"))
-                    .interpolation(.none)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: QR_SIZE, height: QR_SIZE)
+//                Image(uiImage: QRCodeHelper.generate(from: self.data, size: QR_SIZE, level: "M"))
+//                    .interpolation(.none)
+//                    .resizable()
+//                    .scaledToFit()
+//                    .frame(width: QR_SIZE, height: QR_SIZE)
             }
 
             Section(header: Text("Copy to clibboard")) {
                 Button(action: {
-                    UIPasteboard.general.string = self.data
+                    //UIPasteboard.general.string = self.data
                     showCopyAlert.toggle()
                 }) {
                     Text(self.data)
@@ -44,8 +44,8 @@ struct QRCodeDisplayView: View {
             )
         }
         .navigationTitle(self.title)
-        .navigationBarTitleDisplayMode(.inline)
-        .navigationViewStyle(StackNavigationViewStyle())
+        //.navigationBarTitleDisplayMode(.inline)
+        //.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

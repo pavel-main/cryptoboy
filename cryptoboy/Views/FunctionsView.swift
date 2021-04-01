@@ -11,20 +11,18 @@ struct FunctionsView: View {
     @EnvironmentObject var state: AppState
 
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(state.functionsMenu, id: \.id) { section in
-                    Section(header: Text(section.title)) {
-                        ForEach(section.items, id: \.id) { item in
-                            NavigationRow(item: item)
-                        }
+        List {
+            ForEach(state.functionsMenu, id: \.id) { section in
+                Section(header: Text(section.title)) {
+                    ForEach(section.items, id: \.id) { item in
+                        NavigationRow(item: item)
                     }
                 }
             }
-            .listStyle(GroupedListStyle())
-            .navigationTitle("Functions")
         }
-        .navigationViewStyle(StackNavigationViewStyle())
+        //.listStyle(GroupedListStyle())
+        .navigationTitle("Functions")
+        //.navigationViewStyle(StackNavigationViewStyle())
         .environmentObject(state)
     }
 }

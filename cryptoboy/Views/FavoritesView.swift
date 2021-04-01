@@ -12,25 +12,21 @@ struct FavoritesView: View {
 
     var body: some View {
         if !state.bookmarks.isEmpty {
-            NavigationView {
-                List {
-                    ForEach(state.bookmarks, id: \.self) { view in
-                        NavigationRow(item: state.getMenuItem(view)!)
-                    }
-                    .onDelete(perform: deleteBookmark)
+            List {
+                ForEach(state.bookmarks, id: \.self) { view in
+                    NavigationRow(item: state.getMenuItem(view)!)
                 }
-                .listStyle(GroupedListStyle())
-                .navigationTitle("Favorites")
+                .onDelete(perform: deleteBookmark)
             }
-            .navigationViewStyle(StackNavigationViewStyle())
+            //.listStyle(GroupedListStyle())
+            .navigationTitle("Favorites")
+            //.navigationViewStyle(StackNavigationViewStyle())
             .environmentObject(state)
         } else {
-            NavigationView {
-                Text("Favorites list is empty")
-                    .padding()
-                    .navigationTitle("Favorites")
-            }
-            .navigationViewStyle(StackNavigationViewStyle())
+            Text("Favorites list is empty")
+            .padding()
+            .navigationTitle("Favorites")
+            //.navigationViewStyle(StackNavigationViewStyle())
             .environmentObject(state)
         }
     }

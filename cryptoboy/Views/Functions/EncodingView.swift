@@ -17,7 +17,7 @@ struct EncodingView: View {
                     Image(systemName: "ellipsis.bubble")
 
                     TextEditor(text: $state.message)
-                        .autocapitalization(.none)
+                        //.autocapitalization(.none)
                         .disableAutocorrection(true)
 
                     Button(action: state.clearMessage) {

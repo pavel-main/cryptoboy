@@ -1,32 +1,20 @@
 PODS:
   - QRCoder (1.1.0)
   - SwiftLint (0.43.0)
-  - SwiftProtobuf (1.15.0)
-  - TrustWalletCore (2.6.0):
-    - TrustWalletCore/Core (= 2.6.0)
-  - TrustWalletCore/Core (2.6.0):
-    - TrustWalletCore/Types
-  - TrustWalletCore/Types (2.6.0):
-    - SwiftProtobuf
 
 DEPENDENCIES:
   - QRCoder
   - SwiftLint
-  - TrustWalletCore
 
 SPEC REPOS:
   trunk:
     - QRCoder
     - SwiftLint
-    - SwiftProtobuf
-    - TrustWalletCore
 
 SPEC CHECKSUMS:
   QRCoder: cbd2bee531cc86d286df7942334cfed94c803ae4
   SwiftLint: 0c645fdc6feed3e390c1701ab3cc669f88b42752
-  SwiftProtobuf: 3320217e9d8fb75f36b40282e78c482640fd75dd
-  TrustWalletCore: 4c3ad4885571b7eb958fb0a6b06a7855d61ca4e8
 
-PODFILE CHECKSUM: 272751c878ddee3452af6f8d5b4bf5e2160eb142
+PODFILE CHECKSUM: 996e9980010dd76b06c00cc8e12d748f559e3a05
 
 COCOAPODS: 1.10.1

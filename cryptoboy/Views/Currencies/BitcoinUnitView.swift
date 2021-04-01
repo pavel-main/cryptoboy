@@ -32,7 +32,7 @@ struct BitcoinUnitView: View {
                             self.units = updated
                         })
                     )
-                    .keyboardType(.decimalPad)
+                    //.keyboardType(.decimalPad)
                 }
             }
         }

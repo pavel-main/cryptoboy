@@ -1,1 +1,0 @@
-../../../TrustWalletCore/include/TrustWalletCore/TWThetaProto.h

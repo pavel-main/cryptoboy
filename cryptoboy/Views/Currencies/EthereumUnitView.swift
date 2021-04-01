@@ -35,7 +35,7 @@ struct EthereumUnitView: View {
                             self.units = updated
                         })
                     )
-                    .keyboardType(.decimalPad)
+                    //.keyboardType(.decimalPad)
                 }
             }
         }

@@ -22,7 +22,7 @@ struct HashingItemView: View {
             Section(header: Text(self.type.title)) {
                 HStack {
                     Button(action: {
-                        UIPasteboard.general.string = state.getHashOrDefault(type)
+                        //UIPasteboard.general.string = state.getHashOrDefault(type)
                         showCopyAlert.toggle()
                     }) {
                         Text(state.getHashOrDefault(type))
