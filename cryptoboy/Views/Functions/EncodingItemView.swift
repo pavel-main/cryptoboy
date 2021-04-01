@@ -32,7 +32,7 @@ struct EncodingItemView: View {
             .alert(isPresented: $showCopyAlert) {
                 Alert(
                     title: Text("Copied to clipboard"),
-                    message: Text("\(self.type.title) was copied to clipboard!"),
+                    message: Text(state.encodeOrDefault(type)),
                     dismissButton: .default(Text("OK"))
                 )
             }

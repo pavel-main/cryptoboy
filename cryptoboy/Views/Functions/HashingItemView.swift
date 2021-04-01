@@ -32,7 +32,7 @@ struct HashingItemView: View {
             .alert(isPresented: $showCopyAlert) {
                 Alert(
                     title: Text("Copied to clipboard"),
-                    message: Text("\(self.type.title) hash was copied to clipboard!"),
+                    message: Text(state.getHashOrDefault(type)),
                     dismissButton: .default(Text("OK"))
                 )
             }
