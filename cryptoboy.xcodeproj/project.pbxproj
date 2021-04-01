@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C9B849CA541CCF9F68044053 /* libPods-cryptoboy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 498ADA47C73524B39421AE11 /* libPods-cryptoboy.a */; };
+		E902F3E32616140300825004 /* CryptoUnitFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E902F3E22616140300825004 /* CryptoUnitFormatter.swift */; };
+		E902F3EE2616170B00825004 /* String+Filtering.swift in Sources */ = {isa = PBXBuildFile; fileRef = E902F3ED2616170B00825004 /* String+Filtering.swift */; };
+		E902F3F326161C4500825004 /* MinorUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E902F3F226161C4500825004 /* MinorUnit.swift */; };
 		E90853C0261148F30001B9BE /* EncodingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90853BF261148F30001B9BE /* EncodingItemView.swift */; };
 		E90853C5261149290001B9BE /* EncodingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90853C4261149290001B9BE /* EncodingView.swift */; };
 		E90853CE261153510001B9BE /* AboutDonateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90853CD261153510001B9BE /* AboutDonateItem.swift */; };
@@ -74,6 +77,9 @@
 		498ADA47C73524B39421AE11 /* libPods-cryptoboy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cryptoboy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB873BBB4D4F864C700D46AD /* Pods-cryptoboy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cryptoboy.debug.xcconfig"; path = "Target Support Files/Pods-cryptoboy/Pods-cryptoboy.debug.xcconfig"; sourceTree = "<group>"; };
 		E1E84236F48D7A61A8D3980E /* Pods-cryptoboy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cryptoboy.release.xcconfig"; path = "Target Support Files/Pods-cryptoboy/Pods-cryptoboy.release.xcconfig"; sourceTree = "<group>"; };
+		E902F3E22616140300825004 /* CryptoUnitFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoUnitFormatter.swift; sourceTree = "<group>"; };
+		E902F3ED2616170B00825004 /* String+Filtering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Filtering.swift"; sourceTree = "<group>"; };
+		E902F3F226161C4500825004 /* MinorUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinorUnit.swift; sourceTree = "<group>"; };
 		E90853BF261148F30001B9BE /* EncodingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodingItemView.swift; sourceTree = "<group>"; };
 		E90853C4261149290001B9BE /* EncodingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodingView.swift; sourceTree = "<group>"; };
 		E90853CD261153510001B9BE /* AboutDonateItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutDonateItem.swift; sourceTree = "<group>"; };
@@ -181,6 +187,7 @@
 		E90853F126115EF90001B9BE /* Crypto */ = {
 			isa = PBXGroup;
 			children = (
+				E902F3E22616140300825004 /* CryptoUnitFormatter.swift */,
 				E9ED74C52612FAAE00DCD4A3 /* EncodingFormat.swift */,
 				E9ED74C02612F8F500DCD4A3 /* HashFunction.swift */,
 				E90853F226115F0B0001B9BE /* ROT13.swift */,
@@ -197,6 +204,7 @@
 				E9BC9414261125E400D8B83E /* String+Encoding.swift */,
 				E937D403260ECB8A00A75B06 /* String+Hashing.swift */,
 				E99F77BA26124118009BDFF1 /* Set+RawRepresentable.swift */,
+				E902F3ED2616170B00825004 /* String+Filtering.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -288,8 +296,9 @@
 			children = (
 				E96A4AA9260FFD74009EA367 /* AppState.swift */,
 				E9163B36260EAAD200453411 /* Menu.swift */,
-				E95432082612B29B001918F3 /* Theme.swift */,
+				E902F3F226161C4500825004 /* MinorUnit.swift */,
 				E9ED74D8261301B300DCD4A3 /* PageType.swift */,
+				E95432082612B29B001918F3 /* Theme.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -527,10 +536,13 @@
 				E90853CE261153510001B9BE /* AboutDonateItem.swift in Sources */,
 				E945C397260EC96900E732A0 /* CryptoBoyApp.swift in Sources */,
 				E99F77BB26124118009BDFF1 /* Set+RawRepresentable.swift in Sources */,
+				E902F3EE2616170B00825004 /* String+Filtering.swift in Sources */,
 				E99F77C7261269EA009BDFF1 /* BitcoinUnitView.swift in Sources */,
 				E95432092612B29B001918F3 /* Theme.swift in Sources */,
 				E96A4AAA260FFD74009EA367 /* AppState.swift in Sources */,
 				E9163B00260EA4BA00453411 /* FunctionsView.swift in Sources */,
+				E902F3E32616140300825004 /* CryptoUnitFormatter.swift in Sources */,
+				E902F3F326161C4500825004 /* MinorUnit.swift in Sources */,
 				E95432142612B3A8001918F3 /* SelectThemeView.swift in Sources */,
 				E937D404260ECB8A00A75B06 /* String+Hashing.swift in Sources */,
 				E96A4A85260FE062009EA367 /* CurrenciesView.swift in Sources */,

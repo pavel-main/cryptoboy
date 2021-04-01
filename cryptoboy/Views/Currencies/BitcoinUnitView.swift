@@ -10,17 +10,11 @@ import SwiftUI
 struct BitcoinUnitView: View {
     @EnvironmentObject var state: AppState
     
-    struct MinorUnit {
-        var name: String
-        var power: Decimal
-        var value: String
-    }
-    
     @State var units = [
-        MinorUnit(name: "Bitcoin", power: 100_000_000, value: "1"),
-        MinorUnit(name: "milliBTC", power: 100_000, value: "1000"),
-        MinorUnit(name: "microBTC", power: 100, value: "1000000"),
-        MinorUnit(name: "Satoshi", power: 1, value: "100000000"),
+        MinorUnit(name: "Bitcoin", power: 100_000_000, value: "1", fmt: CryptoUnitFormatter.bitcoin),
+        MinorUnit(name: "milliBTC", power: 100_000, value: "1000", fmt: CryptoUnitFormatter.milliBTC),
+        MinorUnit(name: "microBTC", power: 100, value: "1000000", fmt: CryptoUnitFormatter.microBTC),
+        MinorUnit(name: "Satoshi", power: 1, value: "100000000", fmt: CryptoUnitFormatter.satoshi),
     ]
     
     var body: some View {
@@ -32,24 +26,36 @@ struct BitcoinUnitView: View {
                             return self.units[idx].value
                         },
                         set: { (newValue) in
-                            let input = newValue.replacingOccurrences(of: ",", with: ".")
+                            // Save old value
+                            let oldValue = self.units[idx].value
                             
-                            let oldVal = Decimal(string: self.units[idx].value)
-                            let newVal = Decimal(string: input)
-                            
-                            if (oldVal == newVal) {
-                                self.units[idx].value = input
+                            // Replace localized commas with dots
+                            let filteredInput = newValue.replace(target: ",", with: ".").filter { "0123456789.".contains($0) }
+    
+                            // Don't allow multiple dots
+                            let dotsCount = filteredInput.filter { $0 == "." }.count
+                            if (dotsCount > 1) {
+                                self.units[idx].value = oldValue
                                 return
                             }
                             
-                            let decimal = Decimal(string: input) ?? Decimal.zero
-                            let minor = decimal * self.units[idx].power
-                            print("Decimal: \(decimal) minor: \(minor)")
+                            // Allow trailing zeroes
+                            let oldVal = Decimal(string: self.units[idx].value)
+                            let newVal = Decimal(string: filteredInput)
+                            if (oldVal == newVal) {
+                                self.units[idx].value = filteredInput
+                                return
+                            }
                             
+                            // Calculate input value in minor units
+                            let decimalValue = Decimal(string: filteredInput) ?? Decimal.zero
+                            let minorValue = decimalValue * self.units[idx].power
+                            
+                            // Calculate all values based on input
                             for (jdx, item) in units.enumerated() {
-                                let result = minor / item.power
-                                print("Result: \(result) name: \(item.name)")
-                                self.units[jdx].value = String(describing: result)
+                                let unitValue = minorValue / item.power
+                                let result = item.fmt.string(for: unitValue) ?? "0"
+                                self.units[jdx].value = result
                             }
                         })
                     )
