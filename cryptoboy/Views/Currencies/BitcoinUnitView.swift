@@ -32,7 +32,17 @@ struct BitcoinUnitView: View {
                             return self.units[idx].value
                         },
                         set: { (newValue) in
-                            let decimal = Decimal(string: newValue) ?? Decimal.zero
+                            let input = newValue.replacingOccurrences(of: ",", with: ".")
+                            
+                            let oldVal = Decimal(string: self.units[idx].value)
+                            let newVal = Decimal(string: input)
+                            
+                            if (oldVal == newVal) {
+                                self.units[idx].value = input
+                                return
+                            }
+                            
+                            let decimal = Decimal(string: input) ?? Decimal.zero
                             let minor = decimal * self.units[idx].power
                             print("Decimal: \(decimal) minor: \(minor)")
                             
