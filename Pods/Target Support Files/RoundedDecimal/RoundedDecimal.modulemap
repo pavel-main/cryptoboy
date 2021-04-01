@@ -1,0 +1,6 @@
+module RoundedDecimal {
+  umbrella header "RoundedDecimal-umbrella.h"
+
+  export *
+  module * { export * }
+}
