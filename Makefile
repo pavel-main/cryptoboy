@@ -1,7 +1,10 @@
+open:
+	xed .
+
 install:
 	pod install
 
 lint:
 	./Pods/SwiftLint/swiftLint --fix ./cryptoboy
 
-.PHONY: install lint
+.PHONY: open install lint
