@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import BigNumber
 
 struct BitcoinUnitView: View {
     @EnvironmentObject var state: AppState
