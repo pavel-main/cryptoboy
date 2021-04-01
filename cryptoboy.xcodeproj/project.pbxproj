@@ -11,6 +11,8 @@
 		E902F3E32616140300825004 /* CryptoUnitFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E902F3E22616140300825004 /* CryptoUnitFormatter.swift */; };
 		E902F3EE2616170B00825004 /* String+Filtering.swift in Sources */ = {isa = PBXBuildFile; fileRef = E902F3ED2616170B00825004 /* String+Filtering.swift */; };
 		E902F3F326161C4500825004 /* MinorUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E902F3F226161C4500825004 /* MinorUnit.swift */; };
+		E902F423261630F300825004 /* QRCodeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E902F422261630F300825004 /* QRCodeHelper.swift */; };
+		E902F42E2616394500825004 /* QRCodeDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E902F42D2616394500825004 /* QRCodeDisplayView.swift */; };
 		E90853C0261148F30001B9BE /* EncodingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90853BF261148F30001B9BE /* EncodingItemView.swift */; };
 		E90853C5261149290001B9BE /* EncodingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90853C4261149290001B9BE /* EncodingView.swift */; };
 		E90853CE261153510001B9BE /* AboutDonateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90853CD261153510001B9BE /* AboutDonateItem.swift */; };
@@ -34,7 +36,7 @@
 		E95432092612B29B001918F3 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95432082612B29B001918F3 /* Theme.swift */; };
 		E954320F2612B389001918F3 /* SelectThemeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954320E2612B389001918F3 /* SelectThemeButton.swift */; };
 		E95432142612B3A8001918F3 /* SelectThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95432132612B3A8001918F3 /* SelectThemeView.swift */; };
-		E954321D2612B701001918F3 /* QRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954321C2612B701001918F3 /* QRCodeView.swift */; };
+		E954321D2612B701001918F3 /* QRCodeGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954321C2612B701001918F3 /* QRCodeGeneratorView.swift */; };
 		E96A4A7B260FDD62009EA367 /* functions.json in Resources */ = {isa = PBXBuildFile; fileRef = E96A4A7A260FDD62009EA367 /* functions.json */; };
 		E96A4A80260FDD6E009EA367 /* currencies.json in Resources */ = {isa = PBXBuildFile; fileRef = E96A4A7F260FDD6E009EA367 /* currencies.json */; };
 		E96A4A85260FE062009EA367 /* CurrenciesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A4A84260FE062009EA367 /* CurrenciesView.swift */; };
@@ -80,6 +82,8 @@
 		E902F3E22616140300825004 /* CryptoUnitFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoUnitFormatter.swift; sourceTree = "<group>"; };
 		E902F3ED2616170B00825004 /* String+Filtering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Filtering.swift"; sourceTree = "<group>"; };
 		E902F3F226161C4500825004 /* MinorUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinorUnit.swift; sourceTree = "<group>"; };
+		E902F422261630F300825004 /* QRCodeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeHelper.swift; sourceTree = "<group>"; };
+		E902F42D2616394500825004 /* QRCodeDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeDisplayView.swift; sourceTree = "<group>"; };
 		E90853BF261148F30001B9BE /* EncodingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodingItemView.swift; sourceTree = "<group>"; };
 		E90853C4261149290001B9BE /* EncodingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodingView.swift; sourceTree = "<group>"; };
 		E90853CD261153510001B9BE /* AboutDonateItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutDonateItem.swift; sourceTree = "<group>"; };
@@ -109,7 +113,7 @@
 		E95432082612B29B001918F3 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		E954320E2612B389001918F3 /* SelectThemeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectThemeButton.swift; sourceTree = "<group>"; };
 		E95432132612B3A8001918F3 /* SelectThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectThemeView.swift; sourceTree = "<group>"; };
-		E954321C2612B701001918F3 /* QRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeView.swift; sourceTree = "<group>"; };
+		E954321C2612B701001918F3 /* QRCodeGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeGeneratorView.swift; sourceTree = "<group>"; };
 		E96A4A7A260FDD62009EA367 /* functions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = functions.json; sourceTree = "<group>"; };
 		E96A4A7F260FDD6E009EA367 /* currencies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = currencies.json; sourceTree = "<group>"; };
 		E96A4A84260FE062009EA367 /* CurrenciesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrenciesView.swift; sourceTree = "<group>"; };
@@ -298,6 +302,7 @@
 				E9163B36260EAAD200453411 /* Menu.swift */,
 				E902F3F226161C4500825004 /* MinorUnit.swift */,
 				E9ED74D8261301B300DCD4A3 /* PageType.swift */,
+				E902F422261630F300825004 /* QRCodeHelper.swift */,
 				E95432082612B29B001918F3 /* Theme.swift */,
 			);
 			path = Common;
@@ -347,7 +352,8 @@
 				E90853C4261149290001B9BE /* EncodingView.swift */,
 				E96A4AB1260FFF0D009EA367 /* HashingItemView.swift */,
 				E945C39B260EC96F00E732A0 /* HashingView.swift */,
-				E954321C2612B701001918F3 /* QRCodeView.swift */,
+				E902F42D2616394500825004 /* QRCodeDisplayView.swift */,
+				E954321C2612B701001918F3 /* QRCodeGeneratorView.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -551,14 +557,16 @@
 				E96A4AB2260FFF0D009EA367 /* HashingItemView.swift in Sources */,
 				E9163B40260EACA900453411 /* NavigationRow.swift in Sources */,
 				E9163B38260EAAD200453411 /* Bundle+JSON.swift in Sources */,
-				E954321D2612B701001918F3 /* QRCodeView.swift in Sources */,
+				E954321D2612B701001918F3 /* QRCodeGeneratorView.swift in Sources */,
 				E9163B3A260EAAD200453411 /* Menu.swift in Sources */,
 				E9BC942A26112C9900D8B83E /* NavigationBar.swift in Sources */,
 				E90853DE261158700001B9BE /* AboutLinkItem.swift in Sources */,
 				E954320F2612B389001918F3 /* SelectThemeButton.swift in Sources */,
 				E90853C0261148F30001B9BE /* EncodingItemView.swift in Sources */,
+				E902F423261630F300825004 /* QRCodeHelper.swift in Sources */,
 				E99F77B3261240DB009BDFF1 /* Array+RawRepresentable.swift in Sources */,
 				E9ED74C62612FAAE00DCD4A3 /* EncodingFormat.swift in Sources */,
+				E902F42E2616394500825004 /* QRCodeDisplayView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
