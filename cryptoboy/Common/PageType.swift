@@ -12,7 +12,7 @@ enum PageType {
     case btc_unit
     case eth_unit
     case unknown
-    
+
     var title: String {
         switch self {
             case .hash:

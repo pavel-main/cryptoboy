@@ -23,7 +23,7 @@ class CryptoUnitFormatter {
         fmt.roundingMode = .down
         return fmt
     }
-    
+
     /**
      * Updates all units with `newValue` passed at `idx`
      */
@@ -31,36 +31,36 @@ class CryptoUnitFormatter {
         // Save old value
         var units = rawUnits
         let oldValue = units[idx].current
-        
+
         // Replace localized commas with dots
         let filteredInput = newValue.replace(target: ",", with: ".").filter { "0123456789.".contains($0) }
 
         // Don't allow multiple dots
         let dotsCount = filteredInput.filter { $0 == "." }.count
-        if (dotsCount > 1) {
+        if dotsCount > 1 {
             units[idx].current = oldValue
             return units
         }
-        
+
         // Allow trailing zeroes
         let oldVal = Decimal(string: units[idx].current)
         let newVal = Decimal(string: filteredInput)
-        if (oldVal == newVal) {
+        if oldVal == newVal {
             units[idx].current = filteredInput
             return units
         }
-        
+
         // Calculate input value in minor units
         let decimalValue = Decimal(string: filteredInput) ?? Decimal.zero
         let minorValue = decimalValue * pow(10, units[idx].factor)
-        
+
         // Calculate all values based on input
         for (jdx, item) in units.enumerated() {
             let unitValue = minorValue / pow(10, item.factor)
             let result = item.formatter.string(for: unitValue) ?? "0"
             units[jdx].current = result
         }
-        
+
         return units
     }
 }

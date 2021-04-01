@@ -25,7 +25,7 @@ extension Array: RawRepresentable where Element: Codable {
         }
         return result
     }
-    
+
     func mapToSet<T: Hashable>(_ transform: (Element) -> T) -> Set<T> {
         var result = Set<T>()
         for item in self {

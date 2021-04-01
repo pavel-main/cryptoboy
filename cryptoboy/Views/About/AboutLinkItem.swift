@@ -11,13 +11,13 @@ struct AboutLinkItem: View {
     var name: String
     var url: String
     var title: String
-    
+
     init(_ name: String, title: String, url: String) {
         self.name = name
         self.url = url
         self.title = title
     }
-    
+
     var body: some View {
         HStack {
             HStack {

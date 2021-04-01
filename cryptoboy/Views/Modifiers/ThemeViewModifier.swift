@@ -8,7 +8,7 @@
 import SwiftUI
 
 public struct ThemeViewModifier: ViewModifier {
-    
+
     @AppStorage("currentTheme") var currentTheme: String = "blue"
 
     public func body(content: Content) -> some View {

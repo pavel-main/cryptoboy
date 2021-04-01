@@ -9,16 +9,16 @@ import SwiftUI
 
 struct NavigationBar: View {
     @EnvironmentObject var state: AppState
-    
+
     var page: PageType
-    
+
     init(_ page: PageType) {
         self.page = page
     }
-    
+
     var body: some View {
-        if (self.page != .unknown) {
-            if (!state.hasBookmark("\(page)")) {
+        if self.page != .unknown {
+            if !state.hasBookmark("\(page)") {
                 Button(action: {
                     print("Adding \(page) to bookmarks...")
                     state.addBookmark("\(page)")

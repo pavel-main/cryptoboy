@@ -9,23 +9,23 @@ import SwiftUI
 
 struct HashingView: View {
     @EnvironmentObject var state: AppState
-    
+
     var body: some View {
         Form {
             Section(header: Text("Input Message")) {
                 HStack {
                     Image(systemName: "terminal")
-                    
+
                     TextEditor(text: $state.message)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
-                    
+
                     Button(action: state.clearMessage) {
                         Image(systemName: "xmark.circle.fill")
                     }
                 }
             }
-            
+
             Group {
                 HashingItemView(.sha1)
                 HashingItemView(.sha256)
@@ -36,7 +36,7 @@ struct HashingView: View {
                 HashingItemView(.blake256)
                 HashingItemView(.groestl512)
             }
-            
+
             Group {
                 HashingItemView(.sha256ripedm160)
                 HashingItemView(.sha256sha256)

@@ -8,9 +8,9 @@
 import SwiftUI
 
 public struct NavigationViewModifier: ViewModifier {
-    
+
     @EnvironmentObject var state: AppState
-    
+
     let page: PageType
 
     public func body(content: Content) -> some View {

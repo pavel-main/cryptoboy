@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct FunctionsView: View {    
+struct FunctionsView: View {
     @EnvironmentObject var state: AppState
-    
+
     var body: some View {
         NavigationView {
             List {

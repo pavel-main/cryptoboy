@@ -12,13 +12,13 @@ struct HashingItemView: View {
     @State private var showCopyAlert = false
 
     var type: HashFunction
-    
+
     init(_ type: HashFunction) {
         self.type = type
     }
-    
+
     var body: some View {
-        if (!state.isDefaultMessage()) {
+        if !state.isDefaultMessage() {
             Section(header: Text(self.type.title)) {
                 HStack {
                     Button(action: {

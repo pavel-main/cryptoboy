@@ -21,7 +21,7 @@ var themes: [Theme] = [
     Theme(colorPrimary: Color.green, name: "green", publicName: "Green"),
     Theme(colorPrimary: Color.pink, name: "pink", publicName: "Pink"),
     Theme(colorPrimary: Color.yellow, name: "yellow", publicName: "Yellow"),
-    Theme(colorPrimary: Color.primary, name: "system", publicName: "System"),
+    Theme(colorPrimary: Color.primary, name: "system", publicName: "System")
 ]
 
 func getTheme(themeName: String?) -> Theme {
@@ -32,6 +32,6 @@ func getTheme(themeName: String?) -> Theme {
             }
         }
     }
-    
+
     return themes[0]
 }
