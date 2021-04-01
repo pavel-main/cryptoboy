@@ -10,7 +10,7 @@ import Combine
 
 struct QRCodeGeneratorView: View {
     @EnvironmentObject var state: AppState
-    
+
     @State private var data = ""
     @State private var level = "M"
 
@@ -37,7 +37,7 @@ struct QRCodeGeneratorView: View {
                     }
                 }
             }
-            
+
             Section(header: Text("Correction Level")) {
                 Picker(selection: $level, label: Text("Correction Level")) {
                     Text("Low").tag("L")

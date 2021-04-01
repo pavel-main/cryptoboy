@@ -10,7 +10,7 @@ import SwiftUI
 struct QRCodeDisplayView: View {
     @EnvironmentObject var state: AppState
     @State private var showCopyAlert = false
-    
+
     let title: String
     let data: String
 
@@ -25,7 +25,7 @@ struct QRCodeDisplayView: View {
                     .scaledToFit()
                     .frame(width: QR_SIZE, height: QR_SIZE)
             }
-            
+
             Section(header: Text("Copy to clibboard")) {
                 Button(action: {
                     UIPasteboard.general.string = self.data
