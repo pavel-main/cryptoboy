@@ -17,6 +17,7 @@ public struct NavigationViewModifier: ViewModifier {
         content
             .navigationTitle(self.page.title)
             .navigationBarTitleDisplayMode(.inline)
+            .navigationViewStyle(StackNavigationViewStyle())
             .onAppear {
                 state.visitView("\(page)")
             }

@@ -11,6 +11,7 @@ enum PageType {
     case qrcode
     case btc_unit
     case eth_unit
+    case donation
     case unknown
 
     var title: String {
@@ -25,6 +26,8 @@ enum PageType {
                 return "BTC Unit Converter"
             case .eth_unit:
                 return "ETH Unit Converter"
+            case .donation:
+                return "Donation address"
             case .unknown:
                 return "Coming Soon!"
         }

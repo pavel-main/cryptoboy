@@ -14,7 +14,7 @@ struct HashingView: View {
         Form {
             Section(header: Text("Input Message")) {
                 HStack {
-                    Image(systemName: "terminal")
+                    Image(systemName: "ellipsis.bubble")
 
                     TextEditor(text: $state.message)
                         .autocapitalization(.none)

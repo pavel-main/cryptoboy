@@ -10,7 +10,6 @@ import SwiftUI
 struct AboutDonateItem: View {
     var type: String
     var address: String
-    @State private var showCopyAlert = false
 
     init(_ type: String, _ address: String) {
         self.type = type
@@ -18,24 +17,16 @@ struct AboutDonateItem: View {
     }
 
     var body: some View {
-        HStack {
-            Text(self.type)
-            Spacer()
-            Button(action: {
-                UIPasteboard.general.string = self.address
-                showCopyAlert.toggle()
-            }) {
-                Text(self.address)
-                    .frame(height: 10)
-                    .multilineTextAlignment(.trailing)
+        NavigationLink(destination: QRCodeDisplayView(title: "Donate \(type)", data: self.address)) {
+            HStack {
+                Text(self.type)
+                Spacer()
+                Button(action: {}) {
+                    Text(self.address)
+                        .frame(height: 10)
+                        .multilineTextAlignment(.trailing)
+                }
             }
-        }
-        .alert(isPresented: $showCopyAlert) {
-            Alert(
-                title: Text("Copied to clipboard"),
-                message: Text("\(self.type) address: \(self.address)"),
-                dismissButton: .default(Text("OK"))
-            )
         }
     }
 }
