@@ -39,7 +39,7 @@ struct QRCodeDisplayView: View {
         .alert(isPresented: $showCopyAlert) {
             Alert(
                 title: Text("Copied to clipboard"),
-                message: Text("\(self.data)"),
+                message: Text(self.data),
                 dismissButton: .default(Text("OK"))
             )
         }
