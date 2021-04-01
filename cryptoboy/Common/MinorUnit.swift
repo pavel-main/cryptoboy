@@ -8,8 +8,8 @@
 import Foundation
 
 struct MinorUnit {
-    var name: String
-    var power: Decimal
-    var value: String
-    var fmt: NumberFormatter
+    var title: String
+    var multiplier: Decimal
+    var current: String
+    var formatter: NumberFormatter
 }
