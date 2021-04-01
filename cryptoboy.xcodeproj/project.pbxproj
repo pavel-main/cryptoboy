@@ -42,7 +42,6 @@
 		E99F77B3261240DB009BDFF1 /* Array+RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F77B2261240DB009BDFF1 /* Array+RawRepresentable.swift */; };
 		E99F77BB26124118009BDFF1 /* Set+RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F77BA26124118009BDFF1 /* Set+RawRepresentable.swift */; };
 		E99F77C7261269EA009BDFF1 /* BitcoinUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F77C6261269EA009BDFF1 /* BitcoinUnitView.swift */; };
-		E99F77EB26127939009BDFF1 /* CryptoFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F77EA26127939009BDFF1 /* CryptoFormatter.swift */; };
 		E99F77FB26128569009BDFF1 /* EthereumUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F77FA26128569009BDFF1 /* EthereumUnitView.swift */; };
 		E9BC9415261125E400D8B83E /* String+Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC9414261125E400D8B83E /* String+Encoding.swift */; };
 		E9BC942A26112C9900D8B83E /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC942926112C9900D8B83E /* NavigationBar.swift */; };
@@ -115,7 +114,6 @@
 		E99F77B2261240DB009BDFF1 /* Array+RawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+RawRepresentable.swift"; sourceTree = "<group>"; };
 		E99F77BA26124118009BDFF1 /* Set+RawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Set+RawRepresentable.swift"; sourceTree = "<group>"; };
 		E99F77C6261269EA009BDFF1 /* BitcoinUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinUnitView.swift; sourceTree = "<group>"; };
-		E99F77EA26127939009BDFF1 /* CryptoFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoFormatter.swift; sourceTree = "<group>"; };
 		E99F77FA26128569009BDFF1 /* EthereumUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthereumUnitView.swift; sourceTree = "<group>"; };
 		E9BC9414261125E400D8B83E /* String+Encoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Encoding.swift"; sourceTree = "<group>"; };
 		E9BC942926112C9900D8B83E /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
@@ -183,7 +181,6 @@
 		E90853F126115EF90001B9BE /* Crypto */ = {
 			isa = PBXGroup;
 			children = (
-				E99F77EA26127939009BDFF1 /* CryptoFormatter.swift */,
 				E9ED74C52612FAAE00DCD4A3 /* EncodingFormat.swift */,
 				E9ED74C02612F8F500DCD4A3 /* HashFunction.swift */,
 				E90853F226115F0B0001B9BE /* ROT13.swift */,
@@ -535,7 +532,6 @@
 				E96A4AAA260FFD74009EA367 /* AppState.swift in Sources */,
 				E9163B00260EA4BA00453411 /* FunctionsView.swift in Sources */,
 				E95432142612B3A8001918F3 /* SelectThemeView.swift in Sources */,
-				E99F77EB26127939009BDFF1 /* CryptoFormatter.swift in Sources */,
 				E937D404260ECB8A00A75B06 /* String+Hashing.swift in Sources */,
 				E96A4A85260FE062009EA367 /* CurrenciesView.swift in Sources */,
 				E9ED74D9261301B300DCD4A3 /* PageType.swift in Sources */,
