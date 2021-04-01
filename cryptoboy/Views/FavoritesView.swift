@@ -9,9 +9,9 @@ import SwiftUI
 
 struct FavoritesView: View {
     @EnvironmentObject var state: AppState
-    
+
     var body: some View {
-        if (!state.bookmarks.isEmpty) {
+        if !state.bookmarks.isEmpty {
             NavigationView {
                 List {
                     ForEach(state.bookmarks, id: \.self) { view in
@@ -34,7 +34,7 @@ struct FavoritesView: View {
             .environmentObject(state)
         }
     }
-    
+
     func deleteBookmark(at offsets: IndexSet) {
         state.bookmarks.remove(atOffsets: offsets)
     }

@@ -21,7 +21,6 @@ struct MenuItem: Codable, Equatable {
     var description: String
     var icons: [String]
 
-
     #if DEBUG
     static let example = MenuItem(
         id: "hash",

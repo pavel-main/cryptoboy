@@ -11,20 +11,20 @@ import CoreImage.CIFilterBuiltins
 struct QRCodeView: View {
     @EnvironmentObject var state: AppState
     @State private var data = ""
-    
+
     let context = CIContext()
     let filter = CIFilter.qrCodeGenerator()
-    
+
     var body: some View {
         Form {
             Section(header: Text("Input Message")) {
                 HStack {
                     Image(systemName: "terminal")
-                    
+
                     TextEditor(text: $data)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
-                    
+
                     Button(action: {
                         data = ""
                     }) {
@@ -32,8 +32,8 @@ struct QRCodeView: View {
                     }
                 }
             }
-            
-            if (!data.isEmpty) {
+
+            if !data.isEmpty {
                 Section(header: Text("QR Code")) {
                     Image(uiImage: generateQRCode(from: data))
                         .interpolation(.none)
@@ -47,7 +47,7 @@ struct QRCodeView: View {
         .modifier(NavigationViewModifier(page: .qrcode))
         .environmentObject(state)
     }
-    
+
     func generateQRCode(from string: String) -> UIImage {
         let bytes = Data(string.utf8)
         filter.setValue(bytes, forKey: "inputMessage")

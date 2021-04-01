@@ -9,12 +9,12 @@ import SwiftUI
 struct AboutSystemItem: View {
     var name: String
     var value: String
-    
+
     init(_ name: String, _ value: String) {
         self.name = name
         self.value = value
     }
-    
+
     var body: some View {
         HStack {
             HStack {

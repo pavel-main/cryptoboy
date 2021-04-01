@@ -14,13 +14,13 @@ enum HashFunction {
     case keccak512
     case blake256
     case groestl512
-    
+
     case sha256ripedm160
     case sha256sha256
     case blake256ripedm160
     case blake256blake256
     case groestl512groestl512
-    
+
     var title: String {
         switch self {
             case .sha1:

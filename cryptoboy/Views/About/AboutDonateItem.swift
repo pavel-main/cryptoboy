@@ -11,12 +11,12 @@ struct AboutDonateItem: View {
     var type: String
     var address: String
     @State private var showCopyAlert = false
-    
+
     init(_ type: String, _ address: String) {
         self.type = type
         self.address = address
     }
-    
+
     var body: some View {
         HStack {
             Text(self.type)

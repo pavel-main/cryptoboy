@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct NavigationRow : View {
+struct NavigationRow: View {
     @EnvironmentObject var state: AppState
-    
+
     let item: MenuItem
     let colors: [String: Color] = ["new": .red, "soon": .blue]
 
@@ -17,22 +17,22 @@ struct NavigationRow : View {
         NavigationLink(destination: getDestination(from: item)) {
             HStack {
                 Label(String(), systemImage: item.systemImage)
-                
+
                 VStack(alignment: .leading) {
                     Text(item.title)
                         .font(.headline)
-                    
-                    if (item.description != "") {
+
+                    if item.description != "" {
                         Text(item.description)
                             .font(.caption)
                     }
                 }
-                
+
                 Spacer()
-                
+
                 // Icons
                 ForEach(item.icons, id: \.self) { icon in
-                    if (icon == "soon" || !state.hasVisited(item.id)) {
+                    if icon == "soon" || !state.hasVisited(item.id) {
                         Text(icon)
                             .textCase(.uppercase)
                             .font(.caption)
@@ -46,7 +46,7 @@ struct NavigationRow : View {
         }
         .environmentObject(state)
     }
-    
+
     func getDestination(from item: MenuItem) -> AnyView {
         switch item.id {
         case "hash":
@@ -54,16 +54,16 @@ struct NavigationRow : View {
 
         case "encoding":
             return AnyView(EncodingView())
-            
+
         case "qrcode":
             return AnyView(QRCodeView())
-            
+
         case "btc_unit":
             return AnyView(BitcoinUnitView())
-            
+
         case "eth_unit":
             return AnyView(EthereumUnitView())
-            
+
         default:
             return AnyView(ComingSoonView(item: item))
         }

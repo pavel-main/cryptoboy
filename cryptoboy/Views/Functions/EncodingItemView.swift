@@ -16,9 +16,9 @@ struct EncodingItemView: View {
     init(_ type: EncodingFormat) {
         self.type = type
     }
-    
+
     var body: some View {
-        if (!state.isDefaultMessage()) {
+        if !state.isDefaultMessage() {
             Section(header: Text(self.type.title)) {
                 HStack {
                     Button(action: {
@@ -46,4 +46,3 @@ struct EncodingItemView_Previews: PreviewProvider {
         EncodingItemView(.hex)
     }
 }
-

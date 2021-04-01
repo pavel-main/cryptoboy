@@ -12,7 +12,7 @@ struct SelectThemeButton: View {
     @AppStorage("currentTheme") var currentTheme: String = "blue"
     var colorName: String
     var themeName: String
-    
+
     var body: some View {
         HStack {
             Button(action: {
@@ -23,9 +23,9 @@ struct SelectThemeButton: View {
                         .strokeBorder(state.invertedColor(), lineWidth: 1)
                         .background(Circle().foregroundColor(getTheme(themeName: self.themeName).colorPrimary))
                         .frame(width: 25, height: 25)
-                    
+
                     Text(self.colorName)
-                    
+
                     if self.currentTheme == self.themeName {
                         Image(systemName: "checkmark")
                     }

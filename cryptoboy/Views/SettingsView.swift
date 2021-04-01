@@ -11,15 +11,15 @@ struct SettingsView: View {
     @EnvironmentObject var state: AppState
     @AppStorage("isDarkMode") var isDarkMode: Bool = true
     @State private var showClearPrompt = false
-    
+
     var appVersion: String {
         if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
            return version
         }
-       
+
         return "1.0"
     }
-    
+
     var rawBuildDate: Date {
         if let infoPath = Bundle.main.path(forResource: "Info", ofType: "plist"),
             let infoAttr = try? FileManager.default.attributesOfItem(atPath: infoPath),
@@ -28,7 +28,7 @@ struct SettingsView: View {
         }
         return Date()
     }
-    
+
     var buildDate: String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
@@ -36,7 +36,7 @@ struct SettingsView: View {
         dateFormatter.locale = Locale.current
         return dateFormatter.string(from: rawBuildDate)
     }
-    
+
     var body: some View {
         NavigationView {
             List {
@@ -44,7 +44,7 @@ struct SettingsView: View {
                 Section(header: Text("Contact")) {
                     AboutLinkItem("E-mail", title: "cryptoboy2283@gmail.com", url: "mailto:cryptoboy2283@gmail.com")
                 }
-                
+
                 // Donation
                 Section(header: Text("Donate")) {
                     AboutDonateItem("BTC", "1PVVjazdf7ye5oSpTcBq5CWKkCMHHQYD1m")
@@ -52,23 +52,23 @@ struct SettingsView: View {
                     AboutDonateItem("BCH", "qrmtven6eellut9dm5v6ztaee9h9wu7zkulgd7crze")
                     AboutDonateItem("XLM", "GAIDD763J2YXYZBGBWSWVT7Y6MPF2KTJO77OS2QXQ3FJ6UMN6GRDDGUC")
                 }
-                
+
                 // System
                 Section(header: Text("System")) {
                     AboutSystemItem("App Version", appVersion)
                     AboutSystemItem("Build Date", buildDate)
                 }
-                
+
                 // Actions
                 Section(header: Text("Actions")) {
                     Toggle(isOn: $isDarkMode) {
                         Label("Dark Mode", systemImage: "moon.stars")
                     }
-                    
+
                     NavigationLink(destination: SelectThemeView()) {
                         Label("Color Theme", systemImage: "paintbrush")
                     }
-                    
+
                     Button(action: {
                         showClearPrompt.toggle()
                     }) {

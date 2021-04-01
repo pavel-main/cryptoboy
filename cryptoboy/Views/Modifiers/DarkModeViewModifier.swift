@@ -8,7 +8,7 @@
 import SwiftUI
 
 public struct DarkModeViewModifier: ViewModifier {
-    
+
     @AppStorage("isDarkMode") var isDarkMode: Bool = true
 
     public func body(content: Content) -> some View {

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SelectThemeView: View {    
+struct SelectThemeView: View {
     var body: some View {
         List {
             ForEach(themes, id: \.self) { theme in

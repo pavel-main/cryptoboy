@@ -11,7 +11,7 @@ enum EncodingFormat {
     case base58
     case base64
     case rot13
-    
+
     var title: String {
         switch self {
             case .bin:

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CurrenciesView: View {
     @EnvironmentObject var state: AppState
-    
+
     var body: some View {
         NavigationView {
             List {

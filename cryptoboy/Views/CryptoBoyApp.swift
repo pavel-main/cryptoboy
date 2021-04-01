@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct CryptoBoyApp: App {
     @StateObject var state = AppState()
-    
+
     var body: some Scene {
         WindowGroup {
             MainView()
