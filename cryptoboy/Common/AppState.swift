@@ -9,7 +9,7 @@ import SwiftUI
 
 class AppState: ObservableObject {
     @Environment(\.colorScheme) var colorScheme
-    
+
     @AppStorage("isDarkMode") var isDarkMode: Bool = true
     @AppStorage("currentTheme") var currentTheme: String = "blue"
 
