@@ -41,9 +41,6 @@ extension String {
 
         case .base64:
             return Data(self.utf8).base64EncodedString()
-
-        case .rot13:
-            return ROT13.string(self)
         }
     }
 }

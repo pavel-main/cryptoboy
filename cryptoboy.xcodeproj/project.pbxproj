@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C9B849CA541CCF9F68044053 /* libPods-cryptoboy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 498ADA47C73524B39421AE11 /* libPods-cryptoboy.a */; };
+		D6C7DF986CAFDA924E75CAF6 /* libPods-cryptoboy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4727DD0F9BEFDA300BF544E /* libPods-cryptoboy.a */; };
 		E902F3E32616140300825004 /* CryptoUnitFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E902F3E22616140300825004 /* CryptoUnitFormatter.swift */; };
 		E902F3EE2616170B00825004 /* String+Filtering.swift in Sources */ = {isa = PBXBuildFile; fileRef = E902F3ED2616170B00825004 /* String+Filtering.swift */; };
 		E902F3F326161C4500825004 /* MinorUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E902F3F226161C4500825004 /* MinorUnit.swift */; };
@@ -18,7 +18,6 @@
 		E90853CE261153510001B9BE /* AboutDonateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90853CD261153510001B9BE /* AboutDonateItem.swift */; };
 		E90853D9261157D50001B9BE /* AboutSystemItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90853D8261157D50001B9BE /* AboutSystemItem.swift */; };
 		E90853DE261158700001B9BE /* AboutLinkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90853DD261158700001B9BE /* AboutLinkItem.swift */; };
-		E90853F326115F0B0001B9BE /* ROT13.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90853F226115F0B0001B9BE /* ROT13.swift */; };
 		E9163B00260EA4BA00453411 /* FunctionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163AFF260EA4BA00453411 /* FunctionsView.swift */; };
 		E9163B02260EA4BA00453411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9163B01260EA4BA00453411 /* Assets.xcassets */; };
 		E9163B05260EA4BA00453411 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9163B04260EA4BA00453411 /* Preview Assets.xcassets */; };
@@ -76,9 +75,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		498ADA47C73524B39421AE11 /* libPods-cryptoboy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cryptoboy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F1C697313358C980CC37618 /* Pods_cryptoboy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cryptoboy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB873BBB4D4F864C700D46AD /* Pods-cryptoboy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cryptoboy.debug.xcconfig"; path = "Target Support Files/Pods-cryptoboy/Pods-cryptoboy.debug.xcconfig"; sourceTree = "<group>"; };
 		E1E84236F48D7A61A8D3980E /* Pods-cryptoboy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cryptoboy.release.xcconfig"; path = "Target Support Files/Pods-cryptoboy/Pods-cryptoboy.release.xcconfig"; sourceTree = "<group>"; };
+		E4727DD0F9BEFDA300BF544E /* libPods-cryptoboy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cryptoboy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E902F3E22616140300825004 /* CryptoUnitFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoUnitFormatter.swift; sourceTree = "<group>"; };
 		E902F3ED2616170B00825004 /* String+Filtering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Filtering.swift"; sourceTree = "<group>"; };
 		E902F3F226161C4500825004 /* MinorUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinorUnit.swift; sourceTree = "<group>"; };
@@ -89,7 +89,6 @@
 		E90853CD261153510001B9BE /* AboutDonateItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutDonateItem.swift; sourceTree = "<group>"; };
 		E90853D8261157D50001B9BE /* AboutSystemItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSystemItem.swift; sourceTree = "<group>"; };
 		E90853DD261158700001B9BE /* AboutLinkItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutLinkItem.swift; sourceTree = "<group>"; };
-		E90853F226115F0B0001B9BE /* ROT13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ROT13.swift; sourceTree = "<group>"; };
 		E9163AFA260EA4BA00453411 /* cryptoboy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cryptoboy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9163AFF260EA4BA00453411 /* FunctionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionsView.swift; sourceTree = "<group>"; };
 		E9163B01260EA4BA00453411 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -140,7 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9B849CA541CCF9F68044053 /* libPods-cryptoboy.a in Frameworks */,
+				D6C7DF986CAFDA924E75CAF6 /* libPods-cryptoboy.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +163,7 @@
 		5BB926CD15A7B800ADD3CC0D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				498ADA47C73524B39421AE11 /* libPods-cryptoboy.a */,
+				E4727DD0F9BEFDA300BF544E /* libPods-cryptoboy.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -184,6 +183,7 @@
 				E90853CD261153510001B9BE /* AboutDonateItem.swift */,
 				E90853D8261157D50001B9BE /* AboutSystemItem.swift */,
 				E90853DD261158700001B9BE /* AboutLinkItem.swift */,
+				E902F42D2616394500825004 /* QRCodeDisplayView.swift */,
 			);
 			path = About;
 			sourceTree = "<group>";
@@ -194,7 +194,6 @@
 				E902F3E22616140300825004 /* CryptoUnitFormatter.swift */,
 				E9ED74C52612FAAE00DCD4A3 /* EncodingFormat.swift */,
 				E9ED74C02612F8F500DCD4A3 /* HashFunction.swift */,
-				E90853F226115F0B0001B9BE /* ROT13.swift */,
 			);
 			path = Crypto;
 			sourceTree = "<group>";
@@ -222,6 +221,7 @@
 				E9163AFB260EA4BA00453411 /* Products */,
 				7774E28BE82C84E08FD4C1EE /* Pods */,
 				5BB926CD15A7B800ADD3CC0D /* Frameworks */,
+				E96557A8261693C8004E7BF1 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -326,6 +326,14 @@
 			path = Currencies;
 			sourceTree = "<group>";
 		};
+		E96557A8261693C8004E7BF1 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				9F1C697313358C980CC37618 /* Pods_cryptoboy.framework */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		E96A4A76260FDCDC009EA367 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,7 +360,6 @@
 				E90853C4261149290001B9BE /* EncodingView.swift */,
 				E96A4AB1260FFF0D009EA367 /* HashingItemView.swift */,
 				E945C39B260EC96F00E732A0 /* HashingView.swift */,
-				E902F42D2616394500825004 /* QRCodeDisplayView.swift */,
 				E954321C2612B701001918F3 /* QRCodeGeneratorView.swift */,
 			);
 			path = Functions;
@@ -529,7 +536,6 @@
 				E9ED74C12612F8F500DCD4A3 /* HashFunction.swift in Sources */,
 				E96A4A8F260FE2DF009EA367 /* SettingsView.swift in Sources */,
 				E9163B45260EAEA200453411 /* ComingSoonView.swift in Sources */,
-				E90853F326115F0B0001B9BE /* ROT13.swift in Sources */,
 				E9ED74CE2612FCC900DCD4A3 /* NavigationViewModifier.swift in Sources */,
 				E9163B4F260EB31200453411 /* MainView.swift in Sources */,
 				E90853C5261149290001B9BE /* EncodingView.swift in Sources */,
@@ -728,7 +734,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"cryptoboy/Preview Content\"";
 				DEVELOPMENT_TEAM = ACU6WYW3JF;
-				ENABLE_PREVIEWS = YES;
+				ENABLE_PREVIEWS = NO;
 				INFOPLIST_FILE = cryptoboy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -753,7 +759,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"cryptoboy/Preview Content\"";
 				DEVELOPMENT_TEAM = ACU6WYW3JF;
-				ENABLE_PREVIEWS = YES;
+				ENABLE_PREVIEWS = NO;
 				INFOPLIST_FILE = cryptoboy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -40,11 +40,6 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             List {
-                // Contact
-                Section(header: Text("Contact")) {
-                    AboutLinkItem("E-mail", title: "cryptoboy2283@gmail.com", url: "mailto:cryptoboy2283@gmail.com")
-                }
-
                 // Donation
                 Section(header: Text("Donate")) {
                     AboutDonateItem("BTC", "1PVVjazdf7ye5oSpTcBq5CWKkCMHHQYD1m")

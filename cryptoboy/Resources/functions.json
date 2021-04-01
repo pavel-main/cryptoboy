@@ -3,6 +3,13 @@
         "id": "data",
 		"title": "Data",
 		"items": [
+            {
+                "id": "uint256",
+                "title": "Arbitary-precision arithmetic",
+                "systemImage": "plus.magnifyingglass",
+                "description": "uint256 conversion",
+                "icons": []
+            },
 			{
 				"id": "hash",
                 "title": "Hashing",

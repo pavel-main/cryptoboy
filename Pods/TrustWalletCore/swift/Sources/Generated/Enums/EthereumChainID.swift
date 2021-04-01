@@ -17,4 +17,5 @@ public enum EthereumChainID: UInt32, CaseIterable {
     case thunderToken = 108
     case tomoChain = 88
     case binanceSmartChain = 56
+    case matic = 137
 }

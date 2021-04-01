@@ -51,6 +51,7 @@
 #import "TWHRP.h"
 #import "TWIconProto.h"
 #import "TWIoTeXProto.h"
+#import "TWMnemonic.h"
 #import "TWNanoProto.h"
 #import "TWNEARAccount.h"
 #import "TWNEARProto.h"

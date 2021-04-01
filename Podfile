@@ -1,5 +1,5 @@
-target 'cryptoboy'
-
-pod 'SwiftLint'
-pod 'QRCoder'
-pod 'TrustWalletCore'
+target 'cryptoboy' do
+    pod 'SwiftLint'
+    pod 'QRCoder'
+    pod 'TrustWalletCore'
+end

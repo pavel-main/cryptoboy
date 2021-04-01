@@ -10,7 +10,6 @@ enum EncodingFormat {
     case hex
     case base58
     case base64
-    case rot13
 
     var title: String {
         switch self {
@@ -22,8 +21,6 @@ enum EncodingFormat {
                 return "Base58"
             case .base64:
                 return "Base64"
-            case .rot13:
-                return "ROT13"
         }
     }
 }
