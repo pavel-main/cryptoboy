@@ -42,7 +42,7 @@
                 "title": "Decoding",
                 "systemImage": "arrow.counterclockwise",
                 "description": "",
-                "icons": []
+                "icons": ["new"]
             },
             {
                 "id": "encryption",
@@ -97,7 +97,7 @@
                 "title": "QR Code Generator",
                 "systemImage": "qrcode",
                 "description": "",
-                "icons": ["new"]
+                "icons": []
             },
             {
                 "id": "ecdh",
