@@ -14,25 +14,8 @@ extension String {
         return Data(self.utf8).hexString
     }
 
-    func binary() -> String {
-        let st = self
-        var result = ""
-        for char in st.utf8 {
-            var tranformed = String(char, radix: 2)
-            while tranformed.count < 8 {
-                tranformed = "0" + tranformed
-            }
-            let binary = "\(tranformed) "
-            result.append(binary)
-        }
-        return result
-    }
-
     func encode(_ type: EncodingFormat) -> String {
         switch type {
-        case .bin:
-            return self.binary()
-
         case .hex:
             return self.hex()
 
@@ -46,8 +29,6 @@ extension String {
 
     func decode(_ format: EncodingFormat) -> String {
         switch format {
-            case .bin:
-                return "Not implemented yet"
             case .hex:
                 guard let bytes = Data(hexString: self) else {
                     return "Error"

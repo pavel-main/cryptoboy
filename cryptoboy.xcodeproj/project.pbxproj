@@ -197,7 +197,6 @@
 				E90853CD261153510001B9BE /* AboutDonateItem.swift */,
 				E90853D8261157D50001B9BE /* AboutSystemItem.swift */,
 				E90853DD261158700001B9BE /* AboutLinkItem.swift */,
-				E902F42D2616394500825004 /* QRCodeDisplayView.swift */,
 			);
 			path = About;
 			sourceTree = "<group>";
@@ -311,7 +310,7 @@
 				E9D14B69260FDB81000B191B /* Functions */,
 				E96A4A9F260FE4C9009EA367 /* Navigation */,
 				E9ED74AF2612E91A00DCD4A3 /* Modifiers */,
-				E954320D2612B358001918F3 /* Theme */,
+				E954320D2612B358001918F3 /* Settings */,
 				E945C396260EC96900E732A0 /* CryptoBoyApp.swift */,
 				E9163B4E260EB31200453411 /* MainView.swift */,
 				E9163AFF260EA4BA00453411 /* FunctionsView.swift */,
@@ -334,13 +333,13 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		E954320D2612B358001918F3 /* Theme */ = {
+		E954320D2612B358001918F3 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
 				E954320E2612B389001918F3 /* SelectThemeButton.swift */,
 				E95432132612B3A8001918F3 /* SelectThemeView.swift */,
 			);
-			path = Theme;
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		E95432182612B66C001918F3 /* Currencies */ = {
@@ -382,6 +381,7 @@
 			isa = PBXGroup;
 			children = (
 				E9163B44260EAEA200453411 /* ComingSoonView.swift */,
+				E902F42D2616394500825004 /* QRCodeDisplayView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";

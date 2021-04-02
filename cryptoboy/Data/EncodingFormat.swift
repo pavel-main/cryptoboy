@@ -8,15 +8,12 @@
 import Foundation
 
 enum EncodingFormat {
-    case bin
     case hex
     case base58
     case base64
 
     var title: String {
         switch self {
-            case .bin:
-                return "Binary"
             case .hex:
                 return "Hexadecimal"
             case .base58:

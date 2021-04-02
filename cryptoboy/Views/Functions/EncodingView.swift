@@ -30,7 +30,6 @@ struct EncodingView: View {
             EncodingItemView(.hex)
             EncodingItemView(.base58)
             EncodingItemView(.base64)
-            EncodingItemView(.bin)
         }
         .modifier(NavigationViewModifier(page: .encoding))
     }

@@ -27,14 +27,14 @@
 				"id": "hash",
                 "title": "Hashing",
                 "systemImage": "number",
-                "description": "sha, keccak, ripemd, blake, …",
+                "description": "sha256, keccak256, ripemd160, …",
 				"icons": []
 			},
             {
                 "id": "encoding",
                 "title": "Encoding",
                 "systemImage": "arrow.clockwise",
-                "description": "hex, base58, base64",
+                "description": "hex, base58, base64, …",
                 "icons": []
             },
             {
