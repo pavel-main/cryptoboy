@@ -1,0 +1,6 @@
+module SwiftRadix {
+  umbrella header "SwiftRadix-umbrella.h"
+
+  export *
+  module * { export * }
+}

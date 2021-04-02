@@ -49,12 +49,18 @@ struct NavigationRow: View {
 
     func getDestination(from item: MenuItem) -> AnyView {
         switch item.id {
+        case "base":
+            return AnyView(BaseConverterView())
+        
         case "hash":
             return AnyView(HashingView())
 
         case "encoding":
             return AnyView(EncodingView())
 
+        case "decoding":
+            return AnyView(DecodingView())
+            
         case "qrcode":
             return AnyView(QRCodeGeneratorView())
 

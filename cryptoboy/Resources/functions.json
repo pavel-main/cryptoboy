@@ -1,4 +1,24 @@
 [
+    {
+        "id": "math",
+        "title": "Math",
+        "items": [
+            {
+                "id": "base",
+                "title": "Base Converter",
+                "systemImage": "plus.slash.minus",
+                "description": "bin, oct, dec, hex",
+                "icons": []
+            },
+            {
+                "id": "long",
+                "title": "Arbitary-precision arithmetic",
+                "systemImage": "sum",
+                "description": "uint256",
+                "icons": ["soon"]
+            }
+        ]
+    },
 	{
         "id": "data",
 		"title": "Data",
@@ -6,7 +26,7 @@
 			{
 				"id": "hash",
                 "title": "Hashing",
-                "systemImage": "number",
+                "systemImage": "number.circle",
                 "description": "sha, keccak, ripemd, blake, …",
 				"icons": []
 			},
@@ -22,7 +42,7 @@
                 "title": "Decoding",
                 "systemImage": "arrow.counterclockwise",
                 "description": "",
-                "icons": ["soon"]
+                "icons": []
             },
             {
                 "id": "encryption",

@@ -5,6 +5,9 @@
 //  Created by Pavel on 30/03/2021.
 //
 
+import Foundation
+import WalletCore
+
 enum EncodingFormat {
     case bin
     case hex

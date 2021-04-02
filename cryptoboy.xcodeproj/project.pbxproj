@@ -36,6 +36,9 @@
 		E954320F2612B389001918F3 /* SelectThemeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954320E2612B389001918F3 /* SelectThemeButton.swift */; };
 		E95432142612B3A8001918F3 /* SelectThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95432132612B3A8001918F3 /* SelectThemeView.swift */; };
 		E954321D2612B701001918F3 /* QRCodeGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954321C2612B701001918F3 /* QRCodeGeneratorView.swift */; };
+		E96557CB26169AE8004E7BF1 /* DecodingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96557CA26169AE8004E7BF1 /* DecodingView.swift */; };
+		E96557D92616A432004E7BF1 /* BaseConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96557D82616A432004E7BF1 /* BaseConverterView.swift */; };
+		E96557DE2616A536004E7BF1 /* BaseUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96557DD2616A536004E7BF1 /* BaseUnit.swift */; };
 		E96A4A7B260FDD62009EA367 /* functions.json in Resources */ = {isa = PBXBuildFile; fileRef = E96A4A7A260FDD62009EA367 /* functions.json */; };
 		E96A4A80260FDD6E009EA367 /* currencies.json in Resources */ = {isa = PBXBuildFile; fileRef = E96A4A7F260FDD6E009EA367 /* currencies.json */; };
 		E96A4A85260FE062009EA367 /* CurrenciesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A4A84260FE062009EA367 /* CurrenciesView.swift */; };
@@ -113,6 +116,9 @@
 		E954320E2612B389001918F3 /* SelectThemeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectThemeButton.swift; sourceTree = "<group>"; };
 		E95432132612B3A8001918F3 /* SelectThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectThemeView.swift; sourceTree = "<group>"; };
 		E954321C2612B701001918F3 /* QRCodeGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeGeneratorView.swift; sourceTree = "<group>"; };
+		E96557CA26169AE8004E7BF1 /* DecodingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingView.swift; sourceTree = "<group>"; };
+		E96557D82616A432004E7BF1 /* BaseConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConverterView.swift; sourceTree = "<group>"; };
+		E96557DD2616A536004E7BF1 /* BaseUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUnit.swift; sourceTree = "<group>"; };
 		E96A4A7A260FDD62009EA367 /* functions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = functions.json; sourceTree = "<group>"; };
 		E96A4A7F260FDD6E009EA367 /* currencies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = currencies.json; sourceTree = "<group>"; };
 		E96A4A84260FE062009EA367 /* CurrenciesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrenciesView.swift; sourceTree = "<group>"; };
@@ -299,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				E96A4AA9260FFD74009EA367 /* AppState.swift */,
+				E96557DD2616A536004E7BF1 /* BaseUnit.swift */,
 				E9163B36260EAAD200453411 /* Menu.swift */,
 				E902F3F226161C4500825004 /* MinorUnit.swift */,
 				E9ED74D8261301B300DCD4A3 /* PageType.swift */,
@@ -355,12 +362,14 @@
 		E9D14B69260FDB81000B191B /* Functions */ = {
 			isa = PBXGroup;
 			children = (
+				E96557D82616A432004E7BF1 /* BaseConverterView.swift */,
 				E9163B44260EAEA200453411 /* ComingSoonView.swift */,
 				E90853BF261148F30001B9BE /* EncodingItemView.swift */,
 				E90853C4261149290001B9BE /* EncodingView.swift */,
 				E96A4AB1260FFF0D009EA367 /* HashingItemView.swift */,
 				E945C39B260EC96F00E732A0 /* HashingView.swift */,
 				E954321C2612B701001918F3 /* QRCodeGeneratorView.swift */,
+				E96557CA26169AE8004E7BF1 /* DecodingView.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -540,6 +549,7 @@
 				E9163B4F260EB31200453411 /* MainView.swift in Sources */,
 				E90853C5261149290001B9BE /* EncodingView.swift in Sources */,
 				E94D6DFF2614EBBC00181287 /* Binding+Value.swift in Sources */,
+				E96557D92616A432004E7BF1 /* BaseConverterView.swift in Sources */,
 				E9ED74B92612F6C200DCD4A3 /* ThemeViewModifier.swift in Sources */,
 				E9ED74B12612E93300DCD4A3 /* DarkModeViewModifier.swift in Sources */,
 				E99F77FB26128569009BDFF1 /* EthereumUnitView.swift in Sources */,
@@ -555,6 +565,7 @@
 				E9163B00260EA4BA00453411 /* FunctionsView.swift in Sources */,
 				E902F3E32616140300825004 /* CryptoUnitFormatter.swift in Sources */,
 				E902F3F326161C4500825004 /* MinorUnit.swift in Sources */,
+				E96557CB26169AE8004E7BF1 /* DecodingView.swift in Sources */,
 				E95432142612B3A8001918F3 /* SelectThemeView.swift in Sources */,
 				E937D404260ECB8A00A75B06 /* String+Hashing.swift in Sources */,
 				E96A4A85260FE062009EA367 /* CurrenciesView.swift in Sources */,
@@ -566,6 +577,7 @@
 				E954321D2612B701001918F3 /* QRCodeGeneratorView.swift in Sources */,
 				E9163B3A260EAAD200453411 /* Menu.swift in Sources */,
 				E9BC942A26112C9900D8B83E /* NavigationBar.swift in Sources */,
+				E96557DE2616A536004E7BF1 /* BaseUnit.swift in Sources */,
 				E90853DE261158700001B9BE /* AboutLinkItem.swift in Sources */,
 				E954320F2612B389001918F3 /* SelectThemeButton.swift in Sources */,
 				E90853C0261148F30001B9BE /* EncodingItemView.swift in Sources */,
