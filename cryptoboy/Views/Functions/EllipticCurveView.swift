@@ -15,6 +15,8 @@ struct EllipticCurveView: View {
         Form {
             Section(header: Text("Private Key")) {
                 HStack {
+                    Image(systemName: "terminal")
+                    
                     TextField("", text: Binding(
                         get: {
                             guard let privateKey = self.state.privateKey else {
