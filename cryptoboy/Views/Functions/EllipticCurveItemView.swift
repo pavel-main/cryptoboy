@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EllipticCurvePublicKeyView: View {
+struct EllipticCurveItemView: View {
     @EnvironmentObject var state: AppState
     @State private var showCopyAlert = false
 

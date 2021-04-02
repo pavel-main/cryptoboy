@@ -51,11 +51,11 @@ struct EllipticCurveView: View {
 
             if state.privateKey != nil {
                 Group {
-                    EllipticCurvePublicKeyView(.secp256k1(compressed: true))
-                    EllipticCurvePublicKeyView(.ed25519)
-                    EllipticCurvePublicKeyView(.ed25519blake2b)
-                    EllipticCurvePublicKeyView(.curve25519)
-                    EllipticCurvePublicKeyView(.nist256p1)
+                    EllipticCurveItemView(.secp256k1(compressed: true))
+                    EllipticCurveItemView(.ed25519)
+                    EllipticCurveItemView(.ed25519blake2b)
+                    EllipticCurveItemView(.curve25519)
+                    EllipticCurveItemView(.nist256p1)
                 }
             }
 

@@ -19,7 +19,7 @@
 		E90853D9261157D50001B9BE /* AboutSystemItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90853D8261157D50001B9BE /* AboutSystemItem.swift */; };
 		E90853DE261158700001B9BE /* AboutLinkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90853DD261158700001B9BE /* AboutLinkItem.swift */; };
 		E9088B882617CE45008C3BBC /* EllipticCurveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9088B872617CE45008C3BBC /* EllipticCurveView.swift */; };
-		E9088B932617D287008C3BBC /* EllipticCurvePublicKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9088B922617D287008C3BBC /* EllipticCurvePublicKeyView.swift */; };
+		E9088B932617D287008C3BBC /* EllipticCurveItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9088B922617D287008C3BBC /* EllipticCurveItemView.swift */; };
 		E9088B992617D311008C3BBC /* EllipticCurvePublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9088B982617D311008C3BBC /* EllipticCurvePublicKey.swift */; };
 		E9163B00260EA4BA00453411 /* FunctionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163AFF260EA4BA00453411 /* FunctionsView.swift */; };
 		E9163B02260EA4BA00453411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9163B01260EA4BA00453411 /* Assets.xcassets */; };
@@ -97,7 +97,7 @@
 		E90853D8261157D50001B9BE /* AboutSystemItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSystemItem.swift; sourceTree = "<group>"; };
 		E90853DD261158700001B9BE /* AboutLinkItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutLinkItem.swift; sourceTree = "<group>"; };
 		E9088B872617CE45008C3BBC /* EllipticCurveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipticCurveView.swift; sourceTree = "<group>"; };
-		E9088B922617D287008C3BBC /* EllipticCurvePublicKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipticCurvePublicKeyView.swift; sourceTree = "<group>"; };
+		E9088B922617D287008C3BBC /* EllipticCurveItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipticCurveItemView.swift; sourceTree = "<group>"; };
 		E9088B982617D311008C3BBC /* EllipticCurvePublicKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipticCurvePublicKey.swift; sourceTree = "<group>"; };
 		E9163AFA260EA4BA00453411 /* cryptoboy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cryptoboy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9163AFF260EA4BA00453411 /* FunctionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionsView.swift; sourceTree = "<group>"; };
@@ -384,7 +384,7 @@
 				E9163B44260EAEA200453411 /* ComingSoonView.swift */,
 				E96557CA26169AE8004E7BF1 /* DecodingView.swift */,
 				E9088B872617CE45008C3BBC /* EllipticCurveView.swift */,
-				E9088B922617D287008C3BBC /* EllipticCurvePublicKeyView.swift */,
+				E9088B922617D287008C3BBC /* EllipticCurveItemView.swift */,
 				E90853BF261148F30001B9BE /* EncodingItemView.swift */,
 				E90853C4261149290001B9BE /* EncodingView.swift */,
 				E96A4AB1260FFF0D009EA367 /* HashingItemView.swift */,
@@ -582,7 +582,7 @@
 				E99F77C7261269EA009BDFF1 /* BitcoinUnitView.swift in Sources */,
 				E95432092612B29B001918F3 /* Theme.swift in Sources */,
 				E96A4AAA260FFD74009EA367 /* AppState.swift in Sources */,
-				E9088B932617D287008C3BBC /* EllipticCurvePublicKeyView.swift in Sources */,
+				E9088B932617D287008C3BBC /* EllipticCurveItemView.swift in Sources */,
 				E9163B00260EA4BA00453411 /* FunctionsView.swift in Sources */,
 				E902F3E32616140300825004 /* CryptoUnitFormatter.swift in Sources */,
 				E902F3F326161C4500825004 /* MinorUnit.swift in Sources */,
