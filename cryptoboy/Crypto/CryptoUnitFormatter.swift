@@ -24,7 +24,7 @@ class CryptoUnitFormatter {
         fmt.roundingMode = .down
         return fmt
     }
-    
+
     /**
      * Updates all units with `newValue` passed at `idx`
      */
@@ -34,7 +34,7 @@ class CryptoUnitFormatter {
 
         // Validate input
         let filteredInput = newValue.uppercased().filter { units[idx].whitelist.contains($0) }
-        
+
         // Convert to radix value with current base
         let radix = filteredInput.radix(base: units[idx].base) ?? 0.binary
 

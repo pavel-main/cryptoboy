@@ -17,7 +17,7 @@ struct BaseConverterView: View {
         BaseUnit.init(title: "Hexadecimal", base: 16, current: "0", whitelist: "0123456789ABCDEF"),
         BaseUnit.init(title: "Binary", base: 2, current: "0", whitelist: "01")
     ]
-    
+
     var body: some View {
         Form {
             ForEach(units.indices, id: \.self) { idx in

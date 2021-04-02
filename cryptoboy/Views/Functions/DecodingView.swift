@@ -10,9 +10,9 @@ import SwiftUI
 struct DecodingView: View {
     @State private var message = ""
     @State private var format = EncodingFormat.hex
-    
+
     @State private var showCopyAlert = false
-    
+
     var body: some View {
         Form {
             Section(header: Text("Encoded Message")) {
@@ -35,7 +35,7 @@ struct DecodingView: View {
                     Text("Binary").tag(EncodingFormat.bin)
                 }
             }
-            
+
             if !message.isEmpty {
                 Section(header: Text("Decoded Message")) {
                     HStack {

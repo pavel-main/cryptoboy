@@ -49,7 +49,7 @@ class AppState: ObservableObject {
         // Workaround QRCoder init lag
         _ = QRCodeHelper.generate(from: "cryptoboy", size: CGFloat(320), level: "M")
     }
-    
+
     func getMenuItem(_ id: String) -> MenuItem? {
         let menuItems = functionsMenu.flatMap { $0.items } + currenciesMenu.flatMap { $0.items }
         return menuItems.filter { $0.id == id }.first

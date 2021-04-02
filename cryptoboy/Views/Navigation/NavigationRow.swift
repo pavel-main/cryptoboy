@@ -51,7 +51,7 @@ struct NavigationRow: View {
         switch item.id {
         case "base":
             return AnyView(BaseConverterView())
-        
+
         case "hash":
             return AnyView(HashingView())
 
@@ -60,7 +60,7 @@ struct NavigationRow: View {
 
         case "decoding":
             return AnyView(DecodingView())
-            
+
         case "qrcode":
             return AnyView(QRCodeGeneratorView())
 

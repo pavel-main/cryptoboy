@@ -43,7 +43,7 @@ extension String {
             return Data(self.utf8).base64EncodedString()
         }
     }
-    
+
     func decode(_ format: EncodingFormat) -> String {
         switch format {
             case .bin:
@@ -52,7 +52,7 @@ extension String {
                 guard let bytes = Data(hexString: self) else {
                     return "Error"
                 }
-                
+
                 return String(data: bytes, encoding: .utf8) ?? "Error"
             case .base58:
                 guard let result = Base58.decode(string: self) else {
