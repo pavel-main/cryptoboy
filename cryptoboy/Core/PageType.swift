@@ -10,6 +10,7 @@ enum PageType {
     case hash
     case encoding
     case decoding
+    case ecc
     case qrcode
     case btc_unit
     case eth_unit
@@ -25,6 +26,8 @@ enum PageType {
                 return "Encoding"
             case .decoding:
                 return "Decoding"
+            case .ecc:
+                return "Elliptic Curves"
             case .qrcode:
                 return "QR Code Generator"
             case .btc_unit:

@@ -28,10 +28,3 @@ struct CurrenciesView: View {
         .environmentObject(state)
     }
 }
-
-struct CurrencyView_Previews: PreviewProvider {
-    static var previews: some View {
-        CurrenciesView()
-            .environmentObject(AppState())
-    }
-}

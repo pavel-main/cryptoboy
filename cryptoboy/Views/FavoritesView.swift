@@ -39,10 +39,3 @@ struct FavoritesView: View {
         state.bookmarks.remove(atOffsets: offsets)
     }
 }
-
-struct FavoritesView_Previews: PreviewProvider {
-    static var previews: some View {
-        FavoritesView()
-            .environmentObject(AppState())
-    }
-}

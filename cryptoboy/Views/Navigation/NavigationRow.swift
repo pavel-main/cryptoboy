@@ -61,6 +61,9 @@ struct NavigationRow: View {
         case "decoding":
             return AnyView(DecodingView())
 
+        case "ecc":
+            return AnyView(EllipticCurveView())
+
         case "qrcode":
             return AnyView(QRCodeGeneratorView())
 
@@ -73,12 +76,5 @@ struct NavigationRow: View {
         default:
             return AnyView(ComingSoonView(item: item))
         }
-    }
-}
-
-struct NavigationRow_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationRow(item: MenuItem.example)
-            .environmentObject(AppState())
     }
 }

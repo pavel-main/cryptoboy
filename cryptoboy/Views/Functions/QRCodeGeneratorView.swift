@@ -64,10 +64,3 @@ struct QRCodeGeneratorView: View {
         .environmentObject(state)
     }
 }
-
-struct QRCodeView_Previews: PreviewProvider {
-    static var previews: some View {
-        QRCodeGeneratorView()
-            .environmentObject(AppState())
-    }
-}

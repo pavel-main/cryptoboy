@@ -31,13 +31,6 @@ struct MainView: View {
         }
         .modifier(DarkModeViewModifier())
         .modifier(ThemeViewModifier())
-        .environmentObject(AppState())
-    }
-}
-
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
-            .environmentObject(AppState())
+        .environmentObject(state)
     }
 }

@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import WalletCore
 
 enum EncodingFormat {
     case bin

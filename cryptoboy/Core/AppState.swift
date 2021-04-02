@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WalletCore
 
 class AppState: ObservableObject {
     @Environment(\.colorScheme) var colorScheme
@@ -30,6 +31,8 @@ class AppState: ObservableObject {
         }
     }
 
+    @Published var privateKey: PrivateKey?
+
     @AppStorage("bookmarks") var bookmarks: [String] = [] {
         willSet {
             objectWillChange.send()
@@ -42,10 +45,29 @@ class AppState: ObservableObject {
         }
     }
 
+    var appVersion: String {
+        if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+           return version
+        }
+
+        return "1.0"
+    }
+
+    var rawBuildDate: Date {
+        if let infoPath = Bundle.main.path(forResource: "Info", ofType: "plist"),
+            let infoAttr = try? FileManager.default.attributesOfItem(atPath: infoPath),
+            let infoDate = infoAttr[.creationDate] as? Date {
+            return infoDate
+        }
+        return Date()
+    }
+
     let functionsMenu = Bundle.main.decode([MenuSection].self, from: "functions.json")
     let currenciesMenu = Bundle.main.decode([MenuSection].self, from: "currencies.json")
 
     init() {
+        print("Loading CryptoBoy \(appVersion)")
+
         // Workaround QRCoder init lag
         _ = QRCodeHelper.generate(from: "cryptoboy", size: CGFloat(320), level: "M")
     }
@@ -87,6 +109,10 @@ class AppState: ObservableObject {
         self.hasMessageChanged = false
     }
 
+    func clearPrivateKey() {
+        self.privateKey = nil
+    }
+
     func clearState() {
         self.isDarkMode = true
         self.currentTheme = DEFAULT_THEME
@@ -117,5 +143,13 @@ class AppState: ObservableObject {
         }
 
         return message.encode(type)
+    }
+
+    func publicKeyOrDefault(_ type: EllipticCurvePublicKey) -> String {
+        guard let privateKey = self.privateKey else {
+            return ""
+        }
+
+        return type.getPublicKey(from: privateKey).description
     }
 }

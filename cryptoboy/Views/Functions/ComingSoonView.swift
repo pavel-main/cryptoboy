@@ -19,12 +19,3 @@ struct ComingSoonView: View {
             .environmentObject(state)
     }
 }
-
-struct ItemDetail_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            ComingSoonView(item: MenuItem.example)
-                .environmentObject(AppState())
-        }
-    }
-}

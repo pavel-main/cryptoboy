@@ -33,13 +33,13 @@ class CryptoUnitFormatter {
 
         // Replace localized commas with dots
         let input = newValue.replace(target: ",", with: ".").filter { "0123456789.".contains($0) }
-        
+
         // Max Decimal digits
         if input.count > 39 {
             units[idx].current = oldValue
             return units
         }
-        
+
         // Don't allow multiple dots
         let dotsCount = input.filter { $0 == "." }.count
         if dotsCount > 1 {

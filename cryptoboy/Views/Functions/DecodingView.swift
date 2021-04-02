@@ -32,7 +32,7 @@ struct DecodingView: View {
                     Text("Hexadecimal").tag(EncodingFormat.hex)
                     Text("Base58").tag(EncodingFormat.base58)
                     Text("Base64").tag(EncodingFormat.base64)
-                    Text("Binary").tag(EncodingFormat.bin)
+                    // Text("Binary").tag(EncodingFormat.bin)
                 }
             }
 

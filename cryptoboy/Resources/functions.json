@@ -67,8 +67,15 @@
             {
                 "id": "ecc",
                 "title": "Elliptic Curves",
+                "systemImage": "scribble",
+                "description": "secp256k1, ed25519, curve25519, …",
+                "icons": []
+            },
+            {
+                "id": "ecdsa",
+                "title": "Digital Signature Algorithms",
                 "systemImage": "signature",
-                "description": "secp256k1, ed25519, nist256p1",
+                "description": "ECDSA, EdDSA, …",
                 "icons": ["soon"]
             },
             {

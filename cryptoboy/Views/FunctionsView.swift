@@ -28,10 +28,3 @@ struct FunctionsView: View {
         .environmentObject(state)
     }
 }
-
-struct FunctionsView_Previews: PreviewProvider {
-    static var previews: some View {
-        FunctionsView()
-            .environmentObject(AppState())
-    }
-}

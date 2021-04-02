@@ -40,9 +40,3 @@ struct HashingItemView: View {
         }
     }
 }
-
-struct HashFunctionView_Previews: PreviewProvider {
-    static var previews: some View {
-        HashingItemView(.sha256)
-    }
-}
