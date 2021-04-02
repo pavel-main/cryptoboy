@@ -3,13 +3,6 @@
         "id": "data",
 		"title": "Data",
 		"items": [
-            {
-                "id": "uint256",
-                "title": "Arbitary-precision arithmetic",
-                "systemImage": "plus.magnifyingglass",
-                "description": "uint256 conversion",
-                "icons": []
-            },
 			{
 				"id": "hash",
                 "title": "Hashing",
@@ -21,28 +14,28 @@
                 "id": "encoding",
                 "title": "Encoding",
                 "systemImage": "arrow.clockwise",
-                "description": "hex, base58, base64, rot13, …",
+                "description": "hex, base58, base64",
                 "icons": []
             },
             {
                 "id": "decoding",
                 "title": "Decoding",
                 "systemImage": "arrow.counterclockwise",
-                "description": "hex, base58, base64, rot13, …",
+                "description": "",
                 "icons": ["soon"]
             },
             {
                 "id": "encryption",
                 "title": "Encryption",
                 "systemImage": "lock.shield",
-                "description": "aes-cbc, aes-ctr, …",
+                "description": "aes-cbc, aes-ctr",
                 "icons": ["soon"]
             },
             {
                 "id": "decryption",
                 "title": "Decryption",
                 "systemImage": "key",
-                "description": "aes-cbc, aes-ctr, …",
+                "description": "",
                 "icons": ["soon"]
             }
 		]
@@ -55,7 +48,7 @@
                 "id": "ecc",
                 "title": "Elliptic Curves",
                 "systemImage": "signature",
-                "description": "secp256k1, ed25519, nist256p1, …",
+                "description": "secp256k1, ed25519, nist256p1",
                 "icons": ["soon"]
             },
             {

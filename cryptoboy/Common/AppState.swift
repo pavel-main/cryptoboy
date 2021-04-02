@@ -11,9 +11,7 @@ class AppState: ObservableObject {
     @Environment(\.colorScheme) var colorScheme
 
     @AppStorage("isDarkMode") var isDarkMode: Bool = true
-    @AppStorage("currentTheme") var currentTheme: String = "blue"
-
-    @Published var amount: String = "1"
+    @AppStorage("currentTheme") var currentTheme: String = DEFAULT_THEME
 
     @AppStorage("hasMessageChanged") var hasMessageChanged: Bool = false {
         willSet {
@@ -47,6 +45,11 @@ class AppState: ObservableObject {
     let functionsMenu = Bundle.main.decode([MenuSection].self, from: "functions.json")
     let currenciesMenu = Bundle.main.decode([MenuSection].self, from: "currencies.json")
 
+    init() {
+        // Workaround QRCoder init lag
+        _ = QRCodeHelper.generate(from: "cryptoboy", size: CGFloat(320), level: "M")
+    }
+    
     func getMenuItem(_ id: String) -> MenuItem? {
         let menuItems = functionsMenu.flatMap { $0.items } + currenciesMenu.flatMap { $0.items }
         return menuItems.filter { $0.id == id }.first
@@ -86,11 +89,9 @@ class AppState: ObservableObject {
 
     func clearState() {
         self.isDarkMode = true
-        self.currentTheme = "blue"
+        self.currentTheme = DEFAULT_THEME
 
         self.clearMessage()
-        self.amount = "1"
-
         self.visitedViews = []
         self.bookmarks = []
     }

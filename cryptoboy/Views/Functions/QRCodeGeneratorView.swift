@@ -35,6 +35,7 @@ struct QRCodeGeneratorView: View {
                     }) {
                         Image(systemName: "xmark.circle.fill")
                     }
+                    .disabled(data.isEmpty)
                 }
             }
 

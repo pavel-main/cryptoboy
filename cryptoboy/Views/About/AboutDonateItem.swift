@@ -21,6 +21,7 @@ struct AboutDonateItem: View {
             HStack {
                 Text(self.type)
                 Spacer()
+                Spacer()
                 Button(action: {}) {
                     Text(self.address)
                         .frame(height: 10)

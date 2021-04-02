@@ -23,6 +23,7 @@ struct HashingView: View {
                     Button(action: state.clearMessage) {
                         Image(systemName: "xmark.circle.fill")
                     }
+                    .disabled(state.message.isEmpty)
                 }
             }
 
