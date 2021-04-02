@@ -32,10 +32,16 @@ class CryptoUnitFormatter {
         let oldValue = units[idx].current
 
         // Replace localized commas with dots
-        let filteredInput = newValue.replace(target: ",", with: ".").filter { "0123456789.".contains($0) }
-
+        let input = newValue.replace(target: ",", with: ".").filter { "0123456789.".contains($0) }
+        
+        // Max Decimal digits
+        if input.count > 39 {
+            units[idx].current = oldValue
+            return units
+        }
+        
         // Don't allow multiple dots
-        let dotsCount = filteredInput.filter { $0 == "." }.count
+        let dotsCount = input.filter { $0 == "." }.count
         if dotsCount > 1 {
             units[idx].current = oldValue
             return units
@@ -43,14 +49,14 @@ class CryptoUnitFormatter {
 
         // Allow trailing zeroes
         let oldVal = Decimal(string: units[idx].current)
-        let newVal = Decimal(string: filteredInput)
+        let newVal = Decimal(string: input)
         if oldVal == newVal {
-            units[idx].current = filteredInput
+            units[idx].current = input
             return units
         }
 
         // Calculate input value in minor units
-        let decimalValue = Decimal(string: filteredInput) ?? Decimal.zero
+        let decimalValue = newVal ?? Decimal.zero
         let minorValue = decimalValue * pow(10, units[idx].factor)
 
         // Calculate all values based on input
