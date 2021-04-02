@@ -34,7 +34,6 @@
 		E937D404260ECB8A00A75B06 /* String+Hashing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E937D403260ECB8A00A75B06 /* String+Hashing.swift */; };
 		E945C397260EC96900E732A0 /* CryptoBoyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E945C396260EC96900E732A0 /* CryptoBoyApp.swift */; };
 		E945C39C260EC96F00E732A0 /* HashingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E945C39B260EC96F00E732A0 /* HashingView.swift */; };
-		E94D6DFF2614EBBC00181287 /* Binding+Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94D6DFE2614EBBC00181287 /* Binding+Value.swift */; };
 		E95432092612B29B001918F3 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95432082612B29B001918F3 /* Theme.swift */; };
 		E954320F2612B389001918F3 /* SelectThemeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954320E2612B389001918F3 /* SelectThemeButton.swift */; };
 		E95432142612B3A8001918F3 /* SelectThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95432132612B3A8001918F3 /* SelectThemeView.swift */; };
@@ -118,7 +117,6 @@
 		E937D403260ECB8A00A75B06 /* String+Hashing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Hashing.swift"; sourceTree = "<group>"; };
 		E945C396260EC96900E732A0 /* CryptoBoyApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoBoyApp.swift; sourceTree = "<group>"; };
 		E945C39B260EC96F00E732A0 /* HashingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashingView.swift; sourceTree = "<group>"; };
-		E94D6DFE2614EBBC00181287 /* Binding+Value.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Value.swift"; sourceTree = "<group>"; };
 		E95432082612B29B001918F3 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		E954320E2612B389001918F3 /* SelectThemeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectThemeButton.swift; sourceTree = "<group>"; };
 		E95432132612B3A8001918F3 /* SelectThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectThemeView.swift; sourceTree = "<group>"; };
@@ -202,20 +200,19 @@
 			path = About;
 			sourceTree = "<group>";
 		};
-		E90853F126115EF90001B9BE /* Crypto */ = {
+		E90853F126115EF90001B9BE /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				E96BC5012617B7C000D52BEF /* BaseUnitFormatter.swift */,
 				E902F3E22616140300825004 /* CryptoUnitFormatter.swift */,
 			);
-			path = Crypto;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		E90853FA26115FFF0001B9BE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				E99F77B2261240DB009BDFF1 /* Array+RawRepresentable.swift */,
-				E94D6DFE2614EBBC00181287 /* Binding+Value.swift */,
 				E9163B34260EAAD200453411 /* Bundle+JSON.swift */,
 				E9BC9414261125E400D8B83E /* String+Encoding.swift */,
 				E902F3ED2616170B00825004 /* String+Filtering.swift */,
@@ -264,9 +261,9 @@
 			isa = PBXGroup;
 			children = (
 				E9163B54260EB38400453411 /* Core */,
-				E90853F126115EF90001B9BE /* Crypto */,
 				E9088B972617D2B5008C3BBC /* Data */,
 				E90853FA26115FFF0001B9BE /* Extensions */,
+				E90853F126115EF90001B9BE /* Helpers */,
 				E96A4A76260FDCDC009EA367 /* Resources */,
 				E9163B53260EB36F00453411 /* Views */,
 				E9163B01260EA4BA00453411 /* Assets.xcassets */,
@@ -309,8 +306,8 @@
 				E9ACD0CE2617E1FF00650EAC /* Common */,
 				E95432182612B66C001918F3 /* Currencies */,
 				E9D14B69260FDB81000B191B /* Functions */,
-				E9ED74AF2612E91A00DCD4A3 /* Modifiers */,
 				E96A4A9F260FE4C9009EA367 /* Navigation */,
+				E9ED74AF2612E91A00DCD4A3 /* Modifiers */,
 				E954320D2612B358001918F3 /* Theme */,
 				E945C396260EC96900E732A0 /* CryptoBoyApp.swift */,
 				E9163B4E260EB31200453411 /* MainView.swift */,
@@ -576,7 +573,6 @@
 				E9ED74CE2612FCC900DCD4A3 /* NavigationViewModifier.swift in Sources */,
 				E9163B4F260EB31200453411 /* MainView.swift in Sources */,
 				E90853C5261149290001B9BE /* EncodingView.swift in Sources */,
-				E94D6DFF2614EBBC00181287 /* Binding+Value.swift in Sources */,
 				E96557D92616A432004E7BF1 /* BaseUnitConverterView.swift in Sources */,
 				E9ED74B92612F6C200DCD4A3 /* ThemeViewModifier.swift in Sources */,
 				E9ED74B12612E93300DCD4A3 /* DarkModeViewModifier.swift in Sources */,
