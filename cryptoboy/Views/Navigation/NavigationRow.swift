@@ -22,7 +22,7 @@ struct NavigationRow: View {
                     Text(item.title)
                         .font(.headline)
 
-                    if item.description != "" {
+                    if !item.description.isEmpty {
                         Text(item.description)
                             .font(.caption)
                     }

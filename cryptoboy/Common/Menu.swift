@@ -18,8 +18,8 @@ struct MenuItem: Codable, Equatable {
     var id: String
     var title: String
     var systemImage: String
-    var description: String
-    var icons: [String]
+    var description: String = ""
+    var icons: [String] = []
 
     #if DEBUG
     static let example = MenuItem(

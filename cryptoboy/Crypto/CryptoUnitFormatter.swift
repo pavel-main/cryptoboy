@@ -6,8 +6,6 @@
 //
 
 import Foundation
-import SwiftRadix
-import SwiftUI
 
 class CryptoUnitFormatter {
     /**
@@ -23,27 +21,6 @@ class CryptoUnitFormatter {
         fmt.maximumFractionDigits = maxFractionDigits
         fmt.roundingMode = .down
         return fmt
-    }
-
-    /**
-     * Updates all units with `newValue` passed at `idx`
-     */
-    static func updateBaseUnits(_ rawUnits: [BaseUnit], _ idx: Int, _ newValue: String) -> [BaseUnit] {
-        // Save old value
-        var units = rawUnits
-
-        // Validate input
-        let filteredInput = newValue.uppercased().filter { units[idx].whitelist.contains($0) }
-
-        // Convert to radix value with current base
-        let radix = filteredInput.radix(base: units[idx].base) ?? 0.binary
-
-        // Calculate all values based on input
-        for (jdx, item) in units.enumerated() {
-            units[jdx].current = radix.value.radix(base: item.base).stringValue
-        }
-
-        return units
     }
 
     /**

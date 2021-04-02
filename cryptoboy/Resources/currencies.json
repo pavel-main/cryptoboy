@@ -20,7 +20,7 @@
             {
                 "id": "btc_pubkey_compress",
                 "title": "Public Key Compression",
-                "systemImage": "archivebox",
+                "systemImage": "rectangle.compress.vertical",
                 "description": "",
                 "icons": ["soon"]
             },

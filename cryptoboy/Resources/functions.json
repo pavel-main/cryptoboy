@@ -6,7 +6,7 @@
             {
                 "id": "base",
                 "title": "Base Converter",
-                "systemImage": "plus.slash.minus",
+                "systemImage": "arrow.2.squarepath",
                 "description": "bin, oct, dec, hex",
                 "icons": []
             },
@@ -26,7 +26,7 @@
 			{
 				"id": "hash",
                 "title": "Hashing",
-                "systemImage": "number.circle",
+                "systemImage": "number",
                 "description": "sha, keccak, ripemd, blake, …",
 				"icons": []
 			},
@@ -88,7 +88,7 @@
             {
                 "id": "qrcode",
                 "title": "QR Code Generator",
-                "systemImage": "qrcode.viewfinder",
+                "systemImage": "qrcode",
                 "description": "",
                 "icons": ["new"]
             },
