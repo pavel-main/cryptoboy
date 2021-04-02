@@ -15,6 +15,7 @@
 			dependencies = (
 			);
 			name = SwiftLint;
+			productName = SwiftLint;
 		};
 /* End PBXAggregateTarget section */
 
@@ -412,9 +413,9 @@
 		1871AB229F43706A0BEEDF0CCDAF7626 /* TWEthereumAbiValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TWEthereumAbiValue.h; path = include/TrustWalletCore/TWEthereumAbiValue.h; sourceTree = "<group>"; };
 		1BC101B6E54CAFF28916A3725776178D /* SwiftProtobuf-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftProtobuf-umbrella.h"; sourceTree = "<group>"; };
 		1C23247E14CD1A35F4F7268D146AF66A /* SolanaAddress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SolanaAddress.swift; path = swift/Sources/Generated/SolanaAddress.swift; sourceTree = "<group>"; };
-		1C851186D8D5BC76B40FC683C8AA08EA /* libSwiftRadix.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSwiftRadix.a; path = libSwiftRadix.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C851186D8D5BC76B40FC683C8AA08EA /* libSwiftRadix.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSwiftRadix.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E41ACF329432C841371A112B2AEAA7F /* TWPublicKeyType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TWPublicKeyType.h; path = include/TrustWalletCore/TWPublicKeyType.h; sourceTree = "<group>"; };
-		1E623002ECC43F22B6D764841D63A4DD /* libQRCoder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libQRCoder.a; path = libQRCoder.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E623002ECC43F22B6D764841D63A4DD /* libQRCoder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libQRCoder.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F32A3CC0AC80BC743BA1E56402911CC /* Message+JSONAdditions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Message+JSONAdditions.swift"; path = "Sources/SwiftProtobuf/Message+JSONAdditions.swift"; sourceTree = "<group>"; };
 		1F38EAE660A0DB0749C9EE13AFA0F74B /* MessageExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MessageExtension.swift; path = Sources/SwiftProtobuf/MessageExtension.swift; sourceTree = "<group>"; };
 		1F6C8712588EB1BDF5C6BC2C05500918 /* Common.pb.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Common.pb.swift; path = swift/Sources/Generated/Protobuf/Common.pb.swift; sourceTree = "<group>"; };
@@ -518,7 +519,7 @@
 		646041C8EB93DBCA0BAAB2B51DB38B73 /* Octal Type Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Octal Type Extensions.swift"; path = "Sources/SwiftRadix/Radix/Octal/Octal Type Extensions.swift"; sourceTree = "<group>"; };
 		646612ED70152AA7DE94AB4E41A5F7E5 /* Google_Protobuf_ListValue+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Google_Protobuf_ListValue+Extensions.swift"; path = "Sources/SwiftProtobuf/Google_Protobuf_ListValue+Extensions.swift"; sourceTree = "<group>"; };
 		64D466665A30C0F37F753E84A111D242 /* Waves+Proto.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Waves+Proto.swift"; path = "swift/Sources/Generated/Protobuf/Waves+Proto.swift"; sourceTree = "<group>"; };
-		6551E42EE30C833BE67A8F9965801A26 /* libPods-cryptoboy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-cryptoboy.a"; path = "libPods-cryptoboy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6551E42EE30C833BE67A8F9965801A26 /* libPods-cryptoboy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cryptoboy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C0556848970A1AF20C640E71F382B5 /* TWVeChainProto.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TWVeChainProto.h; path = include/TrustWalletCore/TWVeChainProto.h; sourceTree = "<group>"; };
 		65F32C596A93FD70FB2194B1EE310D93 /* VeChain+Proto.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "VeChain+Proto.swift"; path = "swift/Sources/Generated/Protobuf/VeChain+Proto.swift"; sourceTree = "<group>"; };
 		6710927D1A3A6202219FD3DD3AFA26BC /* EthereumAbiFunction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EthereumAbiFunction.swift; path = swift/Sources/Generated/EthereumAbiFunction.swift; sourceTree = "<group>"; };
@@ -576,11 +577,11 @@
 		924F4ADF7A6D84B79D28F14D77A23773 /* Tron.pb.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Tron.pb.swift; path = swift/Sources/Generated/Protobuf/Tron.pb.swift; sourceTree = "<group>"; };
 		9310AF7A2697CE2F8FD21098D5E3DE77 /* TWCoinType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TWCoinType.h; path = include/TrustWalletCore/TWCoinType.h; sourceTree = "<group>"; };
 		93A586AE3A6D1468D973DA3180DBD032 /* QRCodeScannerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeScannerViewController.swift; path = Pod/Classes/QRCodeScannerViewController.swift; sourceTree = "<group>"; };
-		943D347E61A2E181A4FA2CA894307B6E /* libSwiftProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSwiftProtobuf.a; path = libSwiftProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		943D347E61A2E181A4FA2CA894307B6E /* libSwiftProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSwiftProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		947E92758FE1D59847CF32B914C62EAF /* any.pb.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = any.pb.swift; path = Sources/SwiftProtobuf/any.pb.swift; sourceTree = "<group>"; };
 		949441EE7EC33CA12713A41A7E12D99A /* Radix Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Radix Operators.swift"; path = "Sources/SwiftRadix/Radix/Radix Operators.swift"; sourceTree = "<group>"; };
 		952F0A3C436A8BB229B43032E17C5EF5 /* QRCodeGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeGenerator.swift; path = Pod/Classes/QRCodeGenerator.swift; sourceTree = "<group>"; };
-		95BB2094DC34A58512EE96D97F1C789A /* libTrustWalletCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libTrustWalletCore.a; path = libTrustWalletCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		95BB2094DC34A58512EE96D97F1C789A /* libTrustWalletCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTrustWalletCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D3E7C47F8B7E50E03FF0D2AD7E4A92 /* Theta+Proto.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Theta+Proto.swift"; path = "swift/Sources/Generated/Protobuf/Theta+Proto.swift"; sourceTree = "<group>"; };
 		9719D144886CE10F43C8D48878349B21 /* Message+BinaryAdditions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Message+BinaryAdditions.swift"; path = "Sources/SwiftProtobuf/Message+BinaryAdditions.swift"; sourceTree = "<group>"; };
 		9A619AAC33A20236AC171352EABD1010 /* HashVisitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HashVisitor.swift; path = Sources/SwiftProtobuf/HashVisitor.swift; sourceTree = "<group>"; };
@@ -588,7 +589,7 @@
 		9C202F64AF5E7A47C4F9AA88618F5708 /* TextFormatEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextFormatEncoder.swift; path = Sources/SwiftProtobuf/TextFormatEncoder.swift; sourceTree = "<group>"; };
 		9C91135128594B181135716EA0C96BB7 /* Data+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+Extensions.swift"; path = "Sources/SwiftProtobuf/Data+Extensions.swift"; sourceTree = "<group>"; };
 		9D6042249FDE1CD5CCF4DC8DDD434061 /* descriptor.pb.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = descriptor.pb.swift; path = Sources/SwiftProtobuf/descriptor.pb.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9D949A743BA9FD556C3155632267156A /* TWAionProto.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TWAionProto.h; path = include/TrustWalletCore/TWAionProto.h; sourceTree = "<group>"; };
 		9DA1A931E3596B4AC85B068478AAEB13 /* FIO.pb.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FIO.pb.swift; path = swift/Sources/Generated/Protobuf/FIO.pb.swift; sourceTree = "<group>"; };
 		9E29B1FC5FA6BBC9CEA7111FDBD526C1 /* Watch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Watch.swift; path = swift/Sources/Watch.swift; sourceTree = "<group>"; };
@@ -897,7 +898,6 @@
 				0E2C2EFBE61673833E42A56DB2B5B52D /* ZigZag.swift */,
 				9B850341D4FA89DC23563EB55DB9C238 /* Support Files */,
 			);
-			name = SwiftProtobuf;
 			path = SwiftProtobuf;
 			sourceTree = "<group>";
 		};
@@ -958,7 +958,6 @@
 				93A586AE3A6D1468D973DA3180DBD032 /* QRCodeScannerViewController.swift */,
 				6C1E31DC9EA6233286AAF8ECCD10F2CB /* Support Files */,
 			);
-			name = QRCoder;
 			path = QRCoder;
 			sourceTree = "<group>";
 		};
@@ -1057,7 +1056,6 @@
 			children = (
 				5BA9A739B9D8B6F2AE1CC3E93EAFC1AB /* Support Files */,
 			);
-			name = SwiftLint;
 			path = SwiftLint;
 			sourceTree = "<group>";
 		};
@@ -1224,7 +1222,6 @@
 				D596D56FE5FA5155037FC5852D0FB91B /* Utilities.swift */,
 				B3FE7C4020BED5709137893E9773819F /* Support Files */,
 			);
-			name = SwiftRadix;
 			path = SwiftRadix;
 			sourceTree = "<group>";
 		};
@@ -1235,7 +1232,6 @@
 				8BC15025C9A806AFFCE621803F4B1ED5 /* Support Files */,
 				BA61DF56FE49559FF043D1C624E35317 /* Types */,
 			);
-			name = TrustWalletCore;
 			path = TrustWalletCore;
 			sourceTree = "<group>";
 		};

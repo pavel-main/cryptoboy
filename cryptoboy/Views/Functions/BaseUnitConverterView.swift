@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct BaseConverterView: View {
+struct BaseUnitConverterView: View {
     @EnvironmentObject var state: AppState
 
     @State var units = [

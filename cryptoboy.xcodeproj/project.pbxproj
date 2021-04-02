@@ -40,7 +40,7 @@
 		E95432142612B3A8001918F3 /* SelectThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95432132612B3A8001918F3 /* SelectThemeView.swift */; };
 		E954321D2612B701001918F3 /* QRCodeGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954321C2612B701001918F3 /* QRCodeGeneratorView.swift */; };
 		E96557CB26169AE8004E7BF1 /* DecodingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96557CA26169AE8004E7BF1 /* DecodingView.swift */; };
-		E96557D92616A432004E7BF1 /* BaseConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96557D82616A432004E7BF1 /* BaseConverterView.swift */; };
+		E96557D92616A432004E7BF1 /* BaseUnitConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96557D82616A432004E7BF1 /* BaseUnitConverterView.swift */; };
 		E96557DE2616A536004E7BF1 /* BaseUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96557DD2616A536004E7BF1 /* BaseUnit.swift */; };
 		E96A4A7B260FDD62009EA367 /* functions.json in Resources */ = {isa = PBXBuildFile; fileRef = E96A4A7A260FDD62009EA367 /* functions.json */; };
 		E96A4A80260FDD6E009EA367 /* currencies.json in Resources */ = {isa = PBXBuildFile; fileRef = E96A4A7F260FDD6E009EA367 /* currencies.json */; };
@@ -124,7 +124,7 @@
 		E95432132612B3A8001918F3 /* SelectThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectThemeView.swift; sourceTree = "<group>"; };
 		E954321C2612B701001918F3 /* QRCodeGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeGeneratorView.swift; sourceTree = "<group>"; };
 		E96557CA26169AE8004E7BF1 /* DecodingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingView.swift; sourceTree = "<group>"; };
-		E96557D82616A432004E7BF1 /* BaseConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConverterView.swift; sourceTree = "<group>"; };
+		E96557D82616A432004E7BF1 /* BaseUnitConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUnitConverterView.swift; sourceTree = "<group>"; };
 		E96557DD2616A536004E7BF1 /* BaseUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUnit.swift; sourceTree = "<group>"; };
 		E96A4A7A260FDD62009EA367 /* functions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = functions.json; sourceTree = "<group>"; };
 		E96A4A7F260FDD6E009EA367 /* currencies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = currencies.json; sourceTree = "<group>"; };
@@ -306,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				E90853CC2611532F0001B9BE /* About */,
+				E9ACD0CE2617E1FF00650EAC /* Common */,
 				E95432182612B66C001918F3 /* Currencies */,
 				E9D14B69260FDB81000B191B /* Functions */,
 				E9ED74AF2612E91A00DCD4A3 /* Modifiers */,
@@ -377,18 +378,25 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		E9ACD0CE2617E1FF00650EAC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E9163B44260EAEA200453411 /* ComingSoonView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		E9D14B69260FDB81000B191B /* Functions */ = {
 			isa = PBXGroup;
 			children = (
-				E96557D82616A432004E7BF1 /* BaseConverterView.swift */,
-				E9163B44260EAEA200453411 /* ComingSoonView.swift */,
+				E96557D82616A432004E7BF1 /* BaseUnitConverterView.swift */,
 				E96557CA26169AE8004E7BF1 /* DecodingView.swift */,
 				E9088B872617CE45008C3BBC /* EllipticCurveView.swift */,
 				E9088B922617D287008C3BBC /* EllipticCurveItemView.swift */,
-				E90853BF261148F30001B9BE /* EncodingItemView.swift */,
 				E90853C4261149290001B9BE /* EncodingView.swift */,
-				E96A4AB1260FFF0D009EA367 /* HashingItemView.swift */,
+				E90853BF261148F30001B9BE /* EncodingItemView.swift */,
 				E945C39B260EC96F00E732A0 /* HashingView.swift */,
+				E96A4AB1260FFF0D009EA367 /* HashingItemView.swift */,
 				E954321C2612B701001918F3 /* QRCodeGeneratorView.swift */,
 			);
 			path = Functions;
@@ -569,7 +577,7 @@
 				E9163B4F260EB31200453411 /* MainView.swift in Sources */,
 				E90853C5261149290001B9BE /* EncodingView.swift in Sources */,
 				E94D6DFF2614EBBC00181287 /* Binding+Value.swift in Sources */,
-				E96557D92616A432004E7BF1 /* BaseConverterView.swift in Sources */,
+				E96557D92616A432004E7BF1 /* BaseUnitConverterView.swift in Sources */,
 				E9ED74B92612F6C200DCD4A3 /* ThemeViewModifier.swift in Sources */,
 				E9ED74B12612E93300DCD4A3 /* DarkModeViewModifier.swift in Sources */,
 				E99F77FB26128569009BDFF1 /* EthereumUnitView.swift in Sources */,

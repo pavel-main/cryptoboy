@@ -50,7 +50,7 @@ struct NavigationRow: View {
     func getDestination(from item: MenuItem) -> AnyView {
         switch item.id {
         case "base":
-            return AnyView(BaseConverterView())
+            return AnyView(BaseUnitConverterView())
 
         case "hash":
             return AnyView(HashingView())
