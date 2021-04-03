@@ -62,7 +62,7 @@
                 "title": "Diffie-Hellman",
                 "systemImage": "figure.stand.line.dotted.figure.stand",
                 "description": "Key Exchange",
-                "icons": ["soon"]
+                "icons": []
             },
             {
                 "id": "ecdsa",

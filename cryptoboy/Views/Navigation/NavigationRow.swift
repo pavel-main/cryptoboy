@@ -61,6 +61,9 @@ struct NavigationRow: View {
         case "keypair":
             return AnyView(EllipticCurveView())
 
+        case "ecdh":
+            return AnyView(DiffieHellmanView())
+            
         case "qrcode":
             return AnyView(QRCodeGeneratorView())
 
