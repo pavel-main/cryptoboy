@@ -12,40 +12,84 @@ struct HashingView: View {
 
     var body: some View {
         Form {
-            Section(header: Text("Input Message")) {
+            Section(header: Text("Input")) {
                 HStack {
-                    Image(systemName: "ellipsis.bubble")
+                    if !state.isMessageBinary {
+                        Image(systemName: "ellipsis.bubble")
 
-                    TextField("", text: $state.message)
+                        TextField("", text: $state.message)
+                            .autocapitalization(.none)
+                            .disableAutocorrection(true)
+
+                        Button(action: state.clearMessage) {
+                            Image(systemName: "xmark.circle.fill")
+                        }
+                        .disabled(state.isDefaultMessage(false))
+                    } else {
+                        Image(systemName: "01.square")
+
+                        TextField("", text: Binding(
+                            get: {
+                                return self.state.messageBytes
+                            },
+                            set: { (newValue) in
+                                let input = newValue.lowercased().filter { "0123456789abcdef".contains($0) }
+                                self.state.messageBytes = input
+                            })
+                        )
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
+                        .keyboardType(.namePhonePad)
 
-                    Button(action: state.clearMessage) {
-                        Image(systemName: "xmark.circle.fill")
+                        Button(action: state.clearMessageBytes) {
+                            Image(systemName: "xmark.circle.fill")
+                        }
+                        .disabled(state.isDefaultMessage(true))
                     }
-                    .disabled(state.message.isEmpty)
                 }
-                
-                Toggle("Binary", isOn: $state.isMessageBinary)
+
+                Toggle("Hex Bytes", isOn: $state.isMessageBinary)
             }
 
-            Group {
-                HashingItemView(.sha1)
-                HashingItemView(.sha256)
-                HashingItemView(.sha512)
-                HashingItemView(.keccak256)
-                HashingItemView(.keccak512)
-                HashingItemView(.ripemd160)
-                HashingItemView(.blake256)
-                HashingItemView(.groestl512)
-            }
+            if !state.isMessageBinary {
+                Group {
+                    HashingItemView(.sha1, false)
+                    HashingItemView(.sha256, false)
+                    HashingItemView(.sha512, false)
+                    HashingItemView(.keccak256, false)
+                    HashingItemView(.keccak512, false)
+                    HashingItemView(.ripemd160, false)
+                    HashingItemView(.blake256, false)
+                    HashingItemView(.groestl512, false)
+                }
 
-            Group {
-                HashingItemView(.sha256ripedm160)
-                HashingItemView(.sha256sha256)
-                HashingItemView(.blake256ripedm160)
-                HashingItemView(.blake256blake256)
-                HashingItemView(.groestl512groestl512)
+                Group {
+                    HashingItemView(.sha256ripedm160, false)
+                    HashingItemView(.sha256sha256, false)
+                    HashingItemView(.blake256ripedm160, false)
+                    HashingItemView(.blake256blake256, false)
+                    HashingItemView(.groestl512groestl512, false)
+                }
+            } else {
+                Group {
+                    HashingItemView(.bytepad, true)
+                    HashingItemView(.sha1, true)
+                    HashingItemView(.sha256, true)
+                    HashingItemView(.sha512, true)
+                    HashingItemView(.keccak256, true)
+                    HashingItemView(.keccak512, true)
+                    HashingItemView(.ripemd160, true)
+                    HashingItemView(.blake256, true)
+                    HashingItemView(.groestl512, true)
+                }
+
+                Group {
+                    HashingItemView(.sha256ripedm160, true)
+                    HashingItemView(.sha256sha256, true)
+                    HashingItemView(.blake256ripedm160, true)
+                    HashingItemView(.blake256blake256, true)
+                    HashingItemView(.groestl512groestl512, true)
+                }
             }
         }
         .modifier(NavigationViewModifier(page: .hash))

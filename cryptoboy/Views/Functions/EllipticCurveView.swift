@@ -16,7 +16,7 @@ struct EllipticCurveView: View {
             Section(header: Text("Private Key")) {
                 HStack {
                     Image(systemName: "terminal")
-                    
+
                     TextField("", text: Binding(
                         get: {
                             guard let privateKey = self.state.privateKey else {
@@ -62,6 +62,6 @@ struct EllipticCurveView: View {
             }
 
         }
-        .modifier(NavigationViewModifier(page: .ecc))
+        .modifier(NavigationViewModifier(page: .keypair))
     }
 }

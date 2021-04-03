@@ -12,13 +12,15 @@ struct HashingItemView: View {
     @State private var showCopyAlert = false
 
     var type: HashFunction
+    var isBinary: Bool
 
-    init(_ type: HashFunction) {
+    init(_ type: HashFunction, _ isBinary: Bool) {
         self.type = type
+        self.isBinary = isBinary
     }
 
     var body: some View {
-        if !state.isDefaultMessage() {
+        if !state.isDefaultMessage(self.isBinary) {
             Section(header: Text(self.type.title)) {
                 HStack {
                     Button(action: {
@@ -39,8 +41,16 @@ struct HashingItemView: View {
             .environmentObject(state)
         }
     }
-    
+
     func getHash() -> String {
-        return self.state.getHashOrDefault(self.type)
+        if self.isBinary {
+            guard let hash = self.state.getBinaryHash(self.type) else {
+                return ""
+            }
+
+            return hash
+        }
+
+        return self.state.getHash(self.type)
     }
 }

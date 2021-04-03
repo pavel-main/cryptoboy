@@ -6,6 +6,7 @@
 //
 
 enum HashFunction {
+    case bytepad
     case sha1
     case sha256
     case sha512
@@ -23,6 +24,8 @@ enum HashFunction {
 
     var title: String {
         switch self {
+            case .bytepad:
+                return "Original bytes"
             case .sha1:
                 return "SHA-1"
             case .sha256:

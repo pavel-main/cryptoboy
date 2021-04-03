@@ -19,7 +19,7 @@ struct EllipticCurveItemView: View {
 
     var body: some View {
         Section(header: Text(self.type.title)) {
-            HStack {                
+            HStack {
                 Button(action: {
                     UIPasteboard.general.string = state.publicKeyOrDefault(type)
                     showCopyAlert.toggle()

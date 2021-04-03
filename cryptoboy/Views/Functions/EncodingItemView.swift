@@ -18,21 +18,21 @@ struct EncodingItemView: View {
     }
 
     var body: some View {
-        if !state.isDefaultMessage() {
+        if !state.isDefaultMessage(false) {
             Section(header: Text(self.type.title)) {
                 HStack {
                     Button(action: {
-                        UIPasteboard.general.string = state.encodeOrDefault(type)
+                        UIPasteboard.general.string = state.encode(type)
                         showCopyAlert.toggle()
                     }) {
-                        Text(state.encodeOrDefault(type))
+                        Text(state.encode(type))
                     }
                 }
             }
             .alert(isPresented: $showCopyAlert) {
                 Alert(
                     title: Text("Copied to clipboard"),
-                    message: Text(state.encodeOrDefault(type)),
+                    message: Text(state.encode(type)),
                     dismissButton: .default(Text("OK"))
                 )
             }

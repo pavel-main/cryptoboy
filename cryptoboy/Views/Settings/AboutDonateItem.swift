@@ -17,7 +17,7 @@ struct AboutDonateItem: View {
     }
 
     var body: some View {
-        NavigationLink(destination: QRCodeDisplayView(title: "Donate \(type)", data: self.address)) {
+        NavigationLink(destination: QRCodeDisplayView(title: "\(type) address", data: self.address)) {
             HStack {
                 Text(self.type)
                 Spacer()

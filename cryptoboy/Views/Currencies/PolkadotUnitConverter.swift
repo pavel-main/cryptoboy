@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PolkadotUnitView: View {
     @EnvironmentObject var state: AppState
-    
+
     @State private var isKusama = false
 
     static let MAX_FACTOR_DOT = 10
@@ -21,7 +21,7 @@ struct PolkadotUnitView: View {
         MinorUnit.init(title: "MicroDOT", factor: 4, max: MAX_FACTOR_DOT),
         MinorUnit.init(title: "Planck", factor: 0, max: MAX_FACTOR_DOT)
     ]
-    
+
     @State var ksmUnits = [
         MinorUnit.init(title: "KSM", factor: 12, max: MAX_FACTOR_KSM),
         MinorUnit.init(title: "MilliKSM", factor: 9, max: MAX_FACTOR_KSM),
@@ -35,8 +35,8 @@ struct PolkadotUnitView: View {
             Section(header: Text("Token")) {
                 Toggle("Kusama", isOn: $isKusama)
             }
-            
-            if (!isKusama) {
+
+            if !isKusama {
                 ForEach(dotUnits.indices, id: \.self) { idx in
                     Section(header: Text(self.dotUnits[idx].title)) {
                         TextField("", text: Binding(
@@ -73,4 +73,3 @@ struct PolkadotUnitView: View {
         .environmentObject(state)
     }
 }
-

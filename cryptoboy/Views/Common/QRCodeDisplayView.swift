@@ -26,7 +26,7 @@ struct QRCodeDisplayView: View {
                     .frame(width: QR_SIZE, height: QR_SIZE)
             }
 
-            Section(header: Text("Copy to clibboard")) {
+            Section(header: Text("Copy to clipboard")) {
                 Button(action: {
                     UIPasteboard.general.string = self.data
                     showCopyAlert.toggle()

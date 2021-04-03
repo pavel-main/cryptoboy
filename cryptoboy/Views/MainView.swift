@@ -22,7 +22,7 @@ struct MainView: View {
                 }
             FavoritesView()
                 .tabItem {
-                    Label("Favorites", systemImage: "star")
+                    Label("Favorites", systemImage: "text.badge.star")
                 }
             SettingsView()
                 .tabItem {

@@ -58,7 +58,7 @@ struct NavigationRow: View {
         case "encoding":
             return AnyView(EncodingView())
 
-        case "ecc":
+        case "keypair":
             return AnyView(EllipticCurveView())
 
         case "qrcode":
@@ -69,7 +69,7 @@ struct NavigationRow: View {
 
         case "eth_unit":
             return AnyView(EthereumUnitView())
-            
+
         case "dot_unit":
             return AnyView(PolkadotUnitView())
 

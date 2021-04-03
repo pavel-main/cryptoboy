@@ -6,14 +6,14 @@
             {
                 "id": "base",
                 "title": "Base Converter",
-                "systemImage": "01.square",
+                "systemImage": "textformat.123",
                 "description": "binary, octal, decimal, hex",
                 "icons": []
             },
             {
                 "id": "long",
                 "title": "Arbitary-precision arithmetic",
-                "systemImage": "plus.slash.minus",
+                "systemImage": "scope",
                 "description": "uint256 add, sub, mul, div",
                 "icons": ["soon"]
             }
@@ -33,7 +33,7 @@
             {
                 "id": "encoding",
                 "title": "Encoding",
-                "systemImage": "chevron.left.slash.chevron.right",
+                "systemImage": "curlybraces",
                 "description": "hex, base58, base62, base64",
                 "icons": []
             },
@@ -47,28 +47,28 @@
 		]
 	},
 	{
-        "id": "pubkey",
-        "title": "Public Key Cryptography",
+        "id": "ecc",
+        "title": "Elliptic Curves",
 		"items": [
             {
-                "id": "ecc",
-                "title": "Elliptic Curves",
-                "systemImage": "scribble",
+                "id": "keypair",
+                "title": "Keypair Generator",
+                "systemImage": "waveform.path",
                 "description": "secp256k1, ed25519, curve25519",
                 "icons": []
             },
             {
-                "id": "ecdsa",
-                "title": "Digital Signature Algorithms",
-                "systemImage": "signature",
-                "description": "ECDSA",
+                "id": "ecdh",
+                "title": "Diffie-Hellman",
+                "systemImage": "figure.stand.line.dotted.figure.stand",
+                "description": "Key Exchange",
                 "icons": ["soon"]
             },
             {
-                "id": "ecdh",
-                "title": "Key Exchange",
-                "systemImage": "key",
-                "description": "Diffie-Hellman",
+                "id": "ecdsa",
+                "title": "Digital Signatures",
+                "systemImage": "signature",
+                "description": "ECDSA",
                 "icons": ["soon"]
             }
 		]

@@ -10,8 +10,19 @@ import WalletCore
 
 extension String {
 
+    func bytepad() -> String {
+        let count = self.count
+        if count % 2 != 0 {
+            return String(self.prefix(count - 1) + "0" + self.suffix(1))
+        }
+
+        return self
+    }
+
     func hash(_ type: HashFunction) -> String {
         switch type {
+        case .bytepad:
+            return self.bytepad()
         case .sha1:
             return Hash.sha1(data: Data(self.utf8)).hexString
 

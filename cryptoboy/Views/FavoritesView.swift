@@ -17,7 +17,7 @@ struct FavoritesView: View {
                     ForEach(state.bookmarks, id: \.self) { view in
                         NavigationRow(item: state.getMenuItem(view)!)
                     }
-                    .onDelete(perform: deleteBookmark)
+                    .onDelete(perform: state.removeBookmarks)
                 }
                 .listStyle(GroupedListStyle())
                 .navigationTitle("Favorites")
@@ -33,9 +33,5 @@ struct FavoritesView: View {
             .navigationViewStyle(StackNavigationViewStyle())
             .environmentObject(state)
         }
-    }
-
-    func deleteBookmark(at offsets: IndexSet) {
-        state.bookmarks.remove(atOffsets: offsets)
     }
 }

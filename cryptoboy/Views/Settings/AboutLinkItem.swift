@@ -20,18 +20,12 @@ struct AboutLinkItem: View {
 
     var body: some View {
         HStack {
-            HStack {
-                Text(self.name)
-                Spacer()
-                Link(self.title, destination: URL(string: self.url)!)
-            }
+            Text(self.name)
+            Spacer()
+            Link(destination: URL(string: self.url)!, label: {
+                Text(Image(systemName: "link")) + Text(" \(self.title)")
+            })
         }
 
-    }
-}
-
-struct SettingsLinkItem_Previews: PreviewProvider {
-    static var previews: some View {
-        AboutLinkItem("E-mail", title: "cryptoboy2283@gmail.com", url: "mailto:cryptoboy2283@gmail.com")
     }
 }

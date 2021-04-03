@@ -19,8 +19,8 @@ class AppState: ObservableObject {
             objectWillChange.send()
         }
     }
-    
-    @AppStorage("isMessageBinary") var isMessageBinary: Bool = false {
+
+    @AppStorage("hasMessageBytesChanged") var hasMessageBytesChanged: Bool = false {
         willSet {
             objectWillChange.send()
         }
@@ -37,7 +37,19 @@ class AppState: ObservableObject {
         }
     }
 
+    @AppStorage("messageBytes") var messageBytes: String = "" {
+        didSet {
+            if !hasMessageBytesChanged {
+                hasMessageBytesChanged = true
+            }
+        }
+        willSet {
+            objectWillChange.send()
+        }
+    }
+
     @Published var privateKey: PrivateKey?
+    @Published var isMessageBinary: Bool = false
 
     @AppStorage("bookmarks") var bookmarks: [String] = [] {
         willSet {
@@ -83,7 +95,11 @@ class AppState: ObservableObject {
         return menuItems.filter { $0.id == id }.first
     }
 
-    func isDefaultMessage() -> Bool {
+    func isDefaultMessage(_ isBinary: Bool) -> Bool {
+        if isBinary {
+            return messageBytes.isEmpty && !hasMessageBytesChanged
+        }
+
         return message.isEmpty && !hasMessageChanged
     }
 
@@ -96,8 +112,7 @@ class AppState: ObservableObject {
     }
 
     func addBookmark(_ view: String) {
-        bookmarks.append(view)
-        bookmarks = bookmarks.reversed()
+        bookmarks.insert(view, at: 0)
     }
 
     func hasBookmark(_ view: String) -> Bool {
@@ -110,9 +125,18 @@ class AppState: ObservableObject {
         }
     }
 
+    func removeBookmarks(at offsets: IndexSet) {
+        bookmarks.remove(atOffsets: offsets)
+    }
+
     func clearMessage() {
         self.message = ""
         self.hasMessageChanged = false
+    }
+
+    func clearMessageBytes() {
+        self.messageBytes = ""
+        self.hasMessageBytesChanged = false
     }
 
     func clearPrivateKey() {
@@ -135,27 +159,19 @@ class AppState: ObservableObject {
         return Color.black
     }
 
-    func getHashOrDefault(_ type: HashFunction) -> String {
-        if self.isDefaultMessage() {
-            return type.title
-        }
-        
-        if self.isMessageBinary {
-            guard let data = Data(fromHexEncodedString: self.message) else {
-                return "Error parsing hex-encoded bytes"
-            }
-            
-            return data.hash(type)
-        }
-
+    func getHash(_ type: HashFunction) -> String {
         return message.hash(type)
     }
 
-    func encodeOrDefault(_ type: EncodingFormat) -> String {
-        if self.isDefaultMessage() {
-            return type.title
+    func getBinaryHash(_ type: HashFunction) -> String? {
+        guard let data = Data(fromHexEncodedString: self.messageBytes.bytepad()) else {
+            return nil
         }
 
+        return data.hash(type)
+    }
+
+    func encode(_ type: EncodingFormat) -> String {
         return message.encode(type)
     }
 
