@@ -34,7 +34,7 @@
                 "id": "encoding",
                 "title": "Encoding",
                 "systemImage": "curlybraces",
-                "description": "hex, base58, base62, base64",
+                "description": "hex, base58, base64",
                 "icons": []
             },
             {
