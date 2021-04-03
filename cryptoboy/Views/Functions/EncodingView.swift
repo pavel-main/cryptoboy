@@ -12,7 +12,7 @@ struct EncodingView: View {
 
     var body: some View {
         Form {
-            Section(header: Text("Input Message")) {
+            Section(header: Text("Input")) {
                 HStack {
                     Image(systemName: "ellipsis.bubble")
 
@@ -25,11 +25,20 @@ struct EncodingView: View {
                     }
                     .disabled(state.message.isEmpty)
                 }
+                
+                Toggle("Decoding", isOn: $state.isDecoding)
             }
 
-            EncodingItemView(.hex)
-            EncodingItemView(.base58)
-            EncodingItemView(.base64)
+            if (!state.isDecoding) {
+                EncodingItemView(.hex)
+                EncodingItemView(.base58)
+                EncodingItemView(.base64)
+            } else {
+                DecodingItemView(.hex)
+                DecodingItemView(.base58)
+                DecodingItemView(.base64)
+            }
+
         }
         .modifier(NavigationViewModifier(page: .encoding))
     }

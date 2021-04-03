@@ -27,25 +27,25 @@ extension String {
         }
     }
 
-    func decode(_ format: EncodingFormat) -> String {
+    func decode(_ format: EncodingFormat) -> String? {
         switch format {
             case .hex:
-                guard let bytes = Data(hexString: self) else {
-                    return "Error"
+                guard let bytes = Data(fromHexEncodedString: self) else {
+                    return nil
                 }
 
-                return String(data: bytes, encoding: .utf8) ?? "Error"
+                return String(data: bytes, encoding: .utf8) ?? nil
             case .base58:
                 guard let result = Base58.decode(string: self) else {
-                    return "Error"
+                    return nil
                 }
                 return result.hexString
             case .base64:
                 guard let data = Data(base64Encoded: self) else {
-                    return "Error"
+                    return nil
                 }
                 guard let result = String(data: data, encoding: .utf8) else {
-                    return "Error"
+                    return nil
                 }
                 return result
         }

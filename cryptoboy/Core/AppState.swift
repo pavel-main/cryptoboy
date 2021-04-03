@@ -50,6 +50,7 @@ class AppState: ObservableObject {
 
     @Published var privateKey: PrivateKey?
     @Published var isMessageBinary: Bool = false
+    @Published var isDecoding: Bool = false
 
     @AppStorage("bookmarks") var bookmarks: [String] = [] {
         willSet {

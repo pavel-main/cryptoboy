@@ -1,13 +1,12 @@
 //
-//  EncodingItemView.swift
+//  DecodingItemView.swift
 //  cryptoboy
 //
-//  Created by Pavel on 29/03/2021.
-//
+//  Created by Pavel on 03/04/2021.
 
 import SwiftUI
 
-struct EncodingItemView: View {
+struct DecodingItemView: View {
     @EnvironmentObject var state: AppState
     @State private var showCopyAlert = false
 
@@ -18,25 +17,37 @@ struct EncodingItemView: View {
     }
 
     var body: some View {
-        if !state.isDefaultMessage(false) {
+        if !decode().isEmpty {
             Section(header: Text(self.type.title)) {
                 HStack {
                     Button(action: {
-                        UIPasteboard.general.string = state.encode(type)
+                        UIPasteboard.general.string = decode()
                         showCopyAlert.toggle()
                     }) {
-                        Text(state.encode(type))
+                        Text(decode())
                     }
                 }
             }
             .alert(isPresented: $showCopyAlert) {
                 Alert(
                     title: Text("Copied to clipboard"),
-                    message: Text(state.encode(type)),
+                    message: Text(decode()),
                     dismissButton: .default(Text("OK"))
                 )
             }
             .environmentObject(state)
         }
+    }
+    
+    private func decode() -> String {
+        if state.isDefaultMessage(false) {
+           return ""
+        }
+        
+        guard let message = self.state.message.decode(self.type) else {
+            return ""
+        }
+        
+        return message
     }
 }
