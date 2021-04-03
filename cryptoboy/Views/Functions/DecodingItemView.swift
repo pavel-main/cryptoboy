@@ -38,16 +38,16 @@ struct DecodingItemView: View {
             .environmentObject(state)
         }
     }
-    
+
     private func decode() -> String {
         if state.isDefaultMessage(false) {
            return ""
         }
-        
+
         guard let message = self.state.message.decode(self.type) else {
             return ""
         }
-        
+
         return message
     }
 }

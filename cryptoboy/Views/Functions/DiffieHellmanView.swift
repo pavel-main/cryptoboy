@@ -10,9 +10,9 @@ import WalletCore
 
 struct DiffieHellmanView: View {
     @EnvironmentObject var state: AppState
-    @State var counterKey: PrivateKey? = nil
+    @State var counterKey: PrivateKey?
     @State private var showCopyAlert = false
-    
+
     let curveType = EllipticCurvePublicKey.secp256k1(compressed: true)
 
     var body: some View {
@@ -54,7 +54,7 @@ struct DiffieHellmanView: View {
                     Text("Generate New")
                 }
             }
-            
+
             Section(header: Text("Public Key (secp256k1)")) {
                 HStack {
                     Image(systemName: "terminal")
@@ -64,7 +64,7 @@ struct DiffieHellmanView: View {
                             guard let privateKey = self.counterKey else {
                                 return ""
                             }
-                            
+
                             return self.curveType.getPublicKey(from: privateKey).data.hexString
                         },
                         set: { (newValue) in
@@ -117,22 +117,21 @@ struct DiffieHellmanView: View {
         }
         .modifier(NavigationViewModifier(page: .ecdh))
     }
-    
+
     func getSharedSecret() -> String {
         guard let privateKey = self.state.privateKey else {
             return ""
         }
-        
+
         guard let counterKey = self.counterKey else {
             return ""
         }
-        
+
         let publicKey = self.curveType.getPublicKey(from: counterKey)
         guard let sharedKey = privateKey.getSharedKey(publicKey: publicKey, curve: Curve.secp256k1) else {
             return ""
         }
-        
+
         return sharedKey.hexString
     }
 }
-

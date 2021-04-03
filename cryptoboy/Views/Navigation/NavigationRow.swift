@@ -63,7 +63,7 @@ struct NavigationRow: View {
 
         case "ecdh":
             return AnyView(DiffieHellmanView())
-            
+
         case "qrcode":
             return AnyView(QRCodeGeneratorView())
 

@@ -25,11 +25,11 @@ struct EncodingView: View {
                     }
                     .disabled(state.message.isEmpty)
                 }
-                
+
                 Toggle("Decoding", isOn: $state.isDecoding)
             }
 
-            if (!state.isDecoding) {
+            if !state.isDecoding {
                 EncodingItemView(.hex)
                 EncodingItemView(.base58)
                 EncodingItemView(.base64)
