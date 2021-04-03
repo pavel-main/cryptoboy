@@ -11,26 +11,34 @@ PODS:
     - SwiftProtobuf
 
 DEPENDENCIES:
-  - QRCoder
+  - QRCoder (from `https://github.com/pavel-main/QRCoder.git`)
   - SwiftLint
   - SwiftRadix
   - TrustWalletCore
 
 SPEC REPOS:
   trunk:
-    - QRCoder
     - SwiftLint
     - SwiftProtobuf
     - SwiftRadix
     - TrustWalletCore
 
+EXTERNAL SOURCES:
+  QRCoder:
+    :git: https://github.com/pavel-main/QRCoder.git
+
+CHECKOUT OPTIONS:
+  QRCoder:
+    :commit: 31435a012e9c00f0fc8dd2f0a7d9faa0ffdc8aee
+    :git: https://github.com/pavel-main/QRCoder.git
+
 SPEC CHECKSUMS:
-  QRCoder: cbd2bee531cc86d286df7942334cfed94c803ae4
+  QRCoder: b92653e9032bca5d757d5c28f7ac7facd250a109
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
   SwiftProtobuf: 3320217e9d8fb75f36b40282e78c482640fd75dd
   SwiftRadix: a81388c8f6b76cec240cb34027cf2dcf4ebdb6ac
   TrustWalletCore: c9e55a399ab736bf1e378d7ee0146e2d396f7c62
 
-PODFILE CHECKSUM: 42be7c736431cea49886910193766b373c2b2a10
+PODFILE CHECKSUM: 68c1fb28c7c9e353979e6c4907ff1713b0a4bec0
 
 COCOAPODS: 1.10.1
