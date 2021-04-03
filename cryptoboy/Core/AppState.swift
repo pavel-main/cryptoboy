@@ -19,6 +19,12 @@ class AppState: ObservableObject {
             objectWillChange.send()
         }
     }
+    
+    @AppStorage("isMessageBinary") var isMessageBinary: Bool = false {
+        willSet {
+            objectWillChange.send()
+        }
+    }
 
     @AppStorage("message") var message: String = "" {
         didSet {
@@ -132,6 +138,14 @@ class AppState: ObservableObject {
     func getHashOrDefault(_ type: HashFunction) -> String {
         if self.isDefaultMessage() {
             return type.title
+        }
+        
+        if self.isMessageBinary {
+            guard let data = Data(fromHexEncodedString: self.message) else {
+                return "Error parsing hex-encoded bytes"
+            }
+            
+            return data.hash(type)
         }
 
         return message.hash(type)

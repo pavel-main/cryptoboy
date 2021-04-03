@@ -7,14 +7,14 @@
                 "id": "base",
                 "title": "Base Converter",
                 "systemImage": "arrow.2.squarepath",
-                "description": "bin, oct, dec, hex",
+                "description": "binary, octal, decimal, hex",
                 "icons": []
             },
             {
                 "id": "long",
                 "title": "Arbitary-precision arithmetic",
                 "systemImage": "sum",
-                "description": "uint256",
+                "description": "uint256 add, sub, mul, div",
                 "icons": ["soon"]
             }
         ]

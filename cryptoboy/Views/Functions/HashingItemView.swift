@@ -22,21 +22,25 @@ struct HashingItemView: View {
             Section(header: Text(self.type.title)) {
                 HStack {
                     Button(action: {
-                        UIPasteboard.general.string = state.getHashOrDefault(type)
+                        UIPasteboard.general.string = getHash()
                         showCopyAlert.toggle()
                     }) {
-                        Text(state.getHashOrDefault(type))
+                        Text(getHash())
                     }
                 }
             }
             .alert(isPresented: $showCopyAlert) {
                 Alert(
                     title: Text("Copied to clipboard"),
-                    message: Text(state.getHashOrDefault(type)),
+                    message: Text(getHash()),
                     dismissButton: .default(Text("OK"))
                 )
             }
             .environmentObject(state)
         }
+    }
+    
+    func getHash() -> String {
+        return self.state.getHashOrDefault(self.type)
     }
 }

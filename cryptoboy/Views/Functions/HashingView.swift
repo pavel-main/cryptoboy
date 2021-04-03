@@ -25,6 +25,8 @@ struct HashingView: View {
                     }
                     .disabled(state.message.isEmpty)
                 }
+                
+                Toggle("Binary", isOn: $state.isMessageBinary)
             }
 
             Group {
