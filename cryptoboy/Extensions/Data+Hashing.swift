@@ -10,6 +10,9 @@ import WalletCore
 
 extension Data {
 
+    /**
+     * From https://stackoverflow.com/a/40278391/12761484
+     */
     init?(fromHexEncodedString string: String) {
 
         // Convert 0 ... 9, a ... f, A ...F to their decimal value,
