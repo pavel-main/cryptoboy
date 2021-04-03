@@ -22,13 +22,6 @@ extension String {
         case .base58:
             return Base58.encode(data: Data(self.utf8))
 
-        case .base62:
-            guard let integer = UInt64(self) else {
-                return "NaN"
-            }
-
-            return Base62.encode(integer: integer)
-
         case .base64:
             return Data(self.utf8).base64EncodedString()
         }
@@ -47,8 +40,6 @@ extension String {
                     return "Error"
                 }
                 return result.hexString
-            case .base62:
-                return "TBD"
             case .base64:
                 guard let data = Data(base64Encoded: self) else {
                     return "Error"
