@@ -16,7 +16,7 @@ struct HashingView: View {
                 HStack {
                     Image(systemName: "ellipsis.bubble")
 
-                    TextField(text: $state.message)
+                    TextField("", text: $state.message)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
 
