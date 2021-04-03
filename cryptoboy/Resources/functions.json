@@ -48,7 +48,7 @@
                 "id": "encryption",
                 "title": "Encryption",
                 "systemImage": "lock.shield",
-                "description": "aes-cbc, aes-ctr",
+                "description": "AES-CBC, AES-CTR",
                 "icons": ["soon"]
             },
             {
@@ -75,14 +75,14 @@
                 "id": "ecdsa",
                 "title": "Digital Signature Algorithms",
                 "systemImage": "signature",
-                "description": "ECDSA, EdDSA, …",
+                "description": "ECDSA",
                 "icons": ["soon"]
             },
             {
-                "id": "hd",
-                "title": "HD Wallet",
-                "systemImage": "lock.rectangle.stack",
-                "description": "BIP39, BIP44, BIP141, …",
+                "id": "ecdh",
+                "title": "Key Exchange",
+                "systemImage": "key.icloud",
+                "description": "Diffie-Hellman",
                 "icons": ["soon"]
             }
 		]
@@ -98,13 +98,6 @@
                 "systemImage": "qrcode",
                 "description": "",
                 "icons": []
-            },
-            {
-                "id": "ecdh",
-                "title": "Diffie-Hellman Key Exchange",
-                "systemImage": "person.2",
-                "description": "ECDH",
-                "icons": ["soon"]
             },
             {
                 "id": "shamir",

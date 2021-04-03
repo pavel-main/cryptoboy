@@ -11,10 +11,17 @@
                 "icons": []
             },
             {
-                "id": "btc_address",
-                "title": "Address Derivation",
-                "systemImage": "mail.and.text.magnifyingglass",
-                "description": "p2pkh, p2sh, bech32",
+                "id": "btc_wallet",
+                "title": "HD Wallet",
+                "systemImage": "lock.rectangle.stack",
+                "description": "BIP39, BIP44, BIP141, …",
+                "icons": ["soon"]
+            },
+            {
+                "id": "btc_tx_fee",
+                "title": "Transaction Fee Estimation",
+                "systemImage": "percent",
+                "description": "",
                 "icons": ["soon"]
             },
             {
@@ -29,13 +36,6 @@
                 "title": "Wallet Import Format",
                 "systemImage": "square.and.arrow.down",
                 "description": "",
-                "icons": ["soon"]
-            },
-            {
-                "id": "btc_tx_fee",
-                "title": "Transaction Fee Estimation",
-                "systemImage": "percent",
-                "description": "legacy, segwit",
                 "icons": ["soon"]
             }
         ]
