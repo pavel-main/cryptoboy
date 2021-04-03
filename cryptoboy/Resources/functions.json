@@ -6,14 +6,14 @@
             {
                 "id": "base",
                 "title": "Base Converter",
-                "systemImage": "arrow.2.squarepath",
+                "systemImage": "01.square",
                 "description": "binary, octal, decimal, hex",
                 "icons": []
             },
             {
                 "id": "long",
                 "title": "Arbitary-precision arithmetic",
-                "systemImage": "sum",
+                "systemImage": "plus.slash.minus",
                 "description": "uint256 add, sub, mul, div",
                 "icons": ["soon"]
             }
@@ -27,35 +27,21 @@
 				"id": "hash",
                 "title": "Hashing",
                 "systemImage": "number",
-                "description": "sha256, keccak256, ripemd160, …",
+                "description": "sha256, keccak256, ripemd160",
 				"icons": []
 			},
             {
                 "id": "encoding",
                 "title": "Encoding",
-                "systemImage": "arrow.clockwise",
-                "description": "hex, base58, base64, …",
+                "systemImage": "chevron.left.slash.chevron.right",
+                "description": "hex, base58, base62, base64",
                 "icons": []
-            },
-            {
-                "id": "decoding",
-                "title": "Decoding",
-                "systemImage": "arrow.counterclockwise",
-                "description": "",
-                "icons": ["new"]
             },
             {
                 "id": "encryption",
                 "title": "Encryption",
                 "systemImage": "lock.shield",
                 "description": "AES-CBC, AES-CTR",
-                "icons": ["soon"]
-            },
-            {
-                "id": "decryption",
-                "title": "Decryption",
-                "systemImage": "key",
-                "description": "",
                 "icons": ["soon"]
             }
 		]
@@ -68,7 +54,7 @@
                 "id": "ecc",
                 "title": "Elliptic Curves",
                 "systemImage": "scribble",
-                "description": "secp256k1, ed25519, curve25519, …",
+                "description": "secp256k1, ed25519, curve25519",
                 "icons": []
             },
             {
@@ -81,7 +67,7 @@
             {
                 "id": "ecdh",
                 "title": "Key Exchange",
-                "systemImage": "key.icloud",
+                "systemImage": "key",
                 "description": "Diffie-Hellman",
                 "icons": ["soon"]
             }

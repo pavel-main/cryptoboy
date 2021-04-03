@@ -14,10 +14,10 @@ struct EthereumUnitView: View {
 
     @State var units = [
         MinorUnit.init(title: "Ether", factor: 18, max: MAX_FACTOR),
-        MinorUnit.init(title: "milliETH", factor: 15, max: MAX_FACTOR),
-        MinorUnit.init(title: "microETH", factor: 12, max: MAX_FACTOR),
-        MinorUnit.init(title: "Gwei", factor: 9, max: MAX_FACTOR),
-        MinorUnit.init(title: "Mwei", factor: 6, max: MAX_FACTOR),
+        MinorUnit.init(title: "Finney / Milliether", factor: 15, max: MAX_FACTOR),
+        MinorUnit.init(title: "Szabo / Microether", factor: 12, max: MAX_FACTOR),
+        MinorUnit.init(title: "Gwei / Shannon", factor: 9, max: MAX_FACTOR),
+        MinorUnit.init(title: "Mwei / Lovelace", factor: 6, max: MAX_FACTOR),
         MinorUnit.init(title: "Kwei", factor: 3, max: MAX_FACTOR),
         MinorUnit.init(title: "wei", factor: 0, max: MAX_FACTOR)
     ]

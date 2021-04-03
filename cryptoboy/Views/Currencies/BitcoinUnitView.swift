@@ -14,7 +14,7 @@ struct BitcoinUnitView: View {
 
     @State var units = [
         MinorUnit.init(title: "Bitcoin", factor: 8, max: MAX_FACTOR),
-        MinorUnit.init(title: "milliBTC", factor: 5, max: MAX_FACTOR),
+        MinorUnit.init(title: "mBTC", factor: 5, max: MAX_FACTOR),
         MinorUnit.init(title: "microBTC", factor: 2, max: MAX_FACTOR),
         MinorUnit.init(title: "Satoshi", factor: 0, max: MAX_FACTOR)
     ]

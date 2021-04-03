@@ -14,7 +14,7 @@
                 "id": "btc_wallet",
                 "title": "HD Wallet",
                 "systemImage": "lock.rectangle.stack",
-                "description": "BIP39, BIP44, BIP141, …",
+                "description": "BIP39, BIP44, BIP141",
                 "icons": ["soon"]
             },
             {
@@ -48,7 +48,7 @@
                 "id": "eth_unit",
                 "title": "Unit Converter",
                 "systemImage": "eurosign.circle",
-                "description": "ether, finney, szabo, gwei, wei",
+                "description": "Ether, Finney, Szabo, Gwei, wei",
                 "icons": []
             },
             {
@@ -57,14 +57,20 @@
                 "systemImage": "checkmark.seal",
                 "description": "",
                 "icons": ["soon"]
-            },
-            {
-                "id": "eth_rlp",
-                "title": "RLP Encoding",
-                "systemImage": "arrow.triangle.capsulepath",
-                "description": "",
-                "icons": ["soon"]
             }
+        ]
+    },
+    {
+        "id": "dot",
+        "title": "Polkadot & Kusama",
+        "items": [
+            {
+                "id": "dot_unit",
+                "title": "Unit Converter",
+                "systemImage": "sterlingsign.circle",
+                "description": "DOT, mDOT, μBTC, planck",
+                "icons": []
+            },
         ]
     },
     {

@@ -16,7 +16,7 @@ struct EncodingView: View {
                 HStack {
                     Image(systemName: "ellipsis.bubble")
 
-                    TextEditor(text: $state.message)
+                    TextField(text: $state.message)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
 

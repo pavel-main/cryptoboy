@@ -9,11 +9,11 @@ enum PageType {
     case base
     case hash
     case encoding
-    case decoding
     case ecc
     case qrcode
     case btc_unit
     case eth_unit
+    case dot_unit
     case unknown
 
     var title: String {
@@ -24,8 +24,6 @@ enum PageType {
                 return "Hashing"
             case .encoding:
                 return "Encoding"
-            case .decoding:
-                return "Decoding"
             case .ecc:
                 return "Elliptic Curves"
             case .qrcode:
@@ -34,6 +32,8 @@ enum PageType {
                 return "BTC Unit Converter"
             case .eth_unit:
                 return "ETH Unit Converter"
+            case .dot_unit:
+                return "DOT Unit Converter"
             case .unknown:
                 return "Coming Soon!"
         }

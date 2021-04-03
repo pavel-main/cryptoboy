@@ -58,9 +58,6 @@ struct NavigationRow: View {
         case "encoding":
             return AnyView(EncodingView())
 
-        case "decoding":
-            return AnyView(DecodingView())
-
         case "ecc":
             return AnyView(EllipticCurveView())
 
@@ -72,6 +69,9 @@ struct NavigationRow: View {
 
         case "eth_unit":
             return AnyView(EthereumUnitView())
+            
+        case "dot_unit":
+            return AnyView(PolkadotUnitView())
 
         default:
             return AnyView(ComingSoonView(item: item))

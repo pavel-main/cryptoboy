@@ -23,20 +23,6 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             List {
-                // Donation
-                Section(header: Text("Donate")) {
-                    AboutDonateItem("BTC", "1PVVjazdf7ye5oSpTcBq5CWKkCMHHQYD1m")
-                    AboutDonateItem("ETH", "0xC5362223D38d1d4ADbE36Dd78E77B5f4DbbC0F21")
-                    AboutDonateItem("BCH", "qrmtven6eellut9dm5v6ztaee9h9wu7zkulgd7crze")
-                    AboutDonateItem("XLM", "GAIDD763J2YXYZBGBWSWVT7Y6MPF2KTJO77OS2QXQ3FJ6UMN6GRDDGUC")
-                }
-
-                // System
-                Section(header: Text("System")) {
-                    AboutSystemItem("App Version", state.appVersion)
-                    AboutSystemItem("Build Date", buildDate)
-                }
-
                 // Actions
                 Section(header: Text("Actions")) {
                     Toggle(isOn: $isDarkMode) {
@@ -68,6 +54,20 @@ struct SettingsView: View {
                         },
                         secondaryButton: .cancel()
                     )
+                }
+                
+                // Donate
+                Section(header: Text("Donate")) {
+                    AboutDonateItem("BTC", "1PVVjazdf7ye5oSpTcBq5CWKkCMHHQYD1m")
+                    AboutDonateItem("ETH", "0xC5362223D38d1d4ADbE36Dd78E77B5f4DbbC0F21")
+                    AboutDonateItem("BCH", "qrmtven6eellut9dm5v6ztaee9h9wu7zkulgd7crze")
+                    AboutDonateItem("XLM", "GAIDD763J2YXYZBGBWSWVT7Y6MPF2KTJO77OS2QXQ3FJ6UMN6GRDDGUC")
+                }
+
+                // System
+                Section(header: Text("System")) {
+                    AboutSystemItem("App Version", state.appVersion)
+                    AboutSystemItem("Build Date", buildDate)
                 }
             }
             .listStyle(GroupedListStyle())
