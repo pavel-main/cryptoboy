@@ -13,6 +13,7 @@ struct QRCodeGeneratorView: View {
 
     @State private var data = ""
     @State private var level = "M"
+    @State private var revealDetails = false
 
     let QR_SIZE = CGFloat(320)
     let MESSAGE_LIMIT = 4096
@@ -37,25 +38,26 @@ struct QRCodeGeneratorView: View {
                     }
                     .disabled(data.isEmpty)
                 }
-            }
-
-            Section(header: Text("Correction Level")) {
-                Picker(selection: $level, label: Text("Correction Level")) {
-                    Text("Low").tag("L")
-                    Text("Medium").tag("M")
-                    Text("Quartile").tag("Q")
-                    Text("High").tag("H")
+                
+                DisclosureGroup("Correction Level", isExpanded: $revealDetails) {
+                    Picker(selection: $level, label: Text("Correction Level")) {
+                        Text("Low").tag("L")
+                        Text("Medium").tag("M")
+                        Text("Quartile").tag("Q")
+                        Text("High").tag("H")
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
                 }
-                .pickerStyle(SegmentedPickerStyle())
             }
 
             if !data.isEmpty {
                 Section(header: Text("QR Code")) {
-                    Image(uiImage: QRCodeHelper.generate(from: self.data, size: QR_SIZE, level: self.level))
-                        .interpolation(.none)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: QR_SIZE, height: QR_SIZE)
+                    VStack {
+                        Image(uiImage: QRCodeHelper.generate(from: self.data, size: QR_SIZE, level: self.level))
+                            .interpolation(.none)
+                            .resizable()
+                            .aspectRatio(1, contentMode: .fit)
+                    }
                 }
             }
 

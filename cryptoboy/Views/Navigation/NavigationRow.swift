@@ -25,6 +25,7 @@ struct NavigationRow: View {
                     if !item.description.isEmpty {
                         Text(item.description)
                             .font(.caption)
+                            .lineLimit(1)
                     }
                 }
 
