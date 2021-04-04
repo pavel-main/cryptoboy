@@ -31,9 +31,3 @@ struct AboutDonateItem: View {
         }
     }
 }
-
-struct SettingsDonateItem_Previews: PreviewProvider {
-    static var previews: some View {
-        AboutDonateItem("BTC", "1PVVjazdf7ye5oSpTcBq5CWKkCMHHQYD1m")
-    }
-}

@@ -19,11 +19,12 @@ struct QRCodeDisplayView: View {
     var body: some View {
         Form {
             Section(header: Text(self.title)) {
+                VStack {
                 Image(uiImage: QRCodeHelper.generate(from: self.data, size: QR_SIZE, level: "M"))
                     .interpolation(.none)
                     .resizable()
-                    .scaledToFit()
-                    .frame(width: QR_SIZE, height: QR_SIZE)
+                    .aspectRatio(1, contentMode: .fit)
+                }
             }
 
             Section(header: Text("Copy to clipboard")) {
