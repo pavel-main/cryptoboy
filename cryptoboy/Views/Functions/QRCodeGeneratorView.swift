@@ -38,7 +38,7 @@ struct QRCodeGeneratorView: View {
                     }
                     .disabled(data.isEmpty)
                 }
-                
+
                 DisclosureGroup("Correction Level", isExpanded: $revealDetails) {
                     Picker(selection: $level, label: Text("Correction Level")) {
                         Text("Low").tag("L")
