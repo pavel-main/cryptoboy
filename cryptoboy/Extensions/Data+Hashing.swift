@@ -46,50 +46,50 @@ extension Data {
         guard even else { return nil }
     }
 
-    func hash(_ type: HashFunction) -> String {
+    func hash(_ type: HashFunction) -> Data {
         switch type {
         case .bytepad:
             // Unreachable
-            return self.hexString
+            return self
 
         case .sha1:
-            return Hash.sha1(data: self).hexString
+            return Hash.sha1(data: self)
 
         case .sha256:
-            return Hash.sha256(data: self).hexString
+            return Hash.sha256(data: self)
 
         case .sha256ripedm160:
-            return Hash.sha256RIPEMD(data: self).hexString
+            return Hash.sha256RIPEMD(data: self)
 
         case .sha256sha256:
-            return Hash.sha256SHA256(data: self).hexString
+            return Hash.sha256SHA256(data: self)
 
         case .sha512:
-            return Hash.sha512(data: self).hexString
+            return Hash.sha512(data: self)
 
         case .keccak256:
-            return Hash.keccak256(data: self).hexString
+            return Hash.keccak256(data: self)
 
         case .keccak512:
-            return Hash.keccak512(data: self).hexString
+            return Hash.keccak512(data: self)
 
         case .ripemd160:
-            return Hash.ripemd(data: self).hexString
+            return Hash.ripemd(data: self)
 
         case .blake256:
-            return Hash.blake256(data: self).hexString
+            return Hash.blake256(data: self)
 
         case .blake256ripedm160:
-            return Hash.blake256RIPEMD(data: self).hexString
+            return Hash.blake256RIPEMD(data: self)
 
         case .blake256blake256:
-            return Hash.blake256Blake256(data: self).hexString
+            return Hash.blake256Blake256(data: self)
 
         case .groestl512:
-            return Hash.groestl512(data: self).hexString
+            return Hash.groestl512(data: self)
 
         case .groestl512groestl512:
-            return Hash.groestl512Groestl512(data: self).hexString
+            return Hash.groestl512Groestl512(data: self)
         }
     }
 }

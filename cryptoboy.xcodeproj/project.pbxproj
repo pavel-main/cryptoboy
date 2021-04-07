@@ -13,6 +13,9 @@
 		E902F3F326161C4500825004 /* MinorUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E902F3F226161C4500825004 /* MinorUnit.swift */; };
 		E902F423261630F300825004 /* QRCodeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E902F422261630F300825004 /* QRCodeHelper.swift */; };
 		E902F42E2616394500825004 /* QRCodeDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E902F42D2616394500825004 /* QRCodeDisplayView.swift */; };
+		E90775BD261E660D009D3D95 /* DigitalSignaturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90775BC261E660D009D3D95 /* DigitalSignaturesView.swift */; };
+		E90775C5261E7444009D3D95 /* SignatureFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90775C4261E7444009D3D95 /* SignatureFormat.swift */; };
+		E90775CA261E757C009D3D95 /* DigitalSignatureItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90775C9261E757C009D3D95 /* DigitalSignatureItemView.swift */; };
 		E90853C0261148F30001B9BE /* EncodingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90853BF261148F30001B9BE /* EncodingItemView.swift */; };
 		E90853C5261149290001B9BE /* EncodingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90853C4261149290001B9BE /* EncodingView.swift */; };
 		E90853CE261153510001B9BE /* AboutDonateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90853CD261153510001B9BE /* AboutDonateItem.swift */; };
@@ -94,6 +97,9 @@
 		E902F3F226161C4500825004 /* MinorUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinorUnit.swift; sourceTree = "<group>"; };
 		E902F422261630F300825004 /* QRCodeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeHelper.swift; sourceTree = "<group>"; };
 		E902F42D2616394500825004 /* QRCodeDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeDisplayView.swift; sourceTree = "<group>"; };
+		E90775BC261E660D009D3D95 /* DigitalSignaturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalSignaturesView.swift; sourceTree = "<group>"; };
+		E90775C4261E7444009D3D95 /* SignatureFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureFormat.swift; sourceTree = "<group>"; };
+		E90775C9261E757C009D3D95 /* DigitalSignatureItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalSignatureItemView.swift; sourceTree = "<group>"; };
 		E90853BF261148F30001B9BE /* EncodingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodingItemView.swift; sourceTree = "<group>"; };
 		E90853C4261149290001B9BE /* EncodingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodingView.swift; sourceTree = "<group>"; };
 		E90853CD261153510001B9BE /* AboutDonateItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutDonateItem.swift; sourceTree = "<group>"; };
@@ -229,6 +235,7 @@
 				E9088B982617D311008C3BBC /* EllipticCurvePublicKey.swift */,
 				E9ED74C52612FAAE00DCD4A3 /* EncodingFormat.swift */,
 				E9ED74C02612F8F500DCD4A3 /* HashFunction.swift */,
+				E90775C4261E7444009D3D95 /* SignatureFormat.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -391,6 +398,7 @@
 			children = (
 				E96557D82616A432004E7BF1 /* BaseUnitConverterView.swift */,
 				E94E70D72618DCDF00354851 /* DiffieHellmanView.swift */,
+				E90775BC261E660D009D3D95 /* DigitalSignaturesView.swift */,
 				E9088B872617CE45008C3BBC /* EllipticCurveView.swift */,
 				E9088B922617D287008C3BBC /* EllipticCurveItemView.swift */,
 				E90853C4261149290001B9BE /* EncodingView.swift */,
@@ -399,6 +407,7 @@
 				E945C39B260EC96F00E732A0 /* HashingView.swift */,
 				E96A4AB1260FFF0D009EA367 /* HashingItemView.swift */,
 				E954321C2612B701001918F3 /* QRCodeGeneratorView.swift */,
+				E90775C9261E757C009D3D95 /* DigitalSignatureItemView.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -578,6 +587,7 @@
 				E9163B4F260EB31200453411 /* MainView.swift in Sources */,
 				E90853C5261149290001B9BE /* EncodingView.swift in Sources */,
 				E96557D92616A432004E7BF1 /* BaseUnitConverterView.swift in Sources */,
+				E90775BD261E660D009D3D95 /* DigitalSignaturesView.swift in Sources */,
 				E9ED74B92612F6C200DCD4A3 /* ThemeViewModifier.swift in Sources */,
 				E94E70E02618E1A300354851 /* DecodingItemView.swift in Sources */,
 				E9ED74B12612E93300DCD4A3 /* DarkModeViewModifier.swift in Sources */,
@@ -589,8 +599,10 @@
 				E99F77BB26124118009BDFF1 /* Set+RawRepresentable.swift in Sources */,
 				E902F3EE2616170B00825004 /* String+Filtering.swift in Sources */,
 				E99F77C7261269EA009BDFF1 /* BitcoinUnitView.swift in Sources */,
+				E90775C5261E7444009D3D95 /* SignatureFormat.swift in Sources */,
 				E95432092612B29B001918F3 /* Theme.swift in Sources */,
 				E96A4AAA260FFD74009EA367 /* AppState.swift in Sources */,
+				E90775CA261E757C009D3D95 /* DigitalSignatureItemView.swift in Sources */,
 				E9088B932617D287008C3BBC /* EllipticCurveItemView.swift in Sources */,
 				E9163B00260EA4BA00453411 /* FunctionsView.swift in Sources */,
 				E902F3E32616140300825004 /* CryptoUnitFormatter.swift in Sources */,
@@ -780,7 +792,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.1.2;
+				CURRENT_PROJECT_VERSION = 0.1.3;
 				DEVELOPMENT_ASSET_PATHS = "\"cryptoboy/Preview Content\"";
 				DEVELOPMENT_TEAM = ACU6WYW3JF;
 				ENABLE_PREVIEWS = NO;
@@ -790,7 +802,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.2;
+				MARKETING_VERSION = 0.1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = engineering.pavel.cryptoboy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -807,7 +819,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.1.2;
+				CURRENT_PROJECT_VERSION = 0.1.3;
 				DEVELOPMENT_ASSET_PATHS = "\"cryptoboy/Preview Content\"";
 				DEVELOPMENT_TEAM = ACU6WYW3JF;
 				ENABLE_PREVIEWS = NO;
@@ -817,7 +829,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.2;
+				MARKETING_VERSION = 0.1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = engineering.pavel.cryptoboy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

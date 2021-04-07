@@ -49,6 +49,7 @@ class AppState: ObservableObject {
     }
 
     @Published var privateKey: PrivateKey?
+    @Published var digestType: HashFunction = .sha256
     @Published var isMessageBinary: Bool = false
     @Published var isDecoding: Bool = false
 
@@ -169,7 +170,7 @@ class AppState: ObservableObject {
             return nil
         }
 
-        return data.hash(type)
+        return data.hash(type).hexString
     }
 
     func encode(_ type: EncodingFormat) -> String {

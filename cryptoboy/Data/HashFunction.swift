@@ -5,7 +5,7 @@
 //  Created by Pavel on 30/03/2021.
 //
 
-enum HashFunction {
+enum HashFunction: CaseIterable {
     case bytepad
     case sha1
     case sha256

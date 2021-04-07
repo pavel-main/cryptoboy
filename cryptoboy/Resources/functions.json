@@ -11,7 +11,7 @@
                 "icons": []
             },
             {
-                "id": "long",
+                "id": "uint256",
                 "title": "Arbitary-precision arithmetic",
                 "systemImage": "scope",
                 "description": "uint256 add, sub, mul, div",
@@ -69,7 +69,7 @@
                 "title": "Digital Signatures",
                 "systemImage": "signature",
                 "description": "ECDSA",
-                "icons": ["soon"]
+                "icons": ["new"]
             }
 		]
 	},

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum EncodingFormat {
+enum EncodingFormat: CaseIterable {
     case hex
     case base58
     case base64

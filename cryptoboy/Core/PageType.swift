@@ -11,6 +11,7 @@ enum PageType {
     case encoding
     case keypair
     case ecdh
+    case ecdsa
     case qrcode
     case btc_unit
     case eth_unit
@@ -29,6 +30,8 @@ enum PageType {
                 return "Keypair Generator"
             case .ecdh:
                 return "Diffie-Hellman"
+            case .ecdsa:
+                return "Digital Signatures"
             case .qrcode:
                 return "QR Code Generator"
             case .btc_unit:

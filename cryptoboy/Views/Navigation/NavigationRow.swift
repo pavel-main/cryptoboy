@@ -21,6 +21,7 @@ struct NavigationRow: View {
                 VStack(alignment: .leading) {
                     Text(item.title)
                         .font(.headline)
+                        .lineLimit(1)
 
                     if !item.description.isEmpty {
                         Text(item.description)
@@ -65,6 +66,9 @@ struct NavigationRow: View {
         case "ecdh":
             return AnyView(DiffieHellmanView())
 
+        case "ecdsa":
+            return AnyView(DigitalSignaturesView())
+            
         case "qrcode":
             return AnyView(QRCodeGeneratorView())
 
