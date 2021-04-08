@@ -9,7 +9,7 @@ import SwiftUI
 
 public struct ThemeViewModifier: ViewModifier {
 
-    @AppStorage("currentTheme") var currentTheme: String = "blue"
+    @AppStorage("currentTheme") var currentTheme: String = DEFAULT_THEME
 
     public func body(content: Content) -> some View {
         content

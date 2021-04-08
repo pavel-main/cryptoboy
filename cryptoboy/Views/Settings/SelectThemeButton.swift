@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SelectThemeButton: View {
     @EnvironmentObject var state: AppState
-    @AppStorage("currentTheme") var currentTheme: String = "blue"
+    @AppStorage("currentTheme") var currentTheme: String = DEFAULT_THEME
     var colorName: String
     var themeName: String
 
