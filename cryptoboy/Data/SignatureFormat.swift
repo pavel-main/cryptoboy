@@ -8,13 +8,13 @@
 import Foundation
 
 enum SignatureFormat: CaseIterable {
-    case asn1
+    case raw
     case der
 
     var title: String {
         switch self {
-            case .asn1:
-                return "ASN.1"
+            case .raw:
+                return "R|S"
             case .der:
                 return "DER"
         }

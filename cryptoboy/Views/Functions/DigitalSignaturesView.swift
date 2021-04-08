@@ -86,7 +86,7 @@ struct DigitalSignaturesView: View {
             }
 
             if state.privateKey != nil && !state.message.isEmpty {
-                DigitalSignatureItemView(.asn1)
+                DigitalSignatureItemView(.raw)
                 DigitalSignatureItemView(.der)
             }
         }

@@ -55,7 +55,7 @@ struct DigitalSignatureItemView: View {
         var signature: Data?
         
         switch self.type {
-            case .asn1:
+            case .raw:
                 signature = privateKey.sign(digest: digest, curve: .secp256k1)
             case .der:
                 signature = privateKey.signAsDER(digest: digest, curve: .secp256k1)
