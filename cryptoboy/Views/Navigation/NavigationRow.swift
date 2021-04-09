@@ -68,7 +68,7 @@ struct NavigationRow: View {
 
         case "ecdsa":
             return AnyView(DigitalSignaturesView())
-            
+
         case "qrcode":
             return AnyView(QRCodeGeneratorView())
 

@@ -10,7 +10,7 @@ import WalletCore
 
 struct DigitalSignaturesView: View {
     @EnvironmentObject var state: AppState
-    
+
     let digestTypes: [HashFunction] = [
         .sha256,
         .sha512,
@@ -59,11 +59,11 @@ struct DigitalSignaturesView: View {
                     Text("Generate New")
                 }
             }
-            
+
             if state.privateKey != nil {
                 EllipticCurveItemView(.secp256k1(compressed: true))
             }
-            
+
             Section(header: Text("Digest")) {
                 Picker(selection: $state.digestType, label: Text("Digest")) {
                     ForEach(digestTypes, id: \.self) { idx in

@@ -45,15 +45,15 @@ struct DigitalSignatureItemView: View {
         guard let privateKey = self.state.privateKey else {
             return ""
         }
-        
+
         guard let message = state.message.data(using: .utf8) else {
             return ""
         }
-        
+
         let digest = message.hash(state.digestType)
-        
+
         var signature: Data?
-        
+
         switch self.type {
             case .raw:
                 signature = privateKey.sign(digest: digest, curve: .secp256k1)
@@ -62,7 +62,7 @@ struct DigitalSignatureItemView: View {
             case .schnorr:
                 signature = privateKey.signSchnorr(message: message, curve: .secp256k1)
         }
-        
+
         guard let result = signature else {
             return ""
         }

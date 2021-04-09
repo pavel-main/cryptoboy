@@ -6,8 +6,6 @@
 //  Copyright © 2019 Hacking with Swift. All rights reserved.
 //
 
-import SwiftUI
-
 struct MenuSection: Codable {
     var id: String
     var title: String

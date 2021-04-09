@@ -19,7 +19,7 @@ struct EncodingView: View {
                 }
                 .pickerStyle(SegmentedPickerStyle())
             }
-            
+
             Section(header: Text("Input")) {
                 HStack {
                     Image(systemName: "ellipsis.bubble")
