@@ -7,6 +7,7 @@
 
 enum PageType {
     case base
+    case uint256
     case hash
     case encoding
     case keypair
@@ -22,6 +23,8 @@ enum PageType {
         switch self {
             case .base:
                 return "Base Converter"
+            case .uint256:
+                return "Arbitary-precision arithmetic"
             case .hash:
                 return "Hashing"
             case .encoding:

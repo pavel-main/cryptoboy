@@ -53,6 +53,8 @@
 		E96A4AAA260FFD74009EA367 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A4AA9260FFD74009EA367 /* AppState.swift */; };
 		E96A4AB2260FFF0D009EA367 /* HashingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A4AB1260FFF0D009EA367 /* HashingItemView.swift */; };
 		E96BC5022617B7C000D52BEF /* BaseUnitFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96BC5012617B7C000D52BEF /* BaseUnitFormatter.swift */; };
+		E97093282621088700C65FB3 /* ArbitaryPrecisionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97093272621088700C65FB3 /* ArbitaryPrecisionView.swift */; };
+		E97093AC26210E0500C65FB3 /* BigOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97093AB26210E0500C65FB3 /* BigOperation.swift */; };
 		E97879FB2617EE88003C66B2 /* Data+Hashing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97879FA2617EE88003C66B2 /* Data+Hashing.swift */; };
 		E9787A06261804FE003C66B2 /* PolkadotUnitConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9787A05261804FE003C66B2 /* PolkadotUnitConverter.swift */; };
 		E99F77B3261240DB009BDFF1 /* Array+RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F77B2261240DB009BDFF1 /* Array+RawRepresentable.swift */; };
@@ -143,6 +145,8 @@
 		E96A4AA9260FFD74009EA367 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		E96A4AB1260FFF0D009EA367 /* HashingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashingItemView.swift; sourceTree = "<group>"; };
 		E96BC5012617B7C000D52BEF /* BaseUnitFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUnitFormatter.swift; sourceTree = "<group>"; };
+		E97093272621088700C65FB3 /* ArbitaryPrecisionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArbitaryPrecisionView.swift; sourceTree = "<group>"; };
+		E97093AB26210E0500C65FB3 /* BigOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigOperation.swift; sourceTree = "<group>"; };
 		E97879FA2617EE88003C66B2 /* Data+Hashing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Hashing.swift"; sourceTree = "<group>"; };
 		E9787A05261804FE003C66B2 /* PolkadotUnitConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolkadotUnitConverter.swift; sourceTree = "<group>"; };
 		E99F77B2261240DB009BDFF1 /* Array+RawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+RawRepresentable.swift"; sourceTree = "<group>"; };
@@ -231,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				E96557DD2616A536004E7BF1 /* BaseUnit.swift */,
+				E97093AB26210E0500C65FB3 /* BigOperation.swift */,
 				E902F3F226161C4500825004 /* MinorUnit.swift */,
 				E9088B982617D311008C3BBC /* EllipticCurvePublicKey.swift */,
 				E9ED74C52612FAAE00DCD4A3 /* EncodingFormat.swift */,
@@ -396,6 +401,7 @@
 		E9D14B69260FDB81000B191B /* Functions */ = {
 			isa = PBXGroup;
 			children = (
+				E97093272621088700C65FB3 /* ArbitaryPrecisionView.swift */,
 				E96557D82616A432004E7BF1 /* BaseUnitConverterView.swift */,
 				E94E70D72618DCDF00354851 /* DiffieHellmanView.swift */,
 				E90775BC261E660D009D3D95 /* DigitalSignaturesView.swift */,
@@ -587,6 +593,7 @@
 				E9163B4F260EB31200453411 /* MainView.swift in Sources */,
 				E90853C5261149290001B9BE /* EncodingView.swift in Sources */,
 				E96557D92616A432004E7BF1 /* BaseUnitConverterView.swift in Sources */,
+				E97093282621088700C65FB3 /* ArbitaryPrecisionView.swift in Sources */,
 				E90775BD261E660D009D3D95 /* DigitalSignaturesView.swift in Sources */,
 				E9ED74B92612F6C200DCD4A3 /* ThemeViewModifier.swift in Sources */,
 				E94E70E02618E1A300354851 /* DecodingItemView.swift in Sources */,
@@ -621,6 +628,7 @@
 				E9163B38260EAAD200453411 /* Bundle+JSON.swift in Sources */,
 				E954321D2612B701001918F3 /* QRCodeGeneratorView.swift in Sources */,
 				E9163B3A260EAAD200453411 /* MenuSection.swift in Sources */,
+				E97093AC26210E0500C65FB3 /* BigOperation.swift in Sources */,
 				E9BC942A26112C9900D8B83E /* NavigationBar.swift in Sources */,
 				E96557DE2616A536004E7BF1 /* BaseUnit.swift in Sources */,
 				E90853DE261158700001B9BE /* AboutLinkItem.swift in Sources */,

@@ -54,6 +54,9 @@ struct NavigationRow: View {
         case "base":
             return AnyView(BaseUnitConverterView())
 
+        case "uint256":
+            return AnyView(ArbitaryPrecisionView())
+            
         case "hash":
             return AnyView(HashingView())
 

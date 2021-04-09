@@ -1,0 +1,19 @@
+{
+  "name": "BigInt",
+  "version": "1.2.3",
+  "summary": "Arbitrary-precision integer arithmetic in Swift.",
+  "homepage": "https://github.com/CryptoboyApp/BigInt",
+  "license": "MIT",
+  "authors": {
+    "Leif Ibsen": "leif.m.ibsen@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/CryptoboyApp/BigInt.git",
+    "tag": "1.2.3"
+  },
+  "requires_arc": true,
+  "source_files": "Sources/**/*.{swift}",
+  "platforms": {
+    "ios": "9.0"
+  }
+}
