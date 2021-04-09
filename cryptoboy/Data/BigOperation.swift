@@ -12,11 +12,11 @@ enum BigOperation: String, CaseIterable, Identifiable {
     case minus
     case mul
     case div
-    
+
     var id: String {
         return self.rawValue
     }
-    
+
     var title: String {
         switch self {
             case .plus:
