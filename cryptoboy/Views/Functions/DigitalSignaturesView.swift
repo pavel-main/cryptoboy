@@ -60,8 +60,12 @@ struct DigitalSignaturesView: View {
                 }
             }
             
-            Section(header: Text("Digest Type")) {
-                Picker(selection: $state.digestType, label: Text("Digest Type")) {
+            if state.privateKey != nil {
+                EllipticCurveItemView(.secp256k1(compressed: true))
+            }
+            
+            Section(header: Text("Digest")) {
+                Picker(selection: $state.digestType, label: Text("Digest")) {
                     ForEach(digestTypes, id: \.self) { idx in
                         Text(idx.title).tag(idx)
                     }
@@ -87,7 +91,8 @@ struct DigitalSignaturesView: View {
 
             if state.privateKey != nil && !state.message.isEmpty {
                 DigitalSignatureItemView(.raw)
-                DigitalSignatureItemView(.der)
+                DigitalSignatureItemView(.asn1)
+                DigitalSignatureItemView(.schnorr)
             }
         }
         .modifier(NavigationViewModifier(page: .ecdsa))

@@ -57,14 +57,16 @@ struct DigitalSignatureItemView: View {
         switch self.type {
             case .raw:
                 signature = privateKey.sign(digest: digest, curve: .secp256k1)
-            case .der:
+            case .asn1:
                 signature = privateKey.signAsDER(digest: digest, curve: .secp256k1)
-        }
-
-        if (signature == nil) {
-            return ""
+            case .schnorr:
+                signature = privateKey.signSchnorr(message: message, curve: .secp256k1)
         }
         
-        return signature!.hexString
+        guard let result = signature else {
+            return ""
+        }
+
+        return result.hexString
     }
 }

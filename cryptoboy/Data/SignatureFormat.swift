@@ -9,14 +9,17 @@ import Foundation
 
 enum SignatureFormat: CaseIterable {
     case raw
-    case der
+    case asn1
+    case schnorr
 
     var title: String {
         switch self {
             case .raw:
-                return "R|S"
-            case .der:
-                return "DER"
+                return "Raw (R|S)"
+            case .asn1:
+                return "ASN.1 (DER)"
+            case .schnorr:
+                return "Schnorr (SHA-256)"
         }
     }
 }

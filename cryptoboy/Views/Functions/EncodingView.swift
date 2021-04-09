@@ -12,6 +12,14 @@ struct EncodingView: View {
 
     var body: some View {
         Form {
+            Section(header: Text("Mode")) {
+                Picker(selection: $state.isDecoding, label: Text("Mode")) {
+                    Text("Encoding").tag(false)
+                    Text("Decoding").tag(true)
+                }
+                .pickerStyle(SegmentedPickerStyle())
+            }
+            
             Section(header: Text("Input")) {
                 HStack {
                     Image(systemName: "ellipsis.bubble")
@@ -25,8 +33,6 @@ struct EncodingView: View {
                     }
                     .disabled(state.message.isEmpty)
                 }
-
-                Toggle("Decoding", isOn: $state.isDecoding)
             }
 
             if !state.isDecoding {

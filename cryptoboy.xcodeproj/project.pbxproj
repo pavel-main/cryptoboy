@@ -399,6 +399,7 @@
 				E96557D82616A432004E7BF1 /* BaseUnitConverterView.swift */,
 				E94E70D72618DCDF00354851 /* DiffieHellmanView.swift */,
 				E90775BC261E660D009D3D95 /* DigitalSignaturesView.swift */,
+				E90775C9261E757C009D3D95 /* DigitalSignatureItemView.swift */,
 				E9088B872617CE45008C3BBC /* EllipticCurveView.swift */,
 				E9088B922617D287008C3BBC /* EllipticCurveItemView.swift */,
 				E90853C4261149290001B9BE /* EncodingView.swift */,
@@ -407,7 +408,6 @@
 				E945C39B260EC96F00E732A0 /* HashingView.swift */,
 				E96A4AB1260FFF0D009EA367 /* HashingItemView.swift */,
 				E954321C2612B701001918F3 /* QRCodeGeneratorView.swift */,
-				E90775C9261E757C009D3D95 /* DigitalSignatureItemView.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
