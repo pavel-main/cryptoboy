@@ -52,7 +52,7 @@ enum PageType: String {
                 return "Coming Soon!"
         }
     }
-    
+
     func getView(_ item: MenuItem) -> AnyView {
         switch self {
         case .base:
