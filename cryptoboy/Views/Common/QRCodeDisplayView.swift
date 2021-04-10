@@ -20,10 +20,10 @@ struct QRCodeDisplayView: View {
         Form {
             Section(header: Text(self.title)) {
                 VStack {
-                Image(uiImage: QRCodeHelper.generate(from: self.data, size: QR_SIZE, level: "M"))
-                    .interpolation(.none)
-                    .resizable()
-                    .aspectRatio(1, contentMode: .fit)
+                    Image(uiImage: QRCodeHelper.generate(from: self.data, size: QR_SIZE, level: "M"))
+                        .interpolation(.none)
+                        .resizable()
+                        .aspectRatio(1, contentMode: .fit)
                 }
             }
 
