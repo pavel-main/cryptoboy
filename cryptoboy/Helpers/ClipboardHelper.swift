@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 class ClipboardHelper {
-    
+
     static func copyString(_ input: String) {
         UIPasteboard.general.string = input
     }
