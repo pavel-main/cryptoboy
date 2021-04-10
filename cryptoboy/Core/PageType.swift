@@ -14,6 +14,7 @@ enum PageType {
     case ecdh
     case ecdsa
     case qrcode
+    case shamir
     case btc_unit
     case eth_unit
     case dot_unit
@@ -37,6 +38,8 @@ enum PageType {
                 return "Digital Signatures"
             case .qrcode:
                 return "QR Code Generator"
+            case .shamir:
+                return "Shamir Secret Sharing"
             case .btc_unit:
                 return "BTC Unit Converter"
             case .eth_unit:

@@ -86,7 +86,7 @@ struct ArbitaryPrecisionView: View {
         .modifier(NavigationViewModifier(page: .uint256))
         .environmentObject(state)
     }
-    
+
     func validate(_ oldValue: String, _ newValue: String) -> String {
         var input = "0"
         if !newValue.isEmpty {
@@ -96,7 +96,7 @@ struct ArbitaryPrecisionView: View {
         guard let value = BInt(input, radix: 16) else {
             return oldValue
         }
-        
+
         return value.asString(radix: 16)
     }
 
@@ -109,9 +109,9 @@ struct ArbitaryPrecisionView: View {
             result = ""
             return
         }
-        
-        var calc: BInt? = nil
-        
+
+        var calc: BInt?
+
         switch self.operation {
         case .plus:
             calc = big1 + big2
@@ -124,12 +124,12 @@ struct ArbitaryPrecisionView: View {
                 calc = big1 / big2
             }
         }
-        
+
         guard let calcResult = calc else {
             result = ""
             return
         }
-        
+
         self.result = calcResult.asString(radix: 16, uppercase: false)
     }
 }

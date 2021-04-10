@@ -19,7 +19,7 @@ struct HashingView: View {
                 }
                 .pickerStyle(SegmentedPickerStyle())
             }
-            
+
             Section(header: Text("Input")) {
                 HStack {
                     if !state.isMessageBinary {
