@@ -61,6 +61,7 @@
 		E9ACD0DC2617E30B00650EAC /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ACD0DB2617E30B00650EAC /* MenuItem.swift */; };
 		E9ADCF3826225F0D00B0862E /* Predef.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ADCF3726225F0D00B0862E /* Predef.swift */; };
 		E9ADCF4926226B3300B0862E /* ClipboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ADCF4826226B3300B0862E /* ClipboardHelper.swift */; };
+		E9ADCF5126226CB000B0862E /* CopyAlertTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ADCF5026226CB000B0862E /* CopyAlertTextView.swift */; };
 		E9BC9415261125E400D8B83E /* String+Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC9414261125E400D8B83E /* String+Encoding.swift */; };
 		E9BC942A26112C9900D8B83E /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC942926112C9900D8B83E /* NavigationBar.swift */; };
 		E9E2902F262247EA00ADA2B7 /* ShamirSecretView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E2902E262247EA00ADA2B7 /* ShamirSecretView.swift */; };
@@ -153,6 +154,7 @@
 		E9ACD0DB2617E30B00650EAC /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		E9ADCF3726225F0D00B0862E /* Predef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predef.swift; sourceTree = "<group>"; };
 		E9ADCF4826226B3300B0862E /* ClipboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardHelper.swift; sourceTree = "<group>"; };
+		E9ADCF5026226CB000B0862E /* CopyAlertTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyAlertTextView.swift; sourceTree = "<group>"; };
 		E9BC9414261125E400D8B83E /* String+Encoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Encoding.swift"; sourceTree = "<group>"; };
 		E9BC942926112C9900D8B83E /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		E9E2902E262247EA00ADA2B7 /* ShamirSecretView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShamirSecretView.swift; sourceTree = "<group>"; };
@@ -384,6 +386,7 @@
 			isa = PBXGroup;
 			children = (
 				E9163B44260EAEA200453411 /* ComingSoonView.swift */,
+				E9ADCF5026226CB000B0862E /* CopyAlertTextView.swift */,
 				E902F42D2616394500825004 /* QRCodeDisplayView.swift */,
 			);
 			path = Common;
@@ -619,6 +622,7 @@
 				E96BC5022617B7C000D52BEF /* BaseUnitFormatter.swift in Sources */,
 				E954321D2612B701001918F3 /* QRCodeGeneratorView.swift in Sources */,
 				E9163B3A260EAAD200453411 /* MenuSection.swift in Sources */,
+				E9ADCF5126226CB000B0862E /* CopyAlertTextView.swift in Sources */,
 				E97093AC26210E0500C65FB3 /* BigOperation.swift in Sources */,
 				E9BC942A26112C9900D8B83E /* NavigationBar.swift in Sources */,
 				E96557DE2616A536004E7BF1 /* BaseUnit.swift in Sources */,

@@ -10,8 +10,6 @@ import SwiftySSS
 
 struct ShamirSecretView: View {
     @EnvironmentObject var state: AppState
-    @State private var showCopyAlert = false
-    @State private var currentIndex: Int = 1
 
     @State private var shares: Double = 5.0
     @State private var threshold: Double = 3.0
@@ -79,24 +77,9 @@ struct ShamirSecretView: View {
 
             if secret != nil && !state.message.isEmpty {
                 ForEach((1...Int(self.shares)), id: \.self) { idx in
-                    Section(header: Text("Share \(idx)")) {
-                        HStack {
-                            Button(action: {
-                                ClipboardHelper.copyString(getShare(idx))
-                                self.currentIndex = idx
-                                showCopyAlert.toggle()
-                            }) {
-                                Text(getShare(idx))
-                            }
-                        }
-                        .alert(isPresented: $showCopyAlert) {
-                            Alert(
-                                title: Text("Copied to clipboard"),
-                                message: Text(getShare(self.currentIndex)),
-                                dismissButton: .default(Text("OK"))
-                            )
-                        }
-                    }
+                    CopyAlertTextView("Share \(idx)", {
+                        return self.getShare(idx)
+                    })
                 }
             }
         }

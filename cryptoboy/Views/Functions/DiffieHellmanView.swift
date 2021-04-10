@@ -11,7 +11,6 @@ import WalletCore
 struct DiffieHellmanView: View {
     @EnvironmentObject var state: AppState
     @State var counterKey: PrivateKey?
-    @State private var showCopyAlert = false
 
     let curveType = EllipticCurvePublicKey.secp256k1(compressed: true)
 
@@ -96,23 +95,7 @@ struct DiffieHellmanView: View {
             }
 
             if !getSharedSecret().isEmpty {
-                Section(header: Text("Shared Secret")) {
-                    HStack {
-                        Button(action: {
-                            ClipboardHelper.copyString(getSharedSecret())
-                            showCopyAlert.toggle()
-                        }) {
-                            Text(getSharedSecret())
-                        }
-                    }
-                }
-                .alert(isPresented: $showCopyAlert) {
-                    Alert(
-                        title: Text("Copied to clipboard"),
-                        message: Text(getSharedSecret()),
-                        dismissButton: .default(Text("OK"))
-                    )
-                }
+                CopyAlertTextView("Shared Secret", { return getSharedSecret() })
             }
         }
         .modifier(NavigationViewModifier(page: .ecdh))

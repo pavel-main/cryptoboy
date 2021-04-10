@@ -11,7 +11,6 @@ import BigInt
 
 struct ArbitaryPrecisionView: View {
     @EnvironmentObject var state: AppState
-    @State private var showCopyAlert = false
 
     private var operations: [BigOperation] = [.plus, .minus, .mul, .div]
 
@@ -63,24 +62,7 @@ struct ArbitaryPrecisionView: View {
             }
 
             if !self.result.isEmpty {
-                Section(header: Text("Result")) {
-                    HStack {
-                        Button(action: {
-                            ClipboardHelper.copyString(self.result)
-                            showCopyAlert.toggle()
-                        }) {
-                            Text(self.result)
-                        }
-                    }
-                }
-                .alert(isPresented: $showCopyAlert) {
-                    Alert(
-                        title: Text("Copied to clipboard"),
-                        message: Text(self.result),
-                        dismissButton: .default(Text("OK"))
-                    )
-                }
-                .environmentObject(state)
+                CopyAlertTextView("Result", { return self.result })
             }
         }
         .modifier(NavigationViewModifier(page: .uint256))

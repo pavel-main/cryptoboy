@@ -10,7 +10,6 @@ import WalletCore
 
 struct DigitalSignatureItemView: View {
     @EnvironmentObject var state: AppState
-    @State private var showCopyAlert = false
 
     var type: SignatureFormat
 
@@ -20,24 +19,7 @@ struct DigitalSignatureItemView: View {
 
     var body: some View {
         if !state.isDefaultMessage(false) {
-            Section(header: Text(self.type.title)) {
-                HStack {
-                    Button(action: {
-                        ClipboardHelper.copyString(getSignedMessage())
-                        showCopyAlert.toggle()
-                    }) {
-                        Text(getSignedMessage())
-                    }
-                }
-            }
-            .alert(isPresented: $showCopyAlert) {
-                Alert(
-                    title: Text("Copied to clipboard"),
-                    message: Text(getSignedMessage()),
-                    dismissButton: .default(Text("OK"))
-                )
-            }
-            .environmentObject(state)
+            CopyAlertTextView(self.type.title, { return getSignedMessage() })
         }
     }
 

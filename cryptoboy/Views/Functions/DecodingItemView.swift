@@ -8,7 +8,6 @@ import SwiftUI
 
 struct DecodingItemView: View {
     @EnvironmentObject var state: AppState
-    @State private var showCopyAlert = false
 
     var type: EncodingFormat
 
@@ -18,24 +17,7 @@ struct DecodingItemView: View {
 
     var body: some View {
         if !decode().isEmpty {
-            Section(header: Text(self.type.title)) {
-                HStack {
-                    Button(action: {
-                        ClipboardHelper.copyString(decode())
-                        showCopyAlert.toggle()
-                    }) {
-                        Text(decode())
-                    }
-                }
-            }
-            .alert(isPresented: $showCopyAlert) {
-                Alert(
-                    title: Text("Copied to clipboard"),
-                    message: Text(decode()),
-                    dismissButton: .default(Text("OK"))
-                )
-            }
-            .environmentObject(state)
+            CopyAlertTextView(self.type.title, { return self.decode() })
         }
     }
 

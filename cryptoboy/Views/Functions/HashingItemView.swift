@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HashingItemView: View {
     @EnvironmentObject var state: AppState
-    @State private var showCopyAlert = false
 
     var type: HashFunction
     var isBinary: Bool
@@ -21,24 +20,7 @@ struct HashingItemView: View {
 
     var body: some View {
         if !state.isDefaultMessage(self.isBinary) {
-            Section(header: Text(self.type.title)) {
-                HStack {
-                    Button(action: {
-                        ClipboardHelper.copyString(getHash())
-                        showCopyAlert.toggle()
-                    }) {
-                        Text(getHash())
-                    }
-                }
-            }
-            .alert(isPresented: $showCopyAlert) {
-                Alert(
-                    title: Text("Copied to clipboard"),
-                    message: Text(getHash()),
-                    dismissButton: .default(Text("OK"))
-                )
-            }
-            .environmentObject(state)
+            CopyAlertTextView(self.type.title, { return getHash() })
         }
     }
 
