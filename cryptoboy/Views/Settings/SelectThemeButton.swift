@@ -21,7 +21,7 @@ struct SelectThemeButton: View {
                 HStack {
                     Circle()
                         .strokeBorder(state.invertedColor(), lineWidth: 1)
-                        .background(Circle().foregroundColor(getTheme(themeName: self.themeName).colorPrimary))
+                        .background(Circle().foregroundColor(state.getTheme(themeName: self.themeName).colorPrimary))
                         .frame(width: 25, height: 25)
 
                     Text(self.colorName)

@@ -82,9 +82,6 @@ class AppState: ObservableObject {
         return Date()
     }
 
-    let functionsMenu = Bundle.main.decode([MenuSection].self, from: "functions.json")
-    let currenciesMenu = Bundle.main.decode([MenuSection].self, from: "currencies.json")
-
     init() {
         print("Loading CryptoBoy \(appVersion)")
 
@@ -152,6 +149,18 @@ class AppState: ObservableObject {
         self.clearMessage()
         self.visitedViews = []
         self.bookmarks = []
+    }
+    
+    func getTheme(themeName: String?) -> Theme {
+        if themeName != nil {
+            for theme in themes {
+                if themeName! == theme.name {
+                    return theme
+                }
+            }
+        }
+
+        return themes[0]
     }
 
     func invertedColor() -> Color {

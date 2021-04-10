@@ -8,11 +8,13 @@
 import SwiftUI
 
 public struct ThemeViewModifier: ViewModifier {
-
+    
+    @EnvironmentObject var state: AppState
     @AppStorage("currentTheme") var currentTheme: String = DEFAULT_THEME
 
     public func body(content: Content) -> some View {
         content
-            .accentColor(getTheme(themeName: currentTheme).colorPrimary)
+            .accentColor(state.getTheme(themeName: currentTheme).colorPrimary)
+            .environmentObject(state)
     }
 }

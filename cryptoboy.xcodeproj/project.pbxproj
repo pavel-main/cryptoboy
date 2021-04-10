@@ -29,7 +29,6 @@
 		E9163B05260EA4BA00453411 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9163B04260EA4BA00453411 /* Preview Assets.xcassets */; };
 		E9163B10260EA4BB00453411 /* cryptoboyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B0F260EA4BB00453411 /* cryptoboyTests.swift */; };
 		E9163B1B260EA4BB00453411 /* cryptoboyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B1A260EA4BB00453411 /* cryptoboyUITests.swift */; };
-		E9163B38260EAAD200453411 /* Bundle+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B34260EAAD200453411 /* Bundle+JSON.swift */; };
 		E9163B3A260EAAD200453411 /* MenuSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B36260EAAD200453411 /* MenuSection.swift */; };
 		E9163B40260EACA900453411 /* NavigationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B3F260EACA900453411 /* NavigationRow.swift */; };
 		E9163B45260EAEA200453411 /* ComingSoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163B44260EAEA200453411 /* ComingSoonView.swift */; };
@@ -45,8 +44,6 @@
 		E954321D2612B701001918F3 /* QRCodeGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E954321C2612B701001918F3 /* QRCodeGeneratorView.swift */; };
 		E96557D92616A432004E7BF1 /* BaseUnitConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96557D82616A432004E7BF1 /* BaseUnitConverterView.swift */; };
 		E96557DE2616A536004E7BF1 /* BaseUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96557DD2616A536004E7BF1 /* BaseUnit.swift */; };
-		E96A4A7B260FDD62009EA367 /* functions.json in Resources */ = {isa = PBXBuildFile; fileRef = E96A4A7A260FDD62009EA367 /* functions.json */; };
-		E96A4A80260FDD6E009EA367 /* currencies.json in Resources */ = {isa = PBXBuildFile; fileRef = E96A4A7F260FDD6E009EA367 /* currencies.json */; };
 		E96A4A85260FE062009EA367 /* CurrenciesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A4A84260FE062009EA367 /* CurrenciesView.swift */; };
 		E96A4A8E260FE2DF009EA367 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A4A8C260FE2DF009EA367 /* FavoritesView.swift */; };
 		E96A4A8F260FE2DF009EA367 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A4A8D260FE2DF009EA367 /* SettingsView.swift */; };
@@ -62,6 +59,7 @@
 		E99F77C7261269EA009BDFF1 /* BitcoinUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F77C6261269EA009BDFF1 /* BitcoinUnitView.swift */; };
 		E99F77FB26128569009BDFF1 /* EthereumUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F77FA26128569009BDFF1 /* EthereumUnitView.swift */; };
 		E9ACD0DC2617E30B00650EAC /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ACD0DB2617E30B00650EAC /* MenuItem.swift */; };
+		E9ADCF3826225F0D00B0862E /* Predef.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ADCF3726225F0D00B0862E /* Predef.swift */; };
 		E9BC9415261125E400D8B83E /* String+Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC9414261125E400D8B83E /* String+Encoding.swift */; };
 		E9BC942A26112C9900D8B83E /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC942926112C9900D8B83E /* NavigationBar.swift */; };
 		E9E2902F262247EA00ADA2B7 /* ShamirSecretView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E2902E262247EA00ADA2B7 /* ShamirSecretView.swift */; };
@@ -122,7 +120,6 @@
 		E9163B16260EA4BB00453411 /* cryptoboyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cryptoboyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9163B1A260EA4BB00453411 /* cryptoboyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cryptoboyUITests.swift; sourceTree = "<group>"; };
 		E9163B1C260EA4BB00453411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E9163B34260EAAD200453411 /* Bundle+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+JSON.swift"; sourceTree = "<group>"; };
 		E9163B36260EAAD200453411 /* MenuSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuSection.swift; sourceTree = "<group>"; };
 		E9163B3F260EACA900453411 /* NavigationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRow.swift; sourceTree = "<group>"; };
 		E9163B44260EAEA200453411 /* ComingSoonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonView.swift; sourceTree = "<group>"; };
@@ -138,8 +135,6 @@
 		E954321C2612B701001918F3 /* QRCodeGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeGeneratorView.swift; sourceTree = "<group>"; };
 		E96557D82616A432004E7BF1 /* BaseUnitConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUnitConverterView.swift; sourceTree = "<group>"; };
 		E96557DD2616A536004E7BF1 /* BaseUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUnit.swift; sourceTree = "<group>"; };
-		E96A4A7A260FDD62009EA367 /* functions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = functions.json; sourceTree = "<group>"; };
-		E96A4A7F260FDD6E009EA367 /* currencies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = currencies.json; sourceTree = "<group>"; };
 		E96A4A84260FE062009EA367 /* CurrenciesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrenciesView.swift; sourceTree = "<group>"; };
 		E96A4A8C260FE2DF009EA367 /* FavoritesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		E96A4A8D260FE2DF009EA367 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -155,6 +150,7 @@
 		E99F77C6261269EA009BDFF1 /* BitcoinUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinUnitView.swift; sourceTree = "<group>"; };
 		E99F77FA26128569009BDFF1 /* EthereumUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthereumUnitView.swift; sourceTree = "<group>"; };
 		E9ACD0DB2617E30B00650EAC /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		E9ADCF3726225F0D00B0862E /* Predef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predef.swift; sourceTree = "<group>"; };
 		E9BC9414261125E400D8B83E /* String+Encoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Encoding.swift"; sourceTree = "<group>"; };
 		E9BC942926112C9900D8B83E /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		E9E2902E262247EA00ADA2B7 /* ShamirSecretView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShamirSecretView.swift; sourceTree = "<group>"; };
@@ -223,7 +219,6 @@
 			isa = PBXGroup;
 			children = (
 				E99F77B2261240DB009BDFF1 /* Array+RawRepresentable.swift */,
-				E9163B34260EAAD200453411 /* Bundle+JSON.swift */,
 				E97879FA2617EE88003C66B2 /* Data+Hashing.swift */,
 				E9BC9414261125E400D8B83E /* String+Encoding.swift */,
 				E902F3ED2616170B00825004 /* String+Filtering.swift */,
@@ -277,7 +272,6 @@
 				E9088B972617D2B5008C3BBC /* Data */,
 				E90853FA26115FFF0001B9BE /* Extensions */,
 				E90853F126115EF90001B9BE /* Helpers */,
-				E96A4A76260FDCDC009EA367 /* Resources */,
 				E9163B53260EB36F00453411 /* Views */,
 				E9163B01260EA4BA00453411 /* Assets.xcassets */,
 				E9163B06260EA4BA00453411 /* Info.plist */,
@@ -338,6 +332,7 @@
 				E9ACD0DB2617E30B00650EAC /* MenuItem.swift */,
 				E9163B36260EAAD200453411 /* MenuSection.swift */,
 				E9ED74D8261301B300DCD4A3 /* PageType.swift */,
+				E9ADCF3726225F0D00B0862E /* Predef.swift */,
 				E95432082612B29B001918F3 /* Theme.swift */,
 			);
 			path = Core;
@@ -371,15 +366,6 @@
 				9F1C697313358C980CC37618 /* Pods_cryptoboy.framework */,
 			);
 			name = "Recovered References";
-			sourceTree = "<group>";
-		};
-		E96A4A76260FDCDC009EA367 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				E96A4A7F260FDD6E009EA367 /* currencies.json */,
-				E96A4A7A260FDD62009EA367 /* functions.json */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		E96A4A9F260FE4C9009EA367 /* Navigation */ = {
@@ -535,9 +521,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E96A4A7B260FDD62009EA367 /* functions.json in Resources */,
 				E9163B05260EA4BA00453411 /* Preview Assets.xcassets in Resources */,
-				E96A4A80260FDD6E009EA367 /* currencies.json in Resources */,
 				E9163B02260EA4BA00453411 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -629,12 +613,12 @@
 				E96A4AB2260FFF0D009EA367 /* HashingItemView.swift in Sources */,
 				E9163B40260EACA900453411 /* NavigationRow.swift in Sources */,
 				E96BC5022617B7C000D52BEF /* BaseUnitFormatter.swift in Sources */,
-				E9163B38260EAAD200453411 /* Bundle+JSON.swift in Sources */,
 				E954321D2612B701001918F3 /* QRCodeGeneratorView.swift in Sources */,
 				E9163B3A260EAAD200453411 /* MenuSection.swift in Sources */,
 				E97093AC26210E0500C65FB3 /* BigOperation.swift in Sources */,
 				E9BC942A26112C9900D8B83E /* NavigationBar.swift in Sources */,
 				E96557DE2616A536004E7BF1 /* BaseUnit.swift in Sources */,
+				E9ADCF3826225F0D00B0862E /* Predef.swift in Sources */,
 				E90853DE261158700001B9BE /* AboutLinkItem.swift in Sources */,
 				E954320F2612B389001918F3 /* SelectThemeButton.swift in Sources */,
 				E90853C0261148F30001B9BE /* EncodingItemView.swift in Sources */,
