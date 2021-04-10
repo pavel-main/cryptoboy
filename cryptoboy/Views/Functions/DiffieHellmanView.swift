@@ -99,7 +99,7 @@ struct DiffieHellmanView: View {
                 Section(header: Text("Shared Secret")) {
                     HStack {
                         Button(action: {
-                            UIPasteboard.general.string = getSharedSecret()
+                            ClipboardHelper.copyString(getSharedSecret())
                             showCopyAlert.toggle()
                         }) {
                             Text(getSharedSecret())

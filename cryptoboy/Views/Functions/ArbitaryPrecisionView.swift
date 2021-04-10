@@ -66,7 +66,7 @@ struct ArbitaryPrecisionView: View {
                 Section(header: Text("Result")) {
                     HStack {
                         Button(action: {
-                            UIPasteboard.general.string = self.result
+                            ClipboardHelper.copyString(self.result)
                             showCopyAlert.toggle()
                         }) {
                             Text(self.result)

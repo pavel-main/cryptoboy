@@ -21,7 +21,7 @@ struct EllipticCurveItemView: View {
         Section(header: Text(self.type.title)) {
             HStack {
                 Button(action: {
-                    UIPasteboard.general.string = state.publicKeyOrDefault(type)
+                    ClipboardHelper.copyString(state.publicKeyOrDefault(type))
                     showCopyAlert.toggle()
                 }) {
                     Text(state.publicKeyOrDefault(type))

@@ -24,7 +24,7 @@ struct HashingItemView: View {
             Section(header: Text(self.type.title)) {
                 HStack {
                     Button(action: {
-                        UIPasteboard.general.string = getHash()
+                        ClipboardHelper.copyString(getHash())
                         showCopyAlert.toggle()
                     }) {
                         Text(getHash())

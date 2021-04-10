@@ -21,7 +21,7 @@ struct DecodingItemView: View {
             Section(header: Text(self.type.title)) {
                 HStack {
                     Button(action: {
-                        UIPasteboard.general.string = decode()
+                        ClipboardHelper.copyString(decode())
                         showCopyAlert.toggle()
                     }) {
                         Text(decode())

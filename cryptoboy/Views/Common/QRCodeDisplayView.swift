@@ -29,7 +29,7 @@ struct QRCodeDisplayView: View {
 
             Section(header: Text("Copy to clipboard")) {
                 Button(action: {
-                    UIPasteboard.general.string = self.data
+                    ClipboardHelper.copyString(self.data)
                     showCopyAlert.toggle()
                 }) {
                     Text(self.data)
@@ -47,11 +47,5 @@ struct QRCodeDisplayView: View {
         .navigationTitle(self.title)
         .navigationBarTitleDisplayMode(.inline)
         .navigationViewStyle(StackNavigationViewStyle())
-    }
-}
-
-struct QRCodeDisplayView_Previews: PreviewProvider {
-    static var previews: some View {
-        QRCodeDisplayView(title: "Donate BTC", data: "1PVVjazdf7ye5oSpTcBq5CWKkCMHHQYD1m")
     }
 }

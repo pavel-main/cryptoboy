@@ -27,9 +27,3 @@ struct AboutSystemItem: View {
 
     }
 }
-
-struct SettingsSystemItem_Previews: PreviewProvider {
-    static var previews: some View {
-        AboutSystemItem("App Version", "1.0")
-    }
-}

@@ -23,7 +23,7 @@ struct DigitalSignatureItemView: View {
             Section(header: Text(self.type.title)) {
                 HStack {
                     Button(action: {
-                        UIPasteboard.general.string = getSignedMessage()
+                        ClipboardHelper.copyString(getSignedMessage())
                         showCopyAlert.toggle()
                     }) {
                         Text(getSignedMessage())

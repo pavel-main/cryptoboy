@@ -82,7 +82,7 @@ struct ShamirSecretView: View {
                     Section(header: Text("Share \(idx)")) {
                         HStack {
                             Button(action: {
-                                UIPasteboard.general.string = getShare(idx)
+                                ClipboardHelper.copyString(getShare(idx))
                                 self.currentIndex = idx
                                 showCopyAlert.toggle()
                             }) {
