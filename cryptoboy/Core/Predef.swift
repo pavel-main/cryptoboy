@@ -35,7 +35,7 @@ let functionsMenu: [MenuSection] = [
             systemImage: "scope",
             description: "BigInt add, sub, mul, div",
             icons: ["new"]
-        ),
+        )
     ]),
     // Data
     MenuSection(id: "data", title: "Data", items: [
@@ -93,7 +93,7 @@ let functionsMenu: [MenuSection] = [
             title: "Shamir Secret Sharing",
             systemImage: "person.3",
             icons: ["new"]
-        ),
+        )
     ])
 ]
 

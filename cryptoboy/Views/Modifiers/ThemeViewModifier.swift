@@ -8,7 +8,7 @@
 import SwiftUI
 
 public struct ThemeViewModifier: ViewModifier {
-    
+
     @EnvironmentObject var state: AppState
     @AppStorage("currentTheme") var currentTheme: String = DEFAULT_THEME
 
