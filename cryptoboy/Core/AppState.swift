@@ -93,6 +93,11 @@ class AppState: ObservableObject {
         let menuItems = functionsMenu.flatMap { $0.items } + currenciesMenu.flatMap { $0.items }
         return menuItems.filter { $0.id == id }.first
     }
+    
+    func getDestination(from item: MenuItem) -> AnyView {
+        let pageType = PageType(rawValue: item.id) ?? .unknown
+        return pageType.getView(item)
+    }
 
     func isDefaultMessage(_ isBinary: Bool) -> Bool {
         if isBinary {

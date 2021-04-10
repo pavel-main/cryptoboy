@@ -5,7 +5,9 @@
 //  Created by Pavel on 30/03/2021.
 //
 
-enum PageType {
+import SwiftUI
+
+enum PageType: String {
     case base
     case uint256
     case hash
@@ -50,4 +52,48 @@ enum PageType {
                 return "Coming Soon!"
         }
     }
+    
+    func getView(_ item: MenuItem) -> AnyView {
+        switch self {
+        case .base:
+            return AnyView(BaseUnitConverterView())
+
+        case .uint256:
+            return AnyView(ArbitaryPrecisionView())
+
+        case .hash:
+            return AnyView(HashingView())
+
+        case .encoding:
+            return AnyView(EncodingView())
+
+        case .keypair:
+            return AnyView(EllipticCurveView())
+
+        case .ecdh:
+            return AnyView(DiffieHellmanView())
+
+        case .ecdsa:
+            return AnyView(DigitalSignaturesView())
+
+        case .qrcode:
+            return AnyView(QRCodeGeneratorView())
+
+        case .shamir:
+            return AnyView(ShamirSecretView())
+
+        case .btc_unit:
+            return AnyView(BitcoinUnitView())
+
+        case .eth_unit:
+            return AnyView(EthereumUnitView())
+
+        case .dot_unit:
+            return AnyView(PolkadotUnitView())
+
+        default:
+            return AnyView(ComingSoonView(item: item))
+        }
+    }
+
 }

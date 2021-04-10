@@ -14,7 +14,7 @@ struct NavigationRow: View {
     let colors: [String: Color] = ["new": .red, "soon": .blue]
 
     var body: some View {
-        NavigationLink(destination: getDestination(from: item)) {
+        NavigationLink(destination: state.getDestination(from: item)) {
             HStack {
                 Label(String(), systemImage: item.systemImage)
 
@@ -47,48 +47,5 @@ struct NavigationRow: View {
             }
         }
         .environmentObject(state)
-    }
-
-    func getDestination(from item: MenuItem) -> AnyView {
-        switch item.id {
-        case "base":
-            return AnyView(BaseUnitConverterView())
-
-        case "uint256":
-            return AnyView(ArbitaryPrecisionView())
-
-        case "hash":
-            return AnyView(HashingView())
-
-        case "encoding":
-            return AnyView(EncodingView())
-
-        case "keypair":
-            return AnyView(EllipticCurveView())
-
-        case "ecdh":
-            return AnyView(DiffieHellmanView())
-
-        case "ecdsa":
-            return AnyView(DigitalSignaturesView())
-
-        case "qrcode":
-            return AnyView(QRCodeGeneratorView())
-
-        case "shamir":
-            return AnyView(ShamirSecretView())
-
-        case "btc_unit":
-            return AnyView(BitcoinUnitView())
-
-        case "eth_unit":
-            return AnyView(EthereumUnitView())
-
-        case "dot_unit":
-            return AnyView(PolkadotUnitView())
-
-        default:
-            return AnyView(ComingSoonView(item: item))
-        }
     }
 }
