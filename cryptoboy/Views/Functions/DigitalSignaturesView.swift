@@ -60,10 +60,6 @@ struct DigitalSignaturesView: View {
                 }
             }
 
-            if state.privateKey != nil {
-                EllipticCurveItemView(.secp256k1(compressed: true))
-            }
-
             Section(header: Text("Digest")) {
                 Picker(selection: $state.digestType, label: Text("Digest")) {
                     ForEach(digestTypes, id: \.self) { idx in

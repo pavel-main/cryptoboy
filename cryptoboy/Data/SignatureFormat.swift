@@ -19,7 +19,7 @@ enum SignatureFormat: CaseIterable {
             case .asn1:
                 return "ASN.1 (DER)"
             case .schnorr:
-                return "Schnorr (SHA-256)"
+                return "Schnorr (SHA-256 Digest)"
         }
     }
 }

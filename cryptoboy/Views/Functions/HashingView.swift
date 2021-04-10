@@ -12,6 +12,14 @@ struct HashingView: View {
 
     var body: some View {
         Form {
+            Section(header: Text("Input Type")) {
+                Picker(selection: $state.isMessageBinary, label: Text("Input Type")) {
+                    Text("String").tag(false)
+                    Text("Hex Bytes").tag(true)
+                }
+                .pickerStyle(SegmentedPickerStyle())
+            }
+            
             Section(header: Text("Input")) {
                 HStack {
                     if !state.isMessageBinary {
@@ -47,8 +55,6 @@ struct HashingView: View {
                         .disabled(state.isDefaultMessage(true))
                     }
                 }
-
-                Toggle("Hex Bytes", isOn: $state.isMessageBinary)
             }
 
             if !state.isMessageBinary {

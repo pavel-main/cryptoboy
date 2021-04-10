@@ -33,7 +33,11 @@ struct PolkadotUnitView: View {
     var body: some View {
         Form {
             Section(header: Text("Token")) {
-                Toggle("Kusama", isOn: $isKusama)
+                Picker(selection: $isKusama, label: Text("Token")) {
+                    Text("Polkadot").tag(false)
+                    Text("Kusama").tag(true)
+                }
+                .pickerStyle(SegmentedPickerStyle())
             }
 
             if !isKusama {

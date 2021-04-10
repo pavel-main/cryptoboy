@@ -38,7 +38,7 @@ struct SettingsView: View {
                 Section(header: Text("Donate")) {
                     AboutDonateItem("BTC", "1PVVjazdf7ye5oSpTcBq5CWKkCMHHQYD1m")
                     AboutDonateItem("ETH", "0xC5362223D38d1d4ADbE36Dd78E77B5f4DbbC0F21")
-                    AboutDonateItem("BCH", "qrmtven6eellut9dm5v6ztaee9h9wu7zkulgd7crze")
+                    AboutDonateItem("BCH", "bitcoincash:qrmtven6eellut9dm5v6ztaee9h9wu7zkulgd7crze")
                     AboutDonateItem("XLM", "GAIDD763J2YXYZBGBWSWVT7Y6MPF2KTJO77OS2QXQ3FJ6UMN6GRDDGUC")
                 }
 

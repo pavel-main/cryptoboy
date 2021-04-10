@@ -36,7 +36,7 @@ struct ArbitaryPrecisionView: View {
                 .keyboardType(.namePhonePad)
             }
 
-            Section(header: Text("Operator")) {
+            Section(header: Text("Operation")) {
                 Picker(selection: $operation, label: Text("Operation")) {
                     ForEach(self.operations) {
                         Text($0.title).tag($0)

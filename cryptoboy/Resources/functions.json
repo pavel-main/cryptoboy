@@ -14,7 +14,7 @@
                 "id": "uint256",
                 "title": "Arbitary-precision arithmetic",
                 "systemImage": "scope",
-                "description": "uint256 add, sub, mul, div",
+                "description": "BigInt add, sub, mul, div",
                 "icons": ["new"]
             }
         ]

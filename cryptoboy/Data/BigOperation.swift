@@ -24,9 +24,9 @@ enum BigOperation: String, CaseIterable, Identifiable {
             case .minus:
                 return "-"
             case .mul:
-                return "*"
+                return "×"
             case .div:
-                return "/"
+                return "÷"
         }
     }
 }

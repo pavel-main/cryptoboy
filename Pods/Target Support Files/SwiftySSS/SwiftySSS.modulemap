@@ -1,0 +1,6 @@
+module SwiftySSS {
+  umbrella header "SwiftySSS-umbrella.h"
+
+  export *
+  module * { export * }
+}
