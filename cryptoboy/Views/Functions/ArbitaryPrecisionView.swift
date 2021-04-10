@@ -15,44 +15,22 @@ struct ArbitaryPrecisionView: View {
 
     private var operations: [BigOperation] = [.plus, .minus, .mul, .div]
 
-    @State var op1: BInt = BInt(0) {
-        didSet {
-            self.calculate()
-        }
-    }
-
-    @State var op2: BInt = BInt(0) {
-        didSet {
-            self.calculate()
-        }
-    }
-
+    @State var op1: String = "0"
+    @State var op2: String = "0"
     @State var operation: BigOperation = .plus
-
-    @State var result: BInt?
+    @State var result: String = ""
 
     var body: some View {
         Form {
             Section(header: Text("Operand 1")) {
                 TextField("", text: Binding(
                     get: {
-                        return op1.asString(radix: 16)
+                        return op1
                     },
                     set: { (newValue) in
                         let oldValue = self.op1
-                        let raw = newValue.uppercased().filter { "0123456789ABCDEF".contains($0) }
-
-                        if raw.isEmpty {
-                            self.op1 = BInt(0)
-                            return
-                        }
-
-                        guard let value = BInt(raw, radix: 16) else {
-                            self.op1 = oldValue
-                            return
-                        }
-
-                        self.op1 = value
+                        self.op1 = self.validate(oldValue, newValue)
+                        self.calculate()
                     })
                 )
                 .keyboardType(.namePhonePad)
@@ -73,43 +51,32 @@ struct ArbitaryPrecisionView: View {
             Section(header: Text("Operand 2")) {
                 TextField("", text: Binding(
                     get: {
-                        return op2.asString(radix: 16)
+                        return op2
                     },
                     set: { (newValue) in
                         let oldValue = self.op2
-                        let raw = newValue.uppercased().filter { "0123456789ABCDEF".contains($0) }
-
-                        if raw.isEmpty {
-                            self.op2 = BInt(0)
-                            return
-                        }
-
-                        guard let value = BInt(raw, radix: 16) else {
-                            self.op2 = oldValue
-                            return
-                        }
-
-                        self.op2 = value
+                        self.op2 = self.validate(oldValue, newValue)
+                        self.calculate()
                     })
                 )
                 .keyboardType(.namePhonePad)
             }
 
-            if self.result != nil {
+            if !self.result.isEmpty {
                 Section(header: Text("Result")) {
                     HStack {
                         Button(action: {
-                            UIPasteboard.general.string = self.export()
+                            UIPasteboard.general.string = self.result
                             showCopyAlert.toggle()
                         }) {
-                            Text(self.export())
+                            Text(self.result)
                         }
                     }
                 }
                 .alert(isPresented: $showCopyAlert) {
                     Alert(
                         title: Text("Copied to clipboard"),
-                        message: Text(self.export()),
+                        message: Text(self.result),
                         dismissButton: .default(Text("OK"))
                     )
                 }
@@ -119,27 +86,50 @@ struct ArbitaryPrecisionView: View {
         .modifier(NavigationViewModifier(page: .uint256))
         .environmentObject(state)
     }
-
-    func calculate() {
-        switch self.operation {
-        case .plus:
-            self.result = self.op1 + self.op2
-        case .minus:
-            self.result = self.op1 - self.op2
-        case .mul:
-            self.result = self.op1 * self.op2
-        case .div:
-            if self.op2 != 0 {
-                self.result = self.op1 / self.op2
-            }
+    
+    func validate(_ oldValue: String, _ newValue: String) -> String {
+        var input = "0"
+        if !newValue.isEmpty {
+            input = newValue.uppercased().filter { "0123456789ABCDEF".contains($0) }
         }
+
+        guard let value = BInt(input, radix: 16) else {
+            return oldValue
+        }
+        
+        return value.asString(radix: 16)
     }
 
-    func export() -> String {
-        guard let number = result?.asString(radix: 16, uppercase: false) else {
-            return ""
+    func calculate() {
+        guard let big1 = BInt(self.op1, radix: 16) else {
+            result = ""
+            return
         }
-
-        return number
+        guard let big2 = BInt(self.op2, radix: 16) else {
+            result = ""
+            return
+        }
+        
+        var calc: BInt? = nil
+        
+        switch self.operation {
+        case .plus:
+            calc = big1 + big2
+        case .minus:
+            calc = big1 - big2
+        case .mul:
+            calc = big1 * big2
+        case .div:
+            if big2 != 0 {
+                calc = big1 / big2
+            }
+        }
+        
+        guard let calcResult = calc else {
+            result = ""
+            return
+        }
+        
+        self.result = calcResult.asString(radix: 16, uppercase: false)
     }
 }
