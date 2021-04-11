@@ -16,7 +16,7 @@ DEPENDENCIES:
   - BigInt (from `https://github.com/CryptoboyApp/BigInt.git`)
   - QRCoder (from `https://github.com/CryptoboyApp/QRCoder.git`)
   - SwiftLint
-  - SwiftRadix
+  - SwiftRadix (from `https://github.com/CryptoboyApp/SwiftRadix.git`)
   - SwiftySSS (from `https://github.com/CryptoboyApp/SwiftySSS.git`)
   - TrustWalletCore
 
@@ -24,7 +24,6 @@ SPEC REPOS:
   trunk:
     - SwiftLint
     - SwiftProtobuf
-    - SwiftRadix
     - TrustWalletCore
 
 EXTERNAL SOURCES:
@@ -32,6 +31,8 @@ EXTERNAL SOURCES:
     :git: https://github.com/CryptoboyApp/BigInt.git
   QRCoder:
     :git: https://github.com/CryptoboyApp/QRCoder.git
+  SwiftRadix:
+    :git: https://github.com/CryptoboyApp/SwiftRadix.git
   SwiftySSS:
     :git: https://github.com/CryptoboyApp/SwiftySSS.git
 
@@ -42,6 +43,9 @@ CHECKOUT OPTIONS:
   QRCoder:
     :commit: 6698f9bbdd2e819e1377163be04b833e94beb9f6
     :git: https://github.com/CryptoboyApp/QRCoder.git
+  SwiftRadix:
+    :commit: 51d9d6247c9b07521ffa1e0268fb84e30e0efcf8
+    :git: https://github.com/CryptoboyApp/SwiftRadix.git
   SwiftySSS:
     :commit: eb798e0636c9199aaa2e9a366267285c11375907
     :git: https://github.com/CryptoboyApp/SwiftySSS.git
@@ -55,6 +59,6 @@ SPEC CHECKSUMS:
   SwiftySSS: 305df9b779b5a30dce263a11057936696930e6f4
   TrustWalletCore: c9e55a399ab736bf1e378d7ee0146e2d396f7c62
 
-PODFILE CHECKSUM: 3db147a2c31ad0cdcfb66dfdb653529a85f00014
+PODFILE CHECKSUM: 2fc4121a3ee44ab6054ce51561f1ddc41b1d4cb2
 
 COCOAPODS: 1.10.1

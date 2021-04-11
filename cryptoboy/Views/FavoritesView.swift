@@ -24,12 +24,12 @@ struct FavoritesView: View {
             } else {
                 VStack {
                     Spacer()
-                    
+
                     Image("bookmarks-empty")
                         .resizable()
                         .scaledToFit()
                         .opacity(0.35)
-                    
+
                     Text("Your starred items will appear here")
                         .fontWeight(.semibold)
                     Spacer()
