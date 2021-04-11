@@ -31,15 +31,14 @@ struct PolkadotUnitView: View {
     ]
 
     var body: some View {
-        Form {
-            Section(header: Text("Token")) {
-                Picker(selection: $isKusama, label: Text("Token")) {
-                    Text("Polkadot").tag(false)
-                    Text("Kusama").tag(true)
-                }
-                .pickerStyle(SegmentedPickerStyle())
-            }
+        Picker(selection: $isKusama, label: Text("Token")) {
+            Text("Polkadot").tag(false)
+            Text("Kusama").tag(true)
+        }
+        .padding()
+        .pickerStyle(SegmentedPickerStyle())
 
+        Form {
             if !isKusama {
                 ForEach(dotUnits.indices, id: \.self) { idx in
                     Section(header: Text(self.dotUnits[idx].title)) {

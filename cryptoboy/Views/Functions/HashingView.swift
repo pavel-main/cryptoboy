@@ -11,15 +11,14 @@ struct HashingView: View {
     @EnvironmentObject var state: AppState
 
     var body: some View {
-        Form {
-            Section(header: Text("Input Type")) {
-                Picker(selection: $state.isMessageBinary, label: Text("Input Type")) {
-                    Text("String").tag(false)
-                    Text("Hex Bytes").tag(true)
-                }
-                .pickerStyle(SegmentedPickerStyle())
-            }
+        Picker(selection: $state.isMessageBinary, label: Text("Input Type")) {
+            Text("String").tag(false)
+            Text("Hex Bytes").tag(true)
+        }
+        .padding()
+        .pickerStyle(SegmentedPickerStyle())
 
+        Form {
             Section(header: Text("Input")) {
                 HStack {
                     if !state.isMessageBinary {

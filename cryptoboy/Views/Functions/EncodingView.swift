@@ -11,15 +11,14 @@ struct EncodingView: View {
     @EnvironmentObject var state: AppState
 
     var body: some View {
-        Form {
-            Section(header: Text("Mode")) {
-                Picker(selection: $state.isDecoding, label: Text("Mode")) {
-                    Text("Encoding").tag(false)
-                    Text("Decoding").tag(true)
-                }
-                .pickerStyle(SegmentedPickerStyle())
-            }
+        Picker(selection: $state.isDecoding, label: Text("Mode")) {
+            Text("Encoding").tag(false)
+            Text("Decoding").tag(true)
+        }
+        .padding()
+        .pickerStyle(SegmentedPickerStyle())
 
+        Form {
             Section(header: Text("Input")) {
                 HStack {
                     Image(systemName: "ellipsis.bubble")
