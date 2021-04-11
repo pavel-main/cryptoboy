@@ -11,4 +11,5 @@ struct Theme: Hashable {
     var colorPrimary: Color = Color.primary
     var name: String = "system"
     var publicName: String = "System"
+    var female: Bool? = nil
 }

@@ -10,6 +10,11 @@ import WalletCore
 
 class AppState: ObservableObject {
     @Environment(\.colorScheme) var colorScheme
+    @AppStorage("isFemale") var isFemale: Bool = false {
+        willSet {
+            objectWillChange.send()
+        }
+    }
 
     @AppStorage("isDarkMode") var isDarkMode: Bool = true
     @AppStorage("currentTheme") var currentTheme: String = DEFAULT_THEME
@@ -148,6 +153,7 @@ class AppState: ObservableObject {
     }
 
     func clearState() {
+        self.isFemale = false
         self.isDarkMode = true
         self.currentTheme = DEFAULT_THEME
 

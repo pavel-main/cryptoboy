@@ -10,14 +10,19 @@ import SwiftUI
 let DEFAULT_THEME = "green"
 
 let themes: [Theme] = [
-    Theme(colorPrimary: Color.green, name: "green", publicName: "Green"),
-    Theme(colorPrimary: Color.blue, name: "blue", publicName: "Blue"),
-    Theme(colorPrimary: Color.orange, name: "orange", publicName: "Orange"),
-    Theme(colorPrimary: Color.purple, name: "purple", publicName: "Purple"),
-    Theme(colorPrimary: Color.red, name: "red", publicName: "Red"),
-    Theme(colorPrimary: Color.pink, name: "pink", publicName: "Pink"),
-    Theme(colorPrimary: Color.yellow, name: "yellow", publicName: "Yellow"),
-    Theme(colorPrimary: Color.primary, name: "system", publicName: "System")
+    Theme(colorPrimary: Color.primary, name: "system", publicName: "System"),
+    // Male
+    Theme(colorPrimary: Color.red, name: "red", publicName: "Red", female: false),
+    Theme(colorPrimary: Color.purple, name: "purple", publicName: "Purple", female: false),
+    Theme(colorPrimary: Color.pink, name: "pink", publicName: "Pink", female: false),
+    Theme(colorPrimary: Color.orange, name: "orange", publicName: "Orange", female: false),
+    Theme(colorPrimary: Color.yellow, name: "yellow", publicName: "Yellow", female: false),
+    Theme(colorPrimary: Color.green, name: "green", publicName: "Green", female: false),
+    Theme(colorPrimary: Color.blue, name: "blue", publicName: "Blue", female: false),
+    // Female
+    Theme(colorPrimary: Color("scarlet"), name: "scarlet", publicName: "Scarlet", female: true),
+    Theme(colorPrimary: Color("dark-red"), name: "dark-red", publicName: "Dark Red", female: true),
+    Theme(colorPrimary: Color("wine-red"), name: "wine-red", publicName: "Wine Red", female: true)
 ]
 
 let functionsMenu: [MenuSection] = [
