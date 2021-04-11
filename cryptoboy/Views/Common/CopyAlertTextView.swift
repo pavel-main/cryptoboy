@@ -11,6 +11,8 @@ import SwiftUI
 struct CopyAlertTextView: View {
     @EnvironmentObject var state: AppState
     @State private var showCopyAlert = false
+    
+    let MESSAGE_LIMIT = 64
 
     var title: String
     var callback: () -> String
@@ -37,10 +39,19 @@ struct CopyAlertTextView: View {
         .alert(isPresented: $showCopyAlert) {
             Alert(
                 title: Text("Copied to clipboard"),
-                message: Text(callback()),
+                message: Text(prefixCallback()),
                 dismissButton: .default(Text("OK"))
             )
         }
         .environmentObject(state)
+    }
+    
+    func prefixCallback() -> String {
+        let result = callback()
+        if (result.count > MESSAGE_LIMIT) {
+            return result.prefix(MESSAGE_LIMIT) + "..."
+        }
+        
+        return result
     }
 }
