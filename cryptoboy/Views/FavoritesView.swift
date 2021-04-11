@@ -22,11 +22,20 @@ struct FavoritesView: View {
                 .listStyle(GroupedListStyle())
                 .navigationTitle("Favorites")
             } else {
-                Text("Your starred items will appear here")
-                    .fontWeight(.semibold)
-                    .padding(50)
-                    .background(Image("bookmarks-empty").opacity(0.2))
-                    .navigationTitle("Favorites")
+                VStack {
+                    Spacer()
+                    
+                    Image("bookmarks-empty")
+                        .resizable()
+                        .scaledToFit()
+                        .opacity(0.35)
+                    
+                    Text("Your starred items will appear here")
+                        .fontWeight(.semibold)
+                    Spacer()
+                    Spacer()
+                }
+                .navigationTitle("Favorites")
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
