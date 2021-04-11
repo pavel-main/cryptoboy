@@ -9,7 +9,6 @@ import SwiftUI
 
 struct QRCodeDisplayView: View {
     @EnvironmentObject var state: AppState
-    @State private var showCopyAlert = false
 
     let title: String
     let data: String
@@ -27,22 +26,7 @@ struct QRCodeDisplayView: View {
                 }
             }
 
-            Section(header: Text("Copy to clipboard")) {
-                Button(action: {
-                    ClipboardHelper.copyString(self.data)
-                    showCopyAlert.toggle()
-                }) {
-                    Text(self.data)
-                        .multilineTextAlignment(.center)
-                }
-            }
-        }
-        .alert(isPresented: $showCopyAlert) {
-            Alert(
-                title: Text("Copied to clipboard"),
-                message: Text(self.data),
-                dismissButton: .default(Text("OK"))
-            )
+            CopyAlertTextView("Copy to clipboard", { return self.data }, .center)
         }
         .navigationTitle(self.title)
         .navigationBarTitleDisplayMode(.inline)

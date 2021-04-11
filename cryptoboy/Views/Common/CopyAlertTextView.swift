@@ -14,10 +14,12 @@ struct CopyAlertTextView: View {
 
     var title: String
     var callback: () -> String
+    var alignment: TextAlignment
 
-    init(_ title: String, _ callback: @escaping () -> String) {
+    init(_ title: String, _ callback: @escaping () -> String, _ alignment: TextAlignment = .leading) {
         self.title = title
         self.callback = callback
+        self.alignment = alignment
     }
 
     var body: some View {
@@ -28,6 +30,7 @@ struct CopyAlertTextView: View {
                     showCopyAlert.toggle()
                 }) {
                     Text(callback())
+                        .multilineTextAlignment(self.alignment)
                 }
             }
         }
