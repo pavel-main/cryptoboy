@@ -11,8 +11,8 @@ struct FavoritesView: View {
     @EnvironmentObject var state: AppState
 
     var body: some View {
-        if !state.bookmarks.isEmpty {
-            NavigationView {
+        NavigationView {
+            if !state.bookmarks.isEmpty {
                 List {
                     ForEach(state.bookmarks, id: \.self) { view in
                         NavigationRow(item: state.getMenuItem(view)!)
@@ -21,17 +21,14 @@ struct FavoritesView: View {
                 }
                 .listStyle(GroupedListStyle())
                 .navigationTitle("Favorites")
-            }
-            .navigationViewStyle(StackNavigationViewStyle())
-            .environmentObject(state)
-        } else {
-            NavigationView {
-                Text("Favorites list is empty")
-                    .padding()
+            } else {
+                Text("Your starred items will appear here")
+                    .padding(50)
+                    .background(Image("bookmarks-empty").opacity(0.1))
                     .navigationTitle("Favorites")
             }
-            .navigationViewStyle(StackNavigationViewStyle())
-            .environmentObject(state)
         }
+        .navigationViewStyle(StackNavigationViewStyle())
+        .environmentObject(state)
     }
 }
