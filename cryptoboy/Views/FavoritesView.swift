@@ -23,8 +23,9 @@ struct FavoritesView: View {
                 .navigationTitle("Favorites")
             } else {
                 Text("Your starred items will appear here")
+                    .fontWeight(.semibold)
                     .padding(50)
-                    .background(Image("bookmarks-empty").opacity(0.1))
+                    .background(Image("bookmarks-empty").opacity(0.2))
                     .navigationTitle("Favorites")
             }
         }
