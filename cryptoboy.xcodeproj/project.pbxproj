@@ -349,8 +349,8 @@
 			isa = PBXGroup;
 			children = (
 				E90853CD261153510001B9BE /* AboutDonateItem.swift */,
-				E90853D8261157D50001B9BE /* AboutSystemItem.swift */,
 				E90853DD261158700001B9BE /* AboutLinkItem.swift */,
+				E90853D8261157D50001B9BE /* AboutSystemItem.swift */,
 				E954320E2612B389001918F3 /* SelectThemeButton.swift */,
 				E95432132612B3A8001918F3 /* SelectThemeView.swift */,
 			);
@@ -387,10 +387,10 @@
 		E9ACD0CE2617E1FF00650EAC /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E9ADCF5C26228B7B00B0862E /* ClearButtonView.swift */,
 				E9163B44260EAEA200453411 /* ComingSoonView.swift */,
 				E9ADCF5026226CB000B0862E /* CopyAlertTextView.swift */,
 				E902F42D2616394500825004 /* QRCodeDisplayView.swift */,
-				E9ADCF5C26228B7B00B0862E /* ClearButtonView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
