@@ -28,10 +28,7 @@ struct HashingView: View {
                             .autocapitalization(.none)
                             .disableAutocorrection(true)
 
-                        Button(action: state.clearMessage) {
-                            Image(systemName: "xmark.circle.fill")
-                        }
-                        .disabled(state.isDefaultMessage(false))
+                        ClearButtonView({ self.state.clearMessage() }, { self.state.isDefaultMessage(false) })
                     } else {
                         Image(systemName: "01.square")
 
@@ -48,10 +45,7 @@ struct HashingView: View {
                         .disableAutocorrection(true)
                         .keyboardType(.namePhonePad)
 
-                        Button(action: state.clearMessageBytes) {
-                            Image(systemName: "xmark.circle.fill")
-                        }
-                        .disabled(state.isDefaultMessage(true))
+                        ClearButtonView({ self.state.clearMessageBytes() }, { self.state.isDefaultMessage(true) })
                     }
                 }
             }

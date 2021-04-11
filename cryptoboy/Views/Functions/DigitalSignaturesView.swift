@@ -47,10 +47,7 @@ struct DigitalSignaturesView: View {
                         })
                     )
 
-                    Button(action: state.clearPrivateKey) {
-                        Image(systemName: "xmark.circle.fill")
-                    }
-                    .disabled(state.privateKey == nil)
+                    ClearButtonView({ self.state.clearPrivateKey() }, { self.state.privateKey == nil })
                 }
 
                 Button(action: {
@@ -76,12 +73,7 @@ struct DigitalSignaturesView: View {
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
 
-                    Button(action: {
-                        state.clearMessage()
-                    }) {
-                        Image(systemName: "xmark.circle.fill")
-                    }
-                    .disabled(state.message.isEmpty)
+                    ClearButtonView({ self.state.clearMessage() }, { self.state.message.isEmpty })
                 }
             }
 

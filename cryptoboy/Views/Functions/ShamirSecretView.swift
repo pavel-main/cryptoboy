@@ -27,13 +27,10 @@ struct ShamirSecretView: View {
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
 
-                    Button(action: state.clearMessage) {
-                        Image(systemName: "xmark.circle.fill")
-                    }
-                    .disabled(state.message.isEmpty)
-                    .onChange(of: state.message, perform: { _ in
-                        self.calculate()
-                    })
+                    ClearButtonView({ self.state.clearMessage() }, { self.state.message.isEmpty })
+                        .onChange(of: state.message, perform: { _ in
+                            self.calculate()
+                        })
                 }
             }
 

@@ -27,10 +27,7 @@ struct EncodingView: View {
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
 
-                    Button(action: state.clearMessage) {
-                        Image(systemName: "xmark.circle.fill")
-                    }
-                    .disabled(state.message.isEmpty)
+                    ClearButtonView({ self.state.clearMessage() }, { self.state.message.isEmpty })
                 }
             }
 

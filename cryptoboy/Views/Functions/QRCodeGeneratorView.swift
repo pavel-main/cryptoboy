@@ -31,12 +31,7 @@ struct QRCodeGeneratorView: View {
                             self.data = String($0.prefix(MESSAGE_LIMIT))
                         }
 
-                    Button(action: {
-                        data = ""
-                    }) {
-                        Image(systemName: "xmark.circle.fill")
-                    }
-                    .disabled(data.isEmpty)
+                    ClearButtonView({ self.data = "" }, { self.data.isEmpty })
                 }
 
                 DisclosureGroup("Correction Level", isExpanded: $revealDetails) {

@@ -41,10 +41,7 @@ struct DiffieHellmanView: View {
                         })
                     )
 
-                    Button(action: state.clearPrivateKey) {
-                        Image(systemName: "xmark.circle.fill")
-                    }
-                    .disabled(state.privateKey == nil)
+                    ClearButtonView({ self.state.clearPrivateKey() }, { self.state.privateKey == nil })
                 }
 
                 Button(action: {
@@ -79,12 +76,7 @@ struct DiffieHellmanView: View {
                         })
                     )
 
-                    Button(action: {
-                        self.counterKey = nil
-                    }) {
-                        Image(systemName: "xmark.circle.fill")
-                    }
-                    .disabled(self.counterKey == nil)
+                    ClearButtonView({ self.counterKey = nil }, { self.counterKey == nil })
                 }
 
                 Button(action: {

@@ -38,10 +38,7 @@ struct EllipticCurveView: View {
                         })
                     )
 
-                    Button(action: state.clearPrivateKey) {
-                        Image(systemName: "xmark.circle.fill")
-                    }
-                    .disabled(state.privateKey == nil)
+                    ClearButtonView({ self.state.clearPrivateKey() }, { self.state.privateKey == nil })
                 }
 
                 Button(action: {
