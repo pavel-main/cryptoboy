@@ -22,7 +22,7 @@ struct SelectThemeView: View {
             List {
                 ForEach(themes, id: \.self) { theme in
                     if shouldDisplay(theme) {
-                        SelectThemeButton(colorName: theme.publicName, themeName: theme.name)
+                        SelectThemeButton(theme: theme)
                     }
                 }
             }

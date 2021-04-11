@@ -35,15 +35,15 @@ let themes: [Theme] = [
     Theme(colorPrimary: Color("fuchsia"), name: "fuchia", publicName: "Fuchsia", female: true),
     Theme(colorPrimary: Color("salmon"), name: "salmon", publicName: "Salmon", female: true),
     // Female Orange
-    Theme(colorPrimary: Color("orange"), name: "orange", publicName: "Orange", female: true),
+    Theme(colorPrimary: Color("orange"), name: "orange-female", publicName: "Orange", female: true),
     Theme(colorPrimary: Color("melon"), name: "melon", publicName: "Melon", female: true),
     // Female Yellow
-    Theme(colorPrimary: Color("yellow"), name: "yellow", publicName: "Yellow", female: true),
+    Theme(colorPrimary: Color("yellow"), name: "yellow-female", publicName: "Yellow", female: true),
     Theme(colorPrimary: Color("lemon"), name: "lemon", publicName: "Lemon", female: true),
     // Female Green
     Theme(colorPrimary: Color("lime"), name: "lime", publicName: "Lime", female: true),
     Theme(colorPrimary: Color("fresh-grass"), name: "fresh-grass", publicName: "Fresh Grass", female: true),
-    Theme(colorPrimary: Color("green"), name: "green", publicName: "Green", female: true),
+    Theme(colorPrimary: Color("green"), name: "green-female", publicName: "Green", female: true),
     Theme(colorPrimary: Color("dark-green"), name: "dark-green", publicName: "Dark Green", female: true),
     Theme(colorPrimary: Color("moss"), name: "moss", publicName: "Moss", female: true),
     Theme(colorPrimary: Color("green-yellow"), name: "green-yellow", publicName: "Green Yellow", female: true),

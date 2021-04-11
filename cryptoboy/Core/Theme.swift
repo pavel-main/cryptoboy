@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Theme: Hashable {
+struct Theme: Hashable, Equatable {
     var colorPrimary: Color = Color.primary
     var name: String = "system"
     var publicName: String = "System"

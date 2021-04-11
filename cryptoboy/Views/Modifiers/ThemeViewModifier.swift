@@ -14,7 +14,7 @@ public struct ThemeViewModifier: ViewModifier {
 
     public func body(content: Content) -> some View {
         content
-            .accentColor(state.getTheme(themeName: currentTheme).colorPrimary)
+            .accentColor(state.getTheme(currentTheme).colorPrimary)
             .environmentObject(state)
     }
 }

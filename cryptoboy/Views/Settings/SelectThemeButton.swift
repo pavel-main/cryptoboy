@@ -10,28 +10,38 @@ import SwiftUI
 struct SelectThemeButton: View {
     @EnvironmentObject var state: AppState
     @AppStorage("currentTheme") var currentTheme: String = DEFAULT_THEME
-    var colorName: String
-    var themeName: String
+
+    var theme: Theme
 
     var body: some View {
         HStack {
             Button(action: {
-                self.currentTheme = self.themeName
+                self.currentTheme = self.theme.name
             }) {
                 HStack {
                     Circle()
                         .strokeBorder(state.invertedColor(), lineWidth: 1)
-                        .background(Circle().foregroundColor(state.getTheme(themeName: self.themeName).colorPrimary))
+                        .background(Circle().foregroundColor(state.getTheme(self.theme.name).colorPrimary))
                         .frame(width: 25, height: 25)
 
-                    Text(self.colorName)
+                    Text(self.theme.publicName)
 
-                    if self.currentTheme == self.themeName {
+                    if self.isActive() {
                         Image(systemName: "checkmark")
                     }
                 }
             }
         }
         .environmentObject(state)
+    }
+
+    func isActive() -> Bool {
+        let current = state.getTheme(self.currentTheme)
+
+        if current.name == theme.name && current.female == theme.female {
+            return true
+        }
+
+        return false
     }
 }

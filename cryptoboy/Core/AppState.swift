@@ -162,7 +162,7 @@ class AppState: ObservableObject {
         self.bookmarks = []
     }
 
-    func getTheme(themeName: String?) -> Theme {
+    func getTheme(_ themeName: String?) -> Theme {
         if themeName != nil {
             for theme in themes {
                 if themeName! == theme.name {
