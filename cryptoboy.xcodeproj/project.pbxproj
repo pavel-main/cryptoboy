@@ -65,6 +65,7 @@
 		E9ADCF5D26228B7B00B0862E /* ClearButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ADCF5C26228B7B00B0862E /* ClearButtonView.swift */; };
 		E9BC9415261125E400D8B83E /* String+Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC9414261125E400D8B83E /* String+Encoding.swift */; };
 		E9BC942A26112C9900D8B83E /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC942926112C9900D8B83E /* NavigationBar.swift */; };
+		E9D6005F2623D6A300AD3DCD /* LitecoinUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D6005E2623D6A300AD3DCD /* LitecoinUnitView.swift */; };
 		E9E2902F262247EA00ADA2B7 /* ShamirSecretView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E2902E262247EA00ADA2B7 /* ShamirSecretView.swift */; };
 		E9ED74B12612E93300DCD4A3 /* DarkModeViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED74B02612E93300DCD4A3 /* DarkModeViewModifier.swift */; };
 		E9ED74B92612F6C200DCD4A3 /* ThemeViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED74B82612F6C200DCD4A3 /* ThemeViewModifier.swift */; };
@@ -159,6 +160,7 @@
 		E9ADCF5C26228B7B00B0862E /* ClearButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButtonView.swift; sourceTree = "<group>"; };
 		E9BC9414261125E400D8B83E /* String+Encoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Encoding.swift"; sourceTree = "<group>"; };
 		E9BC942926112C9900D8B83E /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		E9D6005E2623D6A300AD3DCD /* LitecoinUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitecoinUnitView.swift; sourceTree = "<group>"; };
 		E9E2902E262247EA00ADA2B7 /* ShamirSecretView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShamirSecretView.swift; sourceTree = "<group>"; };
 		E9ED74B02612E93300DCD4A3 /* DarkModeViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeViewModifier.swift; sourceTree = "<group>"; };
 		E9ED74B82612F6C200DCD4A3 /* ThemeViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeViewModifier.swift; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 			children = (
 				E99F77C6261269EA009BDFF1 /* BitcoinUnitView.swift */,
 				E99F77FA26128569009BDFF1 /* EthereumUnitView.swift */,
+				E9D6005E2623D6A300AD3DCD /* LitecoinUnitView.swift */,
 				E9787A05261804FE003C66B2 /* PolkadotUnitConverter.swift */,
 			);
 			path = Currencies;
@@ -609,6 +612,7 @@
 				E945C397260EC96900E732A0 /* CryptoBoyApp.swift in Sources */,
 				E99F77BB26124118009BDFF1 /* Set+RawRepresentable.swift in Sources */,
 				E902F3EE2616170B00825004 /* String+Filtering.swift in Sources */,
+				E9D6005F2623D6A300AD3DCD /* LitecoinUnitView.swift in Sources */,
 				E99F77C7261269EA009BDFF1 /* BitcoinUnitView.swift in Sources */,
 				E90775C5261E7444009D3D95 /* SignatureFormat.swift in Sources */,
 				E95432092612B29B001918F3 /* Theme.swift in Sources */,

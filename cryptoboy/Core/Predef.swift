@@ -191,6 +191,15 @@ let currenciesMenu: [MenuSection] = [
             description: "DOT, mDOT, μBTC, planck"
         )
     ]),
+    // Litecoin
+    MenuSection(id: "ltc", title: "Litecoin", items: [
+        MenuItem(
+            id: "ltc_unit",
+            title: "Unit Converter",
+            systemImage: "lirasign.circle",
+            description: "LTC, mLTC, photon"
+        )
+    ]),
     // Bitcoin Cash
     MenuSection(id: "bch", title: "Bitcoin Cash", items: [
         MenuItem(
