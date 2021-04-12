@@ -196,7 +196,7 @@ let currenciesMenu: [MenuSection] = [
         MenuItem(
             id: "ltc_unit",
             title: "Unit Converter",
-            systemImage: "lirasign.circle",
+            systemImage: "turkishlirasign.circle",
             description: "LTC, mLTC, photon"
         )
     ]),
