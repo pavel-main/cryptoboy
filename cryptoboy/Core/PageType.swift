@@ -96,7 +96,7 @@ enum PageType: String {
 
         case .ltc_unit:
             return AnyView(LitecoinUnitView())
-            
+
         default:
             return AnyView(ComingSoonView(item: item))
         }
