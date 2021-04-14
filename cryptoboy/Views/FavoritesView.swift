@@ -31,7 +31,7 @@ struct FavoritesView: View {
                         .opacity(0.35)
 
                     Text("Your starred items will appear here")
-                        .fontWeight(.semibold)
+
                     Spacer()
                     Spacer()
                 }

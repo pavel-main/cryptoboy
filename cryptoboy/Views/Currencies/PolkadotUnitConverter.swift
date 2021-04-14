@@ -42,31 +42,39 @@ struct PolkadotUnitView: View {
             if !isKusama {
                 ForEach(dotUnits.indices, id: \.self) { idx in
                     Section(header: Text(self.dotUnits[idx].title)) {
-                        TextField("", text: Binding(
-                            get: {
-                                return self.dotUnits[idx].current
-                            },
-                            set: { (newValue) in
-                                let updated = CryptoUnitFormatter.updateUnits(self.dotUnits, idx, newValue)
-                                self.dotUnits = updated
-                            })
-                        )
-                        .keyboardType(.decimalPad)
+                        HStack {
+                            CopyInputButtonView({ return self.dotUnits[idx].current })
+
+                            TextField("", text: Binding(
+                                get: {
+                                    return self.dotUnits[idx].current
+                                },
+                                set: { (newValue) in
+                                    let updated = CryptoUnitFormatter.updateUnits(self.dotUnits, idx, newValue)
+                                    self.dotUnits = updated
+                                })
+                            )
+                            .keyboardType(.decimalPad)
+                        }
                     }
                 }
             } else {
                 ForEach(ksmUnits.indices, id: \.self) { idx in
                     Section(header: Text(self.ksmUnits[idx].title)) {
-                        TextField("", text: Binding(
-                            get: {
-                                return self.ksmUnits[idx].current
-                            },
-                            set: { (newValue) in
-                                let updated = CryptoUnitFormatter.updateUnits(self.ksmUnits, idx, newValue)
-                                self.ksmUnits = updated
-                            })
-                        )
-                        .keyboardType(.decimalPad)
+                        HStack {
+                            CopyInputButtonView({ return self.ksmUnits[idx].current })
+
+                            TextField("", text: Binding(
+                                get: {
+                                    return self.ksmUnits[idx].current
+                                },
+                                set: { (newValue) in
+                                    let updated = CryptoUnitFormatter.updateUnits(self.ksmUnits, idx, newValue)
+                                    self.ksmUnits = updated
+                                })
+                            )
+                            .keyboardType(.decimalPad)
+                        }
                     }
                 }
             }

@@ -34,14 +34,14 @@ struct CopyAlertTextView: View {
                     Text(callback())
                         .multilineTextAlignment(self.alignment)
                 }
+                .alert(isPresented: $showCopyAlert) {
+                    Alert(
+                        title: Text("Copied to clipboard"),
+                        message: Text(prefixCallback()),
+                        dismissButton: .default(Text("OK"))
+                    )
+                }
             }
-        }
-        .alert(isPresented: $showCopyAlert) {
-            Alert(
-                title: Text("Copied to clipboard"),
-                message: Text(prefixCallback()),
-                dismissButton: .default(Text("OK"))
-            )
         }
         .environmentObject(state)
     }

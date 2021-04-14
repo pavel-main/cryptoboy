@@ -15,7 +15,8 @@ struct EllipticCurveView: View {
         Form {
             Section(header: Text("Private Key")) {
                 HStack {
-                    Image(systemName: "terminal")
+                    CopyInputButtonView({ return self.state.privateKey?.data.hexString ?? "" }, { return self.state.privateKey == nil }
+                    )
 
                     TextField("", text: Binding(
                         get: {

@@ -21,7 +21,7 @@ struct ShamirSecretView: View {
         Form {
             Section(header: Text("Input")) {
                 HStack {
-                    Image(systemName: "ellipsis.bubble")
+                    CopyInputButtonView({ return self.state.message }, { return self.state.isDefaultMessage(false) })
 
                     TextField("", text: $state.message)
                         .autocapitalization(.none)

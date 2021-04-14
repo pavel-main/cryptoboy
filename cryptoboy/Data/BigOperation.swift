@@ -20,13 +20,13 @@ enum BigOperation: String, CaseIterable, Identifiable {
     var title: String {
         switch self {
             case .plus:
-                return "+"
+                return "plus"
             case .minus:
-                return "-"
+                return "minus"
             case .mul:
-                return "×"
+                return "multiply"
             case .div:
-                return "÷"
+                return "divide"
         }
     }
 }

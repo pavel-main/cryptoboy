@@ -18,7 +18,8 @@ struct DiffieHellmanView: View {
         Form {
             Section(header: Text("Private Key")) {
                 HStack {
-                    Image(systemName: "terminal")
+                    CopyInputButtonView({ return self.state.privateKey?.data.hexString ?? "" }, { return self.state.privateKey == nil }
+                    )
 
                     TextField("", text: Binding(
                         get: {
@@ -53,7 +54,8 @@ struct DiffieHellmanView: View {
 
             Section(header: Text("Public Key (secp256k1)")) {
                 HStack {
-                    Image(systemName: "terminal")
+                    CopyInputButtonView({ return self.curveType.getPublicKey(from: self.counterKey!).data.hexString }, { return self.counterKey == nil }
+                    )
 
                     TextField("", text: Binding(
                         get: {

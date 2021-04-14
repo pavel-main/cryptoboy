@@ -26,16 +26,21 @@ struct EthereumUnitView: View {
         Form {
             ForEach(units.indices, id: \.self) { idx in
                 Section(header: Text(self.units[idx].title)) {
-                    TextField("", text: Binding(
-                        get: {
-                            return self.units[idx].current
-                        },
-                        set: { (newValue) in
-                            let updated = CryptoUnitFormatter.updateUnits(self.units, idx, newValue)
-                            self.units = updated
-                        })
-                    )
-                    .keyboardType(.decimalPad)
+                    HStack {
+                        CopyInputButtonView({ return self.units[idx].current })
+
+                        TextField("", text: Binding(
+                            get: {
+                                return self.units[idx].current
+                            },
+                            set: { (newValue) in
+                                let updated = CryptoUnitFormatter.updateUnits(self.units, idx, newValue)
+                                self.units = updated
+                            })
+                        )
+                        .keyboardType(.decimalPad)
+                    }
+
                 }
             }
         }

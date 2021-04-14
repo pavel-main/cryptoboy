@@ -20,45 +20,52 @@ struct ArbitaryPrecisionView: View {
     @State var result: String = ""
 
     var body: some View {
+        Picker(selection: $operation, label: Text("Operation")) {
+            ForEach(self.operations) {
+                Image(systemName: $0.title).tag($0)
+            }
+        }
+        .onChange(of: operation, perform: { _ in
+            self.calculate()
+        })
+        .pickerStyle(SegmentedPickerStyle())
+        .padding()
+
         Form {
             Section(header: Text("Operand 1")) {
-                TextField("", text: Binding(
-                    get: {
-                        return op1
-                    },
-                    set: { (newValue) in
-                        let oldValue = self.op1
-                        self.op1 = self.validate(oldValue, newValue)
-                        self.calculate()
-                    })
-                )
-                .keyboardType(.namePhonePad)
-            }
+                HStack {
+                    CopyInputButtonView({ return self.op1 }, { return self.op1.isEmpty })
 
-            Section(header: Text("Operation")) {
-                Picker(selection: $operation, label: Text("Operation")) {
-                    ForEach(self.operations) {
-                        Text($0.title).tag($0)
-                    }
+                    TextField("", text: Binding(
+                        get: {
+                            return self.op1
+                        },
+                        set: { (newValue) in
+                            let oldValue = self.op1
+                            self.op1 = self.validate(oldValue, newValue)
+                            self.calculate()
+                        })
+                    )
+                    .keyboardType(.namePhonePad)
                 }
-                .onChange(of: operation, perform: { _ in
-                    self.calculate()
-                })
-                .pickerStyle(SegmentedPickerStyle())
             }
 
             Section(header: Text("Operand 2")) {
-                TextField("", text: Binding(
-                    get: {
-                        return op2
-                    },
-                    set: { (newValue) in
-                        let oldValue = self.op2
-                        self.op2 = self.validate(oldValue, newValue)
-                        self.calculate()
-                    })
-                )
-                .keyboardType(.namePhonePad)
+                HStack {
+                    CopyInputButtonView({ return self.op2 }, { return self.op2.isEmpty })
+
+                    TextField("", text: Binding(
+                        get: {
+                            return self.op2
+                        },
+                        set: { (newValue) in
+                            let oldValue = self.op2
+                            self.op2 = self.validate(oldValue, newValue)
+                            self.calculate()
+                        })
+                    )
+                    .keyboardType(.namePhonePad)
+                }
             }
 
             if !self.result.isEmpty {
@@ -70,10 +77,7 @@ struct ArbitaryPrecisionView: View {
     }
 
     func validate(_ oldValue: String, _ newValue: String) -> String {
-        var input = "0"
-        if !newValue.isEmpty {
-            input = newValue.uppercased().filter { "0123456789ABCDEF".contains($0) }
-        }
+        let input = newValue.lowercased().filter { "0123456789abcdef".contains($0) }
 
         guard let value = BInt(input, radix: 16) else {
             return oldValue

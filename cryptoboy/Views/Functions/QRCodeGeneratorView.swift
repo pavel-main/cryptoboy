@@ -13,16 +13,24 @@ struct QRCodeGeneratorView: View {
 
     @State private var data = ""
     @State private var level = "M"
-    @State private var revealDetails = false
 
     let QR_SIZE = CGFloat(320)
     let MESSAGE_LIMIT = 4096
 
     var body: some View {
+        Picker(selection: $level, label: Text("Correction Level")) {
+            Text("Low").tag("L")
+            Text("Medium").tag("M")
+            Text("Quartile").tag("Q")
+            Text("High").tag("H")
+        }
+        .padding()
+        .pickerStyle(SegmentedPickerStyle())
+
         Form {
             Section(header: Text("Input Message")) {
                 HStack {
-                    Image(systemName: "ellipsis.bubble")
+                    CopyInputButtonView({ return self.data }, { return self.data.isEmpty })
 
                     TextField("", text: $data)
                         .autocapitalization(.none)
@@ -32,16 +40,6 @@ struct QRCodeGeneratorView: View {
                         }
 
                     ClearButtonView({ self.data = "" }, { self.data.isEmpty })
-                }
-
-                DisclosureGroup("Correction Level", isExpanded: $revealDetails) {
-                    Picker(selection: $level, label: Text("Correction Level")) {
-                        Text("Low").tag("L")
-                        Text("Medium").tag("M")
-                        Text("Quartile").tag("Q")
-                        Text("High").tag("H")
-                    }
-                    .pickerStyle(SegmentedPickerStyle())
                 }
             }
 

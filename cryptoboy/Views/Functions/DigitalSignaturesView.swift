@@ -24,7 +24,8 @@ struct DigitalSignaturesView: View {
         Form {
             Section(header: Text("Private Key")) {
                 HStack {
-                    Image(systemName: "terminal")
+                    CopyInputButtonView({ return self.state.privateKey?.data.hexString ?? "" }, { return self.state.privateKey == nil }
+                    )
 
                     TextField("", text: Binding(
                         get: {
@@ -67,7 +68,8 @@ struct DigitalSignaturesView: View {
 
             Section(header: Text("Message")) {
                 HStack {
-                    Image(systemName: "text.bubble")
+                    CopyInputButtonView({ return self.state.message }, { return self.state.isDefaultMessage(false) }
+                    )
 
                     TextField("", text: $state.message)
                         .autocapitalization(.none)

@@ -22,7 +22,7 @@ struct HashingView: View {
             Section(header: Text("Input")) {
                 HStack {
                     if !state.isMessageBinary {
-                        Image(systemName: "ellipsis.bubble")
+                        CopyInputButtonView({ return self.state.message }, { return self.state.isDefaultMessage(false) })
 
                         TextField("", text: $state.message)
                             .autocapitalization(.none)
@@ -30,7 +30,7 @@ struct HashingView: View {
 
                         ClearButtonView({ self.state.clearMessage() }, { self.state.isDefaultMessage(false) })
                     } else {
-                        Image(systemName: "01.square")
+                        CopyInputButtonView({ return self.state.messageBytes }, { return self.state.isDefaultMessage(true) })
 
                         TextField("", text: Binding(
                             get: {
