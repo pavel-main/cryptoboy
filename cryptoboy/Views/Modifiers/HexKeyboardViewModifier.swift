@@ -9,6 +9,8 @@ import SwiftUI
 import Introspect
 
 public struct HexKeyboardViewModifier: ViewModifier {
+    
+    @EnvironmentObject var state: AppState
 
     let hex: Bool
 
@@ -45,7 +47,7 @@ public struct HexKeyboardViewModifier: ViewModifier {
 
     func buildButton(_ title: String, _ textField: UITextField) -> UIBarButtonItem {
         let button = UIBarButtonItem(title: title, style: .done, target: self, action: #selector(textField.hexButtonTapped(button:)))
-        button.tintColor = .systemPink
+        button.tintColor = .label
         return button
     }
 }

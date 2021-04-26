@@ -225,9 +225,9 @@
 			isa = PBXGroup;
 			children = (
 				E96BC5012617B7C000D52BEF /* BaseUnitFormatter.swift */,
+				E9ADCF4826226B3300B0862E /* ClipboardHelper.swift */,
 				E902F3E22616140300825004 /* CryptoUnitFormatter.swift */,
 				E902F422261630F300825004 /* QRCodeHelper.swift */,
-				E9ADCF4826226B3300B0862E /* ClipboardHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";

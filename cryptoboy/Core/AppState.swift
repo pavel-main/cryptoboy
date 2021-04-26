@@ -58,13 +58,19 @@ class AppState: ObservableObject {
     @Published var isMessageBinary: Bool = false
     @Published var isDecoding: Bool = false
 
-    @AppStorage("bookmarks") var bookmarks: [String] = [] {
+//    @AppStorage("bookmarks") var bookmarks: [String] = [] {
+//        willSet {
+//            objectWillChange.send()
+//        }
+//    }
+
+    @AppStorage("visitedViews") var visitedViews: Set<String> = [] {
         willSet {
             objectWillChange.send()
         }
     }
-
-    @AppStorage("visitedViews") var visitedViews: Set<String> = [] {
+    
+    @AppStorage("clipboard") var clipboard: [String] = [] {
         willSet {
             objectWillChange.send()
         }
@@ -120,23 +126,23 @@ class AppState: ObservableObject {
         return visitedViews.contains(view)
     }
 
-    func addBookmark(_ view: String) {
-        bookmarks.insert(view, at: 0)
-    }
+//    func addBookmark(_ view: String) {
+//        bookmarks.insert(view, at: 0)
+//    }
 
-    func hasBookmark(_ view: String) -> Bool {
-        return bookmarks.contains(view)
-    }
+//    func hasBookmark(_ view: String) -> Bool {
+//        return bookmarks.contains(view)
+//    }
 
-    func removeBookmark(_ view: String) {
-        if let index = bookmarks.firstIndex(of: view) {
-            bookmarks.remove(at: index)
-        }
-    }
-
-    func removeBookmarks(at offsets: IndexSet) {
-        bookmarks.remove(atOffsets: offsets)
-    }
+//    func removeBookmark(_ view: String) {
+//        if let index = bookmarks.firstIndex(of: view) {
+//            bookmarks.remove(at: index)
+//        }
+//    }
+//
+//    func removeBookmarks(at offsets: IndexSet) {
+//        bookmarks.remove(atOffsets: offsets)
+//    }
 
     func clearMessage() {
         self.message = ""
@@ -159,7 +165,7 @@ class AppState: ObservableObject {
 
         self.clearMessage()
         self.visitedViews = []
-        self.bookmarks = []
+        self.clipboard = []
     }
 
     func getTheme(_ themeName: String?) -> Theme {

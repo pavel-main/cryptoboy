@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct CopyInputButtonView: View {
+    @EnvironmentObject var state: AppState
     @State private var showCopyAlert = false
 
     let MESSAGE_LIMIT = 64

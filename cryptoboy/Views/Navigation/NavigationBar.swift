@@ -18,21 +18,30 @@ struct NavigationBar: View {
 
     var body: some View {
         if self.page != .unknown {
-            if !state.hasBookmark("\(page)") {
-                Button(action: {
-                    print("Adding \(page) to bookmarks...")
-                    state.addBookmark("\(page)")
-                }) {
-                    Image(systemName: "star")
+            Button(action: {
+                guard let result = ClipboardHelper.getString() else {
+                    return
                 }
-            } else {
-                Button(action: {
-                    print("Removing \(page) from bookmarks...")
-                    state.removeBookmark("\(page)")
-                }) {
-                    Image(systemName: "star.fill")
-                }
+                
+                self.state.message = result
+            }) {
+                Image(systemName: "doc.on.clipboard")
             }
+//            if !state.hasBookmark("\(page)") {
+//                Button(action: {
+//                    print("Adding \(page) to bookmarks...")
+//                    state.addBookmark("\(page)")
+//                }) {
+//                    Image(systemName: "star")
+//                }
+//            } else {
+//                Button(action: {
+//                    print("Removing \(page) from bookmarks...")
+//                    state.removeBookmark("\(page)")
+//                }) {
+//                    Image(systemName: "star.fill")
+//                }
+//            }
         }
     }
 }
