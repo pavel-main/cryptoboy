@@ -33,8 +33,7 @@ struct QRCodeGeneratorView: View {
                     CopyInputButtonView({ return self.data }, { return self.data.isEmpty })
 
                     TextField("", text: $data)
-                        .autocapitalization(.none)
-                        .disableAutocorrection(true)
+                        .modifier(DefaultKeyboardViewModifier())
                         .onReceive(data.publisher.collect()) {
                             self.data = String($0.prefix(MESSAGE_LIMIT))
                         }

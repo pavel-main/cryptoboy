@@ -38,6 +38,7 @@ struct EllipticCurveView: View {
                             }
                         })
                     )
+                    .modifier(DefaultKeyboardViewModifier())
 
                     ClearButtonView({ self.state.clearPrivateKey() }, { self.state.privateKey == nil })
                 }

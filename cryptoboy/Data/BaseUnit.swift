@@ -12,13 +12,13 @@ struct BaseUnit {
     var base: Int
     var whitelist: String
     var current: String
-    var keyboard: UIKeyboardType
+    var isHex: Bool
 
-    init(title: String, base: Int, current: String, whitelist: String, keyboard: UIKeyboardType) {
+    init(title: String, base: Int, current: String, whitelist: String, isHex: Bool) {
         self.title = title
         self.base = base
         self.current = current
         self.whitelist = whitelist
-        self.keyboard = keyboard
+        self.isHex = isHex
     }
 }

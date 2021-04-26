@@ -35,6 +35,7 @@ struct LitecoinUnitView: View {
                             })
                         )
                         .keyboardType(.decimalPad)
+                        .modifier(DefaultKeyboardViewModifier())
                     }
                 }
             }

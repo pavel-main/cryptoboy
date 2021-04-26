@@ -25,8 +25,7 @@ struct HashingView: View {
                         CopyInputButtonView({ return self.state.message }, { return self.state.isDefaultMessage(false) })
 
                         TextField("", text: $state.message)
-                            .autocapitalization(.none)
-                            .disableAutocorrection(true)
+                            .modifier(DefaultKeyboardViewModifier())
 
                         ClearButtonView({ self.state.clearMessage() }, { self.state.isDefaultMessage(false) })
                     } else {
@@ -41,9 +40,7 @@ struct HashingView: View {
                                 self.state.messageBytes = input
                             })
                         )
-                        .autocapitalization(.none)
-                        .disableAutocorrection(true)
-                        .keyboardType(.namePhonePad)
+                        .modifier(HexKeyboardViewModifier(hex: true))
 
                         ClearButtonView({ self.state.clearMessageBytes() }, { self.state.isDefaultMessage(true) })
                     }

@@ -10,7 +10,6 @@
 public enum Blockchain: UInt32, CaseIterable {
     case bitcoin = 0
     case ethereum = 1
-    case wanchain = 2
     case vechain = 3
     case tron = 4
     case icon = 5

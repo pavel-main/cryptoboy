@@ -46,7 +46,7 @@ struct ArbitaryPrecisionView: View {
                             self.calculate()
                         })
                     )
-                    .keyboardType(.namePhonePad)
+                    .modifier(HexKeyboardViewModifier(hex: true))
                 }
             }
 
@@ -64,7 +64,7 @@ struct ArbitaryPrecisionView: View {
                             self.calculate()
                         })
                     )
-                    .keyboardType(.namePhonePad)
+                    .modifier(HexKeyboardViewModifier(hex: true))
                 }
             }
 

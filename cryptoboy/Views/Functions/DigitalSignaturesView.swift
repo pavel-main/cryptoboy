@@ -47,6 +47,7 @@ struct DigitalSignaturesView: View {
                             }
                         })
                     )
+                    .modifier(DefaultKeyboardViewModifier())
 
                     ClearButtonView({ self.state.clearPrivateKey() }, { self.state.privateKey == nil })
                 }
@@ -72,8 +73,7 @@ struct DigitalSignaturesView: View {
                     )
 
                     TextField("", text: $state.message)
-                        .autocapitalization(.none)
-                        .disableAutocorrection(true)
+                        .modifier(DefaultKeyboardViewModifier())
 
                     ClearButtonView({ self.state.clearMessage() }, { self.state.message.isEmpty })
                 }

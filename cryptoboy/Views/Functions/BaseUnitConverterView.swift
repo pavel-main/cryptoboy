@@ -12,10 +12,10 @@ struct BaseUnitConverterView: View {
     @EnvironmentObject var state: AppState
 
     @State var units = [
-        BaseUnit.init(title: "Decimal", base: 10, current: "0", whitelist: "0123456789", keyboard: .asciiCapableNumberPad),
-        BaseUnit.init(title: "Octal", base: 8, current: "0", whitelist: "01234567", keyboard: .asciiCapableNumberPad),
-        BaseUnit.init(title: "Hexadecimal", base: 16, current: "0", whitelist: "0123456789ABCDEF", keyboard: .namePhonePad),
-        BaseUnit.init(title: "Binary", base: 2, current: "0", whitelist: "01", keyboard: .asciiCapableNumberPad)
+        BaseUnit.init(title: "Decimal", base: 10, current: "0", whitelist: "0123456789", isHex: false),
+        BaseUnit.init(title: "Octal", base: 8, current: "0", whitelist: "01234567", isHex: false),
+        BaseUnit.init(title: "Hexadecimal", base: 16, current: "0", whitelist: "0123456789ABCDEF", isHex: true),
+        BaseUnit.init(title: "Binary", base: 2, current: "0", whitelist: "01", isHex: false)
     ]
 
     var body: some View {
@@ -34,7 +34,7 @@ struct BaseUnitConverterView: View {
                                 self.units = updated
                             })
                         )
-                        .keyboardType(self.units[idx].keyboard)
+                        .modifier(HexKeyboardViewModifier(hex: self.units[idx].isHex))
                     }
                 }
             }
