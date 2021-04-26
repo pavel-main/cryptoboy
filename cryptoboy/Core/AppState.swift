@@ -10,6 +10,7 @@ import WalletCore
 
 class AppState: ObservableObject {
     @Environment(\.colorScheme) var colorScheme
+
     @AppStorage("isFemale") var isFemale: Bool = false {
         willSet {
             objectWillChange.send()
@@ -58,18 +59,12 @@ class AppState: ObservableObject {
     @Published var isMessageBinary: Bool = false
     @Published var isDecoding: Bool = false
 
-//    @AppStorage("bookmarks") var bookmarks: [String] = [] {
-//        willSet {
-//            objectWillChange.send()
-//        }
-//    }
-
     @AppStorage("visitedViews") var visitedViews: Set<String> = [] {
         willSet {
             objectWillChange.send()
         }
     }
-    
+
     @AppStorage("clipboard") var clipboard: [String] = [] {
         willSet {
             objectWillChange.send()
@@ -126,23 +121,11 @@ class AppState: ObservableObject {
         return visitedViews.contains(view)
     }
 
-//    func addBookmark(_ view: String) {
-//        bookmarks.insert(view, at: 0)
-//    }
-
-//    func hasBookmark(_ view: String) -> Bool {
-//        return bookmarks.contains(view)
-//    }
-
-//    func removeBookmark(_ view: String) {
-//        if let index = bookmarks.firstIndex(of: view) {
-//            bookmarks.remove(at: index)
-//        }
-//    }
-//
-//    func removeBookmarks(at offsets: IndexSet) {
-//        bookmarks.remove(atOffsets: offsets)
-//    }
+    func removeClipboard(at offsets: IndexSet) {
+        if !self.clipboard.isEmpty {
+            self.clipboard.remove(atOffsets: offsets)
+        }
+    }
 
     func clearMessage() {
         self.message = ""

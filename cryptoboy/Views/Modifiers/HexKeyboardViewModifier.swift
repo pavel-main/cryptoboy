@@ -9,7 +9,7 @@ import SwiftUI
 import Introspect
 
 public struct HexKeyboardViewModifier: ViewModifier {
-    
+
     @EnvironmentObject var state: AppState
 
     let hex: Bool

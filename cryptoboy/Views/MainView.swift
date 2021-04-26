@@ -20,9 +20,9 @@ struct MainView: View {
                 .tabItem {
                     Label("Currencies", systemImage: "bitcoinsign.circle")
                 }
-            FavoritesView()
+            ClipboardView()
                 .tabItem {
-                    Label("Favorites", systemImage: "text.badge.star")
+                    Label("Clipboard", systemImage: "mail.stack")
                 }
             SettingsView()
                 .tabItem {

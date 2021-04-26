@@ -13,7 +13,7 @@ class ClipboardHelper {
     static func copyString(_ input: String) {
         UIPasteboard.general.string = input
     }
-    
+
     static func getString() -> String? {
         return UIPasteboard.general.string
     }
