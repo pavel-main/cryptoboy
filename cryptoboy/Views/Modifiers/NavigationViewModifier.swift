@@ -22,7 +22,7 @@ public struct NavigationViewModifier: ViewModifier {
                 state.visitView("\(page)")
             }
             .toolbar {
-                NavigationBar(page)
+                PasteNavigationBar(page)
             }
     }
 }

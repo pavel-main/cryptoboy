@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct CopyInputButtonView: View {
+    @EnvironmentObject var state: AppState
     @State private var showCopyAlert = false
 
     let MESSAGE_LIMIT = 64
@@ -32,8 +33,10 @@ struct CopyInputButtonView: View {
     var body: some View {
         HStack {
             Button(action: {
-                ClipboardHelper.copyString(callback())
+                let value = callback()
+                ClipboardHelper.copyString(value)
                 showCopyAlert.toggle()
+                state.clipboard.insert(value, at: 0)
             }) {
                 Image(systemName: systemImage)
             }

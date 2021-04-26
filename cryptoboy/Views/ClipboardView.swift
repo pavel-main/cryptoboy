@@ -7,35 +7,35 @@
 
 import SwiftUI
 
-struct FavoritesView: View {
+struct ClipboardView: View {
     @EnvironmentObject var state: AppState
 
     var body: some View {
         NavigationView {
-            if !state.bookmarks.isEmpty {
+            if !state.clipboard.isEmpty {
                 List {
-                    ForEach(state.bookmarks, id: \.self) { view in
-                        NavigationRow(item: state.getMenuItem(view)!)
+                    ForEach(state.clipboard, id: \.self) { item in
+                        ClipboardItemView(item)
                     }
-                    .onDelete(perform: state.removeBookmarks)
+                    .onDelete(perform: state.removeClipboard)
                 }
                 .listStyle(GroupedListStyle())
-                .navigationTitle("Favorites")
+                .navigationTitle("Clipboard")
             } else {
                 VStack {
                     Spacer()
 
-                    Image("bookmarks-empty")
+                    Image("clipboard-empty")
                         .resizable()
                         .scaledToFit()
                         .opacity(0.35)
 
-                    Text("Your starred items will appear here")
+                    Text("Copied items will appear here")
 
                     Spacer()
                     Spacer()
                 }
-                .navigationTitle("Favorites")
+                .navigationTitle("Clipboard")
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())

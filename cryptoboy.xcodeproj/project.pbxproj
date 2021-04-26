@@ -46,11 +46,15 @@
 		E96557D92616A432004E7BF1 /* BaseUnitConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96557D82616A432004E7BF1 /* BaseUnitConverterView.swift */; };
 		E96557DE2616A536004E7BF1 /* BaseUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96557DD2616A536004E7BF1 /* BaseUnit.swift */; };
 		E96A4A85260FE062009EA367 /* CurrenciesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A4A84260FE062009EA367 /* CurrenciesView.swift */; };
-		E96A4A8E260FE2DF009EA367 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A4A8C260FE2DF009EA367 /* FavoritesView.swift */; };
+		E96A4A8E260FE2DF009EA367 /* ClipboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A4A8C260FE2DF009EA367 /* ClipboardView.swift */; };
 		E96A4A8F260FE2DF009EA367 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A4A8D260FE2DF009EA367 /* SettingsView.swift */; };
 		E96A4AAA260FFD74009EA367 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A4AA9260FFD74009EA367 /* AppState.swift */; };
 		E96A4AB2260FFF0D009EA367 /* HashingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A4AB1260FFF0D009EA367 /* HashingItemView.swift */; };
 		E96BC5022617B7C000D52BEF /* BaseUnitFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96BC5012617B7C000D52BEF /* BaseUnitFormatter.swift */; };
+		E96FB2EA2637586F00843CE1 /* HexKeyboardViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96FB2E92637586F00843CE1 /* HexKeyboardViewModifier.swift */; };
+		E96FB2EF2637592300843CE1 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96FB2EE2637592300843CE1 /* UITextField.swift */; };
+		E96FB3032637605200843CE1 /* DefaultKeyboardViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96FB3022637605200843CE1 /* DefaultKeyboardViewModifier.swift */; };
+		E96FB31426376AF400843CE1 /* ClipboardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96FB31326376AF400843CE1 /* ClipboardItemView.swift */; };
 		E97093282621088700C65FB3 /* ArbitaryPrecisionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97093272621088700C65FB3 /* ArbitaryPrecisionView.swift */; };
 		E97093AC26210E0500C65FB3 /* BigOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97093AB26210E0500C65FB3 /* BigOperation.swift */; };
 		E97879FB2617EE88003C66B2 /* Data+Hashing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97879FA2617EE88003C66B2 /* Data+Hashing.swift */; };
@@ -65,7 +69,7 @@
 		E9ADCF5126226CB000B0862E /* CopyAlertTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ADCF5026226CB000B0862E /* CopyAlertTextView.swift */; };
 		E9ADCF5D26228B7B00B0862E /* ClearButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ADCF5C26228B7B00B0862E /* ClearButtonView.swift */; };
 		E9BC9415261125E400D8B83E /* String+Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC9414261125E400D8B83E /* String+Encoding.swift */; };
-		E9BC942A26112C9900D8B83E /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC942926112C9900D8B83E /* NavigationBar.swift */; };
+		E9BC942A26112C9900D8B83E /* PasteNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC942926112C9900D8B83E /* PasteNavigationBar.swift */; };
 		E9D6005F2623D6A300AD3DCD /* LitecoinUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D6005E2623D6A300AD3DCD /* LitecoinUnitView.swift */; };
 		E9E2902F262247EA00ADA2B7 /* ShamirSecretView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E2902E262247EA00ADA2B7 /* ShamirSecretView.swift */; };
 		E9ED74B12612E93300DCD4A3 /* DarkModeViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED74B02612E93300DCD4A3 /* DarkModeViewModifier.swift */; };
@@ -142,11 +146,15 @@
 		E96557D82616A432004E7BF1 /* BaseUnitConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUnitConverterView.swift; sourceTree = "<group>"; };
 		E96557DD2616A536004E7BF1 /* BaseUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUnit.swift; sourceTree = "<group>"; };
 		E96A4A84260FE062009EA367 /* CurrenciesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrenciesView.swift; sourceTree = "<group>"; };
-		E96A4A8C260FE2DF009EA367 /* FavoritesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		E96A4A8C260FE2DF009EA367 /* ClipboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipboardView.swift; sourceTree = "<group>"; };
 		E96A4A8D260FE2DF009EA367 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		E96A4AA9260FFD74009EA367 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		E96A4AB1260FFF0D009EA367 /* HashingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashingItemView.swift; sourceTree = "<group>"; };
 		E96BC5012617B7C000D52BEF /* BaseUnitFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUnitFormatter.swift; sourceTree = "<group>"; };
+		E96FB2E92637586F00843CE1 /* HexKeyboardViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexKeyboardViewModifier.swift; sourceTree = "<group>"; };
+		E96FB2EE2637592300843CE1 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		E96FB3022637605200843CE1 /* DefaultKeyboardViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultKeyboardViewModifier.swift; sourceTree = "<group>"; };
+		E96FB31326376AF400843CE1 /* ClipboardItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardItemView.swift; sourceTree = "<group>"; };
 		E97093272621088700C65FB3 /* ArbitaryPrecisionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArbitaryPrecisionView.swift; sourceTree = "<group>"; };
 		E97093AB26210E0500C65FB3 /* BigOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigOperation.swift; sourceTree = "<group>"; };
 		E97879FA2617EE88003C66B2 /* Data+Hashing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Hashing.swift"; sourceTree = "<group>"; };
@@ -161,7 +169,7 @@
 		E9ADCF5026226CB000B0862E /* CopyAlertTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyAlertTextView.swift; sourceTree = "<group>"; };
 		E9ADCF5C26228B7B00B0862E /* ClearButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButtonView.swift; sourceTree = "<group>"; };
 		E9BC9414261125E400D8B83E /* String+Encoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Encoding.swift"; sourceTree = "<group>"; };
-		E9BC942926112C9900D8B83E /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		E9BC942926112C9900D8B83E /* PasteNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteNavigationBar.swift; sourceTree = "<group>"; };
 		E9D6005E2623D6A300AD3DCD /* LitecoinUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitecoinUnitView.swift; sourceTree = "<group>"; };
 		E9E2902E262247EA00ADA2B7 /* ShamirSecretView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShamirSecretView.swift; sourceTree = "<group>"; };
 		E9ED74B02612E93300DCD4A3 /* DarkModeViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeViewModifier.swift; sourceTree = "<group>"; };
@@ -219,9 +227,9 @@
 			isa = PBXGroup;
 			children = (
 				E96BC5012617B7C000D52BEF /* BaseUnitFormatter.swift */,
+				E9ADCF4826226B3300B0862E /* ClipboardHelper.swift */,
 				E902F3E22616140300825004 /* CryptoUnitFormatter.swift */,
 				E902F422261630F300825004 /* QRCodeHelper.swift */,
-				E9ADCF4826226B3300B0862E /* ClipboardHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -235,6 +243,7 @@
 				E902F3ED2616170B00825004 /* String+Filtering.swift */,
 				E937D403260ECB8A00A75B06 /* String+Hashing.swift */,
 				E99F77BA26124118009BDFF1 /* Set+RawRepresentable.swift */,
+				E96FB2EE2637592300843CE1 /* UITextField.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -329,8 +338,8 @@
 				E945C396260EC96900E732A0 /* CryptoBoyApp.swift */,
 				E9163B4E260EB31200453411 /* MainView.swift */,
 				E9163AFF260EA4BA00453411 /* FunctionsView.swift */,
+				E96A4A8C260FE2DF009EA367 /* ClipboardView.swift */,
 				E96A4A84260FE062009EA367 /* CurrenciesView.swift */,
-				E96A4A8C260FE2DF009EA367 /* FavoritesView.swift */,
 				E96A4A8D260FE2DF009EA367 /* SettingsView.swift */,
 			);
 			path = Views;
@@ -383,8 +392,8 @@
 		E96A4A9F260FE4C9009EA367 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				E9BC942926112C9900D8B83E /* NavigationBar.swift */,
 				E9163B3F260EACA900453411 /* NavigationRow.swift */,
+				E9BC942926112C9900D8B83E /* PasteNavigationBar.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -393,6 +402,7 @@
 			isa = PBXGroup;
 			children = (
 				E9ADCF5C26228B7B00B0862E /* ClearButtonView.swift */,
+				E96FB31326376AF400843CE1 /* ClipboardItemView.swift */,
 				E9163B44260EAEA200453411 /* ComingSoonView.swift */,
 				E9ADCF5026226CB000B0862E /* CopyAlertTextView.swift */,
 				E928CEAA2627A893004FD5B4 /* CopyInputButtonView.swift */,
@@ -434,6 +444,8 @@
 			isa = PBXGroup;
 			children = (
 				E9ED74B02612E93300DCD4A3 /* DarkModeViewModifier.swift */,
+				E96FB3022637605200843CE1 /* DefaultKeyboardViewModifier.swift */,
+				E96FB2E92637586F00843CE1 /* HexKeyboardViewModifier.swift */,
 				E9ED74CD2612FCC900DCD4A3 /* NavigationViewModifier.swift */,
 				E9ED74B82612F6C200DCD4A3 /* ThemeViewModifier.swift */,
 			);
@@ -599,6 +611,7 @@
 				E9ED74C12612F8F500DCD4A3 /* HashFunction.swift in Sources */,
 				E96A4A8F260FE2DF009EA367 /* SettingsView.swift in Sources */,
 				E9163B45260EAEA200453411 /* ComingSoonView.swift in Sources */,
+				E96FB2EA2637586F00843CE1 /* HexKeyboardViewModifier.swift in Sources */,
 				E9ED74CE2612FCC900DCD4A3 /* NavigationViewModifier.swift in Sources */,
 				E9163B4F260EB31200453411 /* MainView.swift in Sources */,
 				E928CEAB2627A893004FD5B4 /* CopyInputButtonView.swift in Sources */,
@@ -611,8 +624,9 @@
 				E9ED74B12612E93300DCD4A3 /* DarkModeViewModifier.swift in Sources */,
 				E99F77FB26128569009BDFF1 /* EthereumUnitView.swift in Sources */,
 				E945C39C260EC96F00E732A0 /* HashingView.swift in Sources */,
-				E96A4A8E260FE2DF009EA367 /* FavoritesView.swift in Sources */,
+				E96A4A8E260FE2DF009EA367 /* ClipboardView.swift in Sources */,
 				E90853CE261153510001B9BE /* AboutDonateItem.swift in Sources */,
+				E96FB2EF2637592300843CE1 /* UITextField.swift in Sources */,
 				E945C397260EC96900E732A0 /* CryptoBoyApp.swift in Sources */,
 				E99F77BB26124118009BDFF1 /* Set+RawRepresentable.swift in Sources */,
 				E902F3EE2616170B00825004 /* String+Filtering.swift in Sources */,
@@ -633,6 +647,8 @@
 				E96A4A85260FE062009EA367 /* CurrenciesView.swift in Sources */,
 				E9ED74D9261301B300DCD4A3 /* PageType.swift in Sources */,
 				E97879FB2617EE88003C66B2 /* Data+Hashing.swift in Sources */,
+				E96FB31426376AF400843CE1 /* ClipboardItemView.swift in Sources */,
+				E96FB3032637605200843CE1 /* DefaultKeyboardViewModifier.swift in Sources */,
 				E9ADCF4926226B3300B0862E /* ClipboardHelper.swift in Sources */,
 				E9BC9415261125E400D8B83E /* String+Encoding.swift in Sources */,
 				E9ADCF5D26228B7B00B0862E /* ClearButtonView.swift in Sources */,
@@ -644,7 +660,7 @@
 				E9163B3A260EAAD200453411 /* MenuSection.swift in Sources */,
 				E9ADCF5126226CB000B0862E /* CopyAlertTextView.swift in Sources */,
 				E97093AC26210E0500C65FB3 /* BigOperation.swift in Sources */,
-				E9BC942A26112C9900D8B83E /* NavigationBar.swift in Sources */,
+				E9BC942A26112C9900D8B83E /* PasteNavigationBar.swift in Sources */,
 				E96557DE2616A536004E7BF1 /* BaseUnit.swift in Sources */,
 				E9ADCF3826225F0D00B0862E /* Predef.swift in Sources */,
 				E90853DE261158700001B9BE /* AboutLinkItem.swift in Sources */,
@@ -816,7 +832,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.2.0;
+				CURRENT_PROJECT_VERSION = 0.2.1;
 				DEVELOPMENT_ASSET_PATHS = "\"cryptoboy/Preview Content\"";
 				DEVELOPMENT_TEAM = ACU6WYW3JF;
 				ENABLE_PREVIEWS = NO;
@@ -826,7 +842,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.0;
+				MARKETING_VERSION = 0.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = engineering.pavel.cryptoboy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -843,7 +859,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.2.0;
+				CURRENT_PROJECT_VERSION = 0.2.1;
 				DEVELOPMENT_ASSET_PATHS = "\"cryptoboy/Preview Content\"";
 				DEVELOPMENT_TEAM = ACU6WYW3JF;
 				ENABLE_PREVIEWS = NO;
@@ -853,7 +869,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.0;
+				MARKETING_VERSION = 0.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = engineering.pavel.cryptoboy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

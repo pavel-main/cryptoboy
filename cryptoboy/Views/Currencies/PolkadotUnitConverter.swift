@@ -55,6 +55,7 @@ struct PolkadotUnitView: View {
                                 })
                             )
                             .keyboardType(.decimalPad)
+                            .modifier(DefaultKeyboardViewModifier())
                         }
                     }
                 }
@@ -74,6 +75,7 @@ struct PolkadotUnitView: View {
                                 })
                             )
                             .keyboardType(.decimalPad)
+                            .modifier(DefaultKeyboardViewModifier())
                         }
                     }
                 }

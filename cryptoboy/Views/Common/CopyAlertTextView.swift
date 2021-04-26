@@ -28,8 +28,10 @@ struct CopyAlertTextView: View {
         Section(header: Text(self.title)) {
             HStack {
                 Button(action: {
-                    ClipboardHelper.copyString(callback())
+                    let value = callback()
+                    ClipboardHelper.copyString(value)
                     showCopyAlert.toggle()
+                    self.state.clipboard.insert(value, at: 0)
                 }) {
                     Text(callback())
                         .multilineTextAlignment(self.alignment)

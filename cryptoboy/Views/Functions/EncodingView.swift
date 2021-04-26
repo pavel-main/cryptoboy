@@ -24,8 +24,7 @@ struct EncodingView: View {
                     CopyInputButtonView({ return self.state.message }, { return self.state.isDefaultMessage(false) })
 
                     TextField("", text: $state.message)
-                        .autocapitalization(.none)
-                        .disableAutocorrection(true)
+                        .modifier(DefaultKeyboardViewModifier())
 
                     ClearButtonView({ self.state.clearMessage() }, { self.state.message.isEmpty })
                 }
