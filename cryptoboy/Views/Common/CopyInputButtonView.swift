@@ -36,7 +36,7 @@ struct CopyInputButtonView: View {
                 let value = callback()
                 ClipboardHelper.copyString(value)
                 showCopyAlert.toggle()
-                state.clipboard.insert(value, at: 0)
+                state.addClipboard(value)
             }) {
                 Image(systemName: systemImage)
             }

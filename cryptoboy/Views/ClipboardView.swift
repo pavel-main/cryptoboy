@@ -12,17 +12,16 @@ struct ClipboardView: View {
 
     var body: some View {
         NavigationView {
-            if !state.clipboard.isEmpty {
-                List {
-                    ForEach(state.clipboard, id: \.self) { item in
-                        ClipboardItemView(item)
+            VStack {
+                if !state.clipboard.isEmpty {
+                    List {
+                        ForEach(state.clipboard, id: \.self) { item in
+                            ClipboardItemView(item)
+                        }
+                        .onDelete(perform: state.removeClipboard)
                     }
-                    .onDelete(perform: state.removeClipboard)
-                }
-                .listStyle(GroupedListStyle())
-                .navigationTitle("Clipboard")
-            } else {
-                VStack {
+                    .listStyle(GroupedListStyle())
+                } else {
                     Spacer()
 
                     Image("clipboard-empty")
@@ -35,8 +34,8 @@ struct ClipboardView: View {
                     Spacer()
                     Spacer()
                 }
-                .navigationTitle("Clipboard")
             }
+            .navigationTitle("Clipboard")
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .environmentObject(state)

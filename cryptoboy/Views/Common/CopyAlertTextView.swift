@@ -31,7 +31,7 @@ struct CopyAlertTextView: View {
                     let value = callback()
                     ClipboardHelper.copyString(value)
                     showCopyAlert.toggle()
-                    self.state.clipboard.insert(value, at: 0)
+                    state.addClipboard(value)
                 }) {
                     Text(callback())
                         .multilineTextAlignment(self.alignment)

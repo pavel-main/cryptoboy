@@ -22,13 +22,13 @@ struct ClipboardItemView: View {
 
     var body: some View {
         HStack {
-            Image(systemName: "mail")
+            Image(systemName: "highlighter")
             Button(action: {
                 ClipboardHelper.copyString(value)
                 showCopyAlert.toggle()
             }) {
                 Text(value)
-                    .multilineTextAlignment(.leading)
+                    .lineLimit(1)
             }
             .alert(isPresented: $showCopyAlert) {
                 Alert(

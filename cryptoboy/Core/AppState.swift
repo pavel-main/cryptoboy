@@ -121,6 +121,12 @@ class AppState: ObservableObject {
         return visitedViews.contains(view)
     }
 
+    func addClipboard(_ item: String) {
+        if !self.clipboard.contains(item) {
+            self.clipboard.insert(item, at: 0)
+        }
+    }
+
     func removeClipboard(at offsets: IndexSet) {
         if !self.clipboard.isEmpty {
             self.clipboard.remove(atOffsets: offsets)
