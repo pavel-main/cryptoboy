@@ -41,7 +41,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   BigInt:
-    :commit: f05a83fa7d6fe4e04b34e704fa87360a677abce3
+    :commit: 2050b000e801ea6214d8ca752d181dbc3e7a470a
     :git: https://github.com/CryptoboyApp/BigInt.git
   QRCoder:
     :commit: 6698f9bbdd2e819e1377163be04b833e94beb9f6
