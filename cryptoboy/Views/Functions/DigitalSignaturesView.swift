@@ -15,12 +15,11 @@ struct DigitalSignaturesView: View {
         Form {
             Section(header: Text("Private Key")) {
                 HStack {
-                    CopyInputButtonView({ return self.state.privateKey?.data.hexString ?? "" }, { return self.state.privateKey == nil }
-                    )
+                    CopyInputButtonView({ return state.keypair.getPrivate() }, { return state.keypair.isEmpty() })
 
                     TextField("", text: Binding(
                         get: {
-                            guard let privateKey = self.state.privateKey else {
+                            guard let privateKey = state.keypair.privateKey else {
                                 return ""
                             }
 
@@ -34,35 +33,33 @@ struct DigitalSignaturesView: View {
 
                             // Update
                             if let privateKey = PrivateKey.init(data: input) {
-                                self.state.privateKey = privateKey
+                                state.keypair.privateKey = privateKey
                             }
                         })
                     )
                     .modifier(DefaultKeyboardViewModifier())
 
-                    ClearButtonView({ self.state.clearPrivateKey() }, { self.state.privateKey == nil })
+                    ClearButtonView({ state.resetKeypair() }, { state.keypair.isEmpty() })
                 }
 
-                Button(action: {
-                    self.state.privateKey = PrivateKey.init()
-                }) {
+                Button(action: { state.keypair.privateKey = PrivateKey.init() }) {
                     Text("Generate New")
                 }
             }
 
             Section(header: Text("Message")) {
                 HStack {
-                    CopyInputButtonView({ return self.state.message }, { return self.state.isDefaultMessage(false) }
+                    CopyInputButtonView({ return state.message.value }, { return state.message.isDefault() }
                     )
 
-                    TextField("", text: $state.message)
+                    TextField("", text: $state.message.value)
                         .modifier(DefaultKeyboardViewModifier())
 
-                    ClearButtonView({ self.state.clearMessage() }, { self.state.message.isEmpty })
+                    ClearButtonView({ state.resetMessage() }, { state.message.isDefault() })
                 }
             }
 
-            if state.privateKey != nil && !state.message.isEmpty {
+            if !state.keypair.isEmpty() && !state.message.isEmpty() {
                 DigitalSignatureItemView(.raw)
                 DigitalSignatureItemView(.asn1)
                 DigitalSignatureItemView(.schnorr)

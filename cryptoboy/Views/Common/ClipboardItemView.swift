@@ -24,7 +24,7 @@ struct ClipboardItemView: View {
         HStack {
             Image(systemName: "highlighter")
             Button(action: {
-                ClipboardHelper.copyString(value)
+                ClipboardHelper.setString(value)
                 showCopyAlert.toggle()
             }) {
                 Text(value)

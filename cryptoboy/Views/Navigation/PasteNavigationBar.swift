@@ -13,43 +13,45 @@ struct PasteNavigationBar: View {
 
     var page: PageType
 
-    let messagePages: [PageType] = [.hash, .encoding, .ecdsa]
-    let keyPages: [PageType] = [.keypair, .ecdh]
+    let messagePages: [PageType] = [.hash, .encoding, .ecdsa, .qrcode]
+    let keyPages: [PageType] = [.keypair, .ecdh, .ecdsa]
 
     init(_ page: PageType) {
         self.page = page
     }
 
     var body: some View {
-        if messagePages.contains(self.page) {
-            Button(action: {
-                guard let result = ClipboardHelper.getString() else {
-                    return
-                }
+        HStack {
+            if keyPages.contains(self.page) {
+                Button(action: {
+                    let paste = ClipboardHelper.getString()
+                    if paste.isEmpty {
+                        return
+                    }
 
-                self.state.message = result
-            }) {
-                Image(systemName: "square.and.arrow.down.on.square")
+                    guard let input = Data.init(hexString: paste) else {
+                        return
+                    }
+
+                    guard let privateKey = PrivateKey.init(data: input) else {
+                        return
+                    }
+
+                    state.keypair.privateKey = privateKey
+                }) {
+                    Image(systemName: "lock.doc")
+                }
             }
-        }
 
-        if keyPages.contains(self.page) {
-            Button(action: {
-                guard let result = ClipboardHelper.getString() else {
-                    return
+            if messagePages.contains(self.page) {
+                Button(action: {
+                    let paste = ClipboardHelper.getString()
+                    if !paste.isEmpty {
+                        state.message.value = paste
+                    }
+                }) {
+                    Image(systemName: "arrow.down.doc")
                 }
-
-                guard let input = Data.init(hexString: result) else {
-                    return
-                }
-
-                guard let privateKey = PrivateKey.init(data: input) else {
-                    return
-                }
-
-                self.state.privateKey = privateKey
-            }) {
-                Image(systemName: "square.and.arrow.down.on.square")
             }
         }
     }

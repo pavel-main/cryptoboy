@@ -21,12 +21,12 @@ struct EncodingView: View {
         Form {
             Section(header: Text("Input")) {
                 HStack {
-                    CopyInputButtonView({ return self.state.message }, { return self.state.isDefaultMessage(false) })
+                    CopyInputButtonView({ return state.message.value }, { return state.message.isDefault() })
 
-                    TextField("", text: $state.message)
+                    TextField("", text: $state.message.value)
                         .modifier(DefaultKeyboardViewModifier())
 
-                    ClearButtonView({ self.state.clearMessage() }, { self.state.message.isEmpty })
+                    ClearButtonView({ state.resetMessage() }, { state.message.isDefault() })
                 }
             }
 

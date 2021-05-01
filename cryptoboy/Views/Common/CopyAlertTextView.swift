@@ -29,7 +29,7 @@ struct CopyAlertTextView: View {
             HStack {
                 Button(action: {
                     let value = callback()
-                    ClipboardHelper.copyString(value)
+                    ClipboardHelper.setString(value)
                     showCopyAlert.toggle()
                     state.addClipboard(value)
                 }) {

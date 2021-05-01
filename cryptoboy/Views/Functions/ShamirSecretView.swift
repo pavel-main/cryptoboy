@@ -21,13 +21,13 @@ struct ShamirSecretView: View {
         Form {
             Section(header: Text("Input")) {
                 HStack {
-                    CopyInputButtonView({ return self.state.message }, { return self.state.isDefaultMessage(false) })
+                    CopyInputButtonView({ return state.message.value }, { return state.message.isDefault() })
 
-                    TextField("", text: $state.message)
+                    TextField("", text: $state.message.value)
                         .modifier(DefaultKeyboardViewModifier())
 
-                    ClearButtonView({ self.state.clearMessage() }, { self.state.message.isEmpty })
-                        .onChange(of: state.message, perform: { _ in
+                    ClearButtonView({ state.resetMessage() }, { state.message.isDefault() })
+                        .onChange(of: state.message.value, perform: { _ in
                             self.calculate()
                         })
                 }
@@ -71,7 +71,7 @@ struct ShamirSecretView: View {
                 }
             }
 
-            if secret != nil && !state.message.isEmpty {
+            if secret != nil && !state.message.isEmpty() {
                 ForEach((1...Int(self.shares)), id: \.self) { idx in
                     CopyAlertTextView("Share \(idx)", {
                         return self.getShare(idx)
@@ -86,11 +86,11 @@ struct ShamirSecretView: View {
     }
 
     func calculate() {
-        if state.message.isEmpty {
+        if state.message.isEmpty() {
             return
         }
 
-        let message = Data([UInt8](state.message.utf8))
+        let message = Data([UInt8](state.message.value.utf8))
         do {
             try self.secret = Secret(data: message, threshold: Int(self.threshold), shares: Int(self.shares))
             try self.secretShares = self.secret!.split()

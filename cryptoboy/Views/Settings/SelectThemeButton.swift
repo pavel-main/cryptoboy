@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SelectThemeButton: View {
     @EnvironmentObject var state: AppState
-    @AppStorage("currentTheme") var currentTheme: String = DEFAULT_THEME
+    @AppStorage("currentTheme") var currentTheme: String = "green"
 
     var theme: Theme
 
@@ -21,7 +21,7 @@ struct SelectThemeButton: View {
                 HStack {
                     Circle()
                         .strokeBorder(state.invertedColor(), lineWidth: 1)
-                        .background(Circle().foregroundColor(state.getTheme(self.theme.name).colorPrimary))
+                        .background(Circle().foregroundColor(state.theme.get(theme.name).colorPrimary))
                         .frame(width: 25, height: 25)
 
                     Text(self.theme.publicName)
@@ -36,7 +36,7 @@ struct SelectThemeButton: View {
     }
 
     func isActive() -> Bool {
-        let current = state.getTheme(self.currentTheme)
+        let current = state.theme.get(currentTheme)
 
         if current.name == theme.name && current.female == theme.female {
             return true

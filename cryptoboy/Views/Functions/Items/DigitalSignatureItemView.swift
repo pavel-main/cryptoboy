@@ -18,17 +18,17 @@ struct DigitalSignatureItemView: View {
     }
 
     var body: some View {
-        if !state.isDefaultMessage(false) {
+        if !state.message.isDefault() {
             CopyAlertTextView(self.type.title, { return getSignedMessage() })
         }
     }
 
     func getSignedMessage() -> String {
-        guard let privateKey = self.state.privateKey else {
+        guard let privateKey = state.keypair.privateKey else {
             return ""
         }
 
-        guard let message = state.message.data(using: .utf8) else {
+        guard let message = state.message.value.data(using: .utf8) else {
             return ""
         }
 

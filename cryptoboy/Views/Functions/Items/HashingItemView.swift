@@ -19,20 +19,28 @@ struct HashingItemView: View {
     }
 
     var body: some View {
-        if !state.isDefaultMessage(self.isBinary) {
-            CopyAlertTextView(self.type.title, { return getHash() })
+        if !isDefault() {
+            CopyAlertTextView(type.title, { return getHash() })
         }
     }
 
+    func isDefault() -> Bool {
+        if isBinary {
+            return state.bytes.isDefault()
+        }
+
+        return state.message.isDefault()
+    }
+
     func getHash() -> String {
-        if self.isBinary {
-            guard let hash = self.state.getBinaryHash(self.type) else {
+        if isBinary {
+            guard let hash = state.bytes.getHash(type) else {
                 return ""
             }
 
             return hash
         }
 
-        return self.state.getHash(self.type)
+        return state.message.getHash(type)
     }
 }

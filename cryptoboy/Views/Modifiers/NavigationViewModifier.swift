@@ -15,12 +15,9 @@ public struct NavigationViewModifier: ViewModifier {
 
     public func body(content: Content) -> some View {
         content
-            .navigationTitle(self.page.title)
+            .navigationTitle(page.title)
             .navigationBarTitleDisplayMode(.inline)
             .navigationViewStyle(StackNavigationViewStyle())
-            .onAppear {
-                state.visitView("\(page)")
-            }
             .toolbar {
                 PasteNavigationBar(page)
             }

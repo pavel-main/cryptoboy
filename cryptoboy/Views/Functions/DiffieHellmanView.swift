@@ -18,16 +18,11 @@ struct DiffieHellmanView: View {
         Form {
             Section(header: Text("Private Key")) {
                 HStack {
-                    CopyInputButtonView({ return self.state.privateKey?.data.hexString ?? "" }, { return self.state.privateKey == nil }
-                    )
+                    CopyInputButtonView({ return state.keypair.getPrivate() }, { return state.keypair.isEmpty() })
 
                     TextField("", text: Binding(
                         get: {
-                            guard let privateKey = self.state.privateKey else {
-                                return ""
-                            }
-
-                            return privateKey.data.hexString
+                            return state.keypair.getPrivate()
                         },
                         set: { (newValue) in
                             // Validate
@@ -37,34 +32,31 @@ struct DiffieHellmanView: View {
 
                             // Update
                             if let privateKey = PrivateKey.init(data: input) {
-                                self.state.privateKey = privateKey
+                                state.keypair.privateKey = privateKey
                             }
                         })
                     )
                     .modifier(DefaultKeyboardViewModifier())
 
-                    ClearButtonView({ self.state.clearPrivateKey() }, { self.state.privateKey == nil })
+                    ClearButtonView({ state.resetKeypair() }, { state.keypair.isEmpty() })
                 }
 
-                Button(action: {
-                    self.state.privateKey = PrivateKey.init()
-                }) {
+                Button(action: { state.keypair.privateKey = PrivateKey.init() }) {
                     Text("Generate New")
                 }
             }
 
             Section(header: Text("Public Key (secp256k1)")) {
                 HStack {
-                    CopyInputButtonView({ return self.curveType.getPublicKey(from: self.counterKey!).data.hexString }, { return self.counterKey == nil }
-                    )
+                    CopyInputButtonView({ return curveType.getPublicKey(from: counterKey!).data.hexString }, { return counterKey == nil })
 
                     TextField("", text: Binding(
                         get: {
-                            guard let privateKey = self.counterKey else {
+                            guard let privateKey = counterKey else {
                                 return ""
                             }
 
-                            return self.curveType.getPublicKey(from: privateKey).data.hexString
+                            return curveType.getPublicKey(from: privateKey).data.hexString
                         },
                         set: { (newValue) in
                             // Validate
@@ -73,19 +65,17 @@ struct DiffieHellmanView: View {
                             }
 
                             // Update
-                            if let counterKey = PrivateKey.init(data: input) {
-                                self.counterKey = counterKey
+                            if let ctrKey = PrivateKey.init(data: input) {
+                                counterKey = ctrKey
                             }
                         })
                     )
                     .modifier(DefaultKeyboardViewModifier())
 
-                    ClearButtonView({ self.counterKey = nil }, { self.counterKey == nil })
+                    ClearButtonView({ counterKey = nil }, { counterKey == nil })
                 }
 
-                Button(action: {
-                    self.counterKey = PrivateKey.init()
-                }) {
+                Button(action: { counterKey = PrivateKey.init() }) {
                     Text("Generate New")
                 }
             }
@@ -98,7 +88,7 @@ struct DiffieHellmanView: View {
     }
 
     func getSharedSecret() -> String {
-        guard let privateKey = self.state.privateKey else {
+        guard let privateKey = state.keypair.privateKey else {
             return ""
         }
 

@@ -20,10 +20,10 @@ extension String {
     }
 
     func hash(_ type: HashFunction) -> String {
-        if (type == .bytepad) {
+        if type == .bytepad {
             return self.bytepad()
         }
-        
+
         let data = Data(self.utf8)
         return data.hash(type).hexString
     }
