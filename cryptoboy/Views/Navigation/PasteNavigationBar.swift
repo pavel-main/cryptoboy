@@ -30,6 +30,7 @@ struct PasteNavigationBar: View {
             }) {
                 Image(systemName: "arrow.down.doc")
             }
+            .disabled(ClipboardHelper.isEmpty())
         }
         
         if keyPages.contains(self.page) {
@@ -51,6 +52,7 @@ struct PasteNavigationBar: View {
             }) {
                 Image(systemName: "lock.doc")
             }
+            .disabled(ClipboardHelper.isEmpty())
         }
     }
 }

@@ -9,16 +9,20 @@ import Foundation
 import SwiftUI
 
 class ClipboardHelper {
-
+    
     static func setString(_ input: String) {
         UIPasteboard.general.string = input
     }
 
     static func resetString() {
-        UIPasteboard.general.string = ""
+        UIPasteboard.general.items.removeAll()
     }
 
     static func getString() -> String {
         return UIPasteboard.general.string ?? ""
+    }
+    
+    static func isEmpty() -> Bool {
+        return !UIPasteboard.general.hasStrings
     }
 }
