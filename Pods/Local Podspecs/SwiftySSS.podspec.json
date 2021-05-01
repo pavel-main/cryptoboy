@@ -12,7 +12,7 @@
     "Fedorenko Nikita": "n.fedorenko@pixelplex.io"
   },
   "platforms": {
-    "ios": "10.0"
+    "ios": "12.0"
   },
   "swift_versions": "5.0",
   "source": {
