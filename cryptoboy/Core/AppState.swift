@@ -20,11 +20,13 @@ class AppState: ObservableObject {
             objectWillChange.send()
         }
     }
+    
     @Published var message = MessageState() {
         willSet {
             objectWillChange.send()
         }
     }
+    
     @Published var keypair = KeypairState() {
         willSet {
             objectWillChange.send()
