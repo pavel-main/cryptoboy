@@ -32,7 +32,7 @@ struct DigitalSignatureItemView: View {
             return ""
         }
 
-        let digest = message.hash(state.digestType)
+        let digest = message.hash(.sha256)
 
         var signature: Data?
 

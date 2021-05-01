@@ -45,7 +45,6 @@ class AppState: ObservableObject {
     }
 
     @Published var isBin: Bool = false
-    @Published var digestType: HashFunction = .sha256
     @Published var isDecoding: Bool = false
 
     @AppStorage("clipboard") var clipboard: [String] = [] {
