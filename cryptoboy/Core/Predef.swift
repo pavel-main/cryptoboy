@@ -67,8 +67,7 @@ let functionsMenu: [MenuSection] = [
             id: "uint256",
             title: "Arbitary-precision arithmetic",
             systemImage: "scope",
-            description: "BigInt add, sub, mul, div",
-            icons: ["new"]
+            description: "BigInt add, sub, mul, div"
         )
     ]),
     // Data
@@ -84,13 +83,6 @@ let functionsMenu: [MenuSection] = [
             title: "Encoding",
             systemImage: "curlybraces",
             description: "hex, base58, base64"
-        ),
-        MenuItem(
-            id: "encryption",
-            title: "Encryption",
-            systemImage: "lock.shield",
-            description: "AES-CBC, AES-CTR",
-            icons: ["soon"]
         )
     ]),
     // ECC
@@ -111,7 +103,7 @@ let functionsMenu: [MenuSection] = [
             id: "ecdsa",
             title: "Digital Signatures",
             systemImage: "signature",
-            description: "ECDSA",
+            description: "ECDSA with SHA-256",
             icons: ["new"]
         )
     ]),
@@ -198,15 +190,6 @@ let currenciesMenu: [MenuSection] = [
             title: "Unit Converter",
             systemImage: "turkishlirasign.circle",
             description: "LTC, mLTC, photon"
-        )
-    ]),
-    // Bitcoin Cash
-    MenuSection(id: "bch", title: "Bitcoin Cash", items: [
-        MenuItem(
-            id: "bch_cashaddr",
-            title: "CashAddr Converter",
-            systemImage: "banknote",
-            icons: ["soon"]
         )
     ])
 ]

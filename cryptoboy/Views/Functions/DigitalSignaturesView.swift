@@ -11,15 +11,6 @@ import WalletCore
 struct DigitalSignaturesView: View {
     @EnvironmentObject var state: AppState
 
-    let digestTypes: [HashFunction] = [
-        .sha256,
-        .sha512,
-        .keccak256,
-        .keccak512,
-        .blake256,
-        .groestl512
-    ]
-
     var body: some View {
         Form {
             Section(header: Text("Private Key")) {
@@ -56,14 +47,6 @@ struct DigitalSignaturesView: View {
                     self.state.privateKey = PrivateKey.init()
                 }) {
                     Text("Generate New")
-                }
-            }
-
-            Section(header: Text("Digest")) {
-                Picker(selection: $state.digestType, label: Text("Digest")) {
-                    ForEach(digestTypes, id: \.self) { idx in
-                        Text(idx.title).tag(idx)
-                    }
                 }
             }
 

@@ -34,19 +34,18 @@ struct SettingsView: View {
                     }
                 }
 
-                // Donate
-                Section(header: Text("Donate")) {
-                    AboutDonateItem("BTC", "1PVVjazdf7ye5oSpTcBq5CWKkCMHHQYD1m")
-                    AboutDonateItem("ETH", "0xC5362223D38d1d4ADbE36Dd78E77B5f4DbbC0F21")
-                    AboutDonateItem("BCH", "bitcoincash:qrmtven6eellut9dm5v6ztaee9h9wu7zkulgd7crze")
-                    AboutDonateItem("XLM", "GAIDD763J2YXYZBGBWSWVT7Y6MPF2KTJO77OS2QXQ3FJ6UMN6GRDDGUC")
-                }
-
                 // System
                 Section(header: Text("System")) {
                     AboutSystemItem("App Version", state.appVersion)
                     AboutSystemItem("Build Date", buildDate)
                     AboutLinkItem("Issue Tracker", title: "GitHub", url: "https://github.com/CryptoboyApp/issues")
+                }
+                
+                // Donate
+                Section(header: Text("Donate")) {
+                    AboutDonateItem("BTC", "1PVVjazdf7ye5oSpTcBq5CWKkCMHHQYD1m")
+                    AboutDonateItem("ETH", "0xC5362223D38d1d4ADbE36Dd78E77B5f4DbbC0F21")
+                    AboutDonateItem("XLM", "GAIDD763J2YXYZBGBWSWVT7Y6MPF2KTJO77OS2QXQ3FJ6UMN6GRDDGUC")
                 }
 
                 // Danger
