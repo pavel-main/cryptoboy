@@ -53,7 +53,7 @@
 		E96BC5022617B7C000D52BEF /* BaseUnitFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96BC5012617B7C000D52BEF /* BaseUnitFormatter.swift */; };
 		E96FB2EA2637586F00843CE1 /* HexKeyboardViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96FB2E92637586F00843CE1 /* HexKeyboardViewModifier.swift */; };
 		E96FB2EF2637592300843CE1 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96FB2EE2637592300843CE1 /* UITextField.swift */; };
-		E96FB3032637605200843CE1 /* DefaultKeyboardViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96FB3022637605200843CE1 /* DefaultKeyboardViewModifier.swift */; };
+		E96FB3032637605200843CE1 /* SimpleKeyboardViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96FB3022637605200843CE1 /* SimpleKeyboardViewModifier.swift */; };
 		E96FB31426376AF400843CE1 /* ClipboardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96FB31326376AF400843CE1 /* ClipboardItemView.swift */; };
 		E97093282621088700C65FB3 /* ArbitaryPrecisionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97093272621088700C65FB3 /* ArbitaryPrecisionView.swift */; };
 		E97093AC26210E0500C65FB3 /* BigOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97093AB26210E0500C65FB3 /* BigOperation.swift */; };
@@ -157,7 +157,7 @@
 		E96BC5012617B7C000D52BEF /* BaseUnitFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUnitFormatter.swift; sourceTree = "<group>"; };
 		E96FB2E92637586F00843CE1 /* HexKeyboardViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexKeyboardViewModifier.swift; sourceTree = "<group>"; };
 		E96FB2EE2637592300843CE1 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
-		E96FB3022637605200843CE1 /* DefaultKeyboardViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultKeyboardViewModifier.swift; sourceTree = "<group>"; };
+		E96FB3022637605200843CE1 /* SimpleKeyboardViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleKeyboardViewModifier.swift; sourceTree = "<group>"; };
 		E96FB31326376AF400843CE1 /* ClipboardItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardItemView.swift; sourceTree = "<group>"; };
 		E97093272621088700C65FB3 /* ArbitaryPrecisionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArbitaryPrecisionView.swift; sourceTree = "<group>"; };
 		E97093AB26210E0500C65FB3 /* BigOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigOperation.swift; sourceTree = "<group>"; };
@@ -464,9 +464,9 @@
 			isa = PBXGroup;
 			children = (
 				E9ED74B02612E93300DCD4A3 /* DarkModeViewModifier.swift */,
-				E96FB3022637605200843CE1 /* DefaultKeyboardViewModifier.swift */,
 				E96FB2E92637586F00843CE1 /* HexKeyboardViewModifier.swift */,
 				E9ED74CD2612FCC900DCD4A3 /* NavigationViewModifier.swift */,
+				E96FB3022637605200843CE1 /* SimpleKeyboardViewModifier.swift */,
 				E9ED74B82612F6C200DCD4A3 /* ThemeViewModifier.swift */,
 			);
 			path = Modifiers;
@@ -672,7 +672,7 @@
 				E991FFEA263CD73A007CDD8F /* SystemState.swift in Sources */,
 				E97879FB2617EE88003C66B2 /* Data+Hashing.swift in Sources */,
 				E96FB31426376AF400843CE1 /* ClipboardItemView.swift in Sources */,
-				E96FB3032637605200843CE1 /* DefaultKeyboardViewModifier.swift in Sources */,
+				E96FB3032637605200843CE1 /* SimpleKeyboardViewModifier.swift in Sources */,
 				E991FFF6263CF196007CDD8F /* MenuState.swift in Sources */,
 				E9ADCF4926226B3300B0862E /* ClipboardHelper.swift in Sources */,
 				E9BC9415261125E400D8B83E /* String+Encoding.swift in Sources */,

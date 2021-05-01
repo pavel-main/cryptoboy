@@ -37,9 +37,9 @@ struct DigitalSignaturesView: View {
                             }
                         })
                     )
-                    .modifier(DefaultKeyboardViewModifier())
+                    .modifier(SimpleKeyboardViewModifier())
 
-                    ClearButtonView({ state.resetKeypair() }, { state.keypair.isEmpty() })
+                    ClearButtonView({ state.keypair = KeypairState() }, { state.keypair.isEmpty() })
                 }
 
                 Button(action: { state.keypair.privateKey = PrivateKey.init() }) {
@@ -53,7 +53,7 @@ struct DigitalSignaturesView: View {
                     )
 
                     TextField("", text: $state.message.value)
-                        .modifier(DefaultKeyboardViewModifier())
+                        .modifier(SimpleKeyboardViewModifier())
 
                     ClearButtonView({ state.resetMessage() }, { state.message.isDefault() })
                 }

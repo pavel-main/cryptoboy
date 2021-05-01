@@ -82,12 +82,12 @@ class AppState: ObservableObject {
         self.bytes = BinaryState()
     }
 
-    func resetKeypair() {
-        self.keypair = KeypairState()
-    }
-
     func resetMessage() {
         self.message = MessageState()
+    }
+    
+    func resetKeypair() {
+        self.keypair = KeypairState()
     }
 
     func reset() {

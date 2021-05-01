@@ -31,7 +31,7 @@ struct QRCodeGeneratorView: View {
                     CopyInputButtonView({ return state.message.value }, { return state.message.isEmpty() })
 
                     TextField("", text: $state.message.value)
-                        .modifier(DefaultKeyboardViewModifier())
+                        .modifier(SimpleKeyboardViewModifier())
 
                     ClearButtonView({ state.resetMessage() }, { state.message.isEmpty() })
                 }
@@ -47,7 +47,6 @@ struct QRCodeGeneratorView: View {
                     }
                 }
             }
-
         }
         .modifier(NavigationViewModifier(page: .qrcode))
         .environmentObject(state)

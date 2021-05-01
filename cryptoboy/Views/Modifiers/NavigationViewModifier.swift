@@ -19,7 +19,9 @@ public struct NavigationViewModifier: ViewModifier {
             .navigationBarTitleDisplayMode(.inline)
             .navigationViewStyle(StackNavigationViewStyle())
             .toolbar {
-                PasteNavigationBar(page)
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    PasteNavigationBar(page)
+                }
             }
     }
 }

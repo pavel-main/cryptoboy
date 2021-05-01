@@ -33,9 +33,9 @@ struct EllipticCurveView: View {
                             }
                         })
                     )
-                    .modifier(DefaultKeyboardViewModifier())
+                    .modifier(SimpleKeyboardViewModifier())
 
-                    ClearButtonView({ state.resetKeypair() }, { state.keypair.isEmpty() })
+                    ClearButtonView({ state.keypair = KeypairState() }, { state.keypair.isEmpty() })
                 }
 
                 Button(action: { state.keypair.privateKey = PrivateKey.init() }) {

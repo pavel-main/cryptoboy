@@ -25,7 +25,7 @@ struct HashingView: View {
                         CopyInputButtonView({ return state.message.value }, { return state.message.isDefault() })
 
                         TextField("", text: $state.message.value)
-                            .modifier(DefaultKeyboardViewModifier())
+                            .modifier(SimpleKeyboardViewModifier())
 
                         ClearButtonView({ state.resetMessage() }, { state.message.isDefault() })
                     } else {

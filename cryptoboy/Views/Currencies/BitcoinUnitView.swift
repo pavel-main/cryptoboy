@@ -36,7 +36,7 @@ struct BitcoinUnitView: View {
                             })
                         )
                         .keyboardType(.decimalPad)
-                        .modifier(DefaultKeyboardViewModifier())
+                        .modifier(SimpleKeyboardViewModifier())
                     }
                 }
             }

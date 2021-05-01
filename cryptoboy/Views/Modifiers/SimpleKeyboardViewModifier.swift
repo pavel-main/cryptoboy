@@ -8,7 +8,7 @@
 import SwiftUI
 import Introspect
 
-public struct DefaultKeyboardViewModifier: ViewModifier {
+public struct SimpleKeyboardViewModifier: ViewModifier {
 
     let flex = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
 
