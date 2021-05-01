@@ -32,7 +32,7 @@ struct PasteNavigationBar: View {
             }
             .disabled(ClipboardHelper.isEmpty())
         }
-        
+
         if keyPages.contains(self.page) {
             Button(action: {
                 let paste = ClipboardHelper.getString()

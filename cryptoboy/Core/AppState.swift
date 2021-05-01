@@ -20,13 +20,13 @@ class AppState: ObservableObject {
             objectWillChange.send()
         }
     }
-    
+
     @Published var message = MessageState() {
         willSet {
             objectWillChange.send()
         }
     }
-    
+
     @Published var keypair = KeypairState() {
         willSet {
             objectWillChange.send()
@@ -87,7 +87,7 @@ class AppState: ObservableObject {
     func resetMessage() {
         self.message = MessageState()
     }
-    
+
     func resetKeypair() {
         self.keypair = KeypairState()
     }
