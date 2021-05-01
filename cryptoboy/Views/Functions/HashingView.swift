@@ -11,7 +11,7 @@ struct HashingView: View {
     @EnvironmentObject var state: AppState
 
     var body: some View {
-        Picker(selection: $state.isMessageBinary, label: Text("Input Type")) {
+        Picker(selection: $state.isBin, label: Text("Input Type")) {
             Text("String").tag(false)
             Text("Hex Bytes").tag(true)
         }
@@ -21,33 +21,33 @@ struct HashingView: View {
         Form {
             Section(header: Text("Input")) {
                 HStack {
-                    if !state.isMessageBinary {
-                        CopyInputButtonView({ return self.state.message }, { return self.state.isDefaultMessage(false) })
+                    if !state.isBin {
+                        CopyInputButtonView({ return state.message.value }, { return state.message.isDefault() })
 
-                        TextField("", text: $state.message)
-                            .modifier(DefaultKeyboardViewModifier())
+                        TextField("", text: $state.message.value)
+                            .modifier(SimpleKeyboardViewModifier())
 
-                        ClearButtonView({ self.state.clearMessage() }, { self.state.isDefaultMessage(false) })
+                        ClearButtonView({ state.resetMessage() }, { state.message.isDefault() })
                     } else {
-                        CopyInputButtonView({ return self.state.messageBytes }, { return self.state.isDefaultMessage(true) })
+                        CopyInputButtonView({ return state.bytes.value }, { return state.bytes.isDefault() })
 
                         TextField("", text: Binding(
                             get: {
-                                return self.state.messageBytes
+                                return state.bytes.value
                             },
                             set: { (newValue) in
                                 let input = newValue.lowercased().filter { "0123456789abcdef".contains($0) }
-                                self.state.messageBytes = input
+                                state.bytes.value = input
                             })
                         )
                         .modifier(HexKeyboardViewModifier(hex: true))
 
-                        ClearButtonView({ self.state.clearMessageBytes() }, { self.state.isDefaultMessage(true) })
+                        ClearButtonView({ state.resetBytes() }, { state.bytes.isDefault() })
                     }
                 }
             }
 
-            if !state.isMessageBinary {
+            if !state.isBin {
                 Group {
                     HashingItemView(.sha1, false)
                     HashingItemView(.sha256, false)
@@ -55,16 +55,8 @@ struct HashingView: View {
                     HashingItemView(.keccak256, false)
                     HashingItemView(.keccak512, false)
                     HashingItemView(.ripemd160, false)
-                    HashingItemView(.blake256, false)
-                    HashingItemView(.groestl512, false)
-                }
-
-                Group {
                     HashingItemView(.sha256ripedm160, false)
                     HashingItemView(.sha256sha256, false)
-                    HashingItemView(.blake256ripedm160, false)
-                    HashingItemView(.blake256blake256, false)
-                    HashingItemView(.groestl512groestl512, false)
                 }
             } else {
                 Group {
@@ -75,16 +67,8 @@ struct HashingView: View {
                     HashingItemView(.keccak256, true)
                     HashingItemView(.keccak512, true)
                     HashingItemView(.ripemd160, true)
-                    HashingItemView(.blake256, true)
-                    HashingItemView(.groestl512, true)
-                }
-
-                Group {
                     HashingItemView(.sha256ripedm160, true)
                     HashingItemView(.sha256sha256, true)
-                    HashingItemView(.blake256ripedm160, true)
-                    HashingItemView(.blake256blake256, true)
-                    HashingItemView(.groestl512groestl512, true)
                 }
             }
         }

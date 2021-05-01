@@ -17,8 +17,8 @@ struct EncodingItemView: View {
     }
 
     var body: some View {
-        if !state.isDefaultMessage(false) {
-            CopyAlertTextView(self.type.title, { return self.state.encode(type) })
+        if !state.message.isDefault() {
+            CopyAlertTextView(type.title, { return state.message.encode(type) })
         }
     }
 }

@@ -14,7 +14,7 @@ struct NavigationRow: View {
     let colors: [String: Color] = ["new": .red, "soon": .blue]
 
     var body: some View {
-        NavigationLink(destination: state.getDestination(from: item)) {
+        NavigationLink(destination: state.menu.getView(item)) {
             HStack {
                 Label(String(), systemImage: item.systemImage)
 
@@ -34,15 +34,13 @@ struct NavigationRow: View {
 
                 // Icons
                 ForEach(item.icons, id: \.self) { icon in
-                    if icon == "soon" || !state.hasVisited(item.id) {
-                        Text(icon)
-                            .textCase(.uppercase)
-                            .font(.caption)
-                            .padding(5)
-                            .background(colors[icon, default: state.invertedColor()])
-                            .clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
-                            .foregroundColor(.white)
-                    }
+                    Text(icon)
+                        .textCase(.uppercase)
+                        .font(.caption)
+                        .padding(5)
+                        .background(colors[icon, default: state.invertedColor()])
+                        .clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
+                        .foregroundColor(.white)
                 }
             }
         }

@@ -22,11 +22,11 @@ struct DecodingItemView: View {
     }
 
     private func decode() -> String {
-        if state.isDefaultMessage(false) {
+        if state.message.isDefault() {
            return ""
         }
 
-        guard let message = self.state.message.decode(self.type) else {
+        guard let message = state.message.value.decode(type) else {
             return ""
         }
 

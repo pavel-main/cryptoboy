@@ -11,11 +11,9 @@ import Combine
 struct QRCodeGeneratorView: View {
     @EnvironmentObject var state: AppState
 
-    @State private var data = ""
     @State private var level = "M"
 
     let QR_SIZE = CGFloat(320)
-    let MESSAGE_LIMIT = 4096
 
     var body: some View {
         Picker(selection: $level, label: Text("Correction Level")) {
@@ -30,29 +28,25 @@ struct QRCodeGeneratorView: View {
         Form {
             Section(header: Text("Input Message")) {
                 HStack {
-                    CopyInputButtonView({ return self.data }, { return self.data.isEmpty })
+                    CopyInputButtonView({ return state.message.value }, { return state.message.isEmpty() })
 
-                    TextField("", text: $data)
-                        .modifier(DefaultKeyboardViewModifier())
-                        .onReceive(data.publisher.collect()) {
-                            self.data = String($0.prefix(MESSAGE_LIMIT))
-                        }
+                    TextField("", text: $state.message.value)
+                        .modifier(SimpleKeyboardViewModifier())
 
-                    ClearButtonView({ self.data = "" }, { self.data.isEmpty })
+                    ClearButtonView({ state.resetMessage() }, { state.message.isEmpty() })
                 }
             }
 
-            if !data.isEmpty {
+            if !state.message.isEmpty() {
                 Section(header: Text("QR Code")) {
                     VStack {
-                        Image(uiImage: QRCodeHelper.generate(from: self.data, size: QR_SIZE, level: self.level))
+                        Image(uiImage: QRCodeHelper.generate(from: state.message.value, size: QR_SIZE, level: level))
                             .interpolation(.none)
                             .resizable()
                             .aspectRatio(1, contentMode: .fit)
                     }
                 }
             }
-
         }
         .modifier(NavigationViewModifier(page: .qrcode))
         .environmentObject(state)

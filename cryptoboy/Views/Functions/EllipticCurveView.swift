@@ -15,16 +15,11 @@ struct EllipticCurveView: View {
         Form {
             Section(header: Text("Private Key")) {
                 HStack {
-                    CopyInputButtonView({ return self.state.privateKey?.data.hexString ?? "" }, { return self.state.privateKey == nil }
-                    )
+                    CopyInputButtonView({ return state.keypair.getPrivate() }, { return state.keypair.isEmpty() })
 
                     TextField("", text: Binding(
                         get: {
-                            guard let privateKey = self.state.privateKey else {
-                                return ""
-                            }
-
-                            return privateKey.data.hexString
+                            return state.keypair.getPrivate()
                         },
                         set: { (newValue) in
                             // Validate
@@ -34,23 +29,21 @@ struct EllipticCurveView: View {
 
                             // Update
                             if let privateKey = PrivateKey.init(data: input) {
-                                self.state.privateKey = privateKey
+                                state.keypair.privateKey = privateKey
                             }
                         })
                     )
-                    .modifier(DefaultKeyboardViewModifier())
+                    .modifier(SimpleKeyboardViewModifier())
 
-                    ClearButtonView({ self.state.clearPrivateKey() }, { self.state.privateKey == nil })
+                    ClearButtonView({ state.keypair = KeypairState() }, { state.keypair.isEmpty() })
                 }
 
-                Button(action: {
-                    self.state.privateKey = PrivateKey.init()
-                }) {
+                Button(action: { state.keypair.privateKey = PrivateKey.init() }) {
                     Text("Generate New")
                 }
             }
 
-            if state.privateKey != nil {
+            if !state.keypair.isEmpty() {
                 Group {
                     EllipticCurveItemView(.secp256k1(compressed: true))
                     EllipticCurveItemView(.ed25519)

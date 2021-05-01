@@ -46,8 +46,8 @@ extension Array where Element == Limb {
         s2.add(s1)
         var p3 = x2
         p3.multiply(s2)
-        p3.subtract(p1, 0)
-        p3.subtract(p2, 0)
+        _ = p3.subtract(p1, 0)
+        _ = p3.subtract(p2, 0)
         var w = Limbs(repeating: 0, count: 4 * k)
         w.add(p1, 2 * k)
         w.add(p3, k)

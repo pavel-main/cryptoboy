@@ -17,6 +17,6 @@ struct EllipticCurveItemView: View {
     }
 
     var body: some View {
-        CopyAlertTextView(self.type.title, { return self.state.publicKeyOrDefault(self.type) })
+        CopyAlertTextView(type.title, { return state.keypair.getPublic(type) })
     }
 }

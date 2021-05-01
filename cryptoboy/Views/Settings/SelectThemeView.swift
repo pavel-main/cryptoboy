@@ -20,7 +20,7 @@ struct SelectThemeView: View {
             .pickerStyle(SegmentedPickerStyle())
 
             List {
-                ForEach(themes, id: \.self) { theme in
+                ForEach(state.theme.themes, id: \.self) { theme in
                     if shouldDisplay(theme) {
                         SelectThemeButton(theme: theme)
                     }

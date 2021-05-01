@@ -22,9 +22,9 @@ struct ClipboardItemView: View {
 
     var body: some View {
         HStack {
-            Image(systemName: "highlighter")
+            Image(systemName: "doc.text")
             Button(action: {
-                ClipboardHelper.copyString(value)
+                ClipboardHelper.setString(value)
                 showCopyAlert.toggle()
             }) {
                 Text(value)

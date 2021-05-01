@@ -12,14 +12,6 @@ struct SettingsView: View {
     @AppStorage("isDarkMode") var isDarkMode: Bool = true
     @State private var showClearPrompt = false
 
-    var buildDate: String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .medium
-        dateFormatter.locale = Locale.current
-        return dateFormatter.string(from: state.rawBuildDate)
-    }
-
     var body: some View {
         NavigationView {
             List {
@@ -36,11 +28,11 @@ struct SettingsView: View {
 
                 // System
                 Section(header: Text("System")) {
-                    AboutSystemItem("App Version", state.appVersion)
-                    AboutSystemItem("Build Date", buildDate)
+                    AboutSystemItem("App Version", state.sys.appVersion)
+                    AboutSystemItem("Build Date", state.sys.buildDate)
                     AboutLinkItem("Issue Tracker", title: "GitHub", url: "https://github.com/CryptoboyApp/issues")
                 }
-                
+
                 // Donate
                 Section(header: Text("Donate")) {
                     AboutDonateItem("BTC", "1PVVjazdf7ye5oSpTcBq5CWKkCMHHQYD1m")
@@ -66,7 +58,7 @@ struct SettingsView: View {
                             title: Text("Clear App State"),
                             message: Text("Are you sure?"),
                             primaryButton: .destructive(Text("Clear")) {
-                                state.clearState()
+                                state.reset()
                             },
                             secondaryButton: .cancel()
                         )

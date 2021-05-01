@@ -9,9 +9,9 @@ import Foundation
 import SwiftUI
 
 extension UITextField {
-   @objc func doneButtonTapped(button: UIBarButtonItem) {
-      self.resignFirstResponder()
-   }
+    @objc func doneButtonTapped(button: UIBarButtonItem) {
+        self.resignFirstResponder()
+    }
 
     @objc func hexButtonTapped(button: UIBarButtonItem) {
         self.insertText(button.title!)

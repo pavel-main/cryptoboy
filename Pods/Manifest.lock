@@ -1,7 +1,6 @@
 PODS:
   - BigInt (1.2.3)
   - Introspect (0.1.3)
-  - QRCoder (1.1.0)
   - SwiftLint (0.43.1)
   - SwiftProtobuf (1.16.0)
   - SwiftRadix (1.0.1)
@@ -16,7 +15,6 @@ PODS:
 DEPENDENCIES:
   - BigInt (from `https://github.com/CryptoboyApp/BigInt.git`)
   - Introspect
-  - QRCoder (from `https://github.com/CryptoboyApp/QRCoder.git`)
   - SwiftLint
   - SwiftRadix (from `https://github.com/CryptoboyApp/SwiftRadix.git`)
   - SwiftySSS (from `https://github.com/CryptoboyApp/SwiftySSS.git`)
@@ -32,8 +30,6 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   BigInt:
     :git: https://github.com/CryptoboyApp/BigInt.git
-  QRCoder:
-    :git: https://github.com/CryptoboyApp/QRCoder.git
   SwiftRadix:
     :git: https://github.com/CryptoboyApp/SwiftRadix.git
   SwiftySSS:
@@ -41,28 +37,24 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   BigInt:
-    :commit: f05a83fa7d6fe4e04b34e704fa87360a677abce3
+    :commit: 23a2c63cc09ccb3316fc782960a350b8f9121f4e
     :git: https://github.com/CryptoboyApp/BigInt.git
-  QRCoder:
-    :commit: 6698f9bbdd2e819e1377163be04b833e94beb9f6
-    :git: https://github.com/CryptoboyApp/QRCoder.git
   SwiftRadix:
-    :commit: 51d9d6247c9b07521ffa1e0268fb84e30e0efcf8
+    :commit: 7c527cb24d54e23667506d7cc65263815597ac69
     :git: https://github.com/CryptoboyApp/SwiftRadix.git
   SwiftySSS:
-    :commit: eb798e0636c9199aaa2e9a366267285c11375907
+    :commit: 41872dcb11cb3eb8f50553fe5c6878f4e18cc159
     :git: https://github.com/CryptoboyApp/SwiftySSS.git
 
 SPEC CHECKSUMS:
   BigInt: c0cfaa50e3a3786427ebff2d71e2e3e9a179c2f2
   Introspect: 2be020f30f084ada52bb4387fff83fa52c5c400e
-  QRCoder: b92653e9032bca5d757d5c28f7ac7facd250a109
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
   SwiftProtobuf: 4e16842b83c6fda06b10fac50d73b3f1fce8ab7b
-  SwiftRadix: a81388c8f6b76cec240cb34027cf2dcf4ebdb6ac
-  SwiftySSS: 305df9b779b5a30dce263a11057936696930e6f4
+  SwiftRadix: 0612a4dee7a21904556dbc0d554a7c5ab7912b0f
+  SwiftySSS: 0fb8ae1831fffa36e6020241c730b784031a5be0
   TrustWalletCore: 6e7a2da9b8351cd013150ce36c7078fec3bc0fd8
 
-PODFILE CHECKSUM: 5795e077b100c19608f02284fd8ecda5492d96f6
+PODFILE CHECKSUM: 54a4a4dabd75e50c390f3af2a31ead3b56b4d724
 
 COCOAPODS: 1.10.1
