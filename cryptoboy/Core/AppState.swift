@@ -38,8 +38,19 @@ class AppState: ObservableObject {
     @Published var isDecoding: Bool = false
     
     // Theme
-    @AppStorage("currentTheme") var currentTheme: String = "green"
-    @AppStorage("isDarkMode") var isDarkMode: Bool = true
+    @AppStorage("currentTheme") var currentTheme: String = "green" {
+        willSet {
+            objectWillChange.send()
+        }
+    }
+    
+    @AppStorage("isDarkMode") var isDarkMode: Bool = true {
+        willSet {
+            objectWillChange.send()
+        }
+    }
+    
+    
     @AppStorage("isFemale") var isFemale: Bool = false {
         willSet {
             objectWillChange.send()
