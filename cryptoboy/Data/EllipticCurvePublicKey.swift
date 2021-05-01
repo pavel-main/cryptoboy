@@ -20,7 +20,7 @@ enum EllipticCurvePublicKey {
             case .secp256k1:
                 return "secp256k1"
             case .ed25519:
-                return "ed25519 sha2"
+                return "ed25519 sha512"
             case .ed25519blake2b:
                 return "ed25519 blake2b"
             case .curve25519:
