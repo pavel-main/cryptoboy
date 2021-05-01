@@ -33,9 +33,11 @@ class AppState: ObservableObject {
         }
     }
 
-    // TODO
-    @Environment(\.colorScheme) var colorScheme
-
+    // Flags
+    @Published var isBin: Bool = false
+    @Published var isDecoding: Bool = false
+    
+    // Theme
     @AppStorage("currentTheme") var currentTheme: String = "green"
     @AppStorage("isDarkMode") var isDarkMode: Bool = true
     @AppStorage("isFemale") var isFemale: Bool = false {
@@ -43,10 +45,8 @@ class AppState: ObservableObject {
             objectWillChange.send()
         }
     }
-
-    @Published var isBin: Bool = false
-    @Published var isDecoding: Bool = false
-
+    
+    // Clipboard
     @AppStorage("clipboard") var clipboard: [String] = [] {
         willSet {
             objectWillChange.send()
@@ -67,6 +67,7 @@ class AppState: ObservableObject {
         return Color.black
     }
 
+    /* Clipboard management */
     func addClipboard(_ item: String) {
         if !self.clipboard.contains(item) {
             self.clipboard.insert(item, at: 0)
@@ -79,6 +80,7 @@ class AppState: ObservableObject {
         }
     }
 
+    /* State reset */
     func resetBytes() {
         self.bytes = BinaryState()
     }
