@@ -36,27 +36,26 @@ class AppState: ObservableObject {
     // Toggle Flags
     @Published var isBinary: Bool = false
     @Published var isDecode: Bool = false
-    
+
     // Theme
     @AppStorage("currentTheme") var currentTheme: String = "green" {
         willSet {
             objectWillChange.send()
         }
     }
-    
+
     @AppStorage("isDarkMode") var isDarkMode: Bool = true {
         willSet {
             objectWillChange.send()
         }
     }
-    
-    
+
     @AppStorage("isFemale") var isFemale: Bool = false {
         willSet {
             objectWillChange.send()
         }
     }
-    
+
     // Clipboard
     @AppStorage("clipboard") var clipboard: [String] = [] {
         willSet {

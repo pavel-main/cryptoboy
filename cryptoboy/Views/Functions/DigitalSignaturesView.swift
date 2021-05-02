@@ -24,7 +24,7 @@ struct DigitalSignaturesView: View {
                     ClearButtonView({ state.resetMessage() }, { state.message.isDefault() })
                 }
             }
-            
+
             Section(header: Text("Private Key")) {
                 HStack {
                     CopyInputButtonView({ return state.keypair.getPrivate() }, { return state.keypair.isEmpty() })
