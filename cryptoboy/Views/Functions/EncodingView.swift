@@ -11,7 +11,7 @@ struct EncodingView: View {
     @EnvironmentObject var state: AppState
 
     var body: some View {
-        Picker(selection: $state.isDecoding, label: Text("Mode")) {
+        Picker(selection: $state.isDecode, label: Text("Mode")) {
             Text("Encoding").tag(false)
             Text("Decoding").tag(true)
         }
@@ -30,7 +30,7 @@ struct EncodingView: View {
                 }
             }
 
-            if !state.isDecoding {
+            if !state.isDecode {
                 EncodingItemView(.hex)
                 EncodingItemView(.base58)
                 EncodingItemView(.base64)

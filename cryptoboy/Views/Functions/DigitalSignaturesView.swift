@@ -13,6 +13,18 @@ struct DigitalSignaturesView: View {
 
     var body: some View {
         Form {
+            Section(header: Text("Input")) {
+                HStack {
+                    CopyInputButtonView({ return state.message.value }, { return state.message.isDefault() }
+                    )
+
+                    TextField("", text: $state.message.value)
+                        .modifier(SimpleKeyboardViewModifier())
+
+                    ClearButtonView({ state.resetMessage() }, { state.message.isDefault() })
+                }
+            }
+            
             Section(header: Text("Private Key")) {
                 HStack {
                     CopyInputButtonView({ return state.keypair.getPrivate() }, { return state.keypair.isEmpty() })
@@ -44,18 +56,6 @@ struct DigitalSignaturesView: View {
 
                 Button(action: { state.keypair.privateKey = PrivateKey.init() }) {
                     Text("Generate New")
-                }
-            }
-
-            Section(header: Text("Message")) {
-                HStack {
-                    CopyInputButtonView({ return state.message.value }, { return state.message.isDefault() }
-                    )
-
-                    TextField("", text: $state.message.value)
-                        .modifier(SimpleKeyboardViewModifier())
-
-                    ClearButtonView({ state.resetMessage() }, { state.message.isDefault() })
                 }
             }
 

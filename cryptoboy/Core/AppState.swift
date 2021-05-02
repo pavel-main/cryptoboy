@@ -33,9 +33,9 @@ class AppState: ObservableObject {
         }
     }
 
-    // Flags
-    @Published var isBin: Bool = false
-    @Published var isDecoding: Bool = false
+    // Toggle Flags
+    @Published var isBinary: Bool = false
+    @Published var isDecode: Bool = false
     
     // Theme
     @AppStorage("currentTheme") var currentTheme: String = "green" {

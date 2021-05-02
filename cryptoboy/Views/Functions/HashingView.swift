@@ -11,7 +11,7 @@ struct HashingView: View {
     @EnvironmentObject var state: AppState
 
     var body: some View {
-        Picker(selection: $state.isBin, label: Text("Input Type")) {
+        Picker(selection: $state.isBinary, label: Text("Input Type")) {
             Text("String").tag(false)
             Text("Hex Bytes").tag(true)
         }
@@ -21,7 +21,7 @@ struct HashingView: View {
         Form {
             Section(header: Text("Input")) {
                 HStack {
-                    if !state.isBin {
+                    if !state.isBinary {
                         CopyInputButtonView({ return state.message.value }, { return state.message.isDefault() })
 
                         TextField("", text: $state.message.value)
@@ -47,7 +47,7 @@ struct HashingView: View {
                 }
             }
 
-            if !state.isBin {
+            if !state.isBinary {
                 Group {
                     HashingItemView(.sha1, false)
                     HashingItemView(.sha256, false)

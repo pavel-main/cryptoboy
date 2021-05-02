@@ -14,14 +14,13 @@ struct PasteNavigationBar: View {
     var page: PageType
 
     let messagePages: [PageType] = [.hash, .encoding, .ecdsa, .qrcode, .shamir]
-    let keyPages: [PageType] = [.keypair, .ecdh, .ecdsa]
 
     init(_ page: PageType) {
         self.page = page
     }
 
     var body: some View {
-        if messagePages.contains(self.page) {
+        if messagePages.contains(self.page) && !state.isBinary {
             Button(action: {
                 let paste = ClipboardHelper.getString()
                 if !paste.isEmpty {
@@ -29,28 +28,6 @@ struct PasteNavigationBar: View {
                 }
             }) {
                 Image(systemName: "arrow.down.doc")
-            }
-            .disabled(ClipboardHelper.isEmpty())
-        }
-
-        if keyPages.contains(self.page) {
-            Button(action: {
-                let paste = ClipboardHelper.getString()
-                if paste.isEmpty {
-                    return
-                }
-
-                guard let input = Data.init(hexString: paste) else {
-                    return
-                }
-
-                guard let privateKey = PrivateKey.init(data: input) else {
-                    return
-                }
-
-                state.keypair.privateKey = privateKey
-            }) {
-                Image(systemName: "lock.doc")
             }
             .disabled(ClipboardHelper.isEmpty())
         }
