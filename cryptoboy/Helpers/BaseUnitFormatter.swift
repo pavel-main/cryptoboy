@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import SwiftRadix
+import BigInt
 
 class BaseUnitFormatter {
     /**
@@ -24,11 +24,13 @@ class BaseUnitFormatter {
         }
 
         // Convert to radix value with current base
-        let radix = input.radix(base: units[idx].base, as: UInt64.self) ?? UInt64.max.binary
+        guard let value = BInt(input, radix: units[idx].base) else {
+            return rawUnits
+        }
 
         // Calculate all values based on input
-        for (jdx, item) in units.enumerated() {
-            units[jdx].current = radix.value.radix(base: item.base).stringValue
+        for (jdx, _) in units.enumerated() {
+            units[jdx].current = value.asString(radix: units[jdx].base)
         }
 
         return units

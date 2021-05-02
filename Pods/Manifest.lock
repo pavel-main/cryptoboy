@@ -3,7 +3,6 @@ PODS:
   - Introspect (0.1.3)
   - SwiftLint (0.43.1)
   - SwiftProtobuf (1.16.0)
-  - SwiftRadix (1.0.1)
   - SwiftySSS (0.0.1)
   - TrustWalletCore (2.6.4):
     - TrustWalletCore/Core (= 2.6.4)
@@ -16,7 +15,6 @@ DEPENDENCIES:
   - BigInt (from `https://github.com/CryptoboyApp/BigInt.git`)
   - Introspect
   - SwiftLint
-  - SwiftRadix (from `https://github.com/CryptoboyApp/SwiftRadix.git`)
   - SwiftySSS (from `https://github.com/CryptoboyApp/SwiftySSS.git`)
   - TrustWalletCore
 
@@ -30,8 +28,6 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   BigInt:
     :git: https://github.com/CryptoboyApp/BigInt.git
-  SwiftRadix:
-    :git: https://github.com/CryptoboyApp/SwiftRadix.git
   SwiftySSS:
     :git: https://github.com/CryptoboyApp/SwiftySSS.git
 
@@ -39,9 +35,6 @@ CHECKOUT OPTIONS:
   BigInt:
     :commit: 23a2c63cc09ccb3316fc782960a350b8f9121f4e
     :git: https://github.com/CryptoboyApp/BigInt.git
-  SwiftRadix:
-    :commit: 7c527cb24d54e23667506d7cc65263815597ac69
-    :git: https://github.com/CryptoboyApp/SwiftRadix.git
   SwiftySSS:
     :commit: 41872dcb11cb3eb8f50553fe5c6878f4e18cc159
     :git: https://github.com/CryptoboyApp/SwiftySSS.git
@@ -51,10 +44,9 @@ SPEC CHECKSUMS:
   Introspect: 2be020f30f084ada52bb4387fff83fa52c5c400e
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
   SwiftProtobuf: 4e16842b83c6fda06b10fac50d73b3f1fce8ab7b
-  SwiftRadix: 0612a4dee7a21904556dbc0d554a7c5ab7912b0f
   SwiftySSS: 0fb8ae1831fffa36e6020241c730b784031a5be0
   TrustWalletCore: 6e7a2da9b8351cd013150ce36c7078fec3bc0fd8
 
-PODFILE CHECKSUM: 54a4a4dabd75e50c390f3af2a31ead3b56b4d724
+PODFILE CHECKSUM: 58794cc7db39196244a477b525308e99fd222a70
 
 COCOAPODS: 1.10.1
