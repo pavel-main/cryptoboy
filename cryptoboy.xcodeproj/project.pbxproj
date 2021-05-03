@@ -50,6 +50,8 @@
 		E96A4AAA260FFD74009EA367 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A4AA9260FFD74009EA367 /* AppState.swift */; };
 		E96A4AB2260FFF0D009EA367 /* HashingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A4AB1260FFF0D009EA367 /* HashingItemView.swift */; };
 		E96BC5022617B7C000D52BEF /* BaseUnitFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96BC5012617B7C000D52BEF /* BaseUnitFormatter.swift */; };
+		E96C659B26406074006B0E0D /* BitcoinTransactionSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C659A26406074006B0E0D /* BitcoinTransactionSizeView.swift */; };
+		E96C659D2640610F006B0E0D /* BitcoinTxType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C659C2640610F006B0E0D /* BitcoinTxType.swift */; };
 		E96FB2EA2637586F00843CE1 /* HexKeyboardViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96FB2E92637586F00843CE1 /* HexKeyboardViewModifier.swift */; };
 		E96FB2EF2637592300843CE1 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96FB2EE2637592300843CE1 /* UITextField.swift */; };
 		E96FB3032637605200843CE1 /* SimpleKeyboardViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96FB3022637605200843CE1 /* SimpleKeyboardViewModifier.swift */; };
@@ -131,6 +133,8 @@
 		E96A4AA9260FFD74009EA367 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		E96A4AB1260FFF0D009EA367 /* HashingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashingItemView.swift; sourceTree = "<group>"; };
 		E96BC5012617B7C000D52BEF /* BaseUnitFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUnitFormatter.swift; sourceTree = "<group>"; };
+		E96C659A26406074006B0E0D /* BitcoinTransactionSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinTransactionSizeView.swift; sourceTree = "<group>"; };
+		E96C659C2640610F006B0E0D /* BitcoinTxType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinTxType.swift; sourceTree = "<group>"; };
 		E96FB2E92637586F00843CE1 /* HexKeyboardViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexKeyboardViewModifier.swift; sourceTree = "<group>"; };
 		E96FB2EE2637592300843CE1 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		E96FB3022637605200843CE1 /* SimpleKeyboardViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleKeyboardViewModifier.swift; sourceTree = "<group>"; };
@@ -223,6 +227,7 @@
 			children = (
 				E96557DD2616A536004E7BF1 /* BaseUnit.swift */,
 				E97093AB26210E0500C65FB3 /* BigOperation.swift */,
+				E96C659C2640610F006B0E0D /* BitcoinTxType.swift */,
 				E9088B982617D311008C3BBC /* EllipticCurvePublicKey.swift */,
 				E9ED74C52612FAAE00DCD4A3 /* EncodingFormat.swift */,
 				E9ED74C02612F8F500DCD4A3 /* HashFunction.swift */,
@@ -320,6 +325,7 @@
 		E95432182612B66C001918F3 /* Currencies */ = {
 			isa = PBXGroup;
 			children = (
+				E96C659A26406074006B0E0D /* BitcoinTransactionSizeView.swift */,
 				E99F77C6261269EA009BDFF1 /* BitcoinUnitView.swift */,
 				E99F77FA26128569009BDFF1 /* EthereumUnitView.swift */,
 				E9D6005E2623D6A300AD3DCD /* LitecoinUnitView.swift */,
@@ -509,6 +515,7 @@
 				E928CEAB2627A893004FD5B4 /* CopyInputButtonView.swift in Sources */,
 				E90853C5261149290001B9BE /* EncodingView.swift in Sources */,
 				E96557D92616A432004E7BF1 /* BaseUnitConverterView.swift in Sources */,
+				E96C659D2640610F006B0E0D /* BitcoinTxType.swift in Sources */,
 				E97093282621088700C65FB3 /* ArbitaryPrecisionView.swift in Sources */,
 				E90775BD261E660D009D3D95 /* DigitalSignaturesView.swift in Sources */,
 				E9ED74B92612F6C200DCD4A3 /* ThemeViewModifier.swift in Sources */,
@@ -561,6 +568,7 @@
 				E9BC942A26112C9900D8B83E /* PasteNavigationBar.swift in Sources */,
 				E96557DE2616A536004E7BF1 /* BaseUnit.swift in Sources */,
 				E90853DE261158700001B9BE /* AboutLinkItem.swift in Sources */,
+				E96C659B26406074006B0E0D /* BitcoinTransactionSizeView.swift in Sources */,
 				E954320F2612B389001918F3 /* SelectThemeButton.swift in Sources */,
 				E90853C0261148F30001B9BE /* EncodingItemView.swift in Sources */,
 				E94E70D82618DCDF00354851 /* DiffieHellmanView.swift in Sources */,
@@ -700,7 +708,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.2.4;
+				CURRENT_PROJECT_VERSION = 0.2.5;
 				DEVELOPMENT_ASSET_PATHS = "\"cryptoboy/Preview Content\"";
 				DEVELOPMENT_TEAM = ACU6WYW3JF;
 				ENABLE_PREVIEWS = NO;
@@ -710,7 +718,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.4;
+				MARKETING_VERSION = 0.2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = engineering.pavel.cryptoboy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -727,7 +735,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.2.4;
+				CURRENT_PROJECT_VERSION = 0.2.5;
 				DEVELOPMENT_ASSET_PATHS = "\"cryptoboy/Preview Content\"";
 				DEVELOPMENT_TEAM = ACU6WYW3JF;
 				ENABLE_PREVIEWS = NO;
@@ -737,7 +745,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.4;
+				MARKETING_VERSION = 0.2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = engineering.pavel.cryptoboy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

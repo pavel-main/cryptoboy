@@ -95,11 +95,11 @@ class MenuState {
                 icons: ["soon"]
             ),
             MenuItem(
-                id: "btc_tx_fee",
-                title: "Transaction Fee Estimation",
+                id: "btc_tx_size",
+                title: "Transaction Size Calculator",
                 systemImage: "percent",
-                description: "p2pkh, p2sh, p2wkph",
-                icons: ["soon"]
+                description: "p2pkh, p2sh, p2wkph, p2wsh",
+                icons: ["new"]
             ),
             MenuItem(
                 id: "btc_pubkey_compress",
