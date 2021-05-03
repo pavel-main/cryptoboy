@@ -106,12 +106,6 @@ class MenuState {
                 title: "Public Key Compression",
                 systemImage: "rectangle.compress.vertical",
                 icons: ["new"]
-            ),
-            MenuItem(
-                id: "btc_wif",
-                title: "Wallet Import Format",
-                systemImage: "square.and.arrow.down",
-                icons: ["soon"]
             )
         ]),
         // Ethereum
