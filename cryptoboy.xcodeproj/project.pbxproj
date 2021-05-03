@@ -52,6 +52,7 @@
 		E96BC5022617B7C000D52BEF /* BaseUnitFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96BC5012617B7C000D52BEF /* BaseUnitFormatter.swift */; };
 		E96C659B26406074006B0E0D /* BitcoinTransactionSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C659A26406074006B0E0D /* BitcoinTransactionSizeView.swift */; };
 		E96C659D2640610F006B0E0D /* BitcoinTxType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C659C2640610F006B0E0D /* BitcoinTxType.swift */; };
+		E96C659F26406B23006B0E0D /* BitcoinPubkeyCompressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C659E26406B23006B0E0D /* BitcoinPubkeyCompressView.swift */; };
 		E96FB2EA2637586F00843CE1 /* HexKeyboardViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96FB2E92637586F00843CE1 /* HexKeyboardViewModifier.swift */; };
 		E96FB2EF2637592300843CE1 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96FB2EE2637592300843CE1 /* UITextField.swift */; };
 		E96FB3032637605200843CE1 /* SimpleKeyboardViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96FB3022637605200843CE1 /* SimpleKeyboardViewModifier.swift */; };
@@ -135,6 +136,7 @@
 		E96BC5012617B7C000D52BEF /* BaseUnitFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUnitFormatter.swift; sourceTree = "<group>"; };
 		E96C659A26406074006B0E0D /* BitcoinTransactionSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinTransactionSizeView.swift; sourceTree = "<group>"; };
 		E96C659C2640610F006B0E0D /* BitcoinTxType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinTxType.swift; sourceTree = "<group>"; };
+		E96C659E26406B23006B0E0D /* BitcoinPubkeyCompressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinPubkeyCompressView.swift; sourceTree = "<group>"; };
 		E96FB2E92637586F00843CE1 /* HexKeyboardViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexKeyboardViewModifier.swift; sourceTree = "<group>"; };
 		E96FB2EE2637592300843CE1 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		E96FB3022637605200843CE1 /* SimpleKeyboardViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleKeyboardViewModifier.swift; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 		E95432182612B66C001918F3 /* Currencies */ = {
 			isa = PBXGroup;
 			children = (
+				E96C659E26406B23006B0E0D /* BitcoinPubkeyCompressView.swift */,
 				E96C659A26406074006B0E0D /* BitcoinTransactionSizeView.swift */,
 				E99F77C6261269EA009BDFF1 /* BitcoinUnitView.swift */,
 				E99F77FA26128569009BDFF1 /* EthereumUnitView.swift */,
@@ -516,6 +519,7 @@
 				E90853C5261149290001B9BE /* EncodingView.swift in Sources */,
 				E96557D92616A432004E7BF1 /* BaseUnitConverterView.swift in Sources */,
 				E96C659D2640610F006B0E0D /* BitcoinTxType.swift in Sources */,
+				E96C659F26406B23006B0E0D /* BitcoinPubkeyCompressView.swift in Sources */,
 				E97093282621088700C65FB3 /* ArbitaryPrecisionView.swift in Sources */,
 				E90775BD261E660D009D3D95 /* DigitalSignaturesView.swift in Sources */,
 				E9ED74B92612F6C200DCD4A3 /* ThemeViewModifier.swift in Sources */,

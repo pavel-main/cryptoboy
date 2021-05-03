@@ -102,10 +102,10 @@ class MenuState {
                 icons: ["new"]
             ),
             MenuItem(
-                id: "btc_pubkey_compress",
+                id: "btc_pubkey",
                 title: "Public Key Compression",
                 systemImage: "rectangle.compress.vertical",
-                icons: ["soon"]
+                icons: ["new"]
             ),
             MenuItem(
                 id: "btc_wif",

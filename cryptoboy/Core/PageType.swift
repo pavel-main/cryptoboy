@@ -19,6 +19,7 @@ enum PageType: String {
     case shamir
     case btc_unit
     case btc_tx_size
+    case btc_pubkey
     case eth_unit
     case dot_unit
     case ltc_unit
@@ -48,6 +49,8 @@ enum PageType: String {
                 return "BTC Unit Converter"
             case .btc_tx_size:
                 return "BTC Tx Size Calculator"
+            case .btc_pubkey:
+                return "BTC Pubkey Compression"
             case .eth_unit:
                 return "ETH Unit Converter"
             case .dot_unit:
@@ -93,6 +96,9 @@ enum PageType: String {
 
         case .btc_tx_size:
             return AnyView(BitcoinTransactionSizeView())
+
+        case .btc_pubkey:
+            return AnyView(BitcoinPubkeyCompressView())
             
         case .eth_unit:
             return AnyView(EthereumUnitView())
