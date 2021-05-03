@@ -49,7 +49,6 @@ struct HashingView: View {
 
             if !state.isBinary {
                 Group {
-                    HashingItemView(.sha1, false)
                     HashingItemView(.sha256, false)
                     HashingItemView(.sha512, false)
                     HashingItemView(.keccak256, false)
@@ -61,7 +60,6 @@ struct HashingView: View {
             } else {
                 Group {
                     HashingItemView(.bytepad, true)
-                    HashingItemView(.sha1, true)
                     HashingItemView(.sha256, true)
                     HashingItemView(.sha512, true)
                     HashingItemView(.keccak256, true)
