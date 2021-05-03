@@ -22,7 +22,6 @@ enum PageType: String {
     case btc_pubkey
     case eth_unit
     case dot_unit
-    case ltc_unit
     case unknown
 
     var title: String {
@@ -55,8 +54,6 @@ enum PageType: String {
                 return "ETH Unit Converter"
             case .dot_unit:
                 return "DOT Unit Converter"
-            case .ltc_unit:
-                return "LTC Unit Converter"
             case .unknown:
                 return "Coming Soon!"
         }
@@ -105,9 +102,6 @@ enum PageType: String {
 
         case .dot_unit:
             return AnyView(PolkadotUnitView())
-
-        case .ltc_unit:
-            return AnyView(LitecoinUnitView())
 
         default:
             return AnyView(ComingSoonView(item: item))

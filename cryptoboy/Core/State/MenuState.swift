@@ -131,15 +131,6 @@ class MenuState {
                 systemImage: "sterlingsign.circle",
                 description: "DOT, mDOT, μBTC, planck"
             )
-        ]),
-        // Litecoin
-        MenuSection(id: "ltc", title: "Litecoin", items: [
-            MenuItem(
-                id: "ltc_unit",
-                title: "Unit Converter",
-                systemImage: "turkishlirasign.circle",
-                description: "LTC, mLTC, photon"
-            )
         ])
     ]
 
