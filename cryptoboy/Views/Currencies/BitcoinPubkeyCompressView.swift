@@ -12,6 +12,7 @@ import WalletCore
 struct BitcoinPubkeyCompressView: View {
     @EnvironmentObject var state: AppState
     @State private var publicKey: PublicKey? = nil
+    @State private var isValid: Bool = false
     
     var body: some View {
         Form {
@@ -24,16 +25,23 @@ struct BitcoinPubkeyCompressView: View {
                         set: { (newValue) in
                             // Validate
                             guard let data = Data(fromHexEncodedString: newValue) else {
+                                isValid = false
                                 return
                             }
                             
-                            let pubkey = PublicKey.init(data: data, type: .secp256k1) ?? PublicKey.init(data: data, type: .secp256k1Extended)
+                            var pubkey: PublicKey? = nil
+                            pubkey = PublicKey.init(data: data, type: .secp256k1)
+                            if (pubkey == nil) {
+                                pubkey = PublicKey.init(data: data, type: .secp256k1Extended)
+                            }
                             
                             if (pubkey == nil) {
+                                isValid = false
                                 return
                             }
 
                             // Update
+                            isValid = true
                             publicKey = pubkey
                         })
                     )
@@ -41,19 +49,20 @@ struct BitcoinPubkeyCompressView: View {
                     
                     ClearButtonView({ publicKey = nil }, { publicKey == nil })
                 }
-
+                
+                Button(action: {
+                    let privateKey = PrivateKey.init()
+                    publicKey = privateKey.getPublicKeySecp256k1(compressed: randomBool())
+                    isValid = true
+                }) {
+                    Text("Generate New")
+                }
             }
             
-            if (publicKey != nil) {
+            if (publicKey != nil && isValid) {
                 CopyAlertTextView("Public Key Type", { return isCompressed() })
-                
-                if (publicKey!.isCompressed) {
-                    CopyAlertTextView("Uncompressed", { return publicKey!.uncompressed.description })
-                }
-                
-                if (!publicKey!.isCompressed) {
-                    CopyAlertTextView("Compressed", { return publicKey!.compressed.description })
-                }
+                CopyAlertTextView("Compressed", { return publicKey!.compressed.description })
+                CopyAlertTextView("Uncompressed", { return publicKey!.uncompressed.description })
             }
         }
         .modifier(NavigationViewModifier(page: .btc_pubkey))
@@ -66,5 +75,9 @@ struct BitcoinPubkeyCompressView: View {
         }
         
         return "Uncompressed"
+    }
+    
+    func randomBool() -> Bool {
+        return arc4random_uniform(2) == 0
     }
 }

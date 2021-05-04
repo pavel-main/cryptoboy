@@ -84,15 +84,8 @@ class MenuState {
             MenuItem(
                 id: "btc_unit",
                 title: "Unit Converter",
-                systemImage: "dollarsign.circle",
+                systemImage: "arrow.triangle.2.circlepath",
                 description: "BTC, mBTC, μBTC, satoshi"
-            ),
-            MenuItem(
-                id: "btc_wallet",
-                title: "HD Wallet",
-                systemImage: "lock.rectangle.stack",
-                description: "BIP39, BIP44, BIP141",
-                icons: ["soon"]
             ),
             MenuItem(
                 id: "btc_tx_size",
@@ -106,6 +99,13 @@ class MenuState {
                 title: "Public Key Compression",
                 systemImage: "rectangle.compress.vertical",
                 icons: ["new"]
+            ),
+            MenuItem(
+                id: "btc_wallet",
+                title: "HD Wallet",
+                systemImage: "lock.rectangle.stack",
+                description: "BIP39, BIP44, BIP141",
+                icons: ["soon"]
             )
         ]),
         // Ethereum
@@ -113,7 +113,7 @@ class MenuState {
             MenuItem(
                 id: "eth_unit",
                 title: "Unit Converter",
-                systemImage: "eurosign.circle",
+                systemImage: "arrow.triangle.2.circlepath",
                 description: "Ether, Finney, Szabo, Gwei, wei"
             ),
             MenuItem(
@@ -128,8 +128,18 @@ class MenuState {
             MenuItem(
                 id: "dot_unit",
                 title: "Unit Converter",
-                systemImage: "sterlingsign.circle",
+                systemImage: "arrow.triangle.2.circlepath",
                 description: "DOT, mDOT, μBTC, planck"
+            )
+        ]),
+        // Fiat
+        MenuSection(id: "fiat", title: "Fiat", items: [
+            MenuItem(
+                id: "gbp_tax",
+                title: "Capital Gains Tax Calculator",
+                systemImage: "sterlingsign.circle",
+                description: "Cryptoassets tax for UK residents",
+                icons: ["soon"]
             )
         ])
     ]

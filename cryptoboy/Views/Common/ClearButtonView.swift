@@ -20,11 +20,12 @@ struct ClearButtonView: View {
     }
 
     var body: some View {
-        Button(action: self.callback) {
-            Image(systemName: "xmark.circle.fill")
+        if (!self.disabled()) {
+            Button(action: self.callback) {
+                Image(systemName: "xmark.circle.fill")
+            }
+            .buttonStyle(BorderlessButtonStyle())
+            .environmentObject(state)
         }
-        .buttonStyle(BorderlessButtonStyle())
-        .disabled(self.disabled())
-        .environmentObject(state)
     }
 }
