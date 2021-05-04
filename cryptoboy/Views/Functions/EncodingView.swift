@@ -28,6 +28,10 @@ struct EncodingView: View {
 
                     ClearButtonView({ state.resetMessage() }, { state.message.isDefault() })
                 }
+                
+                Button(action: { state.message.generate() }) {
+                    Text("Generate New")
+                }
             }
 
             if !state.isDecode {

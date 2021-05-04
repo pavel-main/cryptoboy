@@ -15,6 +15,10 @@ struct MessageState {
             hasChanged = true
         }
     }
+    
+    mutating func generate() {
+        value = Lorem.words(5)
+    }
 
     func isEmpty() -> Bool {
         return value.isEmpty

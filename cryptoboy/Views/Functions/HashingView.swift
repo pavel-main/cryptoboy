@@ -45,6 +45,12 @@ struct HashingView: View {
                         ClearButtonView({ state.resetBytes() }, { state.bytes.isDefault() })
                     }
                 }
+                
+                if !state.isBinary {
+                    Button(action: { state.message.generate() }) {
+                        Text("Generate New")
+                    }
+                }
             }
 
             if !state.isBinary {

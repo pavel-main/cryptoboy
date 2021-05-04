@@ -31,6 +31,10 @@ struct ShamirSecretView: View {
                             self.calculate()
                         })
                 }
+                
+                Button(action: { state.message.generate() }) {
+                    Text("Generate New")
+                }
             }
 
             Section(header: Text("Shares (\(Int(shares)))")) {

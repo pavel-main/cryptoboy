@@ -35,6 +35,10 @@ struct QRCodeGeneratorView: View {
 
                     ClearButtonView({ state.resetMessage() }, { state.message.isEmpty() })
                 }
+                
+                Button(action: { state.message.generate() }) {
+                    Text("Generate New")
+                }
             }
 
             if !state.message.isEmpty() {
