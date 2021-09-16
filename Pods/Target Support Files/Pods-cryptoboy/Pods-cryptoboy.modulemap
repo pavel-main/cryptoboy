@@ -1,6 +1,0 @@
-module Pods_cryptoboy {
-  umbrella header "Pods-cryptoboy-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -2,7 +2,7 @@
 .idea/
 
 # CocoaPods
-Pods/
+Pods/*
 
 # Xcode
 #

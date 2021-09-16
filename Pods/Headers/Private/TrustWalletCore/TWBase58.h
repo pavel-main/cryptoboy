@@ -1,1 +1,0 @@
-../../../TrustWalletCore/include/TrustWalletCore/TWBase58.h
