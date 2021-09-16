@@ -1,11 +1,11 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
 CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
-EXCLUDED_ARCHS[sdk=iphonesimulator*] = arm64
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/TrustWalletCore" "${PODS_XCFRAMEWORKS_BUILD_DIR}/WalletCoreCommon"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/SwiftySSS" "${PODS_ROOT}/Headers/Public/TrustWalletCore"
-LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/BigInt" "${PODS_CONFIGURATION_BUILD_DIR}/Introspect" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftProtobuf" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftySSS" "${PODS_CONFIGURATION_BUILD_DIR}/TrustWalletCore" "${PODS_ROOT}/TrustWalletCore/build/ios"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/BigInt" "${PODS_CONFIGURATION_BUILD_DIR}/Introspect" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftProtobuf" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftySSS" "${PODS_CONFIGURATION_BUILD_DIR}/TrustWalletCore"
 OTHER_CFLAGS = $(inherited) -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/BigInt/BigInt.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/Introspect/Introspect.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/SwiftProtobuf/SwiftProtobuf.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/SwiftySSS/SwiftySSS.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/TrustWalletCore/WalletCore.modulemap"
-OTHER_LDFLAGS = $(inherited) -ObjC -fprofile-instr-generate -l"BigInt" -l"Core" -l"Introspect" -l"SwiftProtobuf" -l"SwiftySSS" -l"TrezorCrypto" -l"TrustWalletCore" -l"c++" -l"protobuf"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"BigInt" -l"Introspect" -l"SwiftProtobuf" -l"SwiftySSS" -l"TrustWalletCore" -l"c++" -framework "WalletCoreCommon"
 OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/BigInt/BigInt.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/Introspect/Introspect.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/SwiftProtobuf/SwiftProtobuf.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/SwiftySSS/SwiftySSS.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/TrustWalletCore/WalletCore.modulemap"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

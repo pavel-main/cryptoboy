@@ -10,6 +10,8 @@
 
 #include "TWData.h"
 
-typedef TWData *_Nonnull TW_Algorand_Proto_TransactionPay;
+typedef TWData *_Nonnull TW_Algorand_Proto_Transfer;
+typedef TWData *_Nonnull TW_Algorand_Proto_AssetTransfer;
+typedef TWData *_Nonnull TW_Algorand_Proto_AssetOptIn;
 typedef TWData *_Nonnull TW_Algorand_Proto_SigningInput;
 typedef TWData *_Nonnull TW_Algorand_Proto_SigningOutput;

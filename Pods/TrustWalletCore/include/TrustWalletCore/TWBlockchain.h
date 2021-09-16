@@ -1,4 +1,4 @@
-// Copyright © 2017-2020 Trust Wallet.
+// Copyright © 2017-2021 Trust Wallet.
 //
 // This file is part of Trust. The full Trust copyright notice, including
 // terms governing use, modification, and redistribution, is contained in the
@@ -39,7 +39,6 @@ enum TWBlockchain {
     TWBlockchainHarmony = 25,
     TWBlockchainNEAR = 26,
     TWBlockchainAlgorand = 27,
-    TWBlockchainTON = 28,
     TWBlockchainPolkadot = 29,
     TWBlockchainCardano = 30,
     TWBlockchainNEO = 31,

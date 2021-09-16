@@ -1,4 +1,4 @@
-// Copyright © 2017-2020 Trust Wallet.
+// Copyright © 2017-2021 Trust Wallet.
 //
 // This file is part of Trust. The full Trust copyright notice, including
 // terms governing use, modification, and redistribution, is contained in the
@@ -33,9 +33,11 @@ enum TWHRP {
     TWHRPTerra     /* "terra" */,
     TWHRPKava     /* "kava" */,
     TWHRPOasis     /* "oasis" */,
+    TWHRPBluzelle     /* "bluzelle" */,
     TWHRPBandChain     /* "band" */,
     TWHRPElrond     /* "erd" */,
     TWHRPBinance     /* "bnb" */,
+    TWHRPTHORChain     /* "thor" */,
     TWHRPHarmony     /* "one" */,
     TWHRPCardano     /* "addr" */,
     TWHRPQtum     /* "qc" */,
@@ -55,9 +57,11 @@ static const char *_Nonnull HRP_ZILLIQA = "zil";
 static const char *_Nonnull HRP_TERRA = "terra";
 static const char *_Nonnull HRP_KAVA = "kava";
 static const char *_Nonnull HRP_OASIS = "oasis";
+static const char *_Nonnull HRP_BLUZELLE = "bluzelle";
 static const char *_Nonnull HRP_BAND = "band";
 static const char *_Nonnull HRP_ELROND = "erd";
 static const char *_Nonnull HRP_BINANCE = "bnb";
+static const char *_Nonnull HRP_THORCHAIN = "thor";
 static const char *_Nonnull HRP_HARMONY = "one";
 static const char *_Nonnull HRP_CARDANO = "addr";
 static const char *_Nonnull HRP_QTUM = "qc";

@@ -1,4 +1,4 @@
-// Copyright © 2017-2020 Trust Wallet.
+// Copyright © 2017-2021 Trust Wallet.
 //
 // This file is part of Trust. The full Trust copyright notice, including
 // terms governing use, modification, and redistribution, is contained in the
@@ -58,7 +58,6 @@ enum TWCoinType {
     TWCoinTypeXRP = 144,
     TWCoinTypeSolana = 501,
     TWCoinTypeStellar = 148,
-    TWCoinTypeTON = 396,
     TWCoinTypeTezos = 1729,
     TWCoinTypeTheta = 500,
     TWCoinTypeThunderToken = 1001,
@@ -86,6 +85,14 @@ enum TWCoinType {
     TWCoinTypeSmartChain = 20000714,
     TWCoinTypeOasis = 474,
     TWCoinTypePolygon = 966,
+    TWCoinTypeTHORChain = 931,
+    TWCoinTypeBluzelle = 483,
+    TWCoinTypeOptimism = 10000070,
+    TWCoinTypeArbitrum = 10042221,
+    TWCoinTypeECOChain = 10000553,
+    TWCoinTypeAvalancheCChain = 10009000,
+    TWCoinTypeXDai = 10000100,
+    TWCoinTypeFantom = 10000250,
 };
 
 /// Returns the blockchain for a coin type.
@@ -142,7 +149,7 @@ uint8_t TWCoinTypeP2shPrefix(enum TWCoinType coin);
 TW_EXPORT_PROPERTY
 uint8_t TWCoinTypeStaticPrefix(enum TWCoinType coin);
 
-/// Static prefix for this coin type
+/// SLIP-0044 id for this coin type
 TW_EXPORT_PROPERTY
 uint32_t TWCoinTypeSlip44Id(enum TWCoinType coin);
 
