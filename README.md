@@ -1,7 +1,5 @@
 # cryptoboy
 
-[![Build](https://github.com/CryptoboyApp/cryptoboy/actions/workflows/build.yml/badge.svg)](https://github.com/CryptoboyApp/cryptoboy/actions/workflows/build.yml)
-
 🥷 Your cryptography &amp; cryptocurrency Swiss Army Knife
 
 ## Features
