@@ -1,0 +1,137 @@
+# Title
+page_title                                : CryptoBoy Beta - your cryptography & cryptocurrency Swiss Army Knife
+
+# App Info
+appstore_link                             : https://testflight.apple.com/join/hn0vS2QW
+app_icon                                  : assets/appicon.png                        # Automatically populates if not set and if iOS app ID is set.  Otherwise enter path to icon file manually.
+app_name                                  : CryptoBoy                                 # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
+app_price                                 : Beta                                      # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
+app_description                           : 🥷 Your cryptography & cryptocurrency Swiss Army Knife
+
+enable_smart_app_banner                   : false                                      # Set to true to show a smart app banner at top of page on mobile devices.
+
+# Information About Yourself
+your_name                                 : Pavel with ❤️
+your_link                                 :                     
+your_city                                 :                              
+email_address                             : cryptoboy2283@gmail.com
+facebook_username                         :                                      
+instagram_username                        :
+twitter_username                          :
+github_username                           : CryptoboyApp
+youtube_username                          :
+
+# Feature List                            Edit, add or remove features to be presented.
+features                                  :
+
+  - title                                 : Keypair Generator
+    description                           : Generate private/public keypair for different Elliptic Curves
+    fontawesome_icon_name                 : dice
+    fontawesome_style                     : fas
+
+  - title                                 : Key Exchange
+    description                           : Generate shared secrets for ECDH-based key exchange
+    fontawesome_icon_name                 : handshake
+    fontawesome_style                     : fas
+
+  - title                                 : Digital Signatures
+    description                           : Sign & verify messages with your public/private keypair
+    fontawesome_icon_name                 : pen-fancy
+    fontawesome_style                     : fas
+
+  - title                                 : Shamir Secret Sharing
+    description                           : Split & combine secret data between up to 10 people
+    fontawesome_icon_name                 : users
+    fontawesome_style                     : fas
+
+  - title                                 : Bitcoin Tools
+    description                           : Generate BIP39 mnemonic, calculate tx sizes & compress your public keys
+    fontawesome_icon_name                 : bitcoin
+    fontawesome_style                     : fab
+
+  - title                                 : Hashing
+    description                           : Calculate most popular hashes for text & bytes input
+    fontawesome_icon_name                 : hashtag
+    fontawesome_style                     : fas
+
+  - title                                 : Encoding
+    description                           : Convert data to & from Base16, Base58 & Base64 formats
+    fontawesome_icon_name                 : code
+    fontawesome_style                     : fas
+
+  - title                                 : Minor Unit Converter
+    description                           : Convert between different units of BTC, ETH, LTC, DOT & KSM
+    fontawesome_icon_name                 : balance-scale
+    fontawesome_style                     : fas
+    
+  - title                                 : QR Code Generator
+    description                           : Generate QR codes with arbitary data & correction level
+    fontawesome_icon_name                 : qrcode
+    fontawesome_style                     : fas
+
+  - title                                 : Base Unit Converter
+    description                           : Convert numbers between binary, octal, decimal & hex base
+    fontawesome_icon_name                 : calculator
+    fontawesome_style                     : fas
+  
+  - title                                 : Clipboard
+    description                           : Save & reuse your operation results in a separate tab
+    fontawesome_icon_name                 : clipboard-list
+    fontawesome_style                     : fas
+
+  - title                                 : Themes
+    description                           : Change display colors & switch between light & dark mode
+    fontawesome_icon_name                 : paint-brush
+    fontawesome_style                     : fas
+
+# Theme Settings
+topbar_color                              : "#000000"
+topbar_transparency                       : 0.1
+topbar_title_color                        : "#ffffff"
+
+cover_image                               : assets/canary.jpg                    # Replace with alternative image path or image URL.
+cover_overlay_color                       : "#262829"
+cover_overlay_transparency                : 0.7
+
+device_color                              : black                                     # Set to: blue, black, yellow, coral or white.
+
+body_background_color                     : "#ffffff"
+
+link_color                                : "#1d63ea"
+
+app_title_color                           : "#ffffff"
+app_price_color                           : "#ffffff"
+app_description_color                     : "#ffffff"
+
+feature_title_color                       : "#000000"
+feature_text_color                        : "#666666"
+
+feature_icons_foreground_color            : "#1d63ea"
+feature_icons_background_color            : "#e6e6e6"
+
+social_icons_foreground_color             : "#666666"
+social_icons_background_color             : "#e6e6e6"
+
+footer_text_color                         : "#666666"
+
+####################################################
+### Jekyll Configuration. No need to touch this. ###
+####################################################
+
+# Set the Sass partials directory, as we're using @imports
+sass:
+  style: :compressed # You might prefer to minify using :compressed
+
+# Exclude these files from your production _site
+exclude:
+  - LICENSE
+  - README.md
+  - CNAME
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+# Markdown rendering
+markdown: kramdown
